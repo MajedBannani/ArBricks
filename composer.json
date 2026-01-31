@@ -1,0 +1,23 @@
+{
+  "name": "arbricks/arbricks",
+  "description": "ArBricks WordPress Plugin - Adds professional styles and tools to your WordPress site",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=7.4"
+  },
+  "require-dev": {
+    "wp-coding-standards/wpcs": "^3.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.1"
+  },
+  "scripts": {
+    "lint": "phpcs --standard=WordPress includes/ arbricks.php",
+    "lint:fix": "phpcbf --standard=WordPress includes/ arbricks.php"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

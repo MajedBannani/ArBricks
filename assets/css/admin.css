@@ -1,0 +1,242 @@
+/**
+ * ArBricks Admin Styles
+ *
+ * RTL/LTR-friendly responsive admin interface using CSS logical properties
+ *
+ * @package ArBricks
+ * @since 2.0.0
+ */
+
+:root {
+	--arbricks-space-xs: 0.5rem;
+	--arbricks-space-s: 1rem;
+	--arbricks-space-m: 1.5rem;
+	--arbricks-space-l: 2rem;
+	--arbricks-primary: #2196F3;
+	--arbricks-success: #4CAF50;
+	--arbricks-border: #e2e4e7;
+	--arbricks-bg-light: #f8f9fa;
+	--arbricks-text: #1d2327;
+	--arbricks-text-light: #666;
+}
+
+/* Main Wrapper */
+.arbricks-admin-wrap {
+	max-inline-size: min(90vw, 900px);
+	margin-inline: auto;
+	margin-block: var(--arbricks-space-m);
+	background: #fff;
+	padding: clamp(1rem, 3vw, 2rem);
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.arbricks-intro {
+	margin-block-end: var(--arbricks-space-m);
+	color: var(--arbricks-text-light);
+	text-align: start;
+}
+
+/* Category Title */
+.arbricks-category-title {
+	margin-block-start: var(--arbricks-space-m);
+	margin-block-end: var(--arbricks-space-s);
+	padding-block-end: var(--arbricks-space-xs);
+	border-block-end: 2px solid var(--arbricks-border);
+	color: var(--arbricks-text);
+}
+
+/* Snippets Grid */
+.arbricks-snippets-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+	gap: var(--arbricks-space-m);
+	margin-block-end: var(--arbricks-space-l);
+}
+
+/* Snippet Card */
+.arbricks-snippet-card {
+	background: var(--arbricks-bg-light);
+	border-radius: 8px;
+	padding: var(--arbricks-space-m);
+	border: 1px solid var(--arbricks-border);
+	transition: all 0.3s ease;
+}
+
+.arbricks-snippet-card:hover {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.arbricks-snippet-card.is-enabled {
+	border-color: var(--arbricks-primary);
+	background: rgba(33, 150, 243, 0.05);
+}
+
+/* Snippet Header */
+.arbricks-snippet-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-block-end: var(--arbricks-space-s);
+	gap: var(--arbricks-space-s);
+}
+
+@media (max-width: 600px) {
+	.arbricks-snippet-header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.arbricks-snippet-title {
+	font-size: clamp(1rem, 2vw, 1.2rem);
+	color: var(--arbricks-text);
+	margin: 0;
+}
+
+.arbricks-snippet-description {
+	color: var(--arbricks-text-light);
+	margin-block: var(--arbricks-space-xs) 0;
+	font-size: clamp(0.875rem, 1.5vw, 0.95rem);
+	line-height: 1.5;
+}
+
+/* Snippet Footer */
+.arbricks-snippet-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-block-start: var(--arbricks-space-s);
+	padding-block-start: var(--arbricks-space-s);
+	border-block-start: 1px solid var(--arbricks-border);
+	gap: var(--arbricks-space-s);
+	flex-wrap: wrap;
+}
+
+/* Status Badge */
+.arbricks-status-badge {
+	display: inline-block;
+	padding-inline: var(--arbricks-space-xs);
+	padding-block: 0.25rem;
+	border-radius: 4px;
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	background: #e2e4e7;
+	color: var(--arbricks-text);
+}
+
+.is-enabled .arbricks-status-badge {
+	background: var(--arbricks-success);
+	color: #fff;
+}
+
+/* Toggle Switch */
+.arbricks-toggle {
+	position: relative;
+	display: inline-block;
+	inline-size: 60px;
+	block-size: 34px;
+	flex-shrink: 0;
+}
+
+.arbricks-toggle input {
+	opacity: 0;
+	inline-size: 0;
+	block-size: 0;
+}
+
+.arbricks-toggle-slider {
+	position: absolute;
+	cursor: pointer;
+	inset: 0;
+	background-color: #ccc;
+	transition: 0.4s;
+	border-radius: 34px;
+}
+
+.arbricks-toggle-slider::before {
+	position: absolute;
+	content: "";
+	block-size: 26px;
+	inline-size: 26px;
+	inset-inline-start: 4px;
+	inset-block-end: 4px;
+	background-color: white;
+	transition: 0.4s;
+	border-radius: 50%;
+}
+
+.arbricks-toggle input:checked + .arbricks-toggle-slider {
+	background-color: var(--arbricks-primary);
+}
+
+.arbricks-toggle input:focus + .arbricks-toggle-slider {
+	box-shadow: 0 0 1px var(--arbricks-primary);
+}
+
+.arbricks-toggle input:checked + .arbricks-toggle-slider::before {
+	transform: translateX(26px);
+}
+
+/* RTL Support for Toggle */
+[dir="rtl"] .arbricks-toggle input:checked + .arbricks-toggle-slider::before {
+	transform: translateX(-26px);
+}
+
+/* Copy Shortcode Button */
+.arbricks-copy-shortcode {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+	font-size: 0.875rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.arbr icks-copy-shortcode .dashicons {
+	font-size: 16px;
+	inline-size: 16px;
+	block-size: 16px;
+}
+
+.arbricks-copy-shortcode:hover {
+	transform: translateY(-1px);
+}
+
+/* Submit Button Adjustments */
+.arbricks-admin-wrap .submit {
+	margin-block-start: var(--arbricks-space-m);
+	margin-block-end: 0;
+	padding-inline-start: 0;
+	text-align: start;
+}
+
+/* Notices */
+.arbricks-admin-wrap .notice {
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+}
+
+/* Loading State */
+.arbricks-loading {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+	.arbricks-admin-wrap {
+		padding: var(--arbricks-space-m);
+	}
+
+	.arbricks-snippets-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.arbricks-snippet-footer {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
