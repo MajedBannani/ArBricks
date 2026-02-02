@@ -8,7 +8,7 @@
  * Author URI:      https://arbricks.net/
  * Text Domain:     arbricks
  * Domain Path:     /languages
- * Update URI:      https://github.com/MajedBannani/ArBricks-Plugin
+ * Update URI:      https://github.com/MajedBannani/arbricks-plugin
  * Requires PHP:    7.4
  * Requires at least: 5.8
  * License:         GPL v2 or later
