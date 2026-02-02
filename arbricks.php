@@ -3,7 +3,7 @@
  * Plugin Name:     arbricks
  * Plugin URI:      https://arbricks.net/
  * Description:     استمتع بأسهل طريقة لإضافة أنماط وأدوات احترافية إلى موقع ووردبريس الخاص بك
- * Version:         2.0.6
+ * Version:         2.0.7
  * Author:          Majed | ArBricks
  * Author URI:      https://arbricks.net/
  * Text Domain:     arbricks
