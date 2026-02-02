@@ -43,6 +43,25 @@ class Feature_Seo_Visibility_Warning implements Feature_Interface {
 			'description' => __( 'Show admin notice if search engines are blocked.', 'arbricks' ),
 			'category'    => 'seo',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Displays a prominent admin notice when "Discourage search engines from indexing this site" is enabled in WordPress settings. Prevents accidental launch of production sites with indexing blocked.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Enable the feature toggle above', 'arbricks' ),
+					__( 'Configure where to show notice: All Admin Pages or Dashboard Only', 'arbricks' ),
+					__( 'Select notice type: Error (red) or Warning (yellow)', 'arbricks' ),
+					__( 'Choose whether users can dismiss the notice', 'arbricks' ),
+					__( 'Click "Save Changes"', 'arbricks' ),
+					__( 'If search engines are currently blocked, you\'ll see the notice', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'Checks WordPress Settings → Reading → "Search engine visibility" option', 'arbricks' ),
+					__( 'Notice only appears when "blog_public" option is set to 0 (blocked)', 'arbricks' ),
+					__( 'All Admin Pages: Notice shows on every admin page for maximum visibility', 'arbricks' ),
+					__( 'Dashboard Only: Notice only shows on main dashboard', 'arbricks' ),
+					__( 'Dismissal: If allowed, users can hide notice (reappears on page reload unless dismissed per-user)', 'arbricks' ),
+					__( 'Prevents common mistake of launching sites with SEO blocked', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -179,4 +198,11 @@ class Feature_Seo_Visibility_Warning implements Feature_Interface {
 		update_user_meta( get_current_user_id(), 'arbricks_seo_warning_dismissed', true );
 		wp_send_json_success();
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

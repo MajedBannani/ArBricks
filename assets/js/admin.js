@@ -90,7 +90,7 @@
 
 		// Card Helper Accordion (INNER accordion - inside feature cards)
 		// Uses unique selectors to avoid conflict with category accordion
-		const $helperToggles = $('.arbricks-helper-toggle');
+		const $helperToggles = $('.arbricks-help-toggle');
 		
 		if (window.console && window.console.log) {
 			console.log('[ArBricks] Helper accordion init: found ' + $helperToggles.length + ' toggles');
@@ -106,12 +106,14 @@
 				console.log('[ArBricks] Helper toggle clicked, panel found:', $panel.length, 'ID:', panelId);
 			}
 
-			// Toggle visibility using hidden attribute (matches category accordion approach)
 			if (isExpanded) {
-				$panel.attr('hidden', '');
-				$toggle.attr('aria-expanded', 'false');
+				$panel.slideUp(200, function() {
+					$panel.attr('hidden', '').attr('aria-hidden', 'true');
+					$toggle.attr('aria-expanded', 'false');
+				});
 			} else {
-				$panel.removeAttr('hidden');
+				// Remove hidden attribute so slideDown works, but keep it invisible for a split sec
+				$panel.hide().removeAttr('hidden').attr('aria-hidden', 'false').slideDown(200);
 				$toggle.attr('aria-expanded', 'true');
 			}
 		});

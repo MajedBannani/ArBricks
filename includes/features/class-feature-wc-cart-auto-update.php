@@ -43,6 +43,25 @@ class Feature_Wc_Cart_Auto_Update implements Feature_Interface {
 			'description' => __( 'Automatically update cart when quantity changes.', 'arbricks' ),
 			'category'    => 'woocommerce',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Automatically refreshes the cart totals whenever a customer changes the quantity of an item in their cart. Removes the need for customers to manually click the "Update Cart" button, providing a smoother and more modern shopping experience.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Ensure WooCommerce is installed and active.', 'arbricks' ),
+					__( 'Enable the feature toggle above.', 'arbricks' ),
+					__( 'Set the "Debounce Delay" (default 250ms) to control how long to wait after the last quantity change before updating.', 'arbricks' ),
+					__( 'Decide whether to hide the manual "Update Cart" button.', 'arbricks' ),
+					__( 'Click "Save Changes".', 'arbricks' ),
+					__( 'Go to your Cart page and change any product quantity to see it auto-update.', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'Requires WooCommerce plugin.', 'arbricks' ),
+					__( 'Uses AJAX to update the cart without a full page reload.', 'arbricks' ),
+					__( 'Debounce Delay: Prevents multiple updates if a customer clicks the quantity buttons rapidly.', 'arbricks' ),
+					__( 'Hide Update Button: Recommended for a cleaner UI when auto-update is active.', 'arbricks' ),
+					__( 'Hide notices: Optionally suppresses the "Cart updated" message for a more seamless feel.', 'arbricks' ),
+					__( 'Compatibility: Works with most themes using standard WooCommerce cart markup.', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -144,4 +163,11 @@ class Feature_Wc_Cart_Auto_Update implements Feature_Interface {
 			wp_add_inline_style( $handle . '-style', $css );
 		}
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

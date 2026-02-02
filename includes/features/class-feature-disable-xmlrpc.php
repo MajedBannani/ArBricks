@@ -43,6 +43,21 @@ class Feature_Disable_Xmlrpc implements Feature_Interface {
 			'description' => __( 'Disable XML-RPC completely and optionally block direct access.', 'arbricks' ),
 			'category'    => 'security',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Disables WordPress XML-RPC functionality which is often targeted by brute force attacks and DDoS attempts. XML-RPC is a legacy remote access protocol rarely needed on modern sites.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Enable the feature toggle above', 'arbricks' ),
+					__( 'Optionally enable "Block Direct Access" to return 403 error when xmlrpc.php is accessed', 'arbricks' ),
+					__( 'Click "Save Changes"', 'arbricks' ),
+					__( 'XML-RPC is immediately disabled', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'XML-RPC is used by some mobile apps and legacy publishing tools (rarely needed today)', 'arbricks' ),
+					__( 'Jetpack and some plugins may require XML-RPC - test after enabling', 'arbricks' ),
+					__( 'Block Direct Access: Returns 403 Forbidden when xmlrpc.php is accessed directly', 'arbricks' ),
+					__( 'Improves security by closing common attack vector', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -83,13 +98,8 @@ class Feature_Disable_Xmlrpc implements Feature_Interface {
 	 * @return void
 	 */
 	public function block_xmlrpc_access(): void {
-		if ( is_admin() ) {
-			return;
-		}
-
-		$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
-
-		if ( strpos( $request_uri, 'xmlrpc.php' ) !== false ) {
+		// Check if this is an XML-RPC request using WordPress constant.
+		if ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) {
 			http_response_code( 403 );
 			wp_die(
 				esc_html__( 'XML-RPC is disabled on this site.', 'arbricks' ),
@@ -98,4 +108,11 @@ class Feature_Disable_Xmlrpc implements Feature_Interface {
 			);
 		}
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

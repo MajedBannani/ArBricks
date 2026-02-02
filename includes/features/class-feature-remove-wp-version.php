@@ -41,6 +41,22 @@ class Feature_Remove_Wp_Version implements Feature_Interface {
 			'description' => __( 'Remove WordPress version from head and feeds for security.', 'arbricks' ),
 			'category'    => 'security',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Removes WordPress version number from HTML head and RSS feeds. Prevents potential attackers from easily identifying your WordPress version and targeting known vulnerabilities in that specific version.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Enable the feature toggle above', 'arbricks' ),
+					__( 'Click "Save Changes"', 'arbricks' ),
+					__( 'WordPress version is immediately hidden from public output', 'arbricks' ),
+					__( 'Inspect page source - you should not see generator meta tag', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'Security through obscurity - not a complete security solution', 'arbricks' ),
+					__( 'Removes <meta name="generator"> tag from HTML head', 'arbricks' ),
+					__( 'Removes version from RSS/Atom feeds', 'arbricks' ),
+					__( 'Part of a layered security approach - use with other security features', 'arbricks' ),
+					__( 'No configuration needed - works automatically', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -59,4 +75,11 @@ class Feature_Remove_Wp_Version implements Feature_Interface {
 			1
 		);
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

@@ -44,6 +44,29 @@ class Feature_Login_Honeypot implements Feature_Interface {
 			'description' => __( 'Add hidden honeypot field to block bots on login.', 'arbricks' ),
 			'category'    => 'security',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Adds an invisible "honeypot" field to the login form that bots fill out but humans don\'t see. Any login attempt with a filled honeypot is automatically blocked, preventing automated bot attacks without requiring user interaction.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Enable the feature toggle above', 'arbricks' ),
+					__( 'Optionally customize the honeypot field name (advanced users only)', 'arbricks' ),
+					__( 'Optionally customize the block message shown to bots', 'arbricks' ),
+					__( 'Choose hiding method: CSS (recommended) or Hidden Input', 'arbricks' ),
+					__( 'Click "Save Changes" to activate', 'arbricks' ),
+					__( 'No further configuration needed - protection is automatic', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'CSS Hiding (recommended): Field is visually hidden but accessible to bots that ignore CSS', 'arbricks' ),
+					__( 'Hidden Input: Uses type="hidden" which sophisticated bots may detect', 'arbricks' ),
+					__( 'Field Name: Change only if you suspect bots have learned your field name (rare)', 'arbricks' ),
+					__( 'No external services used - completely local and privacy-friendly', 'arbricks' ),
+					__( 'Works alongside other login security features (reCAPTCHA, Math Captcha)', 'arbricks' ),
+					__( 'Automatically bypassed for XML-RPC, REST API, WP-CLI, and AJAX requests', 'arbricks' ),
+				),
+				'examples' => array(
+					__( 'Default field name: login_honeypot', 'arbricks' ),
+					__( 'Custom field name example: user_website_url (something bots might fill)', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -222,4 +245,11 @@ class Feature_Login_Honeypot implements Feature_Interface {
 
 		return false;
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

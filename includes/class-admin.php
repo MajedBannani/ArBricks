@@ -97,8 +97,6 @@ class Admin {
 			array(
 				'copySuccess' => __( 'Shortcode copied!', 'arbricks' ),
 				'copyError'   => __( 'Failed to copy shortcode.', 'arbricks' ),
-				'ajaxUrl'     => admin_url( 'admin-ajax.php' ),
-				'nonce'       => wp_create_nonce( 'arbricks_tools_nonce' ),
 			)
 		);
 
@@ -328,6 +326,11 @@ class Admin {
 									if ( 'feature' === $item['type'] ) {
 										$this->render_feature_help( $item['object'], $item_id );
 									}
+
+									// Render custom tool UI if feature provides it.
+									if ( 'feature' === $item['type'] ) {
+										$item['object']->render_admin_ui();
+									}
 									?>
 
 									<div class="arbricks-snippet-footer">
@@ -525,22 +528,16 @@ class Admin {
 		}
 
 		$help = $meta['help'];
-
-// Debug: Log helper rendering.
-if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-error_log( '[ArBricks] Rendering helper for: ' . $feature_id . ' | has_help=' . ( empty( $help ) ? '0' : '1' ) );
-}
-
 		?>
 		<div class="arbricks-help-section">
 			<button type="button" class="arbricks-help-toggle" aria-expanded="false" aria-controls="help-<?php echo esc_attr( $feature_id ); ?>">
 				<?php esc_html_e( 'Help', 'arbricks' ); ?>
 				<span class="dashicons dashicons-arrow-down-alt2" aria-hidden="true"></span>
 			</button>
-			<div class="arbricks-help-content" id="help-<?php echo esc_attr( $feature_id ); ?>" style="display:none;" aria-hidden="true">
+			<div class="arbricks-help-content" id="help-<?php echo esc_attr( $feature_id ); ?>" hidden aria-hidden="true">
 				<?php if ( ! empty( $help['summary'] ) ) : ?>
 					<p class="arbricks-help-summary">
-						<?php echo esc_html( $help['summary'] ); ?>
+						<?php echo wp_kses_post( $help['summary'] ); ?>
 					</p>
 				<?php endif; ?>
 
@@ -549,7 +546,7 @@ error_log( '[ArBricks] Rendering helper for: ' . $feature_id . ' | has_help=' . 
 						<strong><?php esc_html_e( 'How to use:', 'arbricks' ); ?></strong>
 						<ol>
 							<?php foreach ( $help['how_to'] as $step ) : ?>
-								<li><?php echo esc_html( $step ); ?></li>
+								<li><?php echo wp_kses_post( $step ); ?></li>
 							<?php endforeach; ?>
 						</ol>
 					</div>
@@ -560,7 +557,7 @@ error_log( '[ArBricks] Rendering helper for: ' . $feature_id . ' | has_help=' . 
 						<strong><?php esc_html_e( 'Notes:', 'arbricks' ); ?></strong>
 						<ul>
 							<?php foreach ( $help['notes'] as $note ) : ?>
-								<li><?php echo esc_html( $note ); ?></li>
+								<li><?php echo wp_kses_post( $note ); ?></li>
 							<?php endforeach; ?>
 						</ul>
 					</div>
@@ -571,7 +568,7 @@ error_log( '[ArBricks] Rendering helper for: ' . $feature_id . ' | has_help=' . 
 						<strong><?php esc_html_e( 'Examples:', 'arbricks' ); ?></strong>
 						<ul>
 							<?php foreach ( $help['examples'] as $example ) : ?>
-								<li><?php echo esc_html( $example ); ?></li>
+								<li><?php echo wp_kses_post( $example ); ?></li>
 							<?php endforeach; ?>
 						</ul>
 					</div>
@@ -592,16 +589,31 @@ error_log( '[ArBricks] Rendering helper for: ' . $feature_id . ' | has_help=' . 
 			return array_map( array( $this, 'sanitize_setting_value' ), $value );
 		}
 
-		if ( is_numeric( $value ) ) {
-			return is_float( $value ) ? floatval( $value ) : intval( $value );
-		}
-
+		// Handle boolean values.
 		if ( is_bool( $value ) || 'true' === $value || 'false' === $value ) {
 			return filter_var( $value, FILTER_VALIDATE_BOOLEAN );
 		}
 
+		// Handle numeric values.
+		if ( is_numeric( $value ) ) {
+			return is_float( $value ) || str_contains( (string) $value, '.' ) ? floatval( $value ) : intval( $value );
+		}
+
+		//Convert to string for further checks.
+		$string_value = (string) $value;
+
+		// Validate and sanitize URLs.
+		if ( filter_var( $string_value, FILTER_VALIDATE_URL ) ) {
+			return esc_url_raw( $string_value );
+		}
+
+		// Validate and sanitize emails.
+		if ( is_email( $string_value ) ) {
+			return sanitize_email( $string_value );
+		}
+
 		// Default: sanitize as text.
-		return sanitize_text_field( $value );
+		return sanitize_text_field( $string_value );
 	}
 
 	/**
@@ -633,8 +645,6 @@ true
 'arbricks-tool-css-minifier',
 'arbricksCssMinifier',
 array(
-'ajaxUrl'        => admin_url( 'admin-ajax.php' ),
-					'nonce'          => wp_create_nonce( 'arbricks_tools_nonce' ),
 					'minifySuccess'  => __( 'CSS minified successfully!', 'arbricks' ),
 					'minifyError'    => __( 'Failed to minify CSS.', 'arbricks' ),
 					'copySuccess'    => __( 'Copied to clipboard!', 'arbricks' ),
@@ -653,9 +663,16 @@ array( 'arbricks-admin' ),
 ARBRICKS_VERSION
 );
 			wp_enqueue_script(
+'arbricks-vendor-qrcode',
+ARBRICKS_PLUGIN_URL . 'assets/vendor/qrcode/qrcode.min.js',
+array(),
+'1.0.0',
+true
+);
+			wp_enqueue_script(
 'arbricks-tool-qr-generator',
 ARBRICKS_PLUGIN_URL . 'assets/js/tools-qr-generator.js',
-array( 'jquery', 'arbricks-admin' ),
+array( 'jquery', 'arbricks-admin', 'arbricks-vendor-qrcode' ),
 ARBRICKS_VERSION,
 true
 );
@@ -663,8 +680,6 @@ true
 'arbricks-tool-qr-generator',
 'arbricksQrGenerator',
 array(
-'ajaxUrl'         => admin_url( 'admin-ajax.php' ),
-					'nonce'           => wp_create_nonce( 'arbricks_tools_nonce' ),
 					'generateSuccess' => __( 'QR code generated!', 'arbricks' ),
 					'generateError'   => __( 'Failed to generate QR code.', 'arbricks' ),
 					'invalidUrl'      => __( 'Please enter a valid URL.', 'arbricks' ),
@@ -692,8 +707,6 @@ true
 'arbricks-tool-webp-converter',
 'arbricksWebpConverter',
 array(
-'ajaxUrl'           => admin_url( 'admin-ajax.php' ),
-					'nonce'             => wp_create_nonce( 'arbricks_tools_nonce' ),
 					'convertSuccess'    => __( 'Conversion complete!', 'arbricks' ),
 					'convertError'      => __( 'Conversion failed.', 'arbricks' ),
 					'noImagesSelected'  => __( 'Please select images to convert.', 'arbricks' ),

@@ -111,4 +111,57 @@ class Feature_Qr_Generator_Tool implements Feature_Interface {
 	public function register_hooks(): void {
 		// Client-side tool - no server hooks needed.
 	}
+
+	/**
+	 * Render custom admin UI for QR Generator
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {
+		$settings = Options::get_feature_settings( self::id() );
+		$size     = $settings['default_size'] ?? '256';
+		$ecc      = $settings['default_ecc'] ?? 'M';
+		?>
+		<div class="arbricks-tool-qr-generator">
+			<div class="tool-section">
+				<label for="qr-url-input"><?php esc_html_e( 'Enter URL:', 'arbricks' ); ?></label>
+				<input type="url" id="qr-url-input" class="widefat" placeholder="https://example.com" value="">
+			</div>
+
+			<div class="tool-section row">
+				<div class="col">
+					<label for="qr-size-select"><?php esc_html_e( 'Size:', 'arbricks' ); ?></label>
+					<select id="qr-size-select">
+						<option value="128" <?php selected( $size, '128' ); ?>><?php esc_html_e( '128px', 'arbricks' ); ?></option>
+						<option value="256" <?php selected( $size, '256' ); ?>><?php esc_html_e( '256px', 'arbricks' ); ?></option>
+						<option value="400" <?php selected( $size, '400' ); ?>><?php esc_html_e( '400px', 'arbricks' ); ?></option>
+						<option value="512" <?php selected( $size, '512' ); ?>><?php esc_html_e( '512px', 'arbricks' ); ?></option>
+					</select>
+				</div>
+				<div class="col">
+					<label for="qr-ecc-select"><?php esc_html_e( 'Error Correction:', 'arbricks' ); ?></label>
+					<select id="qr-ecc-select">
+						<option value="L" <?php selected( $ecc, 'L' ); ?>><?php esc_html_e( 'Low (7%)', 'arbricks' ); ?></option>
+						<option value="M" <?php selected( $ecc, 'M' ); ?>><?php esc_html_e( 'Medium (15%)', 'arbricks' ); ?></option>
+						<option value="Q" <?php selected( $ecc, 'Q' ); ?>><?php esc_html_e( 'Quartile (25%)', 'arbricks' ); ?></option>
+						<option value="H" <?php selected( $ecc, 'H' ); ?>><?php esc_html_e( 'High (30%)', 'arbricks' ); ?></option>
+					</select>
+				</div>
+			</div>
+
+			<div class="tool-actions">
+				<button type="button" id="qr-generate-btn" class="button button-primary">
+					<?php esc_html_e( 'Generate QR Code', 'arbricks' ); ?>
+				</button>
+				<button type="button" id="qr-download-btn" class="button" style="display:none;">
+					<span class="dashicons dashicons-download"></span>
+					<?php esc_html_e( 'Download PNG', 'arbricks' ); ?>
+				</button>
+			</div>
+
+			<div class="qr-preview empty" data-placeholder="<?php esc_attr_e( 'QR code will appear here...', 'arbricks' ); ?>"></div>
+			<div class="tool-notice" style="display:none;"></div>
+		</div>
+		<?php
+	}
 }

@@ -1,0 +1,408 @@
+# Arabic translation for ArBricks.
+# Copyright (C) 2026 ArBricks
+# This file is distributed under the same license as the ArBricks plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: ArBricks 2.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/arbricks\n"
+"POT-Creation-Date: 2026-02-01 09:30:00+00:00\n"
+"PO-Revision-Date: 2026-02-01 09:30:00+00:00\n"
+"Last-Translator: ArBricks Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"X-Generator: ArBricks Translation Generator\n"
+
+msgid "CSS Minifier Tool"
+msgstr "أداة تصغير CSS"
+
+msgid "Minify CSS code directly in admin interface."
+msgstr "تصغير كود CSS مباشرة في واجهة الإدارة."
+
+msgid "Quickly minify CSS code to reduce file size and improve performance. Removes comments and whitespace."
+msgstr "قم بتصغير كود CSS بسرعة لتقليل حجم الملف وتحسين الأداء. يزيل التعليقات والمسافات."
+
+msgid "CSS minified successfully!"
+msgstr "تم تصغير CSS بنجاح!"
+
+msgid "Failed to minify CSS."
+msgstr "فشل تصغير CSS."
+
+msgid "Copied to clipboard!"
+msgstr "تم النسخ إلى الحافظة!"
+
+msgid "Failed to copy."
+msgstr "فشل النسخ."
+
+msgid "Please enter CSS to minify."
+msgstr "الرجاء إدخال CSS للتصغير."
+
+msgid "Processing..."
+msgstr "جاري المعالجة..."
+
+msgid "Minify"
+msgstr "تصغير"
+
+msgid "CSS Input"
+msgstr "إدخال CSS"
+
+msgid "Paste CSS here..."
+msgstr "الصق CSS هنا..."
+
+msgid "Minified Output"
+msgstr "المخرج المصغّر"
+
+msgid "Copy Output"
+msgstr "نسخ المخرج"
+
+msgid "Clear"
+msgstr "مسح"
+
+msgid "QR Code Generator Tool"
+msgstr "أداة إنشاء رمز QR"
+
+msgid "Generate QR codes from URLs directly in admin interface."
+msgstr "إنشاء رموز QR من الروابط مباشرة في واجهة الإدارة."
+
+msgid "Easily create QR codes for URLs. Perfect for marketing materials, print materials, and sharing links."
+msgstr "قم بإنشاء رموز QR للروابط بسهولة. مثالي للمواد التسويقية والمطبوعات ومشاركة الروابط."
+
+msgid "Enable the feature toggle above."
+msgstr "قم بتفعيل الميزة أعلاه."
+
+msgid "Enter the URL you want to encode."
+msgstr "أدخل الرابط الذي تريد ترميزه."
+
+msgid "Choose the QR code size and error correction level."
+msgstr "اختر حجم رمز QR ومستوى تصحيح الأخطاء."
+
+msgid "Click \"Generate\" to create the QR code."
+msgstr "انقر \"إنشاء\" لإنشاء رمز QR."
+
+msgid "Download the QR code as PNG image."
+msgstr "تنزيل رمز QR كصورة PNG."
+
+msgid "Higher error correction allows QR codes to work even if partially damaged."
+msgstr "تصحيح الأخطاء العالي يسمح لرموز QR بالعمل حتى لو تضررت جزئياً."
+
+msgid "Larger sizes are better for print materials."
+msgstr "الأحجام الأكبر أفضل للمواد المطبوعة."
+
+msgid "Generated QR codes are temporary and not saved on the server."
+msgstr "رموز QR المُنشأة مؤقتة ولا يتم حفظها على الخادم."
+
+msgid "Error Correction L = Low (~7% recovery)"
+msgstr "تصحيح الأخطاء L = منخفض (~7% استرداد)"
+
+msgid "Error Correction M = Medium (~15% recovery)"
+msgstr "تصحيح الأخطاء M = متوسط (~15% استرداد)"
+
+msgid "Error Correction Q = Quartile (~25% recovery)"
+msgstr "تصحيح الأخطاء Q = ربعي (~25% استرداد)"
+
+msgid "Error Correction H = High (~30% recovery)"
+msgstr "تصحيح الأخطاء H = عالي (~30% استرداد)"
+
+msgid "Default QR Code Size"
+msgstr "حجم رمز QR الافتراضي"
+
+msgid "Default size in pixels for generated QR codes."
+msgstr "الحجم الافتراضي بالبكسل لرموز QR المُنشأة."
+
+msgid "128px (Small)"
+msgstr "128 بكسل (صغير)"
+
+msgid "256px (Medium)"
+msgstr "256 بكسل (متوسط)"
+
+msgid "400px (Large)"
+msgstr "400 بكسل (كبير)"
+
+msgid "512px (Extra Large)"
+msgstr "512 بكسل (كبير جداً)"
+
+msgid "Default Error Correction"
+msgstr "تصحيح الأخطاء الافتراضي"
+
+msgid "Default error correction level."
+msgstr "مستوى تصحيح الأخطاء الافتراضي."
+
+msgid "Low (7%)"
+msgstr "منخفض (7%)"
+
+msgid "Medium (15%)"
+msgstr "متوسط (15%)"
+
+msgid "Quartile (25%)"
+msgstr "ربعي (25%)"
+
+msgid "High (30%)"
+msgstr "عالي (30%)"
+
+msgid "QR code generated!"
+msgstr "تم إنشاء رمز QR!"
+
+msgid "Failed to generate QR code."
+msgstr "فشل إنشاء رمز QR."
+
+msgid "Please enter a valid URL."
+msgstr "الرجاء إدخال رابط صحيح."
+
+msgid "Generating..."
+msgstr "جاري الإنشاء..."
+
+msgid "No QR code to download."
+msgstr "لا يوجد رمز QR للتنزيل."
+
+msgid "Generate"
+msgstr "إنشاء"
+
+msgid "URL"
+msgstr "الرابط"
+
+msgid "https://example.com"
+msgstr "https://example.com"
+
+msgid "Size"
+msgstr "الحجم"
+
+msgid "Error Correction"
+msgstr "تصحيح الأخطاء"
+
+msgid "QR code will appear here"
+msgstr "سيظهر رمز QR هنا"
+
+msgid "Download PNG"
+msgstr "تنزيل PNG"
+
+msgid "Failed to generate QR code. QR library may not be installed."
+msgstr "فشل إنشاء رمز QR. قد لا تكون مكتبة QR مثبتة."
+
+msgid "No URL provided."
+msgstr "لم يتم تقديم رابط."
+
+msgid "WebP Converter Tool"
+msgstr "أداة تحويل WebP"
+
+msgid "Convert images to WebP format for better performance."
+msgstr "تحويل الصور إلى صيغة WebP لأداء أفضل."
+
+msgid "Convert JPEG and PNG images to modern WebP format, reducing file size by up to 30% without losing quality."
+msgstr "تحويل صور JPEG و PNG إلى صيغة WebP الحديثة، مما يقلل حجم الملف بنسبة تصل إلى 30% دون فقدان الجودة."
+
+msgid "Configure conversion mode and quality settings."
+msgstr "قم بتكوين وضع التحويل وإعدادات الجودة."
+
+msgid "Select images from your Media Library."
+msgstr "حدد الصور من مكتبة الوسائط الخاصة بك."
+
+msgid "Click \"Convert Selected\" to batch convert."
+msgstr "انقر \"تحويل المحدد\" للتحويل الدفعي."
+
+msgid "Check conversion status for each image."
+msgstr "تحقق من حالة التحويل لكل صورة."
+
+msgid "\"Alongside\" mode keeps originals and creates .webp copies."
+msgstr "وضع \"جنباً إلى جنب\" يحتفظ بالأصول وينشئ نسخ .webp."
+
+msgid "\"Replace\" mode deletes originals (use with caution!)."
+msgstr "وضع \"استبدال\" يحذف الأصول (استخدم بحذر!)."
+
+msgid "Quality 85 is recommended for balanced size/quality."
+msgstr "الجودة 85 موصى بها للتوازن بين الحجم والجودة."
+
+msgid "Requires GD or Imagick with WebP support enabled."
+msgstr "يتطلب GD أو Imagick مع تمكين دعم WebP."
+
+msgid "Conversion Mode"
+msgstr "وضع التحويل"
+
+msgid "How to handle converted images."
+msgstr "كيفية التعامل مع الصور المحولة."
+
+msgid "Create WebP alongside original (Recommended)"
+msgstr "إنشاء WebP جنباً إلى جنب مع الأصل (موصى به)"
+
+msgid "Replace original with WebP (Advanced)"
+msgstr "استبدال الأصل بـ WebP (متقدم)"
+
+msgid "WebP Quality"
+msgstr "جودة WebP"
+
+msgid "Quality level (0-100). Higher = better quality, larger file."
+msgstr "مستوى الجودة (0-100). أعلى = جودة أفضل، ملف أكبر."
+
+msgid "Convert JPEG images"
+msgstr "تحويل صور JPEG"
+
+msgid "Enable conversion of JPEG/JPG files."
+msgstr "تمكين تحويل ملفات JPEG/JPG."
+
+msgid "Convert PNG images"
+msgstr "تحويل صور PNG"
+
+msgid "Enable conversion of PNG files."
+msgstr "تمكين تحويل ملفات PNG."
+
+msgid "Keep original files"
+msgstr "الاحتفاظ بالملفات الأصلية"
+
+msgid "Preserve original images after conversion (disabled in Replace mode)."
+msgstr "الحفاظ على الصور الأصلية بعد التحويل (معطل في وضع الاستبدال)."
+
+msgid "Conversion complete!"
+msgstr "اكتمل التحويل!"
+
+msgid "Conversion failed."
+msgstr "فشل التحويل."
+
+msgid "Please select images to convert."
+msgstr "الرجاء تحديد الصور للتحويل."
+
+msgid "WebP format is not supported on this server."
+msgstr "صيغة WebP غير مدعومة على هذا الخادم."
+
+msgid "Select Images"
+msgstr "تحديد الصور"
+
+msgid "Converting..."
+msgstr "جاري التحويل..."
+
+msgid "No images selected"
+msgstr "لم يتم تحديد صور"
+
+msgid "Convert Selected"
+msgstr "تحويل المحدد"
+
+msgid "Select"
+msgstr "تحديد"
+
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+msgid "You do not have permission to perform this action."
+msgstr "ليس لديك إذن لتنفيذ هذا الإجراء."
+
+msgid "WebP is supported on this server."
+msgstr "WebP مدعوم على هذا الخادم."
+
+msgid "WebP is NOT supported on this server. Please enable GD or Imagick with WebP support."
+msgstr "WebP غير مدعوم على هذا الخادم. الرجاء تمكين GD أو Imagick مع دعم WebP."
+
+msgid "No images selected."
+msgstr "لم يتم تحديد صور."
+
+msgid "File not found."
+msgstr "الملف غير موجود."
+
+msgid "File type not allowed for conversion."
+msgstr "نوع الملف غير مسموح بتحويله."
+
+msgid "Converted successfully!"
+msgstr "تم التحويل بنجاح!"
+
+msgid "YouTube Timestamp Generator"
+msgstr "مولد الطوابع الزمنية لـ YouTube"
+
+msgid "Generate timestamped YouTube URLs to link to specific moments in videos."
+msgstr "إنشاء روابط YouTube موقّتة للربط بلحظات محددة في الفيديوهات."
+
+msgid "Create YouTube URLs that start playing at a specific timestamp. Perfect for sharing exact moments in videos."
+msgstr "إنشاء روابط YouTube تبدأ التشغيل عند طابع زمني محدد. مثالي لمشاركة اللحظات الدقيقة في الفيديوهات."
+
+msgid "Enter the YouTube video URL."
+msgstr "أدخل رابط فيديو YouTube."
+
+msgid "Enter the timestamp (e.g., 2:30 or 01:15:45)."
+msgstr "أدخل الطابع الزمني (مثال: 2:30 أو 01:15:45)."
+
+msgid "Optionally add a description."
+msgstr "أضف وصفاً اختيارياً."
+
+msgid "Click \"Generate\" to create the timestamped URL."
+msgstr "انقر \"إنشاء\" لإنشاء الرابط الموقت."
+
+msgid "Copy the URL or HTML snippet."
+msgstr "انسخ الرابط أو مقتطف HTML."
+
+msgid "Supports standard YouTube URLs (youtube.com/watch?v=...) and short URLs (youtu.be/...)."
+msgstr "يدعم روابط YouTube القياسية (youtube.com/watch?v=...) والروابط المختصرة (youtu.be/...)."
+
+msgid "Timestamps can be in format: \"2:30\" (2 min 30 sec) or \"01:15:45\" (1 hr 15 min 45 sec)."
+msgstr "يمكن أن تكون الطوابع الزمنية بتنسيق: \"2:30\" (2 دقيقة 30 ثانية) أو \"01:15:45\" (1 ساعة 15 دقيقة 45 ثانية)."
+
+msgid "Generated URLs use the &t= parameter (e.g., &t=150s for 2min 30sec)."
+msgstr "الروابط المُنشأة تستخدم معامل &t= (مثل &t=150s لـ 2 دقيقة 30 ثانية)."
+
+msgid "Input: "2:30" → Output: "&t=150s""
+msgstr "الإدخال: "2:30" ← المخرج: "&t=150s""
+
+msgid "Input: "01:15:00" → Output: "&t=4500s""
+msgstr "الإدخال: "01:15:00" ← المخرج: "&t=4500s""
+
+msgid "Open in new tab by default"
+msgstr "فتح في تبويب جديد افتراضياً"
+
+msgid "Pre-check the \"Open in new tab\" option."
+msgstr "تحديد خيار \"فتح في تبويب جديد\" مسبقاً."
+
+msgid "Validate YouTube domains"
+msgstr "التحقق من نطاقات YouTube"
+
+msgid "Only allow youtube.com and youtu.be URLs."
+msgstr "السماح فقط بروابط youtube.com و youtu.be."
+
+msgid "Timestamp URL generated!"
+msgstr "تم إنشاء رابط مُوقّت!"
+
+msgid "Please enter a valid YouTube URL."
+msgstr "الرجاء إدخال رابط YouTube صحيح."
+
+msgid "Please enter a valid timestamp (e.g., 2:30 or 01:30:45)."
+msgstr "الرجاء إدخال طابع زمني صحيح (مثال: 2:30 أو 01:30:45)."
+
+msgid "YouTube URL"
+msgstr "رابط YouTube"
+
+msgid "https://www.youtube.com/watch?v=..."
+msgstr "https://www.youtube.com/watch?v=..."
+
+msgid "Timestamp"
+msgstr "الطابع الزمني"
+
+msgid "e.g., 2:30 or 01:02:10"
+msgstr "مثال: 2:30 أو 01:02:10"
+
+msgid "Description (optional)"
+msgstr "الوصف (اختياري)"
+
+msgid "Link text for HTML snippet"
+msgstr "نص الرابط لمقتطف HTML"
+
+msgid "Open in new tab"
+msgstr "فتح في تبويب جديد"
+
+msgid "Generated URL"
+msgstr "الرابط المُنشأ"
+
+msgid "HTML Snippet"
+msgstr "مقتطف HTML"
+
+msgid "Copy URL"
+msgstr "نسخ الرابط"
+
+msgid "Copy HTML"
+msgstr "نسخ HTML"
+
+msgid "Enable this feature to use the tool."
+msgstr "قم بتفعيل هذه الميزة لاستخدام الأداة."
+
+msgid "Enabled"
+msgstr "مفعّل"
+
+msgid "Disabled"
+msgstr "معطّل"
+

@@ -43,6 +43,30 @@ class Feature_Wc_Minimum_Order_Amount implements Feature_Interface {
 			'description' => __( 'Enforce minimum order amount at checkout.', 'arbricks' ),
 			'category'    => 'woocommerce',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Prevents customers from completing checkout if their cart total is below a specified minimum amount. Useful for covering shipping costs, ensuring profitability, or encouraging bulk purchases.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Ensure WooCommerce is installed and active', 'arbricks' ),
+					__( 'Enable the feature toggle above', 'arbricks' ),
+					__( 'Set your Minimum Amount (e.g., 50 for currency units)', 'arbricks' ),
+					__( 'Choose Compare Mode: Subtotal (before tax/shipping) or Total (after tax/shipping)', 'arbricks' ),
+					__( 'Customize the error message (use %s as placeholder for the minimum amount)', 'arbricks' ),
+					__( 'Click "Save Changes"', 'arbricks' ),
+					__( 'Test by adding items below minimum to cart and attempting checkout', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'Requires WooCommerce plugin - feature does nothing if WooCommerce is not active', 'arbricks' ),
+					__( 'Subtotal mode: Checks cart subtotal before tax and shipping are added', 'arbricks' ),
+					__( 'Total mode: Checks final total including tax and shipping', 'arbricks' ),
+					__( 'Minimum amount must be numeric - non-numeric values default to 50', 'arbricks' ),
+					__( 'Error message appears both on cart page and during checkout', 'arbricks' ),
+					__( 'Message placeholder %s is automatically replaced with formatted amount (e.g., $50.00)', 'arbricks' ),
+				),
+				'examples' => array(
+					__( 'Minimum Amount: 50 (no currency symbol needed)', 'arbricks' ),
+					__( 'Error Message: "Minimum order is %s. Please add more items."', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -106,7 +130,17 @@ class Feature_Wc_Minimum_Order_Amount implements Feature_Interface {
 		}
 
 		$settings = Options::get_feature_settings( self::id() );
-		$minimum  = ! empty( $settings['minimum_amount'] ) ? floatval( $settings['minimum_amount'] ) : 50;
+		
+		// Validate minimum amount is numeric before using.
+		$minimum = 50; // Default fallback.
+		if ( ! empty( $settings['minimum_amount'] ) && is_numeric( $settings['minimum_amount'] ) ) {
+			$minimum = floatval( $settings['minimum_amount'] );
+			// Ensure minimum is positive.
+			if ( $minimum <= 0 ) {
+				$minimum = 50;
+			}
+		}
+		
 		$mode     = ! empty( $settings['compare_mode'] ) ? $settings['compare_mode'] : 'subtotal';
 		$message  = ! empty( $settings['error_message'] ) ? $settings['error_message'] : __( 'The minimum order amount is %s.', 'arbricks' );
 
@@ -162,4 +196,11 @@ class Feature_Wc_Minimum_Order_Amount implements Feature_Interface {
 			);
 		}
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

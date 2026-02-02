@@ -112,11 +112,19 @@ class Feature_Google_Tag_Manager implements Feature_Interface {
 			return;
 		}
 
-		add_action( 'wp_head', array( $this, 'inject_head_script' ), 1 );
+		// Priority 10 (default) to avoid conflicts with SEO/caching plugins.
+		// GTM scripts work fine at default priority - no need to run super early.
+		add_action( 'wp_head', array( $this, 'inject_head_script' ), 10 );
 
 		if ( ! empty( $settings['inject_noscript'] ) ) {
 			$location = ! empty( $settings['noscript_location'] ) ? $settings['noscript_location'] : 'wp_body_open';
-			add_action( $location, array( $this, 'inject_noscript' ), 1 );
+			// Use default priority for consistency.
+			add_action( $location, array( $this, 'inject_noscript' ), 10 );
+
+			// Add admin notice if wp_body_open is selected but theme doesn't support it.
+			if ( 'wp_body_open' === $location ) {
+				add_action( 'admin_notices', array( $this, 'theme_compatibility_notice' ) );
+			}
 		}
 	}
 
@@ -139,7 +147,7 @@ class Feature_Google_Tag_Manager implements Feature_Interface {
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','<?php echo $gtm_id; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>');</script>
+		})(window,document,'script','dataLayer','<?php echo esc_js( $gtm_id ); ?>');</script>
 		<!-- End Google Tag Manager -->
 		<?php
 	}
@@ -164,4 +172,41 @@ class Feature_Google_Tag_Manager implements Feature_Interface {
 		<!-- End Google Tag Manager (noscript) -->
 		<?php
 	}
+
+	/**
+	 * Display admin notice if theme doesn't support wp_body_open
+	 *
+	 * @return void
+	 */
+	public function theme_compatibility_notice(): void {
+		// Only show on ArBricks settings page.
+		$screen = get_current_screen();
+		if ( ! $screen || 'toplevel_page_arbricks' !== $screen->id ) {
+			return;
+		}
+
+		// Check if theme supports wp_body_open by checking if function exists.
+		if ( ! function_exists( 'wp_body_open' ) || ! did_action( 'wp_body_open' ) ) {
+			?>
+			<div class="notice notice-warning">
+				<p>
+					<strong><?php esc_html_e( 'ArBricks - Google Tag Manager:', 'arbricks' ); ?></strong>
+					<?php
+					esc_html_e(
+						'Your theme may not support the wp_body_open hook. The GTM noscript tag might not display correctly. Consider selecting "Footer" as the noscript location instead.',
+						'arbricks'
+					);
+					?>
+				</p>
+			</div>
+			<?php
+		}
+	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

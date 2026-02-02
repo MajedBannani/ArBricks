@@ -50,6 +50,30 @@ class Feature_Login_Recaptcha implements Feature_Interface {
 			'description' => __( 'Add Google reCAPTCHA v2 checkbox to login form.', 'arbricks' ),
 			'category'    => 'security',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Adds Google reCAPTCHA v2 ("I\'m not a robot" checkbox) to the WordPress login page (wp-login.php) to prevent automated brute force attacks and bot login attempts.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Get free API keys from Google reCAPTCHA: https://www.google.com/recaptcha/admin', 'arbricks' ),
+					__( 'Select "reCAPTCHA v2" and choose "I\'m not a robot Checkbox"', 'arbricks' ),
+					__( 'Add your domain and copy the Site Key and Secret Key', 'arbricks' ),
+					__( 'Enable the feature toggle above', 'arbricks' ),
+					__( 'Paste your Site Key and Secret Key into the fields below', 'arbricks' ),
+					__( 'Optionally customize the error message and timeout', 'arbricks' ),
+					__( 'Click "Save Changes" to activate', 'arbricks' ),
+					__( 'Test by logging out and trying to log in - you should see the reCAPTCHA checkbox', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'External Service: User IP addresses are sent to Google\'s servers for verification (required for reCAPTCHA to work)', 'arbricks' ),
+					__( 'Requires valid API keys - invalid or missing keys will block ALL logins including administrators', 'arbricks' ),
+					__( 'Only protects wp-login.php - does not affect WooCommerce login forms or custom login pages', 'arbricks' ),
+					__( 'Bypass for Admins: When enabled, users with administrator role skip reCAPTCHA verification', 'arbricks' ),
+					__( 'Timeout setting controls how long to wait for Google\'s API response (default 5 seconds)', 'arbricks' ),
+				),
+				'examples' => array(
+					__( 'Site Key format: 6LcExampleKey123ABCdef...', 'arbricks' ),
+					__( 'Secret Key format: 6LcExampleSecret456XYZabc...', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -279,4 +303,11 @@ class Feature_Login_Recaptcha implements Feature_Interface {
 
 		return filter_var( $ip, FILTER_VALIDATE_IP ) ? $ip : '';
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

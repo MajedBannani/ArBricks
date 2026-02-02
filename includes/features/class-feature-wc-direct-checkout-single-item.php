@@ -43,6 +43,24 @@ class Feature_Wc_Direct_Checkout_Single_Item implements Feature_Interface {
 			'description' => __( 'Redirect to checkout and skip cart for single items.', 'arbricks' ),
 			'category'    => 'woocommerce',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Streamlines the buying process by sending customers directly to the checkout page immediately after they add a product to their cart, skipping the cart page entirely. Ideal for stores selling single items or wanting to reduce friction.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Ensure WooCommerce is installed and active.', 'arbricks' ),
+					__( 'Enable the feature toggle above.', 'arbricks' ),
+					__( 'Configure redirect behavior and message suppression settings.', 'arbricks' ),
+					__( 'Optionally enable "Empty Cart Before Adding" to ensure customers only buy one item at a time.', 'arbricks' ),
+					__( 'Click "Save Changes".', 'arbricks' ),
+					__( 'Test by clicking "Add to Cart" on any product; you should land directly on the Checkout page.', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'Requires WooCommerce plugin.', 'arbricks' ),
+					__( 'Redirect to Checkout: Bypasses the cart page after a successful add-to-cart action.', 'arbricks' ),
+					__( 'Empty Cart Before Adding: Automatically clears the current cart before adding the new product. Prevents multi-item orders.', 'arbricks' ),
+					__( 'Suppress Message: Hides the standard "Product added to cart" notice.', 'arbricks' ),
+					__( 'Disable Order Again: Optionally removes the "Order Again" button from order history to maintain focus on current purchases.', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -143,4 +161,11 @@ class Feature_Wc_Direct_Checkout_Single_Item implements Feature_Interface {
 	public function disable_order_again_button(): void {
 		remove_action( 'woocommerce_order_details_after_order_table', 'woocommerce_order_again_button' );
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

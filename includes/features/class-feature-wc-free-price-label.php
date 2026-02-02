@@ -43,6 +43,26 @@ class Feature_Wc_Free_Price_Label implements Feature_Interface {
 			'description' => __( 'Display custom label for products with zero price.', 'arbricks' ),
 			'category'    => 'woocommerce',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Replaces the default price display with custom text (e.g., "Free!", "No Charge", "مجاني") for WooCommerce products that have a price of zero. Perfect for giveaways, free samples, or promotional items.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Ensure WooCommerce is installed and active', 'arbricks' ),
+					__( 'Enable the feature toggle above', 'arbricks' ),
+					__( 'Enter your custom "Free Text Label" (e.g., "Free!", "Gratis", "مجاني")', 'arbricks' ),
+					__( 'Click "Save Changes"', 'arbricks' ),
+					__( 'Set any product price to 0 to see your custom label', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'Requires WooCommerce plugin', 'arbricks' ),
+					__( 'Only affects products with price exactly 0.00 (zero)', 'arbricks' ),
+					__( 'If product is on sale (regular price > 0, sale price = 0), shows strikethrough with free label', 'arbricks' ),
+					__( 'Works on shop pages, single product pages, and widgets', 'arbricks' ),
+				),
+				'examples' => array(
+					__( 'English: "Free!" or "No Charge"', 'arbricks' ),
+					__( 'Arabic: "مجاني" or "بدون تكلفة"', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -108,4 +128,11 @@ class Feature_Wc_Free_Price_Label implements Feature_Interface {
 
 		return $price;
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

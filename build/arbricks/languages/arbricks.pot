@@ -1,0 +1,130 @@
+# Copyright (C) 2024 ArBricks
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: ArBricks 2.0.0\n"
+"Report-Msgid-Bugs-To: https://arbricks.net/\n"
+"POT-Creation-Date: 2026-02-02 04:37:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+
+#. Plugin Name of the plugin
+msgid "ArBricks - بريكس بالعربي"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://arbricks.net/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Professional WordPress toolkit with security features, WooCommerce enhancements, and developer tools. RTL/LTR optimized."
+msgstr ""
+
+#. Author of the plugin
+msgid "Majed | ArBricks"
+msgstr ""
+
+#: arbricks.php:95
+msgid "Security check failed. Please try again."
+msgstr ""
+
+#: includes/class-admin.php:36
+msgid "Manage ArBricks"
+msgstr ""
+
+#: includes/class-admin.php:37
+msgid "ArBricks"
+msgstr ""
+
+#: includes/class-admin.php:98
+msgid "Shortcode copied!"
+msgstr ""
+
+#: includes/class-admin.php:99
+msgid "Failed to copy shortcode."
+msgstr ""
+
+#: includes/class-admin.php:138
+msgid "Settings saved successfully."
+msgstr ""
+
+#: includes/class-admin.php:221
+msgid "Features"
+msgstr ""
+
+#: includes/class-admin.php:222
+msgid "Tools"
+msgstr ""
+
+#: includes/class-admin.php:223
+msgid "Settings"
+msgstr ""
+
+#: includes/class-admin.php:236
+msgid "Security"
+msgstr ""
+
+#: includes/class-admin.php:237
+msgid "WooCommerce"
+msgstr ""
+
+#: includes/class-admin.php:238
+msgid "SEO & Marketing"
+msgstr ""
+
+#: includes/class-admin.php:239
+msgid "Utilities"
+msgstr ""
+
+#: includes/class-admin.php:255
+msgid "Enabled"
+msgstr ""
+
+#: includes/class-admin.php:264
+msgid "Configure"
+msgstr ""
+
+#: includes/class-admin.php:293
+msgid "Save Changes"
+msgstr ""
+
+#: includes/class-admin.php:299
+msgid "Delete all data on uninstall"
+msgstr ""
+
+#: includes/class-admin.php:300
+msgid "If enabled, all plugin data will be permanently deleted when you uninstall the plugin."
+msgstr ""
+
+#: includes/features/class-feature-disable-xmlrpc.php:95
+msgid "XML-RPC is disabled on this site."
+msgstr ""
+
+#: includes/features/class-feature-google-tag-manager.php:189
+msgid "ArBricks - Google Tag Manager:"
+msgstr ""
+
+#: includes/features/class-feature-google-tag-manager.php:191
+msgid "Your theme may not support the wp_body_open hook. The GTM noscript tag might not display correctly. Consider selecting \"Footer\" as the noscript location instead."
+msgstr ""
+
+#: includes/features/class-feature-login-recaptcha.php:81
+msgid "Error message"
+msgstr ""
+
+#: includes/features/class-feature-login-recaptcha.php:196
+msgid "Please verify that you are not a robot."
+msgstr ""
+
+#: includes/features/class-feature-wc-minimum-order-amount.php:129
+msgid "Minimum order amount is %s."
+msgstr ""
+
+#. Note: This is a basic .pot file
+#. For a complete translation template, use WP-CLI:
+#. wp i18n make-pot . languages/arbricks.pot

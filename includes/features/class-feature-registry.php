@@ -80,6 +80,24 @@ class Feature_Registry {
 	 * @return void
 	 */
 	public function register_built_in_features(): void {
+		// Try to get cached feature list.
+		$cached_features = get_transient( 'arbricks_discovered_features' );
+		
+		if ( false !== $cached_features && is_array( $cached_features ) ) {
+			// Use cached list - no filesystem access needed.
+			foreach ( $cached_features as $file => $full_class_name ) {
+				require_once $file;
+				if ( class_exists( $full_class_name ) ) {
+					$feature = new $full_class_name();
+					if ( $feature instanceof Feature_Interface ) {
+						$this->register_feature( $feature );
+					}
+				}
+			}
+			return;
+		}
+
+		// Cache miss - discover features from filesystem.
 		$features_dir = ARBRICKS_PLUGIN_DIR . 'includes/features/';
 		$pattern      = $features_dir . 'class-feature-*.php';
 		$files        = glob( $pattern );
@@ -87,6 +105,8 @@ class Feature_Registry {
 		if ( empty( $files ) || ! is_array( $files ) ) {
 			return;
 		}
+
+		$feature_map = array();
 
 		foreach ( $files as $file ) {
 			require_once $file;
@@ -106,9 +126,15 @@ class Feature_Registry {
 				$feature = new $full_class_name();
 				if ( $feature instanceof Feature_Interface ) {
 					$this->register_feature( $feature );
+					// Store in cache map.
+					$feature_map[ $file ] = $full_class_name;
 				}
 			}
 		}
+
+		// Cache discovered features for 12 hours.
+		// Cache will be invalidated on plugin update via activation hook.
+		set_transient( 'arbricks_discovered_features', $feature_map, 12 * HOUR_IN_SECONDS );
 	}
 
 	/**
@@ -137,4 +163,11 @@ class Feature_Registry {
 			}
 		}
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

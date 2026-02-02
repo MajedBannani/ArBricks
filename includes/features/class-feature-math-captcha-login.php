@@ -43,6 +43,28 @@ class Feature_Math_Captcha_Login implements Feature_Interface {
 			'description' => __( 'Adds a simple math captcha to wp-login.php and WooCommerce My Account login/register forms.', 'arbricks' ),
 			'category'    => 'security',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Adds a simple math question (e.g., "What is 3 + 5?") to login and registration forms to block automated bots. Works on WordPress core login (wp-login.php) and WooCommerce My Account login/register forms.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Enable the feature toggle above', 'arbricks' ),
+					__( 'Click "Save Changes" to activate', 'arbricks' ),
+					__( 'Test by logging out and visiting the login page - you\'ll see the math question', 'arbricks' ),
+					__( 'If WooCommerce is active, also test the My Account login and register forms', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'No configuration needed - works automatically after enabling', 'arbricks' ),
+					__( 'Covers 3 forms: WordPress login, WooCommerce login, WooCommerce registration', 'arbricks' ),
+					__( 'Math questions use random numbers (1-9) each time for better security', 'arbricks' ),
+					__( 'Question text currently in Arabic - works for Arabic-language sites', 'arbricks' ),
+					__( 'No external services used - completely local and privacy-friendly', 'arbricks' ),
+					__( 'Automatically bypassed for XML-RPC, REST API, WP-CLI, and AJAX requests', 'arbricks' ),
+					__( 'More user-friendly than invisible honeypots or reCAPTCHA for non-technical users', 'arbricks' ),
+				),
+				'examples' => array(
+					__( 'Example question: "تحقق بسيط: كم حاصل 7 + 4 ؟" (Simple check: What is 7 + 4?)', 'arbricks' ),
+					__( 'User must type 11 to proceed with login', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -291,4 +313,11 @@ class Feature_Math_Captcha_Login implements Feature_Interface {
 
 		return $errors;
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }
