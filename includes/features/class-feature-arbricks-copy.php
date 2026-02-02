@@ -12,20 +12,21 @@ class Feature_Arbricks_Copy implements Feature_Interface {
     public static function meta(): array {
         return [
             'title'       => __( 'AR Copy to Clipboard', 'arbricks' ),
-            'description' => __( 'نسخ أي نص إلى الحافظة عند الضغط على عنصر يحتوي على data-arbricks-copy.', 'arbricks' ),
+            'description' => __( 'Copy text to clipboard when clicking any element with data-arbricks-copy', 'arbricks' ),
             'category'    => 'tools',
             'help'        => [
-                'summary'  => __( 'Allows you to copy any text to the clipboard by clicking on an HTML element. Great for sharing links, promo codes, or snippets.', 'arbricks' ),
+                'summary'  => __( 'Allows you to copy any text to the clipboard by clicking on an HTML element. This is useful for sharing links, discount codes, or any specific text snippets.', 'arbricks' ),
                 'how_to'   => [
-                    __( 'Add the attribute `data-arbricks-copy="YOUR_TEXT"` to any HTML element (button, span, div).', 'arbricks' ),
-                    __( 'Optionally customize the success and error messages in the settings below.', 'arbricks' ),
+                    __( 'Add the attribute <code>data-arbricks-copy="TEXT"</code> to any HTML element.', 'arbricks' ),
+                    __( 'Customize the success and error messages in the settings below if needed.', 'arbricks' ),
+                    __( 'The element\'s content will change to the success message for 1.5 seconds after a successful copy.', 'arbricks' ),
                 ],
                 'examples' => [
-                    '<code>&lt;button data-arbricks-copy="https://arbricks.net"&gt;Copy Website Link&lt;/button&gt;</code>',
+                    '<code>&lt;button data-arbricks-copy="Your Value Here"&gt;نسخ&lt;/button&gt;</code>',
                 ],
                 'notes'    => [
-                    __( 'This feature requires a secure connection (HTTPS) in most modern browsers.', 'arbricks' ),
-                    __( 'The element\'s content will temporarily change to the success/error message after clicking.', 'arbricks' ),
+                    __( 'This feature relies on the Clipboard API and requires a secure connection (HTTPS) in most modern browsers.', 'arbricks' ),
+                    __( 'If the browser does not support the Clipboard API, the error message will be shown.', 'arbricks' ),
                 ],
             ],
         ];
