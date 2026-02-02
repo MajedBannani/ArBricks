@@ -76,18 +76,28 @@ abstract class Abstract_Snippet implements Snippet_Interface {
 	}
 
 	/**
-	 * Helper: Check if WordPressContext condition is met
+	 * Check if the context condition is met
 	 *
-	 * For snippets that use WFPCore condition builder.
-	 *
-	 * @return bool True if conditions are met.
+	 * @return bool
 	 */
 	protected function check_context_condition() {
-		if ( ! class_exists( '\\WFPCore\\WordPressContext' ) ) {
-			return true; // Default to everywhere if context class not available.
+		$condition = $this->get_context_condition();
+
+		// If no condition set, always return true.
+		if ( empty( $condition ) ) {
+			return true;
 		}
 
-		$wp_context = new \WFPCore\WordPressContext();
-		return $wp_context->is_everywhere();
+		// Simple WordPress conditionals.
+		if ( 'admin' === $condition ) {
+			return is_admin();
+		}
+
+		if ( 'frontend' === $condition ) {
+			return ! is_admin();
+		}
+
+		// Default to true.
+		return true;
 	}
 }

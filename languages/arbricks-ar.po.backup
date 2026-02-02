@@ -1,0 +1,907 @@
+msgid ""
+msgstr "Project-Id-Version: ArBricks 2.0.0\n"
+"Report-Msgid-Bugs-To: https://arbricks.net\n"
+"POT-Creation-Date: 2026-01-31 19:45:00+0000\n"
+"PO-Revision-Date: 2026-01-31 19:45:00+0000\n"
+"Last-Translator: Majed | ArBricks\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+""
+
+msgid "ArBricks Settings"
+msgstr "إعدادات بريكس بالعربي"
+
+msgid "ArBricks"
+msgstr "بريكس بالعربي"
+
+msgid "Shortcode copied!"
+msgstr "تم نسخ الكود المختصر!"
+
+msgid "Failed to copy shortcode."
+msgstr "فشل نسخ الكود المختصر."
+
+msgid "Security check failed. Please try again."
+msgstr "حصل خطأ في التحقق الأمني. حاول مجددًا."
+
+msgid "You do not have permission to access this page."
+msgstr "ليس لديك صلاحية الوصول إلى هذه الصفحة."
+
+msgid "Tools"
+msgstr "أدوات"
+
+msgid "Security"
+msgstr "الأمان"
+
+msgid "SEO"
+msgstr "تحسين محركات البحث"
+
+msgid "WooCommerce"
+msgstr "ووكومرس"
+
+msgid "Settings saved successfully!"
+msgstr "تم حفظ الإعدادات بنجاح!"
+
+msgid "Enable or disable features as needed. Changes take effect immediately after saving."
+msgstr "فعّل أو عطّل الميزات حسب الحاجة. تسري التغييرات فورًا بعد الحفظ."
+
+msgid "Enabled"
+msgstr "مفعّل"
+
+msgid "Disabled"
+msgstr "غير مفعّل"
+
+msgid "Copy Shortcode"
+msgstr "نسخ الكود المختصر"
+
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+msgid "Help"
+msgstr "مساعدة"
+
+msgid "How to use:"
+msgstr "كيفية الاستخدام:"
+
+msgid "Notes:"
+msgstr "ملاحظات:"
+
+msgid "Examples:"
+msgstr "أمثلة:"
+
+msgid "Disable Comments (Sitewide)"
+msgstr "تعطيل التعليقات (على مستوى الموقع)"
+
+msgid "Disable comments everywhere (frontend + admin), remove UI entries, disable comment feeds, and remove REST comments endpoints."
+msgstr "تعطيل التعليقات في كل مكان (الواجهة + لوحة التحكم)، وإزالة عناصرها من الواجهة، وتعطيل خلاصات التعليقات، وإزالة نقاط نهاية تعليقات REST."
+
+msgid "Comments are disabled on this site."
+msgstr "التعليقات معطلة على هذا الموقع."
+
+msgid "Disable XML-RPC"
+msgstr "تعطيل XML-RPC"
+
+msgid "Disable XML-RPC completely and optionally block direct access."
+msgstr "تعطيل XML-RPC بالكامل وحظر الوصول المباشر اختيارياً."
+
+msgid "Block Direct Access"
+msgstr "حظر الوصول المباشر"
+
+msgid "Return 403 when xmlrpc.php is accessed directly."
+msgstr "إرجاع 403 عند الوصول المباشر لـ xmlrpc.php."
+
+msgid "XML-RPC is disabled on this site."
+msgstr "XML-RPC معطّل على هذا الموقع."
+
+msgid "Google Tag Manager"
+msgstr "مدير وسوم جوجل"
+
+msgid "Inject Google Tag Manager scripts into your site."
+msgstr "إدراج سكريبتات مدير وسوم جوجل في موقعك."
+
+msgid "Easily add Google Tag Manager tracking to your WordPress site with automatic code injection."
+msgstr "أضف تتبع مدير وسوم جوجل إلى موقعك في ووردبريس بسهولة مع حقن تلقائي للكود."
+
+msgid "Enable the feature toggle above."
+msgstr "فعّل المفتاح أعلاه."
+
+msgid "Enter your GTM Container ID (format: GTM-XXXXXXX)."
+msgstr "أدخل معرف الحاوية GTM (الصيغة: GTM-XXXXXXX)."
+
+msgid "Choose whether to include noscript tag for non-JS users."
+msgstr "اختر تضمين وسم noscript للمستخدمين بدون JS."
+
+msgid "Select noscript position (body or footer)."
+msgstr "حدد موضع noscript (body أو footer)."
+
+msgid "Click \"Save Changes\" to apply."
+msgstr "اضغط «حفظ التغييرات» للتطبيق."
+
+msgid "Invalid GTM IDs will be rejected - nothing will be injected."
+msgstr "سيتم رفض معرفات GTM غير الصحيحة."
+
+msgid "Code is automatically placed in correct locations (head + body/footer)."
+msgstr "يتم وضع الكود تلقائياً في المواضع الصحيحة."
+
+msgid "Works with all WordPress themes."
+msgstr "يعمل مع كل قوالب ووردبريس."
+
+msgid "Valid ID: GTM-ABC1234"
+msgstr "معرّف صحيح: GTM-ABC1234"
+
+msgid "Invalid ID: GA-123456 (this is Analytics, not Tag Manager)"
+msgstr "معرّف خاطئ: GA-123456 (هذا Analytics وليس Tag Manager)"
+
+msgid "GTM Container ID"
+msgstr "معرف حاوية GTM"
+
+msgid "Enter your GTM ID (e.g., GTM-XXXXXXX)"
+msgstr "أدخل معرف GTM (مثال: GTM-XXXXXXX)"
+
+msgid "GTM-XXXXXXX"
+msgstr "GTM-XXXXXXX"
+
+msgid "Include noscript tag"
+msgstr "تضمين وسم noscript"
+
+msgid "Inject noscript fallback for users without JavaScript."
+msgstr "إدراج بديل noscript للمستخدمين بدون جافاسكربت."
+
+msgid "Noscript Location"
+msgstr "موضع Noscript"
+
+msgid "Where to inject the noscript tag."
+msgstr "أين يتم إدراج وسم noscript."
+
+msgid "Body Open (Recommended)"
+msgstr "بداية Body (موصى به)"
+
+msgid "Footer"
+msgstr "التذييل"
+
+msgid "Head Cleanup"
+msgstr "تنظيف Head"
+
+msgid "Remove unnecessary default tags from wp_head (legacy discovery links, shortlink, and optional REST/feed links)."
+msgstr "إزالة الوسوم الافتراضية غير الضرورية من wp_head (روابط الاكتشاف القديمة، الرابط المختصر، وروابط REST/الخلاصات عند الحاجة)."
+
+msgid "Hide Admin Bar (Non-Admins)"
+msgstr "إخفاء شريط الإدارة (لغير المسؤولين)"
+
+msgid "Hide WordPress admin bar on the front-end for users who do not have a given capability."
+msgstr "إخفاء شريط الإدارة في الواجهة الأمامية للمستخدمين الذين لا يملكون الصلاحية المطلوبة."
+
+msgid "Login Honeypot"
+msgstr "فخ تسجيل الدخول"
+
+msgid "Add hidden honeypot field to block bots on login."
+msgstr "إضافة حقل فخ مخفي لحظر البوتات."
+
+msgid "Field Name"
+msgstr "اسم الحقل"
+
+msgid "Name of the honeypot field"
+msgstr "اسم حقل الفخ"
+
+msgid "Block Message"
+msgstr "رسالة الحظر"
+
+msgid "Message shown to blocked bots"
+msgstr "الرسالة المعروضة للبوتات المحظورة"
+
+msgid "تم حظر محاولة تسجيل الدخول."
+msgstr "تم حظر محاولة تسجيل الدخول."
+
+msgid "Login attempt blocked."
+msgstr "تم حظر محاولة الدخول."
+
+msgid "Enable CSS Hiding"
+msgstr "تفعيل الإخفاء بـ CSS"
+
+msgid "Use CSS to hide honeypot field"
+msgstr "استخدام CSS لإخفاء حقل الفخ"
+
+msgid "Leave this field empty"
+msgstr "اترك هذا الحقل فارغاً"
+
+msgid "Login reCAPTCHA (v2)"
+msgstr "reCAPTCHA لتسجيل الدخول (v2)"
+
+msgid "Add Google reCAPTCHA v2 checkbox to login form."
+msgstr "إضافة مربع Google reCAPTCHA v2 إلى نموذج الدخول."
+
+msgid "Site Key"
+msgstr "مفتاح الموقع"
+
+msgid "Google reCAPTCHA site key (required)"
+msgstr "مفتاح موقع Google reCAPTCHA (مطلوب)"
+
+msgid "Secret Key"
+msgstr "المفتاح السري"
+
+msgid "Google reCAPTCHA secret key (required)"
+msgstr "المفتاح السري لـ Google reCAPTCHA (مطلوب)"
+
+msgid "Error Message"
+msgstr "رسالة الخطأ"
+
+msgid "Message shown on validation failure"
+msgstr "الرسالة المعروضة عند فشل التحقق"
+
+msgid "يرجى التحقق من أنك لست روبوت."
+msgstr ""
+
+msgid "Please verify you are not a robot."
+msgstr "يرجى التحقق من أنك لست روبوت."
+
+msgid "Bypass for Admins"
+msgstr "تجاوز للمسؤولين"
+
+msgid "Skip reCAPTCHA for administrator accounts"
+msgstr "تخطي reCAPTCHA لحسابات المسؤولين"
+
+msgid "Timeout (seconds)"
+msgstr "المهلة الزمنية (ثوانٍ)"
+
+msgid "API request timeout"
+msgstr "انتهاء مهلة طلب API"
+
+msgid "reCAPTCHA site key not configured."
+msgstr "مفتاح موقع reCAPTCHA غير مُعدّ."
+
+msgid "Please complete the reCAPTCHA."
+msgstr "يرجى إكمال reCAPTCHA."
+
+msgid "reCAPTCHA verification failed: %s"
+msgstr "فشل التحقق من reCAPTCHA: %s"
+
+msgid "reCAPTCHA verification failed."
+msgstr "فشل التحقق من reCAPTCHA."
+
+msgid "Math Captcha (Login + Woo My Account)"
+msgstr "كابتشا رياضية (الدخول + حسابي ووكومرس)"
+
+msgid "Adds a simple math captcha to wp-login.php and WooCommerce My Account login/register forms."
+msgstr "يضيف اختبار تحقق رياضي بسيط لصفحة wp-login.php ولنموذجي تسجيل الدخول/التسجيل في صفحة حسابي الخاصة بووكومرس."
+
+msgid "Security verification failed. Please try again."
+msgstr "حصل خطأ في التحقق الأمني. حاول مجددًا."
+
+msgid "Quick check: what is %1$d + %2$d?"
+msgstr "تحقق بسيط: كم حاصل %1$d + %2$d ؟"
+
+msgid "يجب عليك الإجابة على سؤال التحقق."
+msgstr "يجب عليك الإجابة على سؤال التحقق."
+
+msgid "إجابة التحقق غير صحيحة."
+msgstr "إجابة التحقق غير صحيحة."
+
+msgid "Auto Image Meta on Upload"
+msgstr "بيانات الصورة التلقائية عند الرفع"
+
+msgid "Automatically generate title, caption, description, and alt text from filename."
+msgstr "إنشاء العنوان، والتسمية التوضيحية، والوصف، ونص alt تلقائيًا من اسم الملف."
+
+msgid "Apply To"
+msgstr "تطبيق على"
+
+msgid "When to set metadata"
+msgstr "متى يتم تعيين البيانات"
+
+msgid "Only Empty Fields (Safe)"
+msgstr "الحقول الفارغة فقط (آمن)"
+
+msgid "Always Overwrite"
+msgstr "استبدال دائماً"
+
+msgid "Set Title"
+msgstr "تعيين العنوان"
+
+msgid "Auto-generate attachment title"
+msgstr "توليد عنوان المرفق تلقائياً"
+
+msgid "Set Caption"
+msgstr "تعيين التسمية"
+
+msgid "Auto-generate caption (excerpt)"
+msgstr "توليد التسمية التوضيحية تلقائياً"
+
+msgid "Set Description"
+msgstr "تعيين الوصف"
+
+msgid "Auto-generate description (content)"
+msgstr "توليد الوصف تلقائياً"
+
+msgid "Set Alt Text"
+msgstr "تعيين النص البديل"
+
+msgid "Auto-generate alt text"
+msgstr "توليد النص البديل تلقائياً"
+
+msgid "Preserve Case"
+msgstr "الحفاظ على الأحرف"
+
+msgid "Keep original case (recommended for non-Latin text)"
+msgstr "الحفاظ على الأحرف الأصلية (موصى به للنص غير اللاتيني)"
+
+msgid "Clean Separators"
+msgstr "تنظيف الفواصل"
+
+msgid "Replace hyphens/underscores with spaces"
+msgstr "استبدال الشرطات والشرطات السفلية بمسافات"
+
+msgid "Remove WP Version"
+msgstr "إزالة إصدار ووردبريس"
+
+msgid "Remove WordPress version from head and feeds for security."
+msgstr "إزالة إصدار ووردبريس من head والخلاصات للأمان."
+
+msgid "SEO Visibility Warning"
+msgstr "تحذير ظهور SEO"
+
+msgid "Show admin notice if search engines are blocked."
+msgstr "عرض إشعار إداري إذا كانت محركات البحث محظورة."
+
+msgid "Show On"
+msgstr "عرض على"
+
+msgid "Where to display the notice"
+msgstr "أين يتم عرض الإشعار"
+
+msgid "All Admin Pages"
+msgstr "جميع صفحات الإدارة"
+
+msgid "Dashboard Only"
+msgstr "لوحة التحكم فقط"
+
+msgid "Notice Type"
+msgstr "نوع الإشعار"
+
+msgid "Type of admin notice"
+msgstr "نوع الإشعار الإداري"
+
+msgid "Error (Red)"
+msgstr "خطأ (أحمر)"
+
+msgid "Warning (Yellow)"
+msgstr "تحذير (أصفر)"
+
+msgid "Allow Dismissal"
+msgstr "السماح بالإغلاق"
+
+msgid "Let users dismiss the notice"
+msgstr "السماح للمستخدمين بإغلاق الإشعار"
+
+msgid "SEO Warning:"
+msgstr "تحذير SEO:"
+
+msgid "Search engines are currently discouraged from indexing this site."
+msgstr "محركات البحث محظورة حالياً من فهرسة هذا الموقع."
+
+msgid "Change Settings"
+msgstr "تغيير الإعدادات"
+
+msgid "Email Shortcode"
+msgstr "كود مختصر للبريد"
+
+msgid "Provides [email] shortcode for spam-protected mailto links."
+msgstr "يوفر كود [email] المختصر لروابط بريد محمية من السبام."
+
+msgid "Cart Auto Update on Quantity Change"
+msgstr "تحديث السلة تلقائياً عند تغيير الكمية"
+
+msgid "Automatically update cart when quantity changes."
+msgstr "تحديث السلة تلقائياً عند تغيير الكمية."
+
+msgid "Debounce Delay (ms)"
+msgstr "تأخير منع التكرار (مللي ثانية)"
+
+msgid "Milliseconds to wait before updating"
+msgstr "المللي ثانية للانتظار قبل التحديث"
+
+msgid "Hide Update Cart Button"
+msgstr "إخفاء زر تحديث السلة"
+
+msgid "Auto-update replaces manual update"
+msgstr "التحديث التلقائي يستبدل التحديث اليدوي"
+
+msgid "Hide Cart Update Notices"
+msgstr "إخفاء إشعارات تحديث السلة"
+
+msgid "Suppress \"Cart updated\" messages"
+msgstr "إخفاء رسالة «تم تحديث السلة»."
+
+msgid "Direct Checkout (Single Item Flow)"
+msgstr "الدفع المباشر (تدفق عنصر واحد)"
+
+msgid "Redirect to checkout and skip cart for single items."
+msgstr "الانتقال للدفع مباشرة وتخطي السلة للعناصر الفردية."
+
+msgid "Redirect to Checkout"
+msgstr "إعادة التوجيه للدفع"
+
+msgid "Skip cart, go directly to checkout"
+msgstr "تخطي السلة والذهاب مباشرة للدفع"
+
+msgid "Suppress Add-to-Cart Message"
+msgstr "إخفاء رسالة إضافة للسلة"
+
+msgid "Hide \"Product added to cart\" notice"
+msgstr "إخفاء إشعار «تمت إضافة المنتج إلى السلة»."
+
+msgid "Empty Cart Before Adding"
+msgstr "إفراغ السلة قبل الإضافة"
+
+msgid "Clear cart before adding new product"
+msgstr "مسح السلة قبل إضافة منتج جديد"
+
+msgid "Disable Order Again Button"
+msgstr "تعطيل زر الطلب مرة أخرى"
+
+msgid "Remove \"Order Again\" button from orders"
+msgstr "إزالة زر «اطلب مرة أخرى» من الطلبات."
+
+msgid "Free Checkout Minimal Fields"
+msgstr "حقول الدفع المجاني الأقل"
+
+msgid "Reduce checkout fields when cart is free (no payment required)."
+msgstr "تقليل حقول الدفع عندما تكون السلة مجانية."
+
+msgid "Fields to Keep"
+msgstr "الحقول المحفوظة"
+
+msgid "Comma-separated billing field keys (e.g., billing_email,billing_first_name)"
+msgstr "مفاتيح حقول الفوترة مفصولة بفواصل (مثال: billing_email,billing_first_name)."
+
+msgid "Free Price Label (Zero Price)"
+msgstr "تسمية السعر المجاني (سعر صفر)"
+
+msgid "Display custom label for products with zero price."
+msgstr "عرض تسمية مخصصة للمنتجات ذات السعر صفر."
+
+msgid "Free Text Label"
+msgstr "تسمية النص المجاني"
+
+msgid "Text to display for free products"
+msgstr "النص المعروض للمنتجات المجانية"
+
+msgid "Free!"
+msgstr "مجاناً!"
+
+msgid "Minimum Order Amount"
+msgstr "الحد الأدنى لقيمة الطلب"
+
+msgid "Enforce minimum order amount at checkout."
+msgstr "فرض قيمة طلب دنيا عند الدفع."
+
+msgid "Minimum Amount"
+msgstr "الحد الأدنى للمبلغ"
+
+msgid "Minimum order value (numeric)"
+msgstr "قيمة الطلب الدنيا (رقمية)"
+
+msgid "Compare Mode"
+msgstr "وضع المقارنة"
+
+msgid "What to compare against minimum"
+msgstr "ما يتم مقارنته بالحد الأدنى"
+
+msgid "Subtotal (before tax/shipping)"
+msgstr "المجموع الفرعي (قبل الضريبة/الشحن)"
+
+msgid "Total (after tax/shipping)"
+msgstr "المجموع (بعد الضريبة/الشحن)"
+
+msgid "Use %s for amount placeholder"
+msgstr "استخدم %s كبديل للمبلغ"
+
+msgid "The minimum order amount is %s."
+msgstr "الحد الأدنى لقيمة الطلب هو %s."
+
+msgid "Auto WebP Converter (Uploads)"
+msgstr "محول WebP التلقائي (الرفوعات)"
+
+msgid "Automatically convert uploaded JPEG/PNG images to WebP and replace the original file."
+msgstr "تحويل صور JPEG/PNG المرفوعة تلقائيًا إلى WebP واستبدال الملف الأصلي."
+
+msgid "Auto Grid CSS"
+msgstr "نظام شبكة CSS التلقائي"
+
+msgid "Automatic adaptive grid system for responsive layouts."
+msgstr "نظام شبكة تكيفي تلقائي للتخطيطات المستجيبة."
+
+msgid "Blob Effect CSS"
+msgstr "تأثير Blob بـ CSS"
+
+msgid "Animated blob background effect."
+msgstr "تأثير خلفية متحركة blob."
+
+msgid "Grid Layout CSS"
+msgstr "تخطيط شبكة CSS"
+
+msgid "Responsive grid layout system for page design."
+msgstr "نظام تخطيط شبكة مستجيب لتصميم الصفحات."
+
+msgid "Noise Effect"
+msgstr "تأثير التشويش"
+
+msgid "Grainy noise texture overlay effect."
+msgstr "تأثير تراكب نسيج محبب."
+
+
+msgid "CSS Minifier Tool"
+msgstr "أداة تصغير CSS"
+
+msgid "Minify CSS code directly in admin interface."
+msgstr "تصغير كود CSS مباشرة في واجهة الإدارة."
+
+msgid "Quickly minify CSS code to reduce file size and improve performance. Removes comments and whitespace."
+msgstr "قم بتصغير كود CSS بسرعة لتقليل حجم الملف وتحسين الأداء. يزيل التعليقات والمسافات."
+
+msgid "CSS minified successfully!"
+msgstr "تم تصغير CSS بنجاح!"
+
+msgid "Failed to minify CSS."
+msgstr "فشل تصغير CSS."
+
+msgid "Copied to clipboard!"
+msgstr "تم النسخ إلى الحافظة!"
+
+msgid "Failed to copy."
+msgstr "فشل النسخ."
+
+msgid "Please enter CSS to minify."
+msgstr "الرجاء إدخال CSS للتصغير."
+
+msgid "Processing..."
+msgstr "جاري المعالجة..."
+
+msgid "Minify"
+msgstr "تصغير"
+
+msgid "CSS Input"
+msgstr "إدخال CSS"
+
+msgid "Paste CSS here..."
+msgstr "الصق CSS هنا..."
+
+msgid "Minified Output"
+msgstr "المخرج المصغّر"
+
+msgid "Copy Output"
+msgstr "نسخ المخرج"
+
+msgid "Clear"
+msgstr "مسح"
+
+msgid "QR Code Generator Tool"
+msgstr "أداة إنشاء رمز QR"
+
+msgid "Generate QR codes from URLs directly in admin interface."
+msgstr "إنشاء رموز QR من الروابط مباشرة في واجهة الإدارة."
+
+msgid "Easily create QR codes for URLs. Perfect for marketing materials, print materials, and sharing links."
+msgstr "قم بإنشاء رموز QR للروابط بسهولة. مثالي للمواد التسويقية والمطبوعات ومشاركة الروابط."
+
+msgid "Enter the URL you want to encode."
+msgstr "أدخل الرابط الذي تريد ترميزه."
+
+msgid "Choose the QR code size and error correction level."
+msgstr "اختر حجم رمز QR ومستوى تصحيح الأخطاء."
+
+msgid "Download the QR code as PNG image."
+msgstr "تنزيل رمز QR كصورة PNG."
+
+msgid "Higher error correction allows QR codes to work even if partially damaged."
+msgstr "تصحيح الأخطاء العالي يسمح لرموز QR بالعمل حتى لو تضررت جزئياً."
+
+msgid "Larger sizes are better for print materials."
+msgstr "الأحجام الأكبر أفضل للمواد المطبوعة."
+
+msgid "Generated QR codes are temporary and not saved on the server."
+msgstr "رموز QR المُنشأة مؤقتة ولا يتم حفظها على الخادم."
+
+msgid "Error Correction L = Low (~7% recovery)"
+msgstr "تصحيح الأخطاء L = منخفض (~7% استرداد)"
+
+msgid "Error Correction M = Medium (~15% recovery)"
+msgstr "تصحيح الأخطاء M = متوسط (~15% استرداد)"
+
+msgid "Error Correction Q = Quartile (~25% recovery)"
+msgstr "تصحيح الأخطاء Q = ربعي (~25% استرداد)"
+
+msgid "Error Correction H = High (~30% recovery)"
+msgstr "تصحيح الأخطاء H = عالي (~30% استرداد)"
+
+msgid "Default QR Code Size"
+msgstr "حجم رمز QR الافتراضي"
+
+msgid "Default size in pixels for generated QR codes."
+msgstr "الحجم الافتراضي بالبكسل لرموز QR المُنشأة."
+
+msgid "128px (Small)"
+msgstr "128 بكسل (صغير)"
+
+msgid "256px (Medium)"
+msgstr "256 بكسل (متوسط)"
+
+msgid "400px (Large)"
+msgstr "400 بكسل (كبير)"
+
+msgid "512px (Extra Large)"
+msgstr "512 بكسل (كبير جداً)"
+
+msgid "Default Error Correction"
+msgstr "تصحيح الأخطاء الافتراضي"
+
+msgid "Default error correction level."
+msgstr "مستوى تصحيح الأخطاء الافتراضي."
+
+msgid "Low (7%)"
+msgstr "منخفض (7%)"
+
+msgid "Medium (15%)"
+msgstr "متوسط (15%)"
+
+msgid "Quartile (25%)"
+msgstr "ربعي (25%)"
+
+msgid "High (30%)"
+msgstr "عالي (30%)"
+
+msgid "QR code generated!"
+msgstr "تم إنشاء رمز QR!"
+
+msgid "Failed to generate QR code."
+msgstr "فشل إنشاء رمز QR."
+
+msgid "Please enter a valid URL."
+msgstr "الرجاء إدخال رابط صحيح."
+
+msgid "Generating..."
+msgstr "جاري الإنشاء..."
+
+msgid "No QR code to download."
+msgstr "لا يوجد رمز QR للتنزيل."
+
+msgid "Generate"
+msgstr "إنشاء"
+
+msgid "URL"
+msgstr "الرابط"
+
+msgid "https://example.com"
+msgstr "https://example.com"
+
+msgid "Size"
+msgstr "الحجم"
+
+msgid "Error Correction"
+msgstr "تصحيح الأخطاء"
+
+msgid "QR code will appear here"
+msgstr "سيظهر رمز QR هنا"
+
+msgid "Download PNG"
+msgstr "تنزيل PNG"
+
+msgid "Failed to generate QR code. QR library may not be installed."
+msgstr "فشل إنشاء رمز QR. قد لا تكون مكتبة QR مثبتة."
+
+msgid "No URL provided."
+msgstr "لم يتم تقديم رابط."
+
+msgid "WebP Converter Tool"
+msgstr "أداة تحويل WebP"
+
+msgid "Convert images to WebP format for better performance."
+msgstr "تحويل الصور إلى صيغة WebP لأداء أفضل."
+
+msgid "Convert JPEG and PNG images to modern WebP format, reducing file size by up to 30% without losing quality."
+msgstr "تحويل صور JPEG و PNG إلى صيغة WebP الحديثة، مما يقلل حجم الملف بنسبة تصل إلى 30% دون فقدان الجودة."
+
+msgid "Configure conversion mode and quality settings."
+msgstr "قم بتكوين وضع التحويل وإعدادات الجودة."
+
+msgid "Select images from your Media Library."
+msgstr "حدد الصور من مكتبة الوسائط الخاصة بك."
+
+msgid "Check conversion status for each image."
+msgstr "تحقق من حالة التحويل لكل صورة."
+
+msgid "\"Alongside\" mode keeps originals and creates .webp copies."
+msgstr "وضع \"جنباً إلى جنب\" يحتفظ بالأصول وينشئ نسخ .webp."
+
+msgid "\"Replace\" mode deletes originals (use with caution!)."
+msgstr "وضع \"استبدال\" يحذف الأصول (استخدم بحذر!)."
+
+msgid "Quality 85 is recommended for balanced size/quality."
+msgstr "الجودة 85 موصى بها للتوازن بين الحجم والجودة."
+
+msgid "Requires GD or Imagick with WebP support enabled."
+msgstr "يتطلب GD أو Imagick مع تمكين دعم WebP."
+
+msgid "Conversion Mode"
+msgstr "وضع التحويل"
+
+msgid "How to handle converted images."
+msgstr "كيفية التعامل مع الصور المحولة."
+
+msgid "Create WebP alongside original (Recommended)"
+msgstr "إنشاء WebP جنباً إلى جنب مع الأصل (موصى به)"
+
+msgid "Replace original with WebP (Advanced)"
+msgstr "استبدال الأصل بـ WebP (متقدم)"
+
+msgid "WebP Quality"
+msgstr "جودة WebP"
+
+msgid "Quality level (0-100). Higher = better quality, larger file."
+msgstr "مستوى الجودة (0-100). أعلى = جودة أفضل، ملف أكبر."
+
+msgid "Convert JPEG images"
+msgstr "تحويل صور JPEG"
+
+msgid "Enable conversion of JPEG/JPG files."
+msgstr "تمكين تحويل ملفات JPEG/JPG."
+
+msgid "Convert PNG images"
+msgstr "تحويل صور PNG"
+
+msgid "Enable conversion of PNG files."
+msgstr "تمكين تحويل ملفات PNG."
+
+msgid "Keep original files"
+msgstr "الاحتفاظ بالملفات الأصلية"
+
+msgid "Preserve original images after conversion (disabled in Replace mode)."
+msgstr "الحفاظ على الصور الأصلية بعد التحويل (معطل في وضع الاستبدال)."
+
+msgid "Conversion complete!"
+msgstr "اكتمل التحويل!"
+
+msgid "Conversion failed."
+msgstr "فشل التحويل."
+
+msgid "Please select images to convert."
+msgstr "الرجاء تحديد الصور للتحويل."
+
+msgid "WebP format is not supported on this server."
+msgstr "صيغة WebP غير مدعومة على هذا الخادم."
+
+msgid "Select Images"
+msgstr "تحديد الصور"
+
+msgid "Converting..."
+msgstr "جاري التحويل..."
+
+msgid "No images selected"
+msgstr "لم يتم تحديد صور"
+
+msgid "Convert Selected"
+msgstr "تحويل المحدد"
+
+msgid "Select"
+msgstr "تحديد"
+
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+msgid "You do not have permission to perform this action."
+msgstr "ليس لديك إذن لتنفيذ هذا الإجراء."
+
+msgid "WebP is supported on this server."
+msgstr "WebP مدعوم على هذا الخادم."
+
+msgid "WebP is NOT supported on this server. Please enable GD or Imagick with WebP support."
+msgstr "WebP غير مدعوم على هذا الخادم. الرجاء تمكين GD أو Imagick مع دعم WebP."
+
+msgid "No images selected."
+msgstr "لم يتم تحديد صور."
+
+msgid "File not found."
+msgstr "الملف غير موجود."
+
+msgid "File type not allowed for conversion."
+msgstr "نوع الملف غير مسموح بتحويله."
+
+msgid "Converted successfully!"
+msgstr "تم التحويل بنجاح!"
+
+msgid "YouTube Timestamp Generator"
+msgstr "مولد الطوابع الزمنية لـ YouTube"
+
+msgid "Generate timestamped YouTube URLs to link to specific moments in videos."
+msgstr "إنشاء روابط YouTube موقّتة للربط بلحظات محددة في الفيديوهات."
+
+msgid "Create YouTube URLs that start playing at a specific timestamp. Perfect for sharing exact moments in videos."
+msgstr "إنشاء روابط YouTube تبدأ التشغيل عند طابع زمني محدد. مثالي لمشاركة اللحظات الدقيقة في الفيديوهات."
+
+msgid "Enter the YouTube video URL."
+msgstr "أدخل رابط فيديو YouTube."
+
+msgid "Enter the timestamp (e.g., 2:30 or 01:15:45)."
+msgstr "أدخل الطابع الزمني (مثال: 2:30 أو 01:15:45)."
+
+msgid "Optionally add a description."
+msgstr "أضف وصفاً اختيارياً."
+
+msgid "Copy the URL or HTML snippet."
+msgstr "انسخ الرابط أو مقتطف HTML."
+
+msgid "Supports standard YouTube URLs (youtube.com/watch?v=...) and short URLs (youtu.be/...)."
+msgstr "يدعم روابط YouTube القياسية (youtube.com/watch?v=...) والروابط المختصرة (youtu.be/...)."
+
+msgid "Timestamps can be in format: \"2:30\" (2 min 30 sec) or \"01:15:45\" (1 hr 15 min 45 sec)."
+msgstr "يمكن أن تكون الطوابع الزمنية بتنسيق: \"2:30\" (2 دقيقة 30 ثانية) أو \"01:15:45\" (1 ساعة 15 دقيقة 45 ثانية)."
+
+msgid "Generated URLs use the &t= parameter (e.g., &t=150s for 2min 30sec)."
+msgstr "الروابط المُنشأة تستخدم معامل &t= (مثل &t=150s لـ 2 دقيقة 30 ثانية)."
+
+
+
+# === Merged from arbricks-ar_TOOLS.po ===
+
+msgid "Timestamp URL generated!"
+msgstr "تم إنشاء رابط مُوقّت!"
+
+msgid "e.g., 2:30 or 01:02:10"
+msgstr "مثال: 2:30 أو 01:02:10"
+
+msgid "Enable this feature to use the tool."
+msgstr "قم بتفعيل هذه الميزة لاستخدام الأداة."
+
+msgid "YouTube URL"
+msgstr "رابط YouTube"
+
+msgid "HTML Snippet"
+msgstr "مقتطف HTML"
+
+msgid "Please enter a valid YouTube URL."
+msgstr "الرجاء إدخال رابط YouTube صحيح."
+
+msgid "Only allow youtube.com and youtu.be URLs."
+msgstr "السماح فقط بروابط youtube.com و youtu.be."
+
+msgid "Validate YouTube domains"
+msgstr "التحقق من نطاقات YouTube"
+
+msgid "Description (optional)"
+msgstr "الوصف (اختياري)"
+
+msgid "Copy URL"
+msgstr "نسخ الرابط"
+
+msgid "Open in new tab"
+msgstr "فتح في تبويب جديد"
+
+msgid "Input: "2:30" → Output: "&t=150s""
+msgstr "الإدخال: "
+
+msgid "Link text for HTML snippet"
+msgstr "نص الرابط لمقتطف HTML"
+
+msgid "Copy HTML"
+msgstr "نسخ HTML"
+
+msgid "Open in new tab by default"
+msgstr "فتح في تبويب جديد افتراضياً"
+
+msgid "Timestamp"
+msgstr "الطابع الزمني"
+
+msgid "Generated URL"
+msgstr "الرابط المُنشأ"
+
+msgid "Please enter a valid timestamp (e.g., 2:30 or 01:30:45)."
+msgstr "الرجاء إدخال طابع زمني صحيح (مثال: 2:30 أو 01:30:45)."
+
+msgid "https://www.youtube.com/watch?v=..."
+msgstr "https://www.youtube.com/watch?v=..."
+
+msgid "Pre-check the \"Open in new tab\" option."
+msgstr "تحديد خيار \"
+

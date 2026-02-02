@@ -1,0 +1,87 @@
+/* QR Code Generator Tool Styles */
+
+.arbricks-tool-qr-generator {
+	margin-block-start: 1rem;
+	padding: 1rem;
+	background: #f8f9fa;
+	border-radius: 4px;
+}
+
+.arbricks-tool-qr-generator .tool-section {
+	margin-block-end: 1.5rem;
+}
+
+.arbricks-tool-qr-generator label {
+	display: block;
+	margin-block-end: 0.5rem;
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.arbricks-tool-qr-generator input[type="url"],
+.arbricks-tool-qr-generator select {
+	width: 100%;
+	max-width: 400px;
+	padding: 0.5rem;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+}
+
+.arbricks-tool-qr-generator input[type="url"]:focus {
+	border-color: #2271b1;
+	outline: 2px solid #2271b1;
+	outline-offset: 0;
+}
+
+.arbricks-tool-qr-generator .qr-preview {
+	margin-block-start: 1rem;
+	padding: 1rem;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	text-align: center;
+	min-height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.arbricks-tool-qr-generator .qr-preview img {
+	max-width: 100%;
+	height: auto;
+}
+
+.arbricks-tool-qr-generator .qr-preview.empty::before {
+	content: attr(data-placeholder);
+	color: #8c8f94;
+	font-style: italic;
+}
+
+.arbricks-tool-qr-generator .tool-actions {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	margin-block-start: 1rem;
+}
+
+.arbricks-tool-qr-generator .tool-notice {
+	margin-block-start: 1rem;
+	padding: 0.75rem 1rem;
+	border-inline-start: 4px solid;
+	border-radius: 4px;
+	display: none;
+}
+
+.arbricks-tool-qr-generator .tool-notice.success {
+	display: block;
+	background: #edfaef;
+	border-color: #00a32a;
+	color: #00a32a;
+}
+
+.arbricks-tool-qr-generator .tool-notice.error {
+	display: block;
+	background: #fcf0f1;
+	border-color: #d63638;
+	color: #d63638;
+}

@@ -43,6 +43,13 @@ class Plugin {
 	public $snippet_registry;
 
 	/**
+	 * Feature Registry instance
+	 *
+	 * @var Features\Feature_Registry
+	 */
+	public $feature_registry;
+
+	/**
 	 * Get singleton instance
 	 *
 	 * @return Plugin
@@ -79,10 +86,9 @@ class Plugin {
 		require_once ARBRICKS_PLUGIN_DIR . 'includes/snippets/abstract-snippet.php';
 		require_once ARBRICKS_PLUGIN_DIR . 'includes/snippets/class-snippet-registry.php';
 
-		// Load WFPCore helper if exists.
-		if ( file_exists( ARBRICKS_PLUGIN_DIR . 'WFPCore/WordPressContext.php' ) ) {
-			require_once ARBRICKS_PLUGIN_DIR . 'WFPCore/WordPressContext.php';
-		}
+		// Feature system.
+		require_once ARBRICKS_PLUGIN_DIR . 'includes/features/interface-feature.php';
+		require_once ARBRICKS_PLUGIN_DIR . 'includes/features/class-feature-registry.php';
 	}
 
 	/**
@@ -94,8 +100,8 @@ class Plugin {
 		// Initialize components.
 		add_action( 'init', array( $this, 'init_components' ), 0 );
 
-		// Apply snippets after all plugins loaded.
-		add_action( 'plugins_loaded', array( $this, 'apply_snippets' ), 20 );
+		// Apply snippets on init (after components, before content processing).
+		add_action( 'init', array( $this, 'apply_snippets' ), 10 );
 	}
 
 	/**
@@ -112,18 +118,50 @@ class Plugin {
 		// Initialize snippet registry.
 		$this->snippet_registry = new Snippets\Snippet_Registry();
 		$this->snippet_registry->register_built_in_snippets();
+
+		// Initialize feature registry.
+		$this->feature_registry = new Features\Feature_Registry();
+		$this->feature_registry->register_built_in_features();
 	}
 
 	/**
 	 * Apply enabled snippets
 	 *
-	 * Called after plugins_loaded to ensure all WordPress functions are available.
+	 * Called on init to ensure shortcodes are registered before content is processed.
 	 *
 	 * @return void
 	 */
 	public function apply_snippets() {
+		// Apply snippets.
 		if ( null !== $this->snippet_registry ) {
 			$this->snippet_registry->apply_enabled_snippets();
+
+			// Debug logging in WP_DEBUG mode.
+			if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+				$enabled = Options::get_enabled();
+				foreach ( $enabled as $snippet_id => $is_enabled ) {
+					if ( $is_enabled ) {
+						$shortcode_map = array(
+							'qr_generator'      => 'qr-generator',
+							'webp_converter'    => 'webp-converter',
+							'youtube_timestamp' => 'youtube-generator',
+							'css_minifier'      => 'css-minifier',
+						);
+						
+						if ( isset( $shortcode_map[ $snippet_id ] ) ) {
+							$tag = $shortcode_map[ $snippet_id ];
+							$exists = shortcode_exists( $tag );
+							// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+							error_log( sprintf( '[ArBricks] Shortcode [%s] registered: %s', $tag, $exists ? 'YES' : 'NO' ) );
+						}
+					}
+				}
+			}
+		}
+
+		// Apply features.
+		if ( null !== $this->feature_registry ) {
+			$this->feature_registry->apply_enabled_features();
 		}
 	}
 
@@ -142,7 +180,6 @@ class Plugin {
 	 * @return void
 	 */
 	public static function activate() {
-		// Trigger migration if needed.
 		Options::get_all();
 
 		// Flush rewrite rules if needed in future.

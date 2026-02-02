@@ -1,0 +1,687 @@
+<?php
+/**
+ * Admin interface and settings page
+ *
+ * Handles admin menu, settings page rendering, and form processing.
+ *
+ * @package ArBricks
+ * @since 2.0.0
+ */
+
+namespace ArBricks;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Class Admin
+ *
+ * Manages admin interface and settings.
+ */
+class Admin {
+
+	/**
+	 * Settings page slug
+	 *
+	 * @var string
+	 */
+	const PAGE_SLUG = 'arbricks-settings';
+
+	/**
+	 * Capability required to access settings
+	 *
+	 * @var string
+	 */
+	const REQUIRED_CAPABILITY = 'manage_options';
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		add_action( 'admin_menu', array( $this, 'add_admin_menu' ) );
+		add_action( 'admin_init', array( $this, 'handle_settings_save' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_assets' ) );
+	}
+
+	/**
+	 * Add admin menu page
+	 *
+	 * @return void
+	 */
+	public function add_admin_menu() {
+		add_menu_page(
+			__( 'ArBricks Settings', 'arbricks' ),
+			__( 'ArBricks', 'arbricks' ),
+			self::REQUIRED_CAPABILITY,
+			self::PAGE_SLUG,
+			array( $this, 'render_settings_page' ),
+			'dashicons-admin-generic',
+			80
+		);
+	}
+
+	/**
+	 * Enqueue admin assets
+	 *
+	 * @param string $hook Current admin page hook.
+	 * @return void
+	 */
+	public function enqueue_admin_assets( $hook ) {
+		// Only load on our settings page.
+		if ( 'toplevel_page_' . self::PAGE_SLUG !== $hook ) {
+			return;
+		}
+
+		// Enqueue admin CSS.
+		wp_enqueue_style(
+			'arbricks-admin',
+			ARBRICKS_PLUGIN_URL . 'assets/css/admin.css',
+			array(),
+			ARBRICKS_VERSION
+		);
+
+		// Admin scripts.
+		wp_enqueue_script(
+			'arbricks-admin',
+			ARBRICKS_PLUGIN_URL . 'assets/js/admin.js',
+			array( 'jquery' ),
+			ARBRICKS_VERSION,
+			true
+		);
+
+		// Accordion toggle script.
+		wp_enqueue_script(
+			'arbricks-admin-accordion',
+			ARBRICKS_PLUGIN_URL . 'assets/js/admin-accordion.js',
+			array(),
+			ARBRICKS_VERSION,
+			true
+		);
+
+		// Localize for shortcode copy functionality and AJAX.
+		wp_localize_script(
+			'arbricks-admin',
+			'arbricksAdmin',
+			array(
+				'copySuccess' => __( 'Shortcode copied!', 'arbricks' ),
+				'copyError'   => __( 'Failed to copy shortcode.', 'arbricks' ),
+				'ajaxUrl'     => admin_url( 'admin-ajax.php' ),
+				'nonce'       => wp_create_nonce( 'arbricks_tools_nonce' ),
+			)
+		);
+
+		// Conditionally enqueue tool-specific assets for enabled features.
+		$this->enqueue_tool_assets();
+	}
+
+	/**
+	 * Handle settings form submission
+	 *
+	 * @return void
+	 */
+	public function handle_settings_save() {
+		// Check if form was submitted.
+		if ( ! isset( $_POST['arbricks_save_settings'] ) ) {
+			return;
+		}
+
+		// Verify nonce.
+		if ( ! isset( $_POST['arbricks_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['arbricks_nonce'] ) ), 'arbricks_save_settings' ) ) {
+			wp_die( esc_html__( 'Security check failed. Please try again.', 'arbricks' ) );
+		}
+
+		// Check user capability.
+		if ( ! current_user_can( self::REQUIRED_CAPABILITY ) ) {
+			wp_die( esc_html__( 'You do not have permission to access this page.', 'arbricks' ) );
+		}
+
+		$plugin = Plugin::instance();
+		$submitted_snippets = isset( $_POST['snippets'] ) && is_array( $_POST['snippets'] ) ? $_POST['snippets'] : array();
+
+		// Build new enabled states for BOTH snippets AND features.
+		$new_states = array();
+
+		// Process snippets from snippet_registry.
+		if ( null !== $plugin->snippet_registry ) {
+			foreach ( $plugin->snippet_registry->get_all_snippets() as $snippet ) {
+				$snippet_id = $snippet->get_id();
+				$new_states[ $snippet_id ] = isset( $submitted_snippets[ $snippet_id ] );
+			}
+		}
+
+		// Process features from feature_registry.
+		if ( null !== $plugin->feature_registry ) {
+			foreach ( $plugin->feature_registry->get_all_features() as $feature ) {
+				$feature_id = $feature::id();
+				$new_states[ $feature_id ] = isset( $submitted_snippets[ $feature_id ] );
+			}
+		}
+
+		// Debug logging (temporary).
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+			error_log( '[ArBricks Save Debug] Total items saved: ' . count( $new_states ) );
+			error_log( '[ArBricks Save Debug] Enabled items: ' . count( array_filter( $new_states ) ) );
+		}
+
+		// Save all states at once.
+		Options::set_enabled_bulk( $new_states );
+
+		// Clear cache.
+		Options::clear_cache();
+
+		// Redirect with success message.
+		wp_safe_redirect(
+			add_query_arg(
+				array(
+					'page'    => self::PAGE_SLUG,
+					'updated' => 'true',
+				),
+				admin_url( 'admin.php' )
+			)
+		);
+		exit;
+	}
+
+	/**
+	 * Get translated category label
+	 *
+	 * @param string $category Category slug.
+	 * @return string Translated category label.
+	 */
+	private function get_category_label( string $category ): string {
+		$labels = array(
+			'tools'       => __( 'Tools', 'arbricks' ),
+			'styles'      => __( 'Styles', 'arbricks' ),
+			'security'    => __( 'Security', 'arbricks' ),
+			'seo'         => __( 'SEO', 'arbricks' ),
+			'woocommerce' => __( 'WooCommerce', 'arbricks' ),
+			'media'       => __( 'Media', 'arbricks' ),
+			'general'     => __( 'General', 'arbricks' ),
+		);
+
+		return isset( $labels[ $category ] ) ? $labels[ $category ] : ucfirst( $category );
+	}
+
+	/**
+	 * Get feature metadata safely
+	 *
+	 * @param object|string $feature Feature instance or class name.
+	 * @return array Feature metadata.
+	 */
+	private function get_feature_meta( $feature ): array {
+		try {
+			if ( method_exists( $feature, 'meta' ) ) {
+				return $feature::meta();
+			}
+		} catch ( \Exception $e ) {
+			if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+				error_log( '[ArBricks] Failed to get meta for feature: ' . $e->getMessage() );
+			}
+		}
+
+		return array(
+			'title'       => '',
+			'description' => '',
+			'category'    => 'general',
+		);
+	}
+
+	/**
+	 * Group items by category
+	 *
+	 * @param array $items All items (snippets + features).
+	 * @return array Grouped items.
+	 */
+	private function group_items_by_category( array $items ): array {
+		$grouped = array();
+
+		foreach ( $items as $item ) {
+			$category = $item['category'] ?? 'general';
+
+			if ( ! isset( $grouped[ $category ] ) ) {
+				$grouped[ $category ] = array();
+			}
+
+			$grouped[ $category ][] = $item;
+		}
+
+		// Sort categories in a specific order.
+		$order = array( 'tools', 'styles', 'security', 'seo', 'woocommerce', 'media', 'general' );
+		$sorted = array();
+
+		foreach ( $order as $cat ) {
+			if ( isset( $grouped[ $cat ] ) ) {
+				$sorted[ $cat ] = $grouped[ $cat ];
+			}
+		}
+
+		// Add any remaining categories not in the order.
+		foreach ( $grouped as $cat => $items_list ) {
+			if ( ! isset( $sorted[ $cat ] ) ) {
+				$sorted[ $cat ] = $items_list;
+			}
+		}
+
+		return $sorted;
+	}
+
+	/**
+	 * Render tool-specific UI
+	 *
+	 * @param string $feature_id Feature ID.
+	 * @return void
+	 */
+	private function render_tool_ui( string $feature_id ): void {
+		switch ( $feature_id ) {
+			case 'qr_generator_tool':
+				$this->render_qr_tool_ui();
+				break;
+		}
+	}
+
+	/**
+	 * Render QR Code Generator tool UI
+	 *
+	 * @return void
+	 */
+	private function render_qr_tool_ui(): void {
+		?>
+		<div class="arbricks-tool-ui arbricks-tool-qr-generator">
+			<div class="tool-content">
+				<div class="form-row">
+					<label for="qr-url-input"><?php esc_html_e( 'URL to encode:', 'arbricks' ); ?></label>
+					<input type="text" id="qr-url-input" class="regular-text" placeholder="https://example.com">
+				</div>
+
+				<div class="form-row form-row-inline">
+					<div class="form-col">
+						<label for="qr-size-select"><?php esc_html_e( 'Size:', 'arbricks' ); ?></label>
+						<select id="qr-size-select">
+							<option value="128">128px</option>
+							<option value="256" selected>256px</option>
+							<option value="400">400px</option>
+							<option value="512">512px</option>
+						</select>
+					</div>
+					<div class="form-col">
+						<label for="qr-ecc-select"><?php esc_html_e( 'Error Correction:', 'arbricks' ); ?></label>
+						<select id="qr-ecc-select">
+							<option value="L">Low (7%)</option>
+							<option value="M" selected>Medium (15%)</option>
+							<option value="Q">Quartile (25%)</option>
+							<option value="H">High (30%)</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<button type="button" id="qr-generate-btn" class="button button-primary">
+						<?php esc_html_e( 'Generate QR Code', 'arbricks' ); ?>
+					</button>
+					<button type="button" id="qr-download-btn" class="button" style="display:none;">
+						<?php esc_html_e( 'Download PNG', 'arbricks' ); ?>
+					</button>
+				</div>
+
+				<div class="qr-preview" style="margin-top: 20px;"></div>
+				<div class="tool-notice" style="display:none;"></div>
+			</div>
+		</div>
+		<?php
+	}
+
+
+
+	/**
+	 * Render YouTube Timestamp tool UI
+	 *
+
+	/**
+	 * Render settings page
+	 *
+	 * @return void
+	 */
+	public function render_settings_page() {
+		// Check user capability.
+		if ( ! current_user_can( self::REQUIRED_CAPABILITY ) ) {
+			wp_die( esc_html__( 'You do not have permission to access this page.', 'arbricks' ) );
+		}
+
+		$plugin = Plugin::instance();
+		$all_items = array();
+
+		// Get snippets from registry.
+		if ( null !== $plugin->snippet_registry ) {
+			foreach ( $plugin->snippet_registry->get_all_snippets() as $snippet ) {
+				$all_items[] = array(
+					'type'        => 'snippet',
+					'id'          => $snippet->get_id(),
+					'label'       => $snippet->get_label(),
+					'description' => $snippet->get_description(),
+					'category'    => $snippet->get_category(),
+					'object'      => $snippet,
+				);
+			}
+		}
+
+		// Get features from registry.
+		if ( null !== $plugin->feature_registry ) {
+			foreach ( $plugin->feature_registry->get_all_features() as $feature ) {
+				$meta = $this->get_feature_meta( $feature );
+				$all_items[] = array(
+					'type'        => 'feature',
+					'id'          => $feature::id(),
+					'label'       => $meta['title'] ?? '',
+					'description' => $meta['description'] ?? '',
+					'category'    => $meta['category'] ?? 'general',
+					'object'      => $feature,
+				);
+			}
+		}
+
+		// Debug logging (temporary).
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+			error_log( '[ArBricks Accordion Debug] Total items: ' . count( $all_items ) );
+		}
+
+		// Group by category.
+		$categorized = $this->group_items_by_category( $all_items );
+
+		// Debug logging (temporary).
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+			error_log( '[ArBricks Accordion Debug] Categories: ' . implode( ', ', array_keys( $categorized ) ) );
+			foreach ( $categorized as $cat => $items ) {
+				error_log( "[ArBricks Accordion Debug] Category '$cat': " . count( $items ) . ' items' );
+			}
+		}
+
+		// Get enabled states.
+		$enabled = Options::get_enabled();
+
+		// Show success message if updated.
+		$updated = isset( $_GET['updated'] ) && 'true' === $_GET['updated'];
+
+		?>
+		<div class="wrap arbricks-admin-wrap">
+			<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
+
+			<?php if ( $updated ) : ?>
+				<div class="notice notice-success is-dismissible">
+					<p><?php esc_html_e( 'Settings saved successfully!', 'arbricks' ); ?></p>
+				</div>
+			<?php endif; ?>
+
+			<p class="arbricks-intro">
+				<?php esc_html_e( 'Enable or disable features as needed. Changes take effect immediately after saving.', 'arbricks' ); ?>
+			</p>
+
+
+			<form method="post" action="">
+				<?php wp_nonce_field( 'arbricks_save_settings', 'arbricks_nonce' ); ?>
+				<input type="hidden" name="arbricks_save_settings" value="1">
+
+				<div class="arbricks-accordion" data-arbricks-accordion>
+					<?php foreach ( $categorized as $category => $category_items ) : 
+						$count = count( $category_items );
+						$safe_category = sanitize_title( $category );
+						$panel_id = 'arbricks-acc-panel-' . esc_attr( $safe_category );
+						$btn_id = 'arbricks-acc-btn-' . esc_attr( $safe_category );
+					?>
+						<div class="arbricks-accordion__item" data-category="<?php echo esc_attr( $safe_category ); ?>">
+							<h2 class="arbricks-accordion__heading">
+								<button class="arbricks-accordion__btn"
+										type="button"
+										id="<?php echo esc_attr( $btn_id ); ?>"
+										aria-expanded="false"
+										aria-controls="<?php echo esc_attr( $panel_id ); ?>">
+									<span class="arbricks-accordion__title">
+										<?php echo esc_html( $this->get_category_label( $category ) ); ?>
+									</span>
+									<span class="arbricks-accordion__meta">
+										<?php
+										printf(
+											esc_html( _n( '%d feature', '%d features', $count, 'arbricks' ) ),
+											(int) $count
+										);
+										?>
+									</span>
+									<span class="arbricks-accordion__icon" aria-hidden="true"></span>
+								</button>
+							</h2>
+							<div class="arbricks-accordion__panel"
+								 id="<?php echo esc_attr( $panel_id ); ?>"
+								 role="region"
+								 aria-labelledby="<?php echo esc_attr( $btn_id ); ?>"
+								 hidden>
+								<div class="arbricks-cards-grid">
+									<?php foreach ( $category_items as $item ) : ?>
+									<?php
+									$item_id = $item['id'];
+									$is_enabled = ! empty( $enabled[ $item_id ] );
+									$has_shortcode = false;
+
+									// Check if item has shortcode (legacy snippets only).
+									if ( 'snippet' === $item['type'] ) {
+										$has_shortcode = $this->snippet_has_shortcode( $item_id );
+									}
+
+									// Get helper content for features
+									$help_content = null;
+									$settings_schema = array();
+									if ( 'feature' === $item['type'] ) {
+										$feature = $item['object'];
+										$meta = $this->get_feature_meta( $feature );
+										$help_content = $meta['help'] ?? null;
+										
+										// Get settings schema if feature has method
+										if ( method_exists( $feature, 'get_settings_schema' ) ) {
+											$settings_schema = $feature->get_settings_schema();
+										}
+									}
+
+									// Generate unique IDs for this card's helper accordion
+									$help_id = 'help-' . sanitize_key( $item_id );
+									$help_btn_id = 'help-btn-' . sanitize_key( $item_id );
+									$help_panel_id = 'help-panel-' . sanitize_key( $item_id );
+									?>
+									<div class="arbricks-snippet-card <?php echo $is_enabled ? 'is-enabled' : 'is-disabled'; ?>">
+										<div class="arbricks-snippet-header">
+											<h3 class="arbricks-snippet-title"><?php echo esc_html( $item['label'] ); ?></h3>
+											<label class="arbricks-toggle">
+												<input 
+													type="checkbox" 
+													name="snippets[<?php echo esc_attr( $item_id ); ?>]" 
+													value="1" 
+													<?php checked( $is_enabled ); ?>
+												>
+												<span class="arbricks-toggle-slider"></span>
+											</label>
+										</div>
+										
+										<p class="arbricks-snippet-description">
+											<?php echo esc_html( $item['description'] ); ?>
+										</p>
+
+										<?php if ( $is_enabled && ! empty( $settings_schema ) ) : ?>
+											<div class="arbricks-feature-settings">
+												<?php foreach ( $settings_schema as $key => $field ) : ?>
+													<div class="arbricks-setting-field">
+														<label for="<?php echo esc_attr( $item_id . '_' . $key ); ?>">
+															<?php echo esc_html( $field['label'] ?? '' ); ?>
+														</label>
+														<?php if ( ! empty( $field['description'] ) ) : ?>
+															<p class="description"><?php echo esc_html( $field['description'] ); ?></p>
+														<?php endif; ?>
+														
+														<?php if ( 'select' === ( $field['type'] ?? '' ) ) : ?>
+															<select 
+																name="arbricks_settings[<?php echo esc_attr( $item_id ); ?>][<?php echo esc_attr( $key ); ?>]"
+																id="<?php echo esc_attr( $item_id . '_' . $key ); ?>"
+															>
+																<?php foreach ( $field['options'] ?? array() as $opt_value => $opt_label ) : ?>
+																	<option value="<?php echo esc_attr( $opt_value ); ?>">
+																		<?php echo esc_html( $opt_label ); ?>
+																	</option>
+																<?php endforeach; ?>
+															</select>
+														<?php elseif ( 'text' === ( $field['type'] ?? '' ) ) : ?>
+															<input 
+																type="text"
+																name="arbricks_settings[<?php echo esc_attr( $item_id ); ?>][<?php echo esc_attr( $key ); ?>]"
+																id="<?php echo esc_attr( $item_id . '_' . $key ); ?>"
+																class="regular-text"
+															>
+														<?php endif; ?>
+													</div>
+												<?php endforeach; ?>
+											</div>
+								<?php endif; ?>
+
+								<?php
+								// Render tool-specific UI for enabled features that are tools
+								if ( $is_enabled && 'feature' === $item['type'] && strpos( $item_id, '_tool' ) !== false ) {
+									$this->render_tool_ui( $item_id );
+								}
+								?>
+
+										<?php if ( $help_content ) : ?>
+											<div class="arbricks-card-helper" data-arbricks-card-help>
+												<button 
+													type="button"
+													class="arbricks-helper-toggle"
+													id="<?php echo esc_attr( $help_btn_id ); ?>"
+													aria-expanded="false"
+													aria-controls="<?php echo esc_attr( $help_panel_id ); ?>"
+												>
+													<span class="dashicons dashicons-editor-help"></span>
+													<?php esc_html_e( 'Help', 'arbricks' ); ?>
+												</button>
+												<div 
+													class="arbricks-helper-panel"
+													id="<?php echo esc_attr( $help_panel_id ); ?>"
+													role="region"
+													aria-labelledby="<?php echo esc_attr( $help_btn_id ); ?>"
+													hidden
+												>
+													<?php if ( ! empty( $help_content['summary'] ) ) : ?>
+														<p><strong><?php echo esc_html( $help_content['summary'] ); ?></strong></p>
+													<?php endif; ?>
+
+													<?php if ( ! empty( $help_content['how_to'] ) ) : ?>
+														<h4><?php esc_html_e( 'How to use:', 'arbricks' ); ?></h4>
+														<ol>
+															<?php foreach ( $help_content['how_to'] as $step ) : ?>
+																<li><?php echo esc_html( $step ); ?></li>
+															<?php endforeach; ?>
+														</ol>
+													<?php endif; ?>
+
+													<?php if ( ! empty( $help_content['notes'] ) ) : ?>
+														<h4><?php esc_html_e( 'Notes:', 'arbricks' ); ?></h4>
+														<ul>
+															<?php foreach ( $help_content['notes'] as $note ) : ?>
+																<li><?php echo esc_html( $note ); ?></li>
+															<?php endforeach; ?>
+														</ul>
+													<?php endif; ?>
+
+													<?php if ( ! empty( $help_content['examples'] ) ) : ?>
+														<h4><?php esc_html_e( 'Examples:', 'arbricks' ); ?></h4>
+														<ul>
+															<?php foreach ( $help_content['examples'] as $example ) : ?>
+																<li><?php echo esc_html( $example ); ?></li>
+															<?php endforeach; ?>
+														</ul>
+													<?php endif; ?>
+												</div>
+											</div>
+										<?php endif; ?>
+
+										<div class="arbricks-snippet-footer">
+											<span class="arbricks-status-badge">
+												<?php
+												echo $is_enabled
+													? esc_html__( 'Enabled', 'arbricks' )
+													: esc_html__( 'Disabled', 'arbricks' );
+												?>
+											</span>
+
+											<?php if ( $is_enabled && $has_shortcode ) : ?>
+												<button 
+													type="button" 
+													class="button button-small arbricks-copy-shortcode" 
+													data-shortcode="<?php echo esc_attr( $this->get_shortcode_for_snippet( $item_id ) ); ?>"
+												>
+													<span class="dashicons dashicons-clipboard"></span>
+													<?php esc_html_e( 'Copy Shortcode', 'arbricks' ); ?>
+												</button>
+											<?php endif; ?>
+										</div>
+									</div>
+								<?php endforeach; ?>
+								</div>
+							</div>
+						</div>
+					<?php endforeach; ?>
+				</div>
+
+				<?php submit_button( __( 'Save Changes', 'arbricks' ), 'primary', 'submit', true ); ?>
+			</form>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Categorize snippets by their category
+	 *
+	 * @param array $snippets Array of snippet objects.
+	 * @return array Categorized snippets.
+	 */
+	private function categorize_snippets( $snippets ) {
+		$categorized = array(
+			'tools'  => array(),
+			'styles' => array(),
+			'other'  => array(),
+		);
+
+		foreach ( $snippets as $snippet ) {
+			$category = $snippet->get_category();
+			if ( ! isset( $categorized[ $category ] ) ) {
+				$categorized[ $category ] = array();
+			}
+			$categorized[ $category ][] = $snippet;
+		}
+
+		// Remove empty categories.
+		return array_filter( $categorized );
+	}
+
+	/**
+	 * Check if snippet has a shortcode
+	 *
+	 * @param string $snippet_id Snippet ID.
+	 * @return bool True if has shortcode.
+	 */
+	private function snippet_has_shortcode( $snippet_id ) {
+		$shortcode_snippets = array( 'qr_generator', 'webp_converter', 'youtube_timestamp', 'css_minifier' );
+		return in_array( $snippet_id, $shortcode_snippets, true );
+	}
+
+	/**
+	 * Get shortcode for snippet
+	 *
+	 * @param string $snippet_id Snippet ID.
+	 * @return string Shortcode.
+	 */
+	private function get_shortcode_for_snippet( $snippet_id ) {
+		$shortcodes = array(
+			'qr_generator'      => '[qr-generator]',
+			'webp_converter'    => '[webp-converter]',
+			'youtube_timestamp' => '[youtube-generator]',
+			'css_minifier'      => '[css-minifier]',
+		);
+
+		return isset( $shortcodes[ $snippet_id ] ) ? $shortcodes[ $snippet_id ] : '';
+	}
+}

@@ -87,6 +87,34 @@
 
 			tempInput.remove();
 		}
+
+		// Card Helper Accordion (INNER accordion - inside feature cards)
+		// Uses unique selectors to avoid conflict with category accordion
+		const $helperToggles = $('.arbricks-helper-toggle');
+		
+		if (window.console && window.console.log) {
+			console.log('[ArBricks] Helper accordion init: found ' + $helperToggles.length + ' toggles');
+		}
+		
+		$helperToggles.on('click', function () {
+			const $toggle = $(this);
+			const panelId = $toggle.attr('aria-controls');
+			const $panel = $('#' + panelId);
+			const isExpanded = $toggle.attr('aria-expanded') === 'true';
+
+			if (window.console && window.console.log) {
+				console.log('[ArBricks] Helper toggle clicked, panel found:', $panel.length, 'ID:', panelId);
+			}
+
+			// Toggle visibility using hidden attribute (matches category accordion approach)
+			if (isExpanded) {
+				$panel.attr('hidden', '');
+				$toggle.attr('aria-expanded', 'false');
+			} else {
+				$panel.removeAttr('hidden');
+				$toggle.attr('aria-expanded', 'true');
+			}
+		});
 	});
 
 })(jQuery);

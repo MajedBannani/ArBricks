@@ -29,13 +29,6 @@ class Options {
 	const OPTION_NAME = 'arbricks_options';
 
 	/**
-	 * Legacy option name (v1.x)
-	 *
-	 * @var string
-	 */
-	const LEGACY_OPTION_NAME = 'arbricks_features';
-
-	/**
 	 * Current schema version
 	 *
 	 * @var int
@@ -61,9 +54,9 @@ class Options {
 
 		$options = get_option( self::OPTION_NAME, array() );
 
-		// If option doesn't exist or is old version, migrate.
+		// If option doesn't exist or is old version, initialize.
 		if ( empty( $options ) || ! isset( $options['version'] ) || $options['version'] < self::SCHEMA_VERSION ) {
-			$options = self::migrate();
+			$options = self::initialize_defaults();
 		}
 
 		self::$cache = $options;
@@ -100,6 +93,49 @@ class Options {
 	public static function get_snippet_settings( $snippet_id ) {
 		$options = self::get_all();
 		return isset( $options['settings'][ $snippet_id ] ) ? $options['settings'][ $snippet_id ] : array();
+	}
+
+	/**
+	 * Get feature settings
+	 *
+	 * @param string $feature_id Feature ID.
+	 * @return array Feature settings.
+	 */
+	public static function get_feature_settings( $feature_id ) {
+		$options = self::get_all();
+		return isset( $options['settings'][ $feature_id ] ) && is_array( $options['settings'][ $feature_id ] )
+			? $options['settings'][ $feature_id ]
+			: array();
+	}
+
+	/**
+	 * Set feature settings
+	 *
+	 * @param string $feature_id Feature ID.
+	 * @param array  $settings Feature settings.
+	 * @return void
+	 */
+	public static function set_feature_settings( $feature_id, $settings ) {
+		$options = self::get_all();
+		if ( ! isset( $options['settings'] ) || ! is_array( $options['settings'] ) ) {
+			$options['settings'] = array();
+		}
+		$options['settings'][ $feature_id ] = $settings;
+		update_option( self::OPTION_NAME, $options );
+		self::clear_cache();
+	}
+
+	/**
+	 * Get single feature setting
+	 *
+	 * @param string $feature_id Feature ID.
+	 * @param string $key Setting key.
+	 * @param mixed  $default Default value.
+	 * @return mixed Setting value.
+	 */
+	public static function get_feature_setting( $feature_id, $key, $default = null ) {
+		$settings = self::get_feature_settings( $feature_id );
+		return isset( $settings[ $key ] ) ? $settings[ $key ] : $default;
 	}
 
 	/**
@@ -150,38 +186,21 @@ class Options {
 	}
 
 	/**
-	 * Migrate from v1.x to v2.x
+	 * Initialize default options
 	 *
-	 * Detects legacy option structure and migrates to new schema.
+	 * Creates the default option structure if it doesn't exist.
 	 *
-	 * @return array Migrated options.
+	 * @return array Default options.
 	 */
-	private static function migrate() {
-		// Check for legacy option.
-		$legacy_features = get_option( self::LEGACY_OPTION_NAME, false );
+	private static function initialize_defaults(): array {
+		$defaults = array(
+			'version'  => self::SCHEMA_VERSION,
+			'enabled'  => array(),
+			'settings' => array(),
+		);
 
-		if ( false !== $legacy_features && is_array( $legacy_features ) ) {
-			// Migrate from v1.x.
-			$new_options = array(
-				'version'  => self::SCHEMA_VERSION,
-				'enabled'  => $legacy_features,
-				'settings' => array(),
-			);
-
-			// Save new option.
-			update_option( self::OPTION_NAME, $new_options );
-
-			// Backup old option.
-			update_option( self::LEGACY_OPTION_NAME . '_backup', $legacy_features );
-
-			// Delete old option.
-			delete_option( self::LEGACY_OPTION_NAME );
-
-			return $new_options;
-		}
-
-		// No migration needed, return fresh options with defaults.
-		return self::get_default_options();
+		update_option( self::OPTION_NAME, $defaults );
+		return $defaults;
 	}
 
 	/**
@@ -204,14 +223,38 @@ class Options {
 	 */
 	private static function get_default_enabled_state() {
 		return array(
-			'qr_generator'     => false,
-			'webp_converter'   => false,
-			'youtube_timestamp' => false,
-			'css_minifier'     => false,
-			'grid_layout'      => false,
-			'auto_grid'        => false,
-			'blob_css'         => false,
-			'noise_css'        => false,
+			// Snippets (shortcodes & CSS).
+			'qr_generator'                     => false,
+			'webp_converter'                   => false,
+			'youtube_timestamp'                => false,
+			'css_minifier'                     => false,
+			'grid_layout'                      => false,
+			'auto_grid'                        => false,
+			'blob_css'                         => false,
+			'noise_css'                        => false,
+			// Features (hooks & filters).
+			'webp_auto_convert_uploads'        => false,
+			'math_captcha_login'               => false,
+			'head_cleanup'                     => false,
+			'hide_admin_bar_non_admin'         => false,
+			'disable_comments_sitewide'        => false,
+			'remove_wp_version'                => false,
+			'disable_xmlrpc'                   => false,
+			'google_tag_manager'               => false,
+			'wc_free_checkout_min_fields'      => false,
+			// WooCommerce Features.
+			'wc_free_price_label'              => false,
+			'wc_cart_auto_update'              => false,
+			'wc_direct_checkout_single_item'   => false,
+			'wc_minimum_order_amount'          => false,
+			// New Features (SEO, Tools, Security).
+			'media_auto_meta'                  => false,
+			'shortcode_email'                  => false,
+			'seo_visibility_warning'           => false,
+			'login_recaptcha'                  => false,
+			'login_honeypot'                   => false,
+			// Admin-Only Tool Features.
+			'qr_generator_tool'                => false,
 		);
 	}
 

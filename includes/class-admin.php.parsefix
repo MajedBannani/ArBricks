@@ -580,6 +580,7 @@ error_log( '[ArBricks] Rendering helper for: ' . $feature_id . ' | has_help=' . 
 		</div>
 		<?php
 	}
+}
 
 	/**
 	 * Sanitize setting value based on type

@@ -328,6 +328,11 @@ class Admin {
 									if ( 'feature' === $item['type'] ) {
 										$this->render_feature_help( $item['object'], $item_id );
 									}
+
+									// Render tool UI if feature is an admin tool.
+									if ( 'feature' === $item['type'] ) {
+										$this->render_feature_tool_ui( $item['object'], $item_id, $is_enabled );
+									}
 									?>
 
 									<div class="arbricks-snippet-footer">
@@ -730,5 +735,240 @@ array(
 				)
 			);
 		}
+	}
+}
+	/**
+	 * Render tool UI for admin-only tools
+	 *
+	 * @param object $feature Feature instance.
+	 * @param string $feature_id Feature ID.
+	 * @param bool   $is_enabled Whether feature is enabled.
+	 * @return void
+	 */
+	private function render_feature_tool_ui( $feature, $feature_id, $is_enabled ): void {
+		// Only render tool UI for tool category features.
+		$meta = $feature::meta();
+		if ( empty( $meta['category'] ) || 'tools' !== $meta['category'] ) {
+			return;
+		}
+
+		// List of tool feature IDs.
+		$tool_features = array( 'css_minifier_tool', 'qr_generator_tool', 'webp_converter_tool', 'youtube_timestamp_tool' );
+
+		if ( ! in_array( $feature_id, $tool_features, true ) ) {
+			return;
+		}
+
+		if ( ! $is_enabled ) {
+			// Show disabled message.
+			echo '<div class="arbricks-tool-disabled-notice" style="margin-block-start: 1rem; padding: 1rem; background: #f0f0f1; border-radius: 4px; color: #646970; font-style: italic;">';
+			esc_html_e( 'Enable this feature to use the tool.', 'arbricks' );
+			echo '</div>';
+			return;
+		}
+
+		// Render tool UI based on feature ID.
+		switch ( $feature_id ) {
+			case 'css_minifier_tool':
+				$this->render_css_minifier_ui();
+				break;
+
+			case 'qr_generator_tool':
+				$this->render_qr_generator_ui( $feature_id );
+				break;
+
+			case 'webp_converter_tool':
+				$this->render_webp_converter_ui();
+				break;
+
+			case 'youtube_timestamp_tool':
+				$this->render_youtube_timestamp_ui( $feature_id );
+				break;
+		}
+	}
+
+	/**
+	 * Render CSS Minifier tool UI
+	 *
+	 * @return void
+	 */
+	private function render_css_minifier_ui() {
+		?>
+		<div class="arbricks-tool-css-minifier">
+			<div class="tool-section">
+				<label for="css-minifier-input"><?php esc_html_e( 'CSS Input', 'arbricks' ); ?></label>
+				<textarea id="css-minifier-input" placeholder="<?php esc_attr_e( 'Paste CSS here...', 'arbricks' ); ?>"></textarea>
+			</div>
+
+			<div class="tool-section">
+				<label for="css-minifier-output"><?php esc_html_e( 'Minified Output', 'arbricks' ); ?></label>
+				<textarea id="css-minifier-output" readonly></textarea>
+			</div>
+
+			<div class="tool-actions">
+				<button type="button" id="css-minifier-minify" class="button button-primary">
+					<?php esc_html_e( 'Minify', 'arbricks' ); ?>
+				</button>
+				<button type="button" id="css-minifier-copy" class="button">
+					<?php esc_html_e( 'Copy Output', 'arbricks' ); ?>
+				</button>
+				<button type="button" id="css-minifier-clear" class="button">
+					<?php esc_html_e( 'Clear', 'arbricks' ); ?>
+				</button>
+			</div>
+
+			<div class="tool-notice" style="display:none;"></div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render QR Generator tool UI
+	 *
+	 * @param string $feature_id Feature ID.
+	 * @return void
+	 */
+	private function render_qr_generator_ui( $feature_id ) {
+		$settings     = Options::get_feature_settings( $feature_id );
+		$default_size = ! empty( $settings['default_size'] ) ? $settings['default_size'] : '256';
+		$default_ecc  = ! empty( $settings['default_ecc'] ) ? $settings['default_ecc'] : 'M';
+
+		?>
+		<div class="arbricks-tool-qr-generator">
+			<div class="tool-section">
+				<label for="qr-url-input"><?php esc_html_e( 'URL', 'arbricks' ); ?></label>
+				<input type="url" id="qr-url-input" placeholder="<?php esc_attr_e( 'https://example.com', 'arbricks' ); ?>">
+			</div>
+
+			<div class="tool-section">
+				<label for="qr-size-select"><?php esc_html_e( 'Size', 'arbricks' ); ?></label>
+				<select id="qr-size-select">
+					<option value="128" <?php selected( $default_size, '128' ); ?>>128px</option>
+					<option value="256" <?php selected( $default_size, '256' ); ?>>256px</option>
+					<option value="400" <?php selected( $default_size, '400' ); ?>>400px</option>
+					<option value="512" <?php selected( $default_size, '512' ); ?>>512px</option>
+				</select>
+			</div>
+
+			<div class="tool-section">
+				<label for="qr-ecc-select"><?php esc_html_e( 'Error Correction', 'arbricks' ); ?></label>
+				<select id="qr-ecc-select">
+					<option value="L" <?php selected( $default_ecc, 'L' ); ?>><?php esc_html_e( 'Low (7%)', 'arbricks' ); ?></option>
+					<option value="M" <?php selected( $default_ecc, 'M' ); ?>><?php esc_html_e( 'Medium (15%)', 'arbricks' ); ?></option>
+					<option value="Q" <?php selected( $default_ecc, 'Q' ); ?>><?php esc_html_e( 'Quartile (25%)', 'arbricks' ); ?></option>
+					<option value="H" <?php selected( $default_ecc, 'H' ); ?>><?php esc_html_e( 'High (30%)', 'arbricks' ); ?></option>
+				</select>
+			</div>
+
+			<div class="qr-preview empty" data-placeholder="<?php esc_attr_e( 'QR code will appear here', 'arbricks' ); ?>"></div>
+
+			<div class="tool-actions">
+				<button type="button" id="qr-generate-btn" class="button button-primary">
+					<?php esc_html_e( 'Generate', 'arbricks' ); ?>
+				</button>
+				<button type="button" id="qr-download-btn" class="button">
+					<?php esc_html_e( 'Download PNG', 'arbricks' ); ?>
+				</button>
+			</div>
+
+			<div class="tool-notice" style="display:none;"></div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render WebP Converter tool UI
+	 *
+	 * @return void
+	 */
+	private function render_webp_converter_ui() {
+		?>
+		<div class="arbricks-tool-webp-converter">
+			<div class="support-warning" style="display:none;"></div>
+
+			<div class="tool-section">
+				<p><?php esc_html_e( 'Select images from your Media Library to convert to WebP format.', 'arbricks' ); ?></p>
+			</div>
+
+			<div class="selected-images empty" data-placeholder="<?php esc_attr_e( 'No images selected', 'arbricks' ); ?>"></div>
+
+			<div class="tool-actions">
+				<button type="button" id="webp-select-images-btn" class="button">
+					<?php esc_html_e( 'Select Images', 'arbricks' ); ?>
+				</button>
+				<button type="button" id="webp-convert-btn" class="button button-primary" disabled>
+					<?php esc_html_e( 'Convert Selected', 'arbricks' ); ?>
+				</button>
+			</div>
+
+			<div class="tool-notice" style="display:none;"></div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render YouTube Timestamp tool UI
+	 *
+	 * @param string $feature_id Feature ID.
+	 * @return void
+	 */
+	private function render_youtube_timestamp_ui( $feature_id ) {
+		$settings         = Options::get_feature_settings( $feature_id );
+		$default_new_tab  = ! empty( $settings['default_new_tab'] );
+
+		?>
+		<div class="arbricks-tool-youtube-timestamp">
+			<div class="tool-section">
+				<label for="yt-url-input"><?php esc_html_e( 'YouTube URL', 'arbricks' ); ?></label>
+				<input type="url" id="yt-url-input" placeholder="<?php esc_attr_e( 'https://www.youtube.com/watch?v=...', 'arbricks' ); ?>">
+			</div>
+
+			<div class="tool-section">
+				<label for="yt-timestamp-input"><?php esc_html_e( 'Timestamp', 'arbricks' ); ?></label>
+				<input type="text" id="yt-timestamp-input" placeholder="<?php esc_attr_e( 'e.g., 2:30 or 01:02:10', 'arbricks' ); ?>">
+			</div>
+
+			<div class="tool-section">
+				<label for="yt-desc-input"><?php esc_html_e( 'Description (optional)', 'arbricks' ); ?></label>
+				<input type="text" id="yt-desc-input" placeholder="<?php esc_attr_e( 'Link text for HTML snippet', 'arbricks' ); ?>">
+			</div>
+
+			<div class="tool-section">
+				<div class="checkbox-wrapper">
+					<input type="checkbox" id="yt-new-tab-check" <?php checked( $default_new_tab ); ?>>
+					<label for="yt-new-tab-check"><?php esc_html_e( 'Open in new tab', 'arbricks' ); ?></label>
+				</div>
+			</div>
+
+			<div class="tool-actions">
+				<button type="button" id="yt-generate-btn" class="button button-primary">
+					<?php esc_html_e( 'Generate', 'arbricks' ); ?>
+				</button>
+			</div>
+
+			<div class="result-section">
+				<div class="tool-section">
+					<label for="yt-result-url"><?php esc_html_e( 'Generated URL', 'arbricks' ); ?></label>
+					<input type="text" id="yt-result-url" readonly>
+				</div>
+
+				<div class="tool-section">
+					<label for="yt-result-html"><?php esc_html_e( 'HTML Snippet', 'arbricks' ); ?></label>
+					<textarea id="yt-result-html" readonly></textarea>
+				</div>
+
+				<div class="tool-actions">
+					<button type="button" id="yt-copy-url-btn" class="button">
+						<?php esc_html_e( 'Copy URL', 'arbricks' ); ?>
+					</button>
+					<button type="button" id="yt-copy-html-btn" class="button">
+						<?php esc_html_e( 'Copy HTML', 'arbricks' ); ?>
+					</button>
+				</div>
+			</div>
+
+			<div class="tool-notice" style="display:none;"></div>
+		</div>
+		<?php
 	}
 }
