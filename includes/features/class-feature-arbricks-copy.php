@@ -22,7 +22,7 @@ class Feature_Arbricks_Copy implements Feature_Interface {
                     __( 'The element\'s content will change to the success message for 1.5 seconds after a successful copy.', 'arbricks' ),
                 ],
                 'examples' => [
-                    '<code>&lt;button data-arbricks-copy="Your Value Here"&gt;نسخ&lt;/button&gt;</code>',
+                    '<code>&lt;button data-arbricks-copy="Your Value Here"&gt;Copy&lt;/button&gt;</code>',
                 ],
                 'notes'    => [
                     __( 'This feature relies on the Clipboard API and requires a secure connection (HTTPS) in most modern browsers.', 'arbricks' ),
@@ -43,19 +43,19 @@ class Feature_Arbricks_Copy implements Feature_Interface {
                 'type'        => 'text',
                 'label'       => __( 'Default Text (Fallback)', 'arbricks' ),
                 'description' => __( 'Text used if the element has no original content.', 'arbricks' ),
-                'default'     => __( 'نسخ', 'arbricks' ),
+                'default'     => __( 'Copy', 'arbricks' ),
             ],
             'success_text' => [
                 'type'        => 'text',
                 'label'       => __( 'Success Message', 'arbricks' ),
                 'description' => __( 'Message shown after successful copy.', 'arbricks' ),
-                'default'     => __( 'تم النسخ', 'arbricks' ),
+                'default'     => __( 'Copied', 'arbricks' ),
             ],
             'error_text'   => [
                 'type'        => 'text',
                 'label'       => __( 'Error Message', 'arbricks' ),
                 'description' => __( 'Message shown if copy fails.', 'arbricks' ),
-                'default'     => __( 'فشل النسخ', 'arbricks' ),
+                'default'     => __( 'Copy Failed', 'arbricks' ),
             ],
         ];
     }
@@ -68,9 +68,9 @@ class Feature_Arbricks_Copy implements Feature_Interface {
         $settings = Options::get_feature_settings( self::id() );
 
         $defaults = [
-            'default_text' => __( 'نسخ', 'arbricks' ),
-            'success_text' => __( 'تم النسخ', 'arbricks' ),
-            'error_text'   => __( 'فشل النسخ', 'arbricks' ),
+            'default_text' => __( 'Copy', 'arbricks' ),
+            'success_text' => __( 'Copied', 'arbricks' ),
+            'error_text'   => __( 'Copy Failed', 'arbricks' ),
         ];
 
         $config = wp_parse_args( $settings, $defaults );

@@ -1713,3 +1713,45 @@ msgid ""
 msgstr ""
 "إزالة الأكواد الافتراضية غير الضرورية من رأس الصفحة (روابط الاكتشاف، الروابط "
 "المختصرة، وروابط خلاصات REST)."
+
+msgid "AR Copy to Clipboard"
+msgstr "نسخ إلى الحافظة (AR)"
+
+msgid "Copy text to clipboard when clicking any element with data-arbricks-copy"
+msgstr "نسخ النص إلى الحافظة عند النقر على أي عنصر يحتوي على data-arbricks-copy"
+
+msgid "Allows you to copy any text to the clipboard by clicking on an HTML element. This is useful for sharing links, discount codes, or any specific text snippets."
+msgstr "يتيح لك نسخ أي نص إلى الحافظة من خلال النقر على عنصر HTML. هذا مفيد لمشاركة الروابط أو أكواد الخصم أو أي نصوص محددة."
+
+msgid "Add the attribute <code>data-arbricks-copy=\"TEXT\"</code> to any HTML element."
+msgstr "أضف السمة <code>data-arbricks-copy=\"TEXT\"</code> إلى أي عنصر HTML."
+
+msgid "Customize the success and error messages in the settings below if needed."
+msgstr "قم بتخصيص رسائل النجاح والخطأ في الإعدادات أدناه إذا لزم الأمر."
+
+msgid "The element's content will change to the success message for 1.5 seconds after a successful copy."
+msgstr "سيتغير محتوى العنصر إلى رسالة النجاح لمدة 1.5 ثانية بعد النسخ الناجح."
+
+msgid "This feature relies on the Clipboard API and requires a secure connection (HTTPS) in most modern browsers."
+msgstr "تعتمد هذه الميزة على واجهة برمجة تطبيقات الحافظة (Clipboard API) وتتطلب اتصالاً آمناً (HTTPS) في معظم المتصفحات الحديثة."
+
+msgid "If the browser does not support the Clipboard API, the error message will be shown."
+msgstr "إذا كان المتصفح لا يدعم واجهة برمجة تطبيقات الحافظة، فسيتم عرض رسالة الخطأ."
+
+msgid "Default Text (Fallback)"
+msgstr "النص الافتراضي (الاحتياطي)"
+
+msgid "Text used if the element has no original content."
+msgstr "النص المستخدم إذا لم يكن للعنصر محتوى أصلي."
+
+msgid "Copy"
+msgstr "نسخ"
+
+msgid "Success Message"
+msgstr "رسالة النجاح"
+
+msgid "Copied"
+msgstr "تم النسخ"
+
+msgid "Copy Failed"
+msgstr "فشل النسخ"
