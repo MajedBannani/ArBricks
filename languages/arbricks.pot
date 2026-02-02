@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the ArBricks package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ArBricks 2.0.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-02 07:33+0300\n"
+"POT-Creation-Date: 2026-02-02 13:28+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,166 +17,173 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: includes/class-admin.php:54 build/arbricks/includes/class-admin.php:54
+#: includes/class-github-updater.php:120
+msgid "GitHub Repository URL is not defined."
+msgstr ""
+
+#: includes/class-github-updater.php:124
+msgid "Plugin slug is not defined."
+msgstr ""
+
+#: includes/class-github-updater.php:129
+msgid "Plugin Update Checker library is missing."
+msgstr ""
+
+#: includes/class-github-updater.php:135
+msgid "ArBricks Update System Warning:"
+msgstr ""
+
+#: includes/class-admin.php:54
 msgid "ArBricks Settings"
 msgstr ""
 
-#: includes/class-admin.php:55 arbricks.php:125
-#: build/arbricks/includes/class-admin.php:55 build/arbricks/arbricks.php:125
+#: includes/class-admin.php:55 arbricks.php:137
 msgid "ArBricks"
 msgstr ""
 
-#: includes/class-admin.php:98 build/arbricks/includes/class-admin.php:98
+#: includes/class-admin.php:98
 msgid "Shortcode copied!"
 msgstr ""
 
-#: includes/class-admin.php:99 build/arbricks/includes/class-admin.php:99
+#: includes/class-admin.php:99
 msgid "Failed to copy shortcode."
 msgstr ""
 
-#: includes/class-admin.php:120 build/arbricks/includes/class-admin.php:120
+#: includes/class-admin.php:120
 msgid "Security check failed. Please try again."
 msgstr ""
 
 #: includes/class-admin.php:125 includes/class-admin.php:215
-#: build/arbricks/includes/class-admin.php:125
-#: build/arbricks/includes/class-admin.php:215
 msgid "You do not have permission to access this page."
 msgstr ""
 
-#: includes/class-admin.php:198 build/arbricks/includes/class-admin.php:198
+#: includes/class-admin.php:198
 msgid "Tools"
 msgstr ""
 
-#: includes/class-admin.php:199 build/arbricks/includes/class-admin.php:199
+#: includes/class-admin.php:199
 msgid "Security"
 msgstr ""
 
-#: includes/class-admin.php:200 build/arbricks/includes/class-admin.php:200
+#: includes/class-admin.php:200
 msgid "SEO"
 msgstr ""
 
-#: includes/class-admin.php:201 build/arbricks/includes/class-admin.php:201
+#: includes/class-admin.php:201
 msgid "WooCommerce"
 msgstr ""
 
-#: includes/class-admin.php:272 build/arbricks/includes/class-admin.php:272
+#: includes/class-admin.php:272
 msgid "Settings saved successfully!"
 msgstr ""
 
-#: includes/class-admin.php:277 build/arbricks/includes/class-admin.php:277
+#: includes/class-admin.php:277
 msgid ""
 "Enable or disable features as needed. Changes take effect immediately after "
 "saving."
 msgstr ""
 
-#: includes/class-admin.php:335 build/arbricks/includes/class-admin.php:335
+#: includes/class-admin.php:340
 msgid "Enabled"
 msgstr ""
 
-#: includes/class-admin.php:336 build/arbricks/includes/class-admin.php:336
+#: includes/class-admin.php:341
 msgid "Disabled"
 msgstr ""
 
-#: includes/class-admin.php:347 build/arbricks/includes/class-admin.php:347
+#: includes/class-admin.php:352
 msgid "Copy Shortcode"
 msgstr ""
 
-#: includes/class-admin.php:358 build/arbricks/includes/class-admin.php:358
+#: includes/class-admin.php:363
 msgid "Save Changes"
 msgstr ""
 
-#: includes/class-admin.php:529 build/arbricks/includes/class-admin.php:535
+#: includes/class-admin.php:534
 msgid "Help"
 msgstr ""
 
-#: includes/class-admin.php:541 build/arbricks/includes/class-admin.php:547
+#: includes/class-admin.php:546
 msgid "How to use:"
 msgstr ""
 
-#: includes/class-admin.php:552 build/arbricks/includes/class-admin.php:558
+#: includes/class-admin.php:557
 msgid "Notes:"
 msgstr ""
 
-#: includes/class-admin.php:563 build/arbricks/includes/class-admin.php:569
+#: includes/class-admin.php:568
 msgid "Examples:"
 msgstr ""
 
-#: includes/class-admin.php:643 build/arbricks/includes/class-admin.php:649
+#: includes/class-admin.php:648
 msgid "CSS minified successfully!"
 msgstr ""
 
-#: includes/class-admin.php:644 build/arbricks/includes/class-admin.php:650
+#: includes/class-admin.php:649
 msgid "Failed to minify CSS."
 msgstr ""
 
-#: includes/class-admin.php:645 includes/class-admin.php:729
-#: build/arbricks/includes/class-admin.php:651
-#: build/arbricks/includes/class-admin.php:735
+#: includes/class-admin.php:650 includes/class-admin.php:741
 msgid "Copied to clipboard!"
 msgstr ""
 
-#: includes/class-admin.php:646 includes/class-admin.php:730
-#: build/arbricks/includes/class-admin.php:652
-#: build/arbricks/includes/class-admin.php:736
+#: includes/class-admin.php:651 includes/class-admin.php:742
 msgid "Failed to copy."
 msgstr ""
 
-#: includes/class-admin.php:647 build/arbricks/includes/class-admin.php:653
+#: includes/class-admin.php:652
 msgid "Please enter CSS to minify."
 msgstr ""
 
-#: includes/class-admin.php:671 build/arbricks/includes/class-admin.php:677
+#: includes/class-admin.php:683
 msgid "QR code generated!"
 msgstr ""
 
-#: includes/class-admin.php:672 build/arbricks/includes/class-admin.php:678
+#: includes/class-admin.php:684
 msgid "Failed to generate QR code."
 msgstr ""
 
-#: includes/class-admin.php:673 build/arbricks/includes/class-admin.php:679
+#: includes/class-admin.php:685
 msgid "Please enter a valid URL."
 msgstr ""
 
-#: includes/class-admin.php:698 build/arbricks/includes/class-admin.php:704
+#: includes/class-admin.php:710
 msgid "Conversion complete!"
 msgstr ""
 
-#: includes/class-admin.php:699 build/arbricks/includes/class-admin.php:705
+#: includes/class-admin.php:711
 msgid "Conversion failed."
 msgstr ""
 
-#: includes/class-admin.php:700 build/arbricks/includes/class-admin.php:706
+#: includes/class-admin.php:712
 msgid "Please select images to convert."
 msgstr ""
 
-#: includes/class-admin.php:701 build/arbricks/includes/class-admin.php:707
+#: includes/class-admin.php:713
 msgid "WebP format is not supported on this server."
 msgstr ""
 
-#: includes/class-admin.php:702 build/arbricks/includes/class-admin.php:708
+#: includes/class-admin.php:714
 msgid "Select Images"
 msgstr ""
 
-#: includes/class-admin.php:726 build/arbricks/includes/class-admin.php:732
+#: includes/class-admin.php:738
 msgid "Timestamp URL generated!"
 msgstr ""
 
-#: includes/class-admin.php:727 build/arbricks/includes/class-admin.php:733
+#: includes/class-admin.php:739
 msgid "Please enter a valid YouTube URL."
 msgstr ""
 
-#: includes/class-admin.php:728 build/arbricks/includes/class-admin.php:734
+#: includes/class-admin.php:740
 msgid "Please enter a valid timestamp (e.g., 2:30 or 01:30:45)."
 msgstr ""
 
 #: includes/features/class-feature-disable-comments-sitewide.php:41
-#: build/arbricks/includes/features/class-feature-disable-comments-sitewide.php:41
 msgid "Disable Comments (Sitewide)"
 msgstr ""
 
 #: includes/features/class-feature-disable-comments-sitewide.php:42
-#: build/arbricks/includes/features/class-feature-disable-comments-sitewide.php:42
 msgid ""
 "Disable comments everywhere (frontend + admin), remove UI entries, disable "
 "comment feeds, and remove REST comments endpoints."
@@ -259,17 +266,14 @@ msgid "No configuration needed - works automatically"
 msgstr ""
 
 #: includes/features/class-feature-disable-comments-sitewide.php:116
-#: build/arbricks/includes/features/class-feature-disable-comments-sitewide.php:98
 msgid "Comments are disabled on this site."
 msgstr ""
 
 #: includes/features/class-feature-wc-free-checkout-min-fields.php:42
-#: build/arbricks/includes/features/class-feature-wc-free-checkout-min-fields.php:42
 msgid "Free Checkout Minimal Fields"
 msgstr ""
 
 #: includes/features/class-feature-wc-free-checkout-min-fields.php:43
-#: build/arbricks/includes/features/class-feature-wc-free-checkout-min-fields.php:43
 msgid "Reduce checkout fields when cart is free (no payment required)."
 msgstr ""
 
@@ -293,8 +297,6 @@ msgstr ""
 #: includes/features/class-feature-google-tag-manager.php:49
 #: includes/features/class-feature-webp-auto-convert.php:48
 #: includes/features/class-feature-wc-cart-auto-update.php:50
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:49
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:49
 msgid "Enable the feature toggle above."
 msgstr ""
 
@@ -340,23 +342,19 @@ msgid "Great for building email lists through free digital giveaways."
 msgstr ""
 
 #: includes/features/class-feature-wc-free-checkout-min-fields.php:75
-#: build/arbricks/includes/features/class-feature-wc-free-checkout-min-fields.php:58
 msgid "Fields to Keep"
 msgstr ""
 
 #: includes/features/class-feature-wc-free-checkout-min-fields.php:76
-#: build/arbricks/includes/features/class-feature-wc-free-checkout-min-fields.php:59
 msgid ""
 "Comma-separated billing field keys (e.g., billing_email,billing_first_name)"
 msgstr ""
 
 #: includes/features/class-feature-disable-xmlrpc.php:42
-#: build/arbricks/includes/features/class-feature-disable-xmlrpc.php:42
 msgid "Disable XML-RPC"
 msgstr ""
 
 #: includes/features/class-feature-disable-xmlrpc.php:43
-#: build/arbricks/includes/features/class-feature-disable-xmlrpc.php:43
 msgid "Disable XML-RPC completely and optionally block direct access."
 msgstr ""
 
@@ -398,27 +396,22 @@ msgid "Improves security by closing common attack vector"
 msgstr ""
 
 #: includes/features/class-feature-disable-xmlrpc.php:73
-#: build/arbricks/includes/features/class-feature-disable-xmlrpc.php:58
 msgid "Block Direct Access"
 msgstr ""
 
 #: includes/features/class-feature-disable-xmlrpc.php:74
-#: build/arbricks/includes/features/class-feature-disable-xmlrpc.php:59
 msgid "Return 403 when xmlrpc.php is accessed directly."
 msgstr ""
 
 #: includes/features/class-feature-disable-xmlrpc.php:105
-#: build/arbricks/includes/features/class-feature-disable-xmlrpc.php:90
 msgid "XML-RPC is disabled on this site."
 msgstr ""
 
 #: includes/features/class-feature-wc-direct-checkout-single-item.php:42
-#: build/arbricks/includes/features/class-feature-wc-direct-checkout-single-item.php:42
 msgid "Direct Checkout (Single Item Flow)"
 msgstr ""
 
 #: includes/features/class-feature-wc-direct-checkout-single-item.php:43
-#: build/arbricks/includes/features/class-feature-wc-direct-checkout-single-item.php:43
 msgid "Redirect to checkout and skip cart for single items."
 msgstr ""
 
@@ -469,52 +462,42 @@ msgid ""
 msgstr ""
 
 #: includes/features/class-feature-wc-direct-checkout-single-item.php:76
-#: build/arbricks/includes/features/class-feature-wc-direct-checkout-single-item.php:58
 msgid "Redirect to Checkout"
 msgstr ""
 
 #: includes/features/class-feature-wc-direct-checkout-single-item.php:77
-#: build/arbricks/includes/features/class-feature-wc-direct-checkout-single-item.php:59
 msgid "Skip cart, go directly to checkout"
 msgstr ""
 
 #: includes/features/class-feature-wc-direct-checkout-single-item.php:82
-#: build/arbricks/includes/features/class-feature-wc-direct-checkout-single-item.php:64
 msgid "Suppress Add-to-Cart Message"
 msgstr ""
 
 #: includes/features/class-feature-wc-direct-checkout-single-item.php:83
-#: build/arbricks/includes/features/class-feature-wc-direct-checkout-single-item.php:65
 msgid "Hide \"Product added to cart\" notice"
 msgstr ""
 
 #: includes/features/class-feature-wc-direct-checkout-single-item.php:88
-#: build/arbricks/includes/features/class-feature-wc-direct-checkout-single-item.php:70
 msgid "Empty Cart Before Adding"
 msgstr ""
 
 #: includes/features/class-feature-wc-direct-checkout-single-item.php:89
-#: build/arbricks/includes/features/class-feature-wc-direct-checkout-single-item.php:71
 msgid "Clear cart before adding new product"
 msgstr ""
 
 #: includes/features/class-feature-wc-direct-checkout-single-item.php:94
-#: build/arbricks/includes/features/class-feature-wc-direct-checkout-single-item.php:76
 msgid "Disable Order Again Button"
 msgstr ""
 
 #: includes/features/class-feature-wc-direct-checkout-single-item.php:95
-#: build/arbricks/includes/features/class-feature-wc-direct-checkout-single-item.php:77
 msgid "Remove \"Order Again\" button from orders"
 msgstr ""
 
 #: includes/features/class-feature-hide-admin-bar-non-admin.php:41
-#: build/arbricks/includes/features/class-feature-hide-admin-bar-non-admin.php:41
 msgid "Hide Admin Bar (Non-Admins)"
 msgstr ""
 
 #: includes/features/class-feature-hide-admin-bar-non-admin.php:42
-#: build/arbricks/includes/features/class-feature-hide-admin-bar-non-admin.php:42
 msgid ""
 "Hide WordPress admin bar on the front-end for users who do not have a given "
 "capability."
@@ -556,253 +539,248 @@ msgid ""
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:42
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:42
 msgid "QR Code Generator Tool"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:43
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:43
 msgid "Generate QR codes from URLs directly in admin interface."
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:47
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:47
 msgid ""
 "Easily create QR codes for URLs. Perfect for marketing materials, print "
 "materials, and sharing links."
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:50
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:50
 msgid "Enter the URL you want to encode."
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:51
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:51
 msgid "Choose the QR code size and error correction level."
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:52
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:52
 msgid "Click \"Generate\" to create the QR code."
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:53
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:53
 msgid "Download the QR code as PNG image."
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:56
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:56
 msgid ""
 "Higher error correction allows QR codes to work even if partially damaged."
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:57
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:57
 msgid "Larger sizes are better for print materials."
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:58
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:58
 msgid ""
 "QR codes are generated instantly in your browser (no server processing)."
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:61
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:61
 msgid "Error Correction L = Low (~7% recovery)"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:62
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:62
 msgid "Error Correction M = Medium (~15% recovery)"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:63
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:63
 msgid "Error Correction Q = Quartile (~25% recovery)"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:64
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:64
 msgid "Error Correction H = High (~30% recovery)"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:79
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:79
 msgid "Default QR Code Size"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:80
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:80
 msgid "Default size in pixels for generated QR codes."
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:82
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:82
 msgid "128px (Small)"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:83
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:83
 msgid "256px (Medium)"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:84
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:84
 msgid "400px (Large)"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:85
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:85
 msgid "512px (Extra Large)"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:91
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:91
 msgid "Default Error Correction"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:92
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:92
 msgid "Default error correction level."
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:94
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:94
+#: includes/features/class-feature-qr-generator-tool.php:144
 msgid "Low (7%)"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:95
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:95
+#: includes/features/class-feature-qr-generator-tool.php:145
 msgid "Medium (15%)"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:96
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:96
+#: includes/features/class-feature-qr-generator-tool.php:146
 msgid "Quartile (25%)"
 msgstr ""
 
 #: includes/features/class-feature-qr-generator-tool.php:97
-#: build/arbricks/includes/features/class-feature-qr-generator-tool.php:97
+#: includes/features/class-feature-qr-generator-tool.php:147
 msgid "High (30%)"
 msgstr ""
 
+#: includes/features/class-feature-qr-generator-tool.php:127
+msgid "Enter URL:"
+msgstr ""
+
+#: includes/features/class-feature-qr-generator-tool.php:133
+msgid "Size:"
+msgstr ""
+
+#: includes/features/class-feature-qr-generator-tool.php:135
+msgid "128px"
+msgstr ""
+
+#: includes/features/class-feature-qr-generator-tool.php:136
+msgid "256px"
+msgstr ""
+
+#: includes/features/class-feature-qr-generator-tool.php:137
+msgid "400px"
+msgstr ""
+
+#: includes/features/class-feature-qr-generator-tool.php:138
+msgid "512px"
+msgstr ""
+
+#: includes/features/class-feature-qr-generator-tool.php:142
+msgid "Error Correction:"
+msgstr ""
+
+#: includes/features/class-feature-qr-generator-tool.php:154
+msgid "Generate QR Code"
+msgstr ""
+
+#: includes/features/class-feature-qr-generator-tool.php:158
+msgid "Download PNG"
+msgstr ""
+
+#: includes/features/class-feature-qr-generator-tool.php:162
+msgid "QR code will appear here..."
+msgstr ""
+
 #: includes/features/class-feature-google-tag-manager.php:42
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:42
 msgid "Google Tag Manager"
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:43
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:43
 msgid "Inject Google Tag Manager scripts into your site."
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:47
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:47
 msgid ""
 "Easily add Google Tag Manager tracking to your WordPress site with automatic "
 "code injection."
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:50
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:50
 msgid "Enter your GTM Container ID (format: GTM-XXXXXXX)."
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:51
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:51
 msgid "Choose whether to include noscript tag for non-JS users."
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:52
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:52
 msgid "Select noscript position (body or footer)."
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:53
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:53
 msgid "Click \"Save Changes\" to apply."
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:56
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:56
 msgid "Invalid GTM IDs will be rejected - nothing will be injected."
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:57
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:57
 msgid "Code is automatically placed in correct locations (head + body/footer)."
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:58
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:58
 msgid "Works with all WordPress themes."
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:61
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:61
 msgid "Valid ID: GTM-ABC1234"
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:62
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:62
 msgid "Invalid ID: GA-123456 (this is Analytics, not Tag Manager)"
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:77
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:77
 msgid "GTM Container ID"
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:78
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:78
 msgid "Enter your GTM ID (e.g., GTM-XXXXXXX)"
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:80
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:80
 msgid "GTM-XXXXXXX"
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:84
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:84
 msgid "Include noscript tag"
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:85
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:85
 msgid "Inject noscript fallback for users without JavaScript."
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:90
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:90
 msgid "Noscript Location"
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:91
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:91
 msgid "Where to inject the noscript tag."
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:93
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:93
 msgid "Body Open (Recommended)"
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:94
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:94
 msgid "Footer"
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:193
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:193
 msgid "ArBricks - Google Tag Manager:"
 msgstr ""
 
 #: includes/features/class-feature-google-tag-manager.php:196
-#: build/arbricks/includes/features/class-feature-google-tag-manager.php:196
 msgid ""
 "Your theme may not support the wp_body_open hook. The GTM noscript tag might "
 "not display correctly. Consider selecting \"Footer\" as the noscript "
@@ -810,12 +788,10 @@ msgid ""
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:42
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:42
 msgid "SEO Visibility Warning"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:43
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:43
 msgid "Show admin notice if search engines are blocked."
 msgstr ""
 
@@ -871,77 +847,62 @@ msgid "Prevents common mistake of launching sites with SEO blocked"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:77
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:58
 msgid "Show On"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:78
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:59
 msgid "Where to display the notice"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:80
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:61
 msgid "All Admin Pages"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:81
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:62
 msgid "Dashboard Only"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:87
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:68
 msgid "Notice Type"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:88
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:69
 msgid "Type of admin notice"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:90
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:71
 msgid "Error (Red)"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:91
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:72
 msgid "Warning (Yellow)"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:97
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:78
 msgid "Allow Dismissal"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:98
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:79
 msgid "Let users dismiss the notice"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:160
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:141
 msgid "SEO Warning:"
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:161
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:142
 msgid "Search engines are currently discouraged from indexing this site."
 msgstr ""
 
 #: includes/features/class-feature-seo-visibility-warning.php:163
-#: build/arbricks/includes/features/class-feature-seo-visibility-warning.php:144
 msgid "Change Settings"
 msgstr ""
 
 #: includes/features/class-feature-shortcode-email.php:40
-#: build/arbricks/includes/features/class-feature-shortcode-email.php:40
 msgid "Email Shortcode"
 msgstr ""
 
 #: includes/features/class-feature-shortcode-email.php:41
-#: build/arbricks/includes/features/class-feature-shortcode-email.php:41
 msgid "Provides [email] shortcode for spam-protected mailto links."
 msgstr ""
 
@@ -988,12 +949,10 @@ msgid "Output: Clickable mailto link with spam-protected email"
 msgstr ""
 
 #: includes/features/class-feature-wc-free-price-label.php:42
-#: build/arbricks/includes/features/class-feature-wc-free-price-label.php:42
 msgid "Free Price Label (Zero Price)"
 msgstr ""
 
 #: includes/features/class-feature-wc-free-price-label.php:43
-#: build/arbricks/includes/features/class-feature-wc-free-price-label.php:43
 msgid "Display custom label for products with zero price."
 msgstr ""
 
@@ -1046,31 +1005,24 @@ msgid "Arabic: \"مجاني\" or \"بدون تكلفة\""
 msgstr ""
 
 #: includes/features/class-feature-wc-free-price-label.php:78
-#: build/arbricks/includes/features/class-feature-wc-free-price-label.php:58
 msgid "Free Text Label"
 msgstr ""
 
 #: includes/features/class-feature-wc-free-price-label.php:79
-#: build/arbricks/includes/features/class-feature-wc-free-price-label.php:59
 msgid "Text to display for free products"
 msgstr ""
 
 #: includes/features/class-feature-wc-free-price-label.php:80
 #: includes/features/class-feature-wc-free-price-label.php:81
 #: includes/features/class-feature-wc-free-price-label.php:109
-#: build/arbricks/includes/features/class-feature-wc-free-price-label.php:60
-#: build/arbricks/includes/features/class-feature-wc-free-price-label.php:61
-#: build/arbricks/includes/features/class-feature-wc-free-price-label.php:89
 msgid "Free!"
 msgstr ""
 
 #: includes/features/class-feature-head-cleanup.php:41
-#: build/arbricks/includes/features/class-feature-head-cleanup.php:41
 msgid "Head Cleanup"
 msgstr ""
 
 #: includes/features/class-feature-head-cleanup.php:42
-#: build/arbricks/includes/features/class-feature-head-cleanup.php:42
 msgid ""
 "Remove unnecessary default tags from wp_head (discovery links, shortlink, "
 "and optional REST/feed links)."
@@ -1108,12 +1060,10 @@ msgid "Safe for all sites - does not affect functionality"
 msgstr ""
 
 #: includes/features/class-feature-login-honeypot.php:43
-#: build/arbricks/includes/features/class-feature-login-honeypot.php:43
 msgid "Login Honeypot"
 msgstr ""
 
 #: includes/features/class-feature-login-honeypot.php:44
-#: build/arbricks/includes/features/class-feature-login-honeypot.php:44
 msgid "Add hidden honeypot field to block bots on login."
 msgstr ""
 
@@ -1186,59 +1136,133 @@ msgid "Custom field name example: user_website_url (something bots might fill)"
 msgstr ""
 
 #: includes/features/class-feature-login-honeypot.php:82
-#: build/arbricks/includes/features/class-feature-login-honeypot.php:59
 msgid "Field Name"
 msgstr ""
 
 #: includes/features/class-feature-login-honeypot.php:83
-#: build/arbricks/includes/features/class-feature-login-honeypot.php:60
 msgid "Name of the honeypot field"
 msgstr ""
 
 #: includes/features/class-feature-login-honeypot.php:89
-#: build/arbricks/includes/features/class-feature-login-honeypot.php:66
 msgid "Block Message"
 msgstr ""
 
 #: includes/features/class-feature-login-honeypot.php:90
-#: build/arbricks/includes/features/class-feature-login-honeypot.php:67
 msgid "Message shown to blocked bots"
 msgstr ""
 
 #: includes/features/class-feature-login-honeypot.php:91
-#: build/arbricks/includes/features/class-feature-login-honeypot.php:68
 msgid "تم حظر محاولة تسجيل الدخول."
 msgstr ""
 
 #: includes/features/class-feature-login-honeypot.php:92
 #: includes/features/class-feature-login-honeypot.php:213
-#: build/arbricks/includes/features/class-feature-login-honeypot.php:69
-#: build/arbricks/includes/features/class-feature-login-honeypot.php:190
 msgid "Login attempt blocked."
 msgstr ""
 
 #: includes/features/class-feature-login-honeypot.php:96
-#: build/arbricks/includes/features/class-feature-login-honeypot.php:73
 msgid "Enable CSS Hiding"
 msgstr ""
 
 #: includes/features/class-feature-login-honeypot.php:97
-#: build/arbricks/includes/features/class-feature-login-honeypot.php:74
 msgid "Use CSS to hide honeypot field"
 msgstr ""
 
 #: includes/features/class-feature-login-honeypot.php:128
-#: build/arbricks/includes/features/class-feature-login-honeypot.php:105
 msgid "Leave this field empty"
 msgstr ""
 
+#: includes/features/class-feature-arbricks-copy.php:14
+msgid "AR Copy to Clipboard"
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:15
+msgid ""
+"Copy text to clipboard when clicking any element with data-arbricks-copy"
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:18
+msgid ""
+"Allows you to copy any text to the clipboard by clicking on an HTML element. "
+"This is useful for sharing links, discount codes, or any specific text "
+"snippets."
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:20
+msgid ""
+"Add the attribute <code>data-arbricks-copy=\"TEXT\"</code> to any HTML "
+"element."
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:21
+msgid ""
+"Customize the success and error messages in the settings below if needed."
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:22
+msgid ""
+"The element's content will change to the success message for 1.5 seconds "
+"after a successful copy."
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:28
+msgid ""
+"This feature relies on the Clipboard API and requires a secure connection "
+"(HTTPS) in most modern browsers."
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:29
+msgid ""
+"If the browser does not support the Clipboard API, the error message will be "
+"shown."
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:44
+msgid "Default Text (Fallback)"
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:45
+msgid "Text used if the element has no original content."
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:46
+#: includes/features/class-feature-arbricks-copy.php:71
+msgid "Copy"
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:50
+msgid "Success Message"
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:51
+msgid "Message shown after successful copy."
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:52
+#: includes/features/class-feature-arbricks-copy.php:72
+msgid "Copied"
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:56
+#: includes/features/class-feature-login-recaptcha.php:103
+#: includes/features/class-feature-wc-minimum-order-amount.php:99
+msgid "Error Message"
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:57
+msgid "Message shown if copy fails."
+msgstr ""
+
+#: includes/features/class-feature-arbricks-copy.php:58
+#: includes/features/class-feature-arbricks-copy.php:73
+msgid "Copy Failed"
+msgstr ""
+
 #: includes/features/class-feature-math-captcha-login.php:42
-#: build/arbricks/includes/features/class-feature-math-captcha-login.php:42
 msgid "Math Captcha (Login + Woo My Account)"
 msgstr ""
 
 #: includes/features/class-feature-math-captcha-login.php:43
-#: build/arbricks/includes/features/class-feature-math-captcha-login.php:43
 msgid ""
 "Adds a simple math captcha to wp-login.php and WooCommerce My Account login/"
 "register forms."
@@ -1296,33 +1320,27 @@ msgid "User must type 11 to proceed with login"
 msgstr ""
 
 #: includes/features/class-feature-math-captcha-login.php:145
-#: build/arbricks/includes/features/class-feature-math-captcha-login.php:123
 #, php-format
 msgid "تحقق بسيط: كم حاصل %1$d + %2$d ؟"
 msgstr ""
 
 #: includes/features/class-feature-math-captcha-login.php:199
-#: build/arbricks/includes/features/class-feature-math-captcha-login.php:177
 msgid "حصل خطأ في التحقق الأمني. حاول مجددًا."
 msgstr ""
 
 #: includes/features/class-feature-math-captcha-login.php:207
-#: build/arbricks/includes/features/class-feature-math-captcha-login.php:185
 msgid "يجب عليك الإجابة على سؤال التحقق."
 msgstr ""
 
 #: includes/features/class-feature-math-captcha-login.php:211
-#: build/arbricks/includes/features/class-feature-math-captcha-login.php:189
 msgid "إجابة التحقق غير صحيحة."
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:49
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:49
 msgid "Login reCAPTCHA (v2)"
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:50
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:50
 msgid "Add Google reCAPTCHA v2 checkbox to login form."
 msgstr ""
 
@@ -1400,95 +1418,71 @@ msgid "Secret Key format: 6LcExampleSecret456XYZabc..."
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:89
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:65
 msgid "Site Key"
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:90
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:66
 msgid "Google reCAPTCHA site key (required)"
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:96
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:72
 msgid "Secret Key"
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:97
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:73
 msgid "Google reCAPTCHA secret key (required)"
 msgstr ""
 
-#: includes/features/class-feature-login-recaptcha.php:103
-#: includes/features/class-feature-wc-minimum-order-amount.php:99
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:79
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:75
-msgid "Error Message"
-msgstr ""
-
 #: includes/features/class-feature-login-recaptcha.php:104
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:80
 msgid "Message shown on validation failure"
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:105
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:81
 msgid "يرجى التحقق من أنك لست روبوت."
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:106
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:82
 msgid "Please verify you are not a robot."
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:110
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:86
 msgid "Bypass for Admins"
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:111
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:87
 msgid "Skip reCAPTCHA for administrator accounts"
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:116
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:92
 msgid "Timeout (seconds)"
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:117
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:93
 msgid "API request timeout"
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:167
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:143
 msgid "reCAPTCHA site key not configured."
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:217
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:193
 msgid "Please complete the reCAPTCHA."
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:245
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:221
 #, php-format
 msgid "reCAPTCHA verification failed: %s"
 msgstr ""
 
 #: includes/features/class-feature-login-recaptcha.php:256
-#: build/arbricks/includes/features/class-feature-login-recaptcha.php:232
 msgid "reCAPTCHA verification failed."
 msgstr ""
 
 #: includes/features/class-feature-wc-minimum-order-amount.php:42
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:42
 msgid "Minimum Order Amount"
 msgstr ""
 
 #: includes/features/class-feature-wc-minimum-order-amount.php:43
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:43
 msgid "Enforce minimum order amount at checkout."
 msgstr ""
 
@@ -1558,37 +1552,30 @@ msgid "Error Message: \"Minimum order is %s. Please add more items.\""
 msgstr ""
 
 #: includes/features/class-feature-wc-minimum-order-amount.php:82
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:58
 msgid "Minimum Amount"
 msgstr ""
 
 #: includes/features/class-feature-wc-minimum-order-amount.php:83
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:59
 msgid "Minimum order value (numeric)"
 msgstr ""
 
 #: includes/features/class-feature-wc-minimum-order-amount.php:89
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:65
 msgid "Compare Mode"
 msgstr ""
 
 #: includes/features/class-feature-wc-minimum-order-amount.php:90
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:66
 msgid "What to compare against minimum"
 msgstr ""
 
 #: includes/features/class-feature-wc-minimum-order-amount.php:92
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:68
 msgid "Subtotal (before tax/shipping)"
 msgstr ""
 
 #: includes/features/class-feature-wc-minimum-order-amount.php:93
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:69
 msgid "Total (after tax/shipping)"
 msgstr ""
 
 #: includes/features/class-feature-wc-minimum-order-amount.php:100
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:76
 #, php-format
 msgid "Use %s for amount placeholder"
 msgstr ""
@@ -1597,21 +1584,15 @@ msgstr ""
 #: includes/features/class-feature-wc-minimum-order-amount.php:102
 #: includes/features/class-feature-wc-minimum-order-amount.php:145
 #: includes/features/class-feature-wc-minimum-order-amount.php:179
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:77
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:78
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:121
-#: build/arbricks/includes/features/class-feature-wc-minimum-order-amount.php:155
 #, php-format
 msgid "The minimum order amount is %s."
 msgstr ""
 
 #: includes/features/class-feature-remove-wp-version.php:40
-#: build/arbricks/includes/features/class-feature-remove-wp-version.php:40
 msgid "Remove WP Version"
 msgstr ""
 
 #: includes/features/class-feature-remove-wp-version.php:41
-#: build/arbricks/includes/features/class-feature-remove-wp-version.php:41
 msgid "Remove WordPress version from head and feeds for security."
 msgstr ""
 
@@ -1647,12 +1628,10 @@ msgid "Part of a layered security approach - use with other security features"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:49
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:49
 msgid "Auto Image Meta on Upload"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:50
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:50
 msgid ""
 "Automatically generate title, caption, description, and alt text from "
 "filename."
@@ -1731,92 +1710,74 @@ msgid ""
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:89
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:65
 msgid "Apply To"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:90
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:66
 msgid "When to set metadata"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:92
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:68
 msgid "Only Empty Fields (Safe)"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:93
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:69
 msgid "Always Overwrite"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:99
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:75
 msgid "Set Title"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:100
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:76
 msgid "Auto-generate attachment title"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:105
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:81
 msgid "Set Caption"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:106
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:82
 msgid "Auto-generate caption (excerpt)"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:111
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:87
 msgid "Set Description"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:112
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:88
 msgid "Auto-generate description (content)"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:117
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:93
 msgid "Set Alt Text"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:118
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:94
 msgid "Auto-generate alt text"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:123
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:99
 msgid "Preserve Case"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:124
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:100
 msgid "Keep original case (recommended for non-Latin text)"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:129
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:105
 msgid "Clean Separators"
 msgstr ""
 
 #: includes/features/class-feature-media-auto-meta.php:130
-#: build/arbricks/includes/features/class-feature-media-auto-meta.php:106
 msgid "Replace hyphens/underscores with spaces"
 msgstr ""
 
 #: includes/features/class-feature-webp-auto-convert.php:41
-#: build/arbricks/includes/features/class-feature-webp-auto-convert.php:41
 msgid "Auto WebP Converter (Uploads)"
 msgstr ""
 
 #: includes/features/class-feature-webp-auto-convert.php:42
-#: build/arbricks/includes/features/class-feature-webp-auto-convert.php:42
 msgid ""
 "Automatically convert uploaded JPEG/PNG images to WebP and replace the "
 "original file."
@@ -1872,12 +1833,10 @@ msgid ""
 msgstr ""
 
 #: includes/features/class-feature-wc-cart-auto-update.php:42
-#: build/arbricks/includes/features/class-feature-wc-cart-auto-update.php:42
 msgid "Cart Auto Update on Quantity Change"
 msgstr ""
 
 #: includes/features/class-feature-wc-cart-auto-update.php:43
-#: build/arbricks/includes/features/class-feature-wc-cart-auto-update.php:43
 msgid "Automatically update cart when quantity changes."
 msgstr ""
 
@@ -1931,93 +1890,86 @@ msgid ""
 msgstr ""
 
 #: includes/features/class-feature-wc-cart-auto-update.php:77
-#: build/arbricks/includes/features/class-feature-wc-cart-auto-update.php:58
 msgid "Debounce Delay (ms)"
 msgstr ""
 
 #: includes/features/class-feature-wc-cart-auto-update.php:78
-#: build/arbricks/includes/features/class-feature-wc-cart-auto-update.php:59
 msgid "Milliseconds to wait before updating"
 msgstr ""
 
 #: includes/features/class-feature-wc-cart-auto-update.php:84
-#: build/arbricks/includes/features/class-feature-wc-cart-auto-update.php:65
 msgid "Hide Update Cart Button"
 msgstr ""
 
 #: includes/features/class-feature-wc-cart-auto-update.php:85
-#: build/arbricks/includes/features/class-feature-wc-cart-auto-update.php:66
 msgid "Auto-update replaces manual update"
 msgstr ""
 
 #: includes/features/class-feature-wc-cart-auto-update.php:90
-#: build/arbricks/includes/features/class-feature-wc-cart-auto-update.php:71
 msgid "Hide Cart Update Notices"
 msgstr ""
 
 #: includes/features/class-feature-wc-cart-auto-update.php:91
-#: build/arbricks/includes/features/class-feature-wc-cart-auto-update.php:72
 msgid "Suppress \"Cart updated\" messages"
 msgstr ""
 
-#: arbricks.php:107 build/arbricks/arbricks.php:107
+#: arbricks.php:119
 msgid "ArBricks Plugin"
 msgstr ""
 
-#: arbricks.php:108 build/arbricks/arbricks.php:108
+#: arbricks.php:120
 msgid ""
 "By default, this plugin does not collect or transmit any personal data. "
 "However, certain optional features may transmit data to third-party services "
 "when enabled:"
 msgstr ""
 
-#: arbricks.php:109 build/arbricks/arbricks.php:109
+#: arbricks.php:121
 msgid "Optional External Services"
 msgstr ""
 
-#: arbricks.php:110 build/arbricks/arbricks.php:110
+#: arbricks.php:122
 msgid "Google reCAPTCHA (Login Protection)"
 msgstr ""
 
-#: arbricks.php:111 build/arbricks/arbricks.php:111
+#: arbricks.php:123
 msgid "If you enable the Google reCAPTCHA feature for login protection:"
 msgstr ""
 
-#: arbricks.php:112 build/arbricks/arbricks.php:112
+#: arbricks.php:124
 msgid "Data sent: User IP address and browser fingerprint"
 msgstr ""
 
-#: arbricks.php:113 build/arbricks/arbricks.php:113
+#: arbricks.php:125
 msgid "Purpose: Bot detection and spam prevention"
 msgstr ""
 
-#: arbricks.php:114 arbricks.php:120 build/arbricks/arbricks.php:114
-#: build/arbricks/arbricks.php:120
+#: arbricks.php:126 arbricks.php:132
 msgid ""
 "Service: Google LLC - Privacy Policy: https://policies.google.com/privacy"
 msgstr ""
 
-#: arbricks.php:115 build/arbricks/arbricks.php:115
+#: arbricks.php:127
 msgid "Control: You must manually enable this feature and provide API keys"
 msgstr ""
 
-#: arbricks.php:116 build/arbricks/arbricks.php:116
+#: arbricks.php:128
 msgid "Google Tag Manager (Marketing & Analytics)"
 msgstr ""
 
-#: arbricks.php:117 build/arbricks/arbricks.php:117
+#: arbricks.php:129
 msgid "If you enable the Google Tag Manager feature:"
 msgstr ""
 
-#: arbricks.php:118 build/arbricks/arbricks.php:118
+#: arbricks.php:130
 msgid "Data sent: Depends on your GTM container configuration"
 msgstr ""
 
-#: arbricks.php:119 build/arbricks/arbricks.php:119
+#: arbricks.php:131
 msgid "Purpose: Analytics and marketing tracking as configured by you"
 msgstr ""
 
-#: arbricks.php:121 build/arbricks/arbricks.php:121
+#: arbricks.php:133
 msgid ""
 "All features using external services are disabled by default and require "
 "manual configuration. You are responsible for updating your privacy policy "
