@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Plugin constants.
-define( 'ARBRICKS_VERSION', '2.0.0' );
+define( 'ARBRICKS_VERSION', '2.0.7' );
 define( 'ARBRICKS_PLUGIN_FILE', __FILE__ );
 define( 'ARBRICKS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'ARBRICKS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
