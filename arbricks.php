@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     بريكس بالعربي
+ * Plugin Name:     arbricks
  * Plugin URI:      https://arbricks.net/
  * Description:     استمتع بأسهل طريقة لإضافة أنماط وأدوات احترافية إلى موقع ووردبريس الخاص بك
  * Version:         2.0.0
@@ -8,6 +8,7 @@
  * Author URI:      https://arbricks.net/
  * Text Domain:     arbricks
  * Domain Path:     /languages
+ * Update URI:      https://github.com/MajedBannani/ArBricks-Plugin
  * Requires PHP:    7.4
  * Requires at least: 5.8
  * License:         GPL v2 or later
@@ -26,12 +27,18 @@ define( 'ARBRICKS_PLUGIN_FILE', __FILE__ );
 define( 'ARBRICKS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'ARBRICKS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'ARBRICKS_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+define( 'ARBRICKS_PLUGIN_SLUG', 'arbricks' );
+define( 'ARBRICKS_GITHUB_REPO_URL', 'https://github.com/MajedBannani/arbricks-plugin' );
+define( 'ARBRICKS_GITHUB_TOKEN', '' ); // Optional: for private repos.
 
 // Load Options class first (needed by activation hook).
 require_once ARBRICKS_PLUGIN_DIR . 'includes/class-options.php';
 
 // Load main plugin class.
 require_once ARBRICKS_PLUGIN_DIR . 'includes/class-plugin.php';
+
+// Load GitHub Updater.
+require_once ARBRICKS_PLUGIN_DIR . 'includes/class-github-updater.php';
 
 /**
  * Initialize plugin
@@ -51,6 +58,11 @@ function arbricks_init() {
 
 	// Start plugin.
 	\ArBricks\Plugin::instance();
+
+	// Initialize GitHub Updater.
+	if ( class_exists( 'ArBricks_GitHub_Updater' ) ) {
+		new \ArBricks_GitHub_Updater();
+	}
 }
 add_action( 'plugins_loaded', 'arbricks_init' );
 
