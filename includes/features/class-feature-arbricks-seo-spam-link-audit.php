@@ -329,18 +329,26 @@ class Feature_ArBricks_SEO_Spam_Link_Audit implements Feature_Interface {
 								var data = results[domain];
 								var status = data.suspicious ? '<span style="color: #d63638; font-weight: bold;">⚠️ <?php echo esc_js( __( 'Suspicious', 'arbricks' ) ); ?></span>' : '<span style="color: #68de7c;">✅ <?php echo esc_js( __( 'Safe', 'arbricks' ) ); ?></span>';
 								
-								var locations = data.found_in.map(function(loc) {
-									return '<small>' + loc.type + ': ' + loc.title + '</small>';
-								}).join('<br>');
+								var $row = $('<tr>');
+								$row.append($('<td>').append($('<code>').text(domain)));
+								$row.append($('<td>').text(data.count));
+								
+								var $statusCell = $('<td>');
+								if (data.suspicious) {
+									$statusCell.append($('<span>').css({'color': '#d63638', 'font-weight': 'bold'}).text('⚠️ <?php echo esc_js( __( 'Suspicious', 'arbricks' ) ); ?>'));
+								} else {
+									$statusCell.append($('<span>').css({'color': '#68de7c'}).text('✅ <?php echo esc_js( __( 'Safe', 'arbricks' ) ); ?>'));
+								}
+								$row.append($statusCell);
 
-								$('#arbricks-spam-results-body').append(
-									'<tr>' +
-										'<td><code>' + domain + '</code></td>' +
-										'<td>' + data.count + '</td>' +
-										'<td>' + status + '</td>' +
-										'<td>' + locations + '</td>' +
-									'</tr>'
-								);
+								var $locationCell = $('<td>');
+								data.found_in.forEach(function(loc, index) {
+									if (index > 0) $locationCell.append($('<br>'));
+									$locationCell.append($('<small>').text(loc.type + ': ' + loc.title));
+								});
+								$row.append($locationCell);
+
+								$('#arbricks-spam-results-body').append($row);
 							});
 						}
 						$('#arbricks-spam-results').fadeIn();

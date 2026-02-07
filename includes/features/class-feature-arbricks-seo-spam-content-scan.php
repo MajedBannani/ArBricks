@@ -311,15 +311,33 @@ class Feature_ArBricks_SEO_Spam_Content_Scan implements Feature_Interface {
 								var issuesStr = item.issues.join(', ');
 								var riskLabel = '<?php echo esc_js( __( 'Risk:', 'arbricks' ) ); ?> ' + item.risk;
 
-								$('#arbricks-scs-results-body').append(
-									'<tr>' +
-										'<td>' + item.id + '</td>' +
-										'<td><strong>' + item.title + '</strong><br><small>' + item.type + '</small></td>' +
-										'<td>' + issuesStr + '</td>' +
-										'<td><span style="font-weight:bold; color:' + riskColor + ';">' + item.risk + '</span></td>' +
-										'<td><a href="' + item.edit_link + '" class="button button-small" target="_blank"><?php echo esc_js( __( 'Edit', 'arbricks' ) ); ?></a></td>' +
-									'</tr>'
-								);
+								var $row = $('<tr>');
+								$row.append($('<td>').text(item.id));
+								
+								var $titleCell = $('<td>');
+								$titleCell.append($('<strong>').text(item.title));
+								$titleCell.append($('<br>'));
+								$titleCell.append($('<small>').text(item.type));
+								$row.append($titleCell);
+								
+								$row.append($('<td>').text(issuesStr));
+								
+								$row.append($('<td>').append(
+									$('<span>').css({
+										'font-weight': 'bold',
+										'color': riskColor
+									}).text(item.risk)
+								));
+								
+								$row.append($('<td>').append(
+									$('<a>').attr({
+										'href': item.edit_link,
+										'class': 'button button-small',
+										'target': '_blank'
+									}).text('<?php echo esc_js( __( 'Edit', 'arbricks' ) ); ?>')
+								));
+
+								$('#arbricks-scs-results-body').append($row);
 							});
 						}
 						$('#arbricks-scs-results').fadeIn();

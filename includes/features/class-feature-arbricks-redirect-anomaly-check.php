@@ -294,28 +294,42 @@ class Feature_ArBricks_Redirect_Anomaly_Check implements Feature_Interface {
 					
 					if (response.success) {
 						response.data.results.forEach(function(item) {
-							var normalChain = item.normal.chain.map(c => '<span class="arbricks-badge">' + c.code + '</span>').join(' → ');
-							var botChain = item.bot ? item.bot.chain.map(c => '<span class="arbricks-badge">' + c.code + '</span>').join(' → ') : 'N/A';
+							var $row = $('<tr>');
+							$row.append($('<td>').append($('<small>').append($('<code>').text(item.url))));
 							
-							var riskColor = '#68de7c'; // Low
-							if (item.anomaly.risk === 'High') riskColor = '#d63638';
-							else if (item.anomaly.risk === 'Medium') riskColor = '#f0b20a';
+							var $chainCell = $('<td>');
+							$chainCell.append($('<strong>').text('Browser: '));
+							item.normal.chain.forEach(function(c, i) {
+								if (i > 0) $chainCell.append(' → ');
+								$chainCell.append($('<span>').addClass('arbricks-badge').text(c.code));
+							});
+							$chainCell.append($('<br>'));
+							$chainCell.append($('<strong>').text('Bot: '));
+							if (item.bot) {
+								item.bot.chain.forEach(function(c, i) {
+									if (i > 0) $chainCell.append(' → ');
+									$chainCell.append($('<span>').addClass('arbricks-badge').text(c.code));
+								});
+							} else {
+								$chainCell.append('N/A');
+							}
+							$row.append($chainCell);
 
-							var issuesHtml = item.anomaly.issues.length ? '<ul>' + item.anomaly.issues.map(i => '<li>' + i + '</li>').join('') + '</ul>' : '<?php echo esc_js( __( 'No issues detected', 'arbricks' ) ); ?>';
+							var $riskCell = $('<td>');
+							$riskCell.append($('<span>').css({'font-weight': 'bold', 'color': riskColor}).text(item.anomaly.risk));
+							
+							if (item.anomaly.issues.length) {
+								var $list = $('<ul>');
+								item.anomaly.issues.forEach(function(issue) {
+									$list.append($('<li>').text(issue));
+								});
+								$riskCell.append($list);
+							} else {
+								$riskCell.append($('<p>').text('<?php echo esc_js( __( 'No issues detected', 'arbricks' ) ); ?>'));
+							}
+							$row.append($riskCell);
 
-							$('#arbricks-red-results-body').append(
-								'<tr>' +
-									'<td><small><code>' + item.url + '</code></small></td>' +
-									'<td>' +
-										'<strong>Browser:</strong> ' + normalChain + '<br>' +
-										'<strong>Bot:</strong> ' + botChain +
-									'</td>' +
-									'<td>' +
-										'<span style="font-weight:bold; color:' + riskColor + ';">' + item.anomaly.risk + '</span>' +
-										issuesHtml +
-									'</td>' +
-								'</tr>'
-							);
+							$('#arbricks-red-results-body').append($row);
 						});
 						$('#arbricks-red-results').fadeIn();
 					} else {

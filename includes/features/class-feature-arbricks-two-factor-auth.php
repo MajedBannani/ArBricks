@@ -141,9 +141,10 @@ class Feature_ArBricks_Two_Factor_Auth implements Feature_Interface {
 				// Generate Setup UI.
 				$("#arbricks-2fa-setup-btn").on("click", function() {
 					var $btn = $(this);
-					$btn.prop("disabled", true).text("' . esc_js( __( 'Generating...', 'arbricks' ) ) . '");
-					
-					$.post(ajaxurl, { action: "arbricks_2fa_setup_generate" }, function(response) {
+					$.post(ajaxurl, { 
+						action: "arbricks_2fa_setup_generate",
+						nonce: "' . esc_js( wp_create_nonce( 'arbricks_2fa_setup' ) ) . '"
+					}, function(response) {
 						if (response.success) {
 							$("#arbricks-2fa-setup-section").show();
 							$("#arbricks-2fa-secret-text").text(response.data.secret);
@@ -171,6 +172,7 @@ class Feature_ArBricks_Two_Factor_Auth implements Feature_Interface {
 					
 					$.post(ajaxurl, { 
 						action: "arbricks_2fa_setup_verify",
+						nonce: "' . esc_js( wp_create_nonce( 'arbricks_2fa_setup' ) ) . '",
 						code: code
 					}, function(response) {
 						if (response.success) {
@@ -186,7 +188,10 @@ class Feature_ArBricks_Two_Factor_Auth implements Feature_Interface {
 				$("#arbricks-2fa-disable-btn").on("click", function() {
 					if (!confirm("' . esc_js( __( 'Are you sure you want to disable 2FA? This will reduce your account security.', 'arbricks' ) ) . '")) return;
 					
-					$.post(ajaxurl, { action: "arbricks_2fa_disable" }, function(response) {
+					$.post(ajaxurl, { 
+						action: "arbricks_2fa_disable",
+						nonce: "' . esc_js( wp_create_nonce( 'arbricks_2fa_setup' ) ) . '"
+					}, function(response) {
 						if (response.success) {
 							location.reload();
 						}
@@ -206,6 +211,8 @@ class Feature_ArBricks_Two_Factor_Auth implements Feature_Interface {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( array( 'message' => __( 'Permission denied', 'arbricks' ) ) );
 		}
+
+		check_ajax_referer( 'arbricks_2fa_setup', 'nonce' );
 
 		$user   = wp_get_current_user();
 		$secret = $this->ga->createSecret();
@@ -231,6 +238,8 @@ class Feature_ArBricks_Two_Factor_Auth implements Feature_Interface {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( array( 'message' => __( 'Permission denied', 'arbricks' ) ) );
 		}
+
+		check_ajax_referer( 'arbricks_2fa_setup', 'nonce' );
 
 		$code   = isset( $_POST['code'] ) ? sanitize_text_field( wp_unslash( $_POST['code'] ) ) : '';
 		$user   = wp_get_current_user();
@@ -260,6 +269,8 @@ class Feature_ArBricks_Two_Factor_Auth implements Feature_Interface {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error();
 		}
+
+		check_ajax_referer( 'arbricks_2fa_setup', 'nonce' );
 
 		$user = wp_get_current_user();
 		delete_user_meta( $user->ID, 'arbricks_2fa_secret' );
