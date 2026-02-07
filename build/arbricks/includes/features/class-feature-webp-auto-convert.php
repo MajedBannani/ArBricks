@@ -42,6 +42,23 @@ class Feature_WebP_Auto_Convert implements Feature_Interface {
 			'description' => __( 'Automatically convert uploaded JPEG/PNG images to WebP and replace the original file.', 'arbricks' ),
 			'category'    => 'tools',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Automatically optimizes your media library by converting new JPEG and PNG uploads to the modern WebP format. WebP images are significantly smaller in size without losing quality, leading to faster site loading times.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Enable the feature toggle above.', 'arbricks' ),
+					__( 'Click "Save Changes".', 'arbricks' ),
+					__( 'Upload a new JPEG or PNG image to your Media Library.', 'arbricks' ),
+					__( 'The original image will be deleted and replaced with a .webp version.', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'Requires GD or ImageMagick PHP extension with WebP support enabled on your server.', 'arbricks' ),
+					__( 'Original Capture: Replaces the original JPG/PNG file entirely to save disk space.', 'arbricks' ),
+					__( 'Quality: Converted at 85% quality by default (optimal balance between size and quality).', 'arbricks' ),
+					__( 'Transparency: PNG transparency is preserved during conversion.', 'arbricks' ),
+					__( 'Scope: Only affects NEW uploads. Existing images in your media library are not processed.', 'arbricks' ),
+					__( 'Performance: Slight increase in processing time during upload as conversion happens on-the-fly.', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -150,4 +167,11 @@ class Feature_WebP_Auto_Convert implements Feature_Interface {
 
 		return $upload;
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

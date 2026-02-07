@@ -39,7 +39,7 @@ class Feature_Wc_Direct_Checkout_Single_Item implements Feature_Interface {
 	 */
 	public static function meta(): array {
 		return array(
-			'title'       => __( 'Direct Checkout (Single Item Flow)', 'arbricks' ),
+			'title'       => __( 'Direct Checkout (Single Item)', 'arbricks' ),
 			'description' => __( 'Redirect to checkout and skip cart for single items.', 'arbricks' ),
 			'category'    => 'woocommerce',
 			'shortcode'   => '',
@@ -74,25 +74,25 @@ class Feature_Wc_Direct_Checkout_Single_Item implements Feature_Interface {
 			'redirect_to_checkout'       => array(
 				'type'        => 'checkbox',
 				'label'       => __( 'Redirect to Checkout', 'arbricks' ),
-				'description' => __( 'Skip cart, go directly to checkout', 'arbricks' ),
+				'description' => __( 'Skip cart and go directly to checkout.', 'arbricks' ),
 				'default'     => true,
 			),
 			'suppress_add_to_cart_message' => array(
 				'type'        => 'checkbox',
-				'label'       => __( 'Suppress Add-to-Cart Message', 'arbricks' ),
-				'description' => __( 'Hide "Product added to cart" notice', 'arbricks' ),
+				'label'       => __( 'Suppress Add to Cart Message', 'arbricks' ),
+				'description' => __( 'Hide "Product added to cart" notice.', 'arbricks' ),
 				'default'     => true,
 			),
 			'empty_cart_before_add'      => array(
 				'type'        => 'checkbox',
 				'label'       => __( 'Empty Cart Before Adding', 'arbricks' ),
-				'description' => __( 'Clear cart before adding new product', 'arbricks' ),
+				'description' => __( 'Clear cart before adding new product.', 'arbricks' ),
 				'default'     => true,
 			),
 			'disable_order_again_button' => array(
 				'type'        => 'checkbox',
 				'label'       => __( 'Disable Order Again Button', 'arbricks' ),
-				'description' => __( 'Remove "Order Again" button from orders', 'arbricks' ),
+				'description' => __( 'Remove re-order button from my account page.', 'arbricks' ),
 				'default'     => true,
 			),
 		);

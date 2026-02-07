@@ -39,23 +39,23 @@ class Feature_Head_Cleanup implements Feature_Interface {
 	public static function meta(): array {
 		return array(
 			'title'       => __( 'Head Cleanup', 'arbricks' ),
-			'description' => __( 'Remove unnecessary default tags from wp_head (discovery links, shortlink, and optional REST/feed links).', 'arbricks' ),
+			'description' => __( 'Remove unnecessary default tags from wp_head output (RSD, shortlinks, etc.).', 'arbricks' ),
 			'category'    => 'tools',
 			'shortcode'   => '',
 			'help'        => array(
-				'summary'  => __( 'Removes unnecessary meta tags and links from the HTML <head> section. Cleans up wp_head() output by removing RSD link, Windows Live Writer manifest, and shortlink tags. Results in cleaner HTML and slightly improved performance.', 'arbricks' ),
+				'summary'  => __( 'Removes unnecessary meta tags and links from the <head> section of your HTML. It cleans up the wp_head() output by removing RSD links, Windows Live Writer manifests, and shortlink tags. This results in cleaner HTML code and a slight performance improvement.', 'arbricks' ),
 				'how_to'   => array(
-					__( 'Enable the feature toggle above', 'arbricks' ),
-					__( 'Click "Save Changes"', 'arbricks' ),
-					__( 'Unnecessary tags are immediately removed from your site\'s HTML head', 'arbricks' ),
-					__( 'Inspect page source to verify cleaner <head> section', 'arbricks' ),
+					__( 'Enable the feature using the toggle above.', 'arbricks' ),
+					__( 'Click "Save Changes".', 'arbricks' ),
+					__( 'The unnecessary tags will be removed immediately from your site\'s HTML head.', 'arbricks' ),
+					__( 'Inspect your page source to verify a cleaner <head> section.', 'arbricks' ),
 				),
 				'notes'    => array(
-					__( 'Always removed: RSD link, Windows Live Writer manifest, shortlink', 'arbricks' ),
-					__( 'These tags are legacy and rarely used by modern tools', 'arbricks' ),
-					__( 'Future versions may add settings to remove REST API and RSS feed links', 'arbricks' ),
-					__( 'No configuration needed - works automatically', 'arbricks' ),
-					__( 'Safe for all sites - does not affect functionality', 'arbricks' ),
+					__( 'Always removed: RSD links, Windows Live Writer manifest, and Shortlinks.', 'arbricks' ),
+					__( 'These tags are legacy and rarely used by modern tools.', 'arbricks' ),
+					__( 'Future versions may add options to remove REST API links and RSS feeds.', 'arbricks' ),
+					__( 'No configuration needed - works automatically.', 'arbricks' ),
+					__( 'Safe for all sites - does not affect site functionality.', 'arbricks' ),
 				),
 			),
 		);

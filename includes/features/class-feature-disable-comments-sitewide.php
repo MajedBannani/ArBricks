@@ -39,25 +39,25 @@ class Feature_Disable_Comments_Sitewide implements Feature_Interface {
 	public static function meta(): array {
 		return array(
 			'title'       => __( 'Disable Comments (Sitewide)', 'arbricks' ),
-			'description' => __( 'Disable comments everywhere (frontend + admin), remove UI entries, disable comment feeds, and remove REST comments endpoints.', 'arbricks' ),
+			'description' => __( 'Disable comments everywhere (Frontend + Admin), remove interface elements, disable comment feeds, and remove REST endpoints for comments.', 'arbricks' ),
 			'category'    => 'tools',
 			'shortcode'   => '',
 			'help'        => array(
-				'summary'  => __( 'Completely disables all comment functionality across your entire WordPress site including frontend forms, admin interface, comment feeds, REST API, and admin bar. Perfect for sites that don\'t need comments (portfolios, business sites, blogs using external comment systems).', 'arbricks' ),
+				'summary'  => __( 'Completely disables all comment functionality across the entire WordPress site, including frontend forms, the admin interface, comment feeds, the REST API, and the admin bar. Ideal for sites that do not need comments (portfolios, business sites, blogs using external comment systems).', 'arbricks' ),
 				'how_to'   => array(
-					__( 'Enable the feature toggle above', 'arbricks' ),
-					__( 'Click "Save Changes"', 'arbricks' ),
-					__( 'Comments are immediately disabled sitewide', 'arbricks' ),
-					__( 'The Comments menu will disappear from WordPress admin', 'arbricks' ),
+					__( 'Enable the feature toggle above.', 'arbricks' ),
+					__( 'Click "Save Changes".', 'arbricks' ),
+					__( 'Comments will be disabled immediately sitewide.', 'arbricks' ),
+					__( 'The Comments menu will disappear from the WordPress dashboard.', 'arbricks' ),
 				),
 				'notes'    => array(
-					__( 'Existing comments remain in database but are completely hidden', 'arbricks' ),
-					__( 'Removes Comments menu from admin and redirects direct access to dashboard', 'arbricks' ),
-					__( 'Removes Comments link from admin bar', 'arbricks' ),
-					__( 'Disables comment feeds (RSS/Atom) - returns 404 error', 'arbricks' ),
-					__( 'Removes REST API comment endpoints for security', 'arbricks' ),
-					__( 'Unqueues comment-reply.js script to improve performance', 'arbricks' ),
-					__( 'No configuration needed - works automatically', 'arbricks' ),
+					__( 'Existing comments remain in the database but are completely hidden.', 'arbricks' ),
+					__( 'Removes the comments menu from admin and redirects direct access to the dashboard.', 'arbricks' ),
+					__( 'Removes the comments link from the admin bar.', 'arbricks' ),
+					__( 'Disables comment feeds (RSS/Atom) - returns a 404 error.', 'arbricks' ),
+					__( 'Removes REST API comment endpoints for increased security.', 'arbricks' ),
+					__( 'Prevents comment-reply.js script from loading to improve performance.', 'arbricks' ),
+					__( 'No configuration required - works automatically.', 'arbricks' ),
 				),
 			),
 		);

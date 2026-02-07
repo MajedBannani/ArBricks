@@ -40,9 +40,26 @@ class Feature_Wc_Free_Checkout_Min_Fields implements Feature_Interface {
 	public static function meta(): array {
 		return array(
 			'title'       => __( 'Free Checkout Minimal Fields', 'arbricks' ),
-			'description' => __( 'Reduce checkout fields when cart is free (no payment required).', 'arbricks' ),
+			'description' => __( 'Reduce checkout fields when cart is free (no payment needed).', 'arbricks' ),
 			'category'    => 'woocommerce',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Simplifies the checkout process for free products by removing unnecessary billing fields (like address, phone, and company) when the cart total is zero. Reduces friction and increases conversions for free products or samples.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Ensure WooCommerce is installed and active.', 'arbricks' ),
+					__( 'Enable the feature toggle above.', 'arbricks' ),
+					__( 'In "Fields to Keep", enter a comma-separated list of field IDs you want to remain visible.', 'arbricks' ),
+					__( 'Click "Save Changes".', 'arbricks' ),
+					__( 'Try adding a free product to your cart and proceed to checkout to see the simplification.', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'Requires WooCommerce plugin.', 'arbricks' ),
+					__( 'Only works when the cart total is 0.00 and no payment is required.', 'arbricks' ),
+					__( 'Fields to Keep: Default is "billing_email,billing_first_name".', 'arbricks' ),
+					__( 'Supported field IDs include: billing_first_name, billing_last_name, billing_company, billing_address_1, billing_city, billing_phone, etc.', 'arbricks' ),
+					__( 'Great for building email lists through free digital giveaways.', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -56,7 +73,7 @@ class Feature_Wc_Free_Checkout_Min_Fields implements Feature_Interface {
 			'keep_fields' => array(
 				'type'        => 'text',
 				'label'       => __( 'Fields to Keep', 'arbricks' ),
-				'description' => __( 'Comma-separated billing field keys (e.g., billing_email,billing_first_name)', 'arbricks' ),
+				'description' => __( 'Comma-separated field IDs (e.g., billing_email,billing_first_name)', 'arbricks' ),
 				'default'     => 'billing_email,billing_first_name',
 				'placeholder' => 'billing_email,billing_first_name',
 			),
@@ -105,4 +122,11 @@ class Feature_Wc_Free_Checkout_Min_Fields implements Feature_Interface {
 
 		return $fields;
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

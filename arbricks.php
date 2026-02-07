@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     arbricks
  * Plugin URI:      https://arbricks.net/
- * Description:     استمتع بأسهل طريقة لإضافة أنماط وأدوات احترافية إلى موقع ووردبريس الخاص بك
+ * Description:     Enjoy the easiest way to add professional patterns and tools to your WordPress site.
  * Version:         2.0.10
  * Author:          Majed | ArBricks
  * Author URI:      https://arbricks.net/

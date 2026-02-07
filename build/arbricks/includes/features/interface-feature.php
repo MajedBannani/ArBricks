@@ -50,4 +50,14 @@ interface Feature_Interface {
 	 * @return void
 	 */
 	public function register_hooks(): void;
+
+	/**
+	 * Render custom admin UI on the settings page
+	 *
+	 * Optional: Features can implement this to output interactive HTML
+	 * inside their setting card.
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void;
 }

@@ -12,7 +12,7 @@ echo ""
 
 # Configuration
 PLUGIN_SLUG="arbricks"
-PLUGIN_VERSION="2.0.0"
+PLUGIN_VERSION="2.0.10"
 BUILD_DIR="./build"
 PACKAGE_NAME="${PLUGIN_SLUG}.${PLUGIN_VERSION}"
 
@@ -69,7 +69,7 @@ REQUIRED_FILES=(
     "readme.txt"
     "uninstall.php"
     "languages/arbricks.pot"
-    "assets/vendor/qrcode/qrcode.js"
+    "assets/vendor/qrcode/qrcode.min.js"
     "assets/vendor/qrcode/LICENSE"
 )
 

@@ -39,27 +39,27 @@ class Feature_Wc_Cart_Auto_Update implements Feature_Interface {
 	 */
 	public static function meta(): array {
 		return array(
-			'title'       => __( 'Cart Auto Update on Quantity Change', 'arbricks' ),
-			'description' => __( 'Automatically update cart when quantity changes.', 'arbricks' ),
+			'title'       => __( 'Auto Update Cart on Quantity Change', 'arbricks' ),
+			'description' => __( 'Automatically update the cart as soon as the customer changes any product quantity.', 'arbricks' ),
 			'category'    => 'woocommerce',
 			'shortcode'   => '',
 			'help'        => array(
-				'summary'  => __( 'Automatically refreshes the cart totals whenever a customer changes the quantity of an item in their cart. Removes the need for customers to manually click the "Update Cart" button, providing a smoother and more modern shopping experience.', 'arbricks' ),
+				'summary'  => __( 'Automatically updates cart totals as soon as the customer changes a product quantity. This eliminates the need for customers to manually click the "Update Cart" button, providing a smoother and more modern shopping experience.', 'arbricks' ),
 				'how_to'   => array(
 					__( 'Ensure WooCommerce is installed and active.', 'arbricks' ),
-					__( 'Enable the feature toggle above.', 'arbricks' ),
-					__( 'Set the "Debounce Delay" (default 250ms) to control how long to wait after the last quantity change before updating.', 'arbricks' ),
-					__( 'Decide whether to hide the manual "Update Cart" button.', 'arbricks' ),
+					__( 'Enable the feature using the toggle above.', 'arbricks' ),
+					__( 'Adjust "Update Delay" (default 250ms) to control the wait period after the last quantity change before updating.', 'arbricks' ),
+					__( 'Choose whether you want to hide the manual "Update Cart" button.', 'arbricks' ),
 					__( 'Click "Save Changes".', 'arbricks' ),
-					__( 'Go to your Cart page and change any product quantity to see it auto-update.', 'arbricks' ),
+					__( 'Go to the cart page and try changing a product quantity to see the auto-update.', 'arbricks' ),
 				),
 				'notes'    => array(
-					__( 'Requires WooCommerce plugin.', 'arbricks' ),
-					__( 'Uses AJAX to update the cart without a full page reload.', 'arbricks' ),
-					__( 'Debounce Delay: Prevents multiple updates if a customer clicks the quantity buttons rapidly.', 'arbricks' ),
-					__( 'Hide Update Button: Recommended for a cleaner UI when auto-update is active.', 'arbricks' ),
-					__( 'Hide notices: Optionally suppresses the "Cart updated" message for a more seamless feel.', 'arbricks' ),
-					__( 'Compatibility: Works with most themes using standard WooCommerce cart markup.', 'arbricks' ),
+					__( 'This feature requires WooCommerce.', 'arbricks' ),
+					__( 'Uses AJAX technology to update the cart without reloading the entire page.', 'arbricks' ),
+					__( 'Update Delay (Debounce): Prevents multiple updates if the customer clicks quantity buttons quickly.', 'arbricks' ),
+					__( 'Hide Update Button: Recommended for a cleaner interface when auto-update is enabled.', 'arbricks' ),
+					__( 'Hide Notices: Optionally hides the "Cart updated" message for a more seamless experience.', 'arbricks' ),
+					__( 'Compatibility: Works with most themes using standard WooCommerce cart structure.', 'arbricks' ),
 				),
 			),
 		);
@@ -74,21 +74,21 @@ class Feature_Wc_Cart_Auto_Update implements Feature_Interface {
 		return array(
 			'debounce_ms'        => array(
 				'type'        => 'text',
-				'label'       => __( 'Debounce Delay (ms)', 'arbricks' ),
-				'description' => __( 'Milliseconds to wait before updating', 'arbricks' ),
+				'label'       => __( 'Update Delay (ms)', 'arbricks' ),
+				'description' => __( 'Wait period after change and before start update.', 'arbricks' ),
 				'default'     => '250',
 				'placeholder' => '250',
 			),
 			'hide_update_button' => array(
 				'type'        => 'checkbox',
 				'label'       => __( 'Hide Update Cart Button', 'arbricks' ),
-				'description' => __( 'Auto-update replaces manual update', 'arbricks' ),
+				'description' => __( 'Disable the manual button and rely on auto-update.', 'arbricks' ),
 				'default'     => true,
 			),
 			'hide_notices'       => array(
 				'type'        => 'checkbox',
 				'label'       => __( 'Hide Cart Update Notices', 'arbricks' ),
-				'description' => __( 'Suppress "Cart updated" messages', 'arbricks' ),
+				'description' => __( 'Do not show "Cart updated" message.', 'arbricks' ),
 				'default'     => false,
 			),
 		);

@@ -163,4 +163,11 @@ class Feature_Registry {
 			}
 		}
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

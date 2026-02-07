@@ -1,0 +1,1508 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ArBricks 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-01-31 19:45:00+0000\n"
+"Last-Translator: Majed | ArBricks\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+msgid "128px (Small)"
+msgstr "128 بكسل (صغير)"
+
+msgid "256px (Medium)"
+msgstr "256 بكسل (متوسط)"
+
+msgid "400px (Large)"
+msgstr "400 بكسل (كبير)"
+
+msgid "512px (Extra Large)"
+msgstr "512 بكسل (كبير جداً)"
+
+msgid "API request timeout"
+msgstr "انتهاء مهلة طلب API"
+
+msgid "AR Copy to Clipboard"
+msgstr "نسخ إلى الحافظة (AR)"
+
+msgid "Add Google reCAPTCHA v2 checkbox to login form."
+msgstr "إضافة مربع Google reCAPTCHA v2 إلى نموذج الدخول."
+
+msgid "Add hidden honeypot field to block bots on login."
+msgstr "إضافة حقل فخ مخفي لحظر البوتات."
+
+msgid ""
+"Add the attribute <code>data-arbricks-copy=\"TEXT\"</code> to any HTML "
+"element."
+msgstr "أضف السمة <code>data-arbricks-copy=\"TEXT\"</code> إلى أي عنصر HTML."
+
+msgid "Add your domain and copy the Site Key and Secret Key"
+msgstr "أضف نطاقك وانسخ مفتاح الموقع (Site Key) والمفتاح السري (Secret Key)"
+
+msgid ""
+"Adds Google reCAPTCHA v2 (\"I'm not a robot\" checkbox) to the WordPress "
+"login page (wp-login.php) to prevent automated brute force attacks and bot "
+"login attempts."
+msgstr ""
+"يضيف Google reCAPTCHA v2 (مربع \"أنا لست روبوت\") إلى صفحة تسجيل الدخول في "
+"ووردبريس (wp-login.php) لمنع هجمات التخمين الآلية ومحاولات دخول البوتات."
+
+msgid ""
+"Adds a simple math captcha to wp-login.php and WooCommerce My Account login/"
+"register forms."
+msgstr ""
+"يضيف اختبار تحقق رياضي بسيط لصفحة wp-login.php ولنموذجي تسجيل الدخول/التسجيل "
+"في صفحة حسابي الخاصة بووكومرس."
+
+msgid ""
+"Adds a simple math question (e.g., \"What is 3 + 5?\") to login and "
+"registration forms to block automated bots. Works on WordPress core login "
+"(wp-login.php) and WooCommerce My Account login/register forms."
+msgstr ""
+"يضيف سؤالاً رياضياً بسيطاً (مثل: \"ما حاصل 3 + 5؟\") لنماذج الدخول والتسجيل "
+"لحظر البوتات. يعمل على صفحة دخول ووردبريس الأساسية ونماذج التسجيل/الدخول في "
+"ووكومرس."
+
+msgid ""
+"Adds an invisible \"honeypot\" field to the login form that bots fill out "
+"but humans don't see. Any login attempt with a filled honeypot is "
+"automatically blocked, preventing automated bot attacks without requiring "
+"user interaction."
+msgstr ""
+"يضيف حقلاً مخفياً (فخ المصيدة) إلى نموذج تسجيل الدخول يملأه البوتات تلقائياً "
+"بينما لا يراه البشر. أي محاولة دخول بحقل فخ ممتلئ يتم حظرها تلقائياً، مما "
+"يمنع هجمات البوتات الآلية دون الحاجة لتفاعل المستخدم."
+
+msgid "Admin bar will be hidden on frontend for non-admin users"
+msgstr "سيتم إخفاء شريط الإدارة في الواجهة الأمامية لغير المسؤولين."
+
+msgid "All Admin Pages"
+msgstr "جميع صفحات الإدارة"
+
+msgid ""
+"All Admin Pages: Notice shows on every admin page for maximum visibility"
+msgstr "كل صفحات الإدارة: يظهر التنبيه في كل مكان لأقصى درجة من الانتباه."
+
+msgid "Allow Dismissal"
+msgstr "السماح بالإغلاق"
+
+msgid ""
+"Allows you to copy any text to the clipboard by clicking on an HTML element. "
+"This is useful for sharing links, discount codes, or any specific text "
+"snippets."
+msgstr ""
+"يتيح لك نسخ أي نص إلى الحافظة من خلال النقر على عنصر HTML. هذا مفيد لمشاركة "
+"الروابط أو أكواد الخصم أو أي نصوص محددة."
+
+msgid "Always Overwrite"
+msgstr "استبدال دائماً"
+
+msgid ""
+"Always Overwrite: Replaces existing metadata every time - use with caution"
+msgstr "استبدال دائماً: يستبدل البيانات الموجودة في كل مرة - استخدمه بحذر."
+
+msgid "Always removed: RSD link, Windows Live Writer manifest, shortlink"
+msgstr "يتم حذفها دائماً: رابط RSD، تقرير Windows Live Writer، الرابط المختصر."
+
+msgid "Apply To"
+msgstr "تطبيق على"
+
+msgid "ArBricks"
+msgstr "بريكس بالعربي"
+
+msgid "ArBricks Settings"
+msgstr "إعدادات بريكس بالعربي"
+
+msgid ""
+"Arabic filename: صورة-منتج.jpg → Keeps original case if Preserve Case enabled"
+msgstr "اسم ملف عربي: صورة-منتج.jpg ← يحافظ على الصيغة الأصلية."
+
+msgid "Arabic: \"مجاني\" or \"بدون تكلفة\""
+msgstr "العربية: \"مجاني\" أو \"بدون تكلفة\""
+
+msgid "Auto Image Meta on Upload"
+msgstr "بيانات الصورة التلقائية عند الرفع"
+
+msgid "Auto WebP Converter (Uploads)"
+msgstr "محول WebP التلقائي (الرفوعات)"
+
+msgid "Auto-generate alt text"
+msgstr "توليد النص البديل تلقائياً"
+
+msgid "Auto-generate attachment title"
+msgstr "توليد عنوان المرفق تلقائياً"
+
+msgid "Auto-generate caption (excerpt)"
+msgstr "توليد التسمية التوضيحية تلقائياً"
+
+msgid "Auto-generate description (content)"
+msgstr "توليد الوصف تلقائياً"
+
+msgid "Auto-update replaces manual update"
+msgstr "التحديث التلقائي يستبدل التحديث اليدوي"
+
+msgid "Automatically bypassed for XML-RPC, REST API, WP-CLI, and AJAX requests"
+msgstr "يتم التجاوز تلقائياً لطلبات XML-RPC و REST API و WP-CLI و AJAX."
+
+msgid ""
+"Automatically convert uploaded JPEG/PNG images to WebP and replace the "
+"original file."
+msgstr "تحويل صور JPEG/PNG المرفوعة تلقائياً إلى WebP واستبدال الملف الأصلي."
+
+msgid ""
+"Automatically generate title, caption, description, and alt text from "
+"filename."
+msgstr ""
+"إنشاء العنوان، والتسمية التوضيحية، والوصف، ونص alt تلقائيًا من اسم الملف."
+
+msgid ""
+"Automatically generates image metadata (title, alt text, caption, "
+"description) from the filename when you upload images. Saves time and "
+"improves SEO by ensuring all images have proper alt text and titles."
+msgstr ""
+"ينشئ بيانات الصورة تلقائياً (العنوان، النص البديل، التسمية والوصف) من اسم "
+"الملف عند الرفع. يوفر الوقت ويحسن SEO بضمان وجود نصوص بديلة وعناوين لجميع "
+"صورك."
+
+msgid ""
+"Automatically optimizes your media library by converting new JPEG and PNG "
+"uploads to the modern WebP format. WebP images are significantly smaller in "
+"size without losing quality, leading to faster site loading times."
+msgstr ""
+"يحسن مكتبة الوسائط تلقائياً عبر تحويل صور JPEG و PNG المرفوعة حديثاً إلى صيغة "
+"WebP الحديثة. صور WebP أصغر حجماً بكثير بدون فقدان الجودة، مما يؤدي لسرعة "
+"تحميل أكبر للموقع."
+
+msgid ""
+"Automatically refreshes the cart totals whenever a customer changes the "
+"quantity of an item in their cart. Removes the need for customers to "
+"manually click the \"Update Cart\" button, providing a smoother and more "
+"modern shopping experience."
+msgstr ""
+"يقوم بتحديث إجماليات السلة تلقائياً بمجرد تغيير العميل لكمية أي منتج. يغني "
+"العميل عن الضغط يدوياً على زر \"تحديث السلة\"، مما يوفر تجربة تسوق أكثر سلاسة "
+"وحداثة."
+
+msgid "Automatically update cart when quantity changes."
+msgstr "تحديث السلة تلقائياً عند تغيير الكمية."
+
+msgid "Block Direct Access"
+msgstr "حظر الوصول المباشر"
+
+msgid ""
+"Block Direct Access: Returns 403 Forbidden when xmlrpc.php is accessed "
+"directly"
+msgstr ""
+"حظر الوصول المباشر: يعيد خطأ 403 (ممنوع) عند الوصول المباشر لملف xmlrpc.php."
+
+msgid "Block Message"
+msgstr "رسالة الحظر"
+
+msgid "Body Open (Recommended)"
+msgstr "بداية Body (موصى به)"
+
+msgid "Bypass for Admins"
+msgstr "تجاوز للمسؤولين"
+
+msgid ""
+"Bypass for Admins: When enabled, users with administrator role skip "
+"reCAPTCHA verification"
+msgstr ""
+"تجاوز للمسؤولين: عند التفعيل، سيتخطى المستخدمون ذوو رتبة \"مسؤول\" التحقق من "
+"reCAPTCHA"
+
+msgid ""
+"CSS Hiding (recommended): Field is visually hidden but accessible to bots "
+"that ignore CSS"
+msgstr ""
+"الإخفاء بـ CSS (موصى به): الحقل مخفي بصرياً لكنه متاح للبوتات التي تتجاهل "
+"أكواد CSS."
+
+msgid "CSS minified successfully!"
+msgstr "تم تصغير CSS بنجاح!"
+
+msgid "Cart Auto Update on Quantity Change"
+msgstr "تحديث السلة تلقائياً عند تغيير الكمية"
+
+msgid "Change Settings"
+msgstr "تغيير الإعدادات"
+
+msgid ""
+"Checks WordPress Settings → Reading → \"Search engine visibility\" option"
+msgstr "يتحقق من خيار \"فهرسة الموقع\" في إعدادات القراءة بووردبريس."
+
+msgid "Choose \"Apply To\" mode: Only Empty Fields (safe) or Always Overwrite"
+msgstr "اختر الوضع: الحقول الفارغة فقط (آمن) أو استبدال دائماً."
+
+msgid ""
+"Choose Compare Mode: Subtotal (before tax/shipping) or Total (after tax/"
+"shipping)"
+msgstr ""
+"اختر وضع المقارنة: المجموع الفرعي (قبل الضريبة والشحن) أو المجموع الكلي (بعد "
+"الضريبة والشحن)."
+
+msgid "Choose hiding method: CSS (recommended) or Hidden Input"
+msgstr "اختر طريقة الإخفاء: CSS (موصى به) أو مدخل مخفي (Hidden Input)"
+
+msgid "Choose the QR code size and error correction level."
+msgstr "اختر حجم رمز QR ومستوى تصحيح الأخطاء."
+
+msgid "Choose whether to include noscript tag for non-JS users."
+msgstr "اختر تضمين وسم noscript للمستخدمين بدون JS."
+
+msgid "Choose whether users can dismiss the notice"
+msgstr "اختر ما إذا كان يمكن للمستخدم إغلاق التنبيه."
+
+msgid "Clean Separators"
+msgstr "تنظيف الفواصل"
+
+msgid ""
+"Clean Separators: Converts hyphens and underscores to spaces (my-image-"
+"file.jpg → My Image File)"
+msgstr "تنظيف الفواصل: يحول الشرطات والشرطات السفلية إلى مسافات."
+
+msgid "Clear cart before adding new product"
+msgstr "مسح السلة قبل إضافة منتج جديد"
+
+msgid "Click \"Generate\" to create the QR code."
+msgstr "انقر \"إنشاء\" لإنشاء رمز QR."
+
+msgid "Click \"Save Changes\" to activate"
+msgstr "اضغط \"حفظ التغييرات\" للتفعيل"
+
+msgid "Click \"Save Changes\" to apply."
+msgstr "اضغط «حفظ التغييرات» للتطبيق."
+
+msgid "Code is automatically placed in correct locations (head + body/footer)."
+msgstr "يتم وضع الكود تلقائياً في المواضع الصحيحة."
+
+msgid ""
+"Comma-separated billing field keys (e.g., billing_email,billing_first_name)"
+msgstr "معرفات حقول الفوترة (مثل: billing_email,billing_first_name)."
+
+msgid "Comments are disabled on this site."
+msgstr "التعليقات معطلة على هذا الموقع."
+
+msgid "Comments are immediately disabled sitewide"
+msgstr "سيتم تعطيل التعليقات فوراً على مستوى الموقع."
+
+msgid "Compare Mode"
+msgstr "وضع المقارنة"
+
+msgid ""
+"Compatibility: Works with most themes using standard WooCommerce cart markup."
+msgstr "التوافق: يعمل مع معظم القوالب التي تستخدم بنية سلة ووكومرس القياسية."
+
+msgid ""
+"Completely disables all comment functionality across your entire WordPress "
+"site including frontend forms, admin interface, comment feeds, REST API, and "
+"admin bar. Perfect for sites that don't need comments (portfolios, business "
+"sites, blogs using external comment systems)."
+msgstr ""
+"يعطل جميع وظائف التعليقات تماماً في موقعك، بما في ذلك نماذج الواجهة الأمامية، "
+"لوحة التحكم، الخلاصات، واجهة REST API، وشريط الأدوات. مثالي للمواقع التي لا "
+"تحتاج لتعليقات (أعمال، شركات، مدونات تستخدم أنظمة خارجية)."
+
+msgid "Configure redirect behavior and message suppression settings."
+msgstr "قم بتكوين سلوك إعادة التوجيه وإعدادات إخفاء الرسائل."
+
+msgid "Configure text processing: Preserve Case and Clean Separators"
+msgstr "إعداد معالجة النص: الحفاظ على الأحرف وتنظيف الفواصل."
+
+msgid "Configure where to show notice: All Admin Pages or Dashboard Only"
+msgstr "أختر مكان ظهور التنبيه: كل صفحات لوحة التحكم أو الرئيسية فقط."
+
+msgid "Conversion complete!"
+msgstr "اكتمل التحويل!"
+
+msgid "Conversion failed."
+msgstr "فشل التحويل."
+
+msgid "Copied"
+msgstr "تم النسخ"
+
+msgid "Copied to clipboard!"
+msgstr "تم النسخ إلى الحافظة!"
+
+msgid "Copy"
+msgstr "نسخ"
+
+msgid "Copy Failed"
+msgstr "فشل النسخ"
+
+msgid "Copy Shortcode"
+msgstr "نسخ الكود المختصر"
+
+msgid ""
+"Copy text to clipboard when clicking any element with data-arbricks-copy"
+msgstr ""
+"نسخ النص إلى الحافظة عند النقر على أي عنصر يحتوي على data-arbricks-copy"
+
+msgid ""
+"Covers 3 forms: WordPress login, WooCommerce login, WooCommerce registration"
+msgstr "يغطي 3 نماذج: دخول ووردبريس، ودخول ووكومرس، وتسجيل ووكومرس."
+
+msgid "Custom field name example: user_website_url (something bots might fill)"
+msgstr "مثال لاسم حقل مخصص: user_website_url (شيء قد تغرى البوتات بملئه)."
+
+msgid ""
+"Customize the error message (use %s as placeholder for the minimum amount)"
+msgstr "خصص رسالة الخطأ (استخدم %s كبديل لقيمة المبلغ الأدنى)."
+
+msgid ""
+"Customize the success and error messages in the settings below if needed."
+msgstr "قم بتخصيص رسائل النجاح والخطأ في الإعدادات أدناه إذا لزم الأمر."
+
+msgid "Dashboard Only"
+msgstr "لوحة التحكم فقط"
+
+msgid "Dashboard Only: Notice only shows on main dashboard"
+msgstr "الرئيسية فقط: يظهر التنبيه في صفحة لوحة التحكم الرئيسية فقط."
+
+msgid "Debounce Delay (ms)"
+msgstr "تأخير منع التكرار (مللي ثانية)"
+
+msgid ""
+"Debounce Delay: Prevents multiple updates if a customer clicks the quantity "
+"buttons rapidly."
+msgstr ""
+"تأخير منع التكرار: يمنع التحديثات المكررة إذا قام العميل بالضغط على أزرار "
+"الكمية بسرعة."
+
+msgid "Decide whether to hide the manual \"Update Cart\" button."
+msgstr "اختر ما إذا كنت تريد إخفاء زر \"تحديث السلة\" اليدوي."
+
+msgid "Default Error Correction"
+msgstr "تصحيح الأخطاء الافتراضي"
+
+msgid "Default QR Code Size"
+msgstr "حجم رمز QR الافتراضي"
+
+msgid "Default Text (Fallback)"
+msgstr "النص الافتراضي (الاحتياطي)"
+
+msgid "Default error correction level."
+msgstr "مستوى تصحيح الأخطاء الافتراضي."
+
+msgid "Default field name: login_honeypot"
+msgstr "اسم الحقل الافتراضي: login_honeypot"
+
+msgid "Default size in pixels for generated QR codes."
+msgstr "الحجم الافتراضي بالبكسل لرموز QR المُنشأة."
+
+msgid ""
+"Developers can change required capability using "
+"\"arbricks_admin_bar_capability\" filter"
+msgstr ""
+"يمكن للمطورين تغيير الصلاحية المطلوبة عبر فلتر "
+"\"arbricks_admin_bar_capability\"."
+
+msgid "Direct Checkout (Single Item Flow)"
+msgstr "الدفع المباشر (تدفق عنصر واحد)"
+
+msgid "Disable Comments (Sitewide)"
+msgstr "تعطيل التعليقات (على مستوى الموقع)"
+
+msgid "Disable Order Again Button"
+msgstr "تعطيل زر الطلب مرة أخرى"
+
+msgid ""
+"Disable Order Again: Optionally removes the \"Order Again\" button from "
+"order history to maintain focus on current purchases."
+msgstr ""
+"تعطيل \"اطلب مجدداً\": يزيل زر إعادة الطلب من سجل الطلبات للتركيز على الشراء "
+"الحالي."
+
+msgid "Disable XML-RPC"
+msgstr "تعطيل XML-RPC"
+
+msgid "Disable XML-RPC completely and optionally block direct access."
+msgstr "تعطيل XML-RPC بالكامل وحظر الوصول المباشر اختيارياً."
+
+msgid ""
+"Disable comments everywhere (frontend + admin), remove UI entries, disable "
+"comment feeds, and remove REST comments endpoints."
+msgstr ""
+"تعطيل التعليقات في كل مكان (الواجهة الأمامية + الإدارة)، إزالة مدخلات "
+"الواجهة، تعطيل خلاصات التعليقات، وإزالة نقاط نهاية REST."
+
+msgid "Disabled"
+msgstr "غير مفعّل"
+
+msgid ""
+"Disables WordPress XML-RPC functionality which is often targeted by brute "
+"force attacks and DDoS attempts. XML-RPC is a legacy remote access protocol "
+"rarely needed on modern sites."
+msgstr ""
+"يعطل وظيفة XML-RPC في ووردبريس التي غالباً ما تستهدف بهجمات التخمين وهجمات "
+"DDoS. بروتوكول XML-RPC هو تقنية قديمة للوصول عن بُعد ونادراً ما يُحتاج إليها "
+"اليوم."
+
+msgid "Disables comment feeds (RSS/Atom) - returns 404 error"
+msgstr "يعطل خلاصات التعليقات (RSS/Atom) - ويعيد خطأ 404."
+
+msgid ""
+"Dismissal: If allowed, users can hide notice (reappears on page reload "
+"unless dismissed per-user)"
+msgstr "الإغلاق: إذا سمحت بذلك، يمكن للمستخدم إخفاء التنبيه."
+
+msgid "Display custom label for products with zero price."
+msgstr "عرض تسمية مخصصة للمنتجات ذات السعر صفر."
+
+msgid ""
+"Displays a prominent admin notice when \"Discourage search engines from "
+"indexing this site\" is enabled in WordPress settings. Prevents accidental "
+"launch of production sites with indexing blocked."
+msgstr ""
+"يعرض تنبيهاً بارزاً في لوحة التحكم عند تفعيل خيار \"منع محركات البحث من فهرسة "
+"الموقع\" في إعدادات ووردبريس. يمنع الإطلاق العرضي للمواقع دون فهرستها."
+
+msgid "Download PNG"
+msgstr "تنزيل PNG"
+
+msgid "Download the QR code as PNG image."
+msgstr "تنزيل رمز QR كصورة PNG."
+
+msgid ""
+"Easily add Google Tag Manager tracking to your WordPress site with automatic "
+"code injection."
+msgstr ""
+"أضف تتبع مدير وسوم جوجل إلى موقعك في ووردبريس بسهولة مع حقن تلقائي للكود."
+
+msgid ""
+"Easily create QR codes for URLs. Perfect for marketing materials, print "
+"materials, and sharing links."
+msgstr ""
+"قم بإنشاء رموز QR للروابط بسهولة. مثالي للمواد التسويقية والمطبوعات ومشاركة "
+"الروابط."
+
+msgid "Email Shortcode"
+msgstr "كود مختصر للبريد"
+
+msgid "Email address is encoded using WordPress antispambot() function"
+msgstr ""
+"يتم ترميز البريد الإلكتروني باستخدام دالة antispambot() الرسمية في ووردبريس."
+
+msgid "Empty Cart Before Adding"
+msgstr "إفراغ السلة قبل الإضافة"
+
+msgid ""
+"Empty Cart Before Adding: Automatically clears the current cart before "
+"adding the new product. Prevents multi-item orders."
+msgstr ""
+"إفراغ السلة قبل الإضافة: يمسح السلة الحالية تلقائياً قبل إضافة المنتج الجديد "
+"لمنع الطلبات المتعددة."
+
+msgid "Enable CSS Hiding"
+msgstr "تفعيل الإخفاء بـ CSS"
+
+msgid ""
+"Enable or disable features as needed. Changes take effect immediately after "
+"saving."
+msgstr "فعّل أو عطّل الميزات حسب الحاجة. تسري التغييرات فورًا بعد الحفظ."
+
+msgid "Enable the feature toggle above"
+msgstr "فعّل مفتاح التبديل للميزة أعلاه"
+
+msgid "Enable the feature toggle above."
+msgstr "فعّل المفتاح أعلاه."
+
+msgid "Enabled"
+msgstr "مفعّل"
+
+msgid "Enforce minimum order amount at checkout."
+msgstr "فرض قيمة طلب دنيا عند الدفع."
+
+msgid "English: \"Free!\" or \"No Charge\""
+msgstr "الإنجليزية: \"Free!\" أو \"No Charge\""
+
+msgid "Ensure WooCommerce is installed and active"
+msgstr "تأكد من تثبيت وتفعيل إضافة ووكومرس."
+
+msgid "Enter the URL you want to encode."
+msgstr "أدخل الرابط الذي تريد ترميزه."
+
+msgid "Enter your GTM Container ID (format: GTM-XXXXXXX)."
+msgstr "أدخل معرف الحاوية GTM (الصيغة: GTM-XXXXXXX)."
+
+msgid "Enter your GTM ID (e.g., GTM-XXXXXXX)"
+msgstr "أدخل معرف GTM (مثال: GTM-XXXXXXX)"
+
+msgid ""
+"Enter your custom \"Free Text Label\" (e.g., \"Free!\", \"Gratis\", "
+"\"مجاني\")"
+msgstr "أدخل نص \"تسمية السعر المجاني\" (مثال: \"مجاني!\"، \"بدون تكلفة\")."
+
+msgid "Error (Red)"
+msgstr "خطأ (أحمر)"
+
+msgid "Error Correction H = High (~30% recovery)"
+msgstr "تصحيح الأخطاء H = عالي (~30% استرداد)"
+
+msgid "Error Correction L = Low (~7% recovery)"
+msgstr "تصحيح الأخطاء L = منخفض (~7% استرداد)"
+
+msgid "Error Correction M = Medium (~15% recovery)"
+msgstr "تصحيح الأخطاء M = متوسط (~15% استرداد)"
+
+msgid "Error Correction Q = Quartile (~25% recovery)"
+msgstr "تصحيح الأخطاء Q = ربعي (~25% استرداد)"
+
+msgid "Error Message"
+msgstr "رسالة الخطأ"
+
+msgid "Error message appears both on cart page and during checkout"
+msgstr "تظهر رسالة الخطأ في صفحة السلة وعند إتمام الطلب على حد سواء."
+
+msgid ""
+"Example question: \"تحقق بسيط: كم حاصل 7 + 4 ؟\" (Simple check: What is 7 + "
+"4?)"
+msgstr "مثال للسؤال: \"تحقق بسيط: كم حاصل 7 + 4 ؟\""
+
+msgid "Examples:"
+msgstr "أمثلة:"
+
+msgid "Existing comments remain in database but are completely hidden"
+msgstr "التعليقات القديمة ستبقى في قاعدة البيانات لكنها ستكون مخفية تماماً."
+
+msgid ""
+"External Service: User IP addresses are sent to Google's servers for "
+"verification (required for reCAPTCHA to work)"
+msgstr ""
+"خدمة خارجية: يتم إرسال عناوين IP الخاصة بالمستخدمين إلى خوادم جوجل للتحقق "
+"(مطلوب لعمل الخدمة)"
+
+msgid "Failed to copy shortcode."
+msgstr "فشل نسخ الكود المختصر."
+
+msgid "Failed to copy."
+msgstr "فشل النسخ."
+
+msgid "Failed to generate QR code."
+msgstr "فشل إنشاء رمز QR."
+
+msgid "Failed to minify CSS."
+msgstr "فشل تصغير CSS."
+
+msgid "Field Name"
+msgstr "اسم الحقل"
+
+msgid ""
+"Field Name: Change only if you suspect bots have learned your field name "
+"(rare)"
+msgstr ""
+"اسم الحقل: قم بتغييره فقط إذا كنت تشك في أن البوتات تعرفت على الاسم (حالة "
+"نادرة)."
+
+msgid "Fields to Keep"
+msgstr "الحقول المحفوظة"
+
+msgid "Fields to Keep: Default is \"billing_email,billing_first_name\"."
+msgstr "حقول للمحافظة عليها: الافتراضي هو البريد والاسم الأول."
+
+msgid "File extension is automatically removed (image.jpg → image)"
+msgstr "تتم إزالة امتداد الملف تلقائياً (image.jpg يصبح image)."
+
+msgid ""
+"Filename: product-red-shoes.jpg → Alt: \"product red shoes\" or \"Product "
+"Red Shoes\""
+msgstr "اسم الملف: product-red-shoes.jpg ← النص البديل: \"product red shoes\""
+
+msgid "Footer"
+msgstr "التذييل"
+
+msgid "Free Checkout Minimal Fields"
+msgstr "حقول الدفع المجاني الأقل"
+
+msgid "Free Price Label (Zero Price)"
+msgstr "تسمية السعر المجاني (سعر صفر)"
+
+msgid "Free Text Label"
+msgstr "تسمية النص المجاني"
+
+msgid "Free!"
+msgstr "مجاناً!"
+
+msgid "Future versions may add settings to remove REST API and RSS feed links"
+msgstr "قد تضيف الإصدارات المستقبلية إعدادات لحذف روابط REST API وخلاصات RSS."
+
+msgid "GTM Container ID"
+msgstr "معرف حاوية GTM"
+
+msgid "GTM-XXXXXXX"
+msgstr "GTM-XXXXXXX"
+
+msgid "Generate QR codes from URLs directly in admin interface."
+msgstr "إنشاء رموز QR من الروابط مباشرة في واجهة الإدارة."
+
+msgid ""
+"Get free API keys from Google reCAPTCHA: https://www.google.com/recaptcha/"
+"admin"
+msgstr ""
+"احصل على مفاتيح API مجانية من Google reCAPTCHA: https://www.google.com/"
+"recaptcha/admin"
+
+msgid ""
+"Go to your Cart page and change any product quantity to see it auto-update."
+msgstr "اذهب لصفحة السلة وقم بتغيير كمية أي منتج لتشاهد التحديث التلقائي."
+
+msgid "Google Tag Manager"
+msgstr "مدير وسوم جوجل"
+
+msgid "Google reCAPTCHA secret key (required)"
+msgstr "المفتاح السري لـ Google reCAPTCHA (مطلوب)"
+
+msgid "Google reCAPTCHA site key (required)"
+msgstr "مفتاح موقع Google reCAPTCHA (مطلوب)"
+
+msgid "Great for building email lists through free digital giveaways."
+msgstr "رائع لبناء قوائم بريدية عبر توزيعات المنتجات الرقمية المجانية."
+
+msgid "Head Cleanup"
+msgstr "تنظيف Head"
+
+msgid "Help"
+msgstr "مساعدة"
+
+msgid "Hidden Input: Uses type=\"hidden\" which sophisticated bots may detect"
+msgstr "مدخل مخفي: يستخدم النوع \"hidden\" والذي قد تكتشفه البوتات المتطورة."
+
+msgid "Hide \"Product added to cart\" notice"
+msgstr "إخفاء إشعار «تمت إضافة المنتج إلى السلة»."
+
+msgid "Hide Admin Bar (Non-Admins)"
+msgstr "إخفاء شريط الإدارة (لغير المسؤولين)"
+
+msgid "Hide Cart Update Notices"
+msgstr "إخفاء إشعارات تحديث السلة"
+
+msgid ""
+"Hide Update Button: Recommended for a cleaner UI when auto-update is active."
+msgstr "إخفاء زر التحديث: موصى به لمظهر أنظف عند تفعيل التحديث التلقائي."
+
+msgid "Hide Update Cart Button"
+msgstr "إخفاء زر تحديث السلة"
+
+msgid ""
+"Hide WordPress admin bar on the front-end for users who do not have a given "
+"capability."
+msgstr ""
+"إخفاء شريط الإدارة في الواجهة الأمامية للمستخدمين الذين لا يملكون صلاحيات "
+"كافية."
+
+msgid ""
+"Hide notices: Optionally suppresses the \"Cart updated\" message for a more "
+"seamless feel."
+msgstr ""
+"إخفاء الإشعارات: يخفي رسالة \"تم تحديث السلة\" اختيارياً لتجربة أكثر انسيابية."
+
+msgid ""
+"Hides the WordPress admin bar (the black bar at top of pages) on the "
+"frontend for users who are not administrators. Clean up your site's frontend "
+"appearance for subscribers, customers, and other non-admin users."
+msgstr ""
+"يخفي شريط الإدارة (الشريط الأسود أعلى الصفحات) في الواجهة الأمامية "
+"للمستخدمين غير المسؤولين. قم بتنظيف مظهر موقعك للمشتركين والعملاء "
+"والمستخدمين الآخرين."
+
+msgid "High (30%)"
+msgstr "عالي (30%)"
+
+msgid ""
+"Higher error correction allows QR codes to work even if partially damaged."
+msgstr "تصحيح الأخطاء العالي يسمح لرموز QR بالعمل حتى لو تضررت جزئياً."
+
+msgid "How to use:"
+msgstr "كيفية الاستخدام:"
+
+msgid ""
+"If WooCommerce is active, also test the My Account login and register forms"
+msgstr ""
+"إذا كان ووكومرس مفعلاً، اختبر أيضاً نموذج الدخول والتسجيل في صفحة \"حسابي\"."
+
+msgid ""
+"If product is on sale (regular price > 0, sale price = 0), shows "
+"strikethrough with free label"
+msgstr ""
+"إذا كان المنتج في عرض (السعر الأصلي > 0 وسعر العرض = 0)، ستظهر شطبة مع تسمية "
+"مجاني."
+
+msgid "If search engines are currently blocked, you'll see the notice"
+msgstr "إذا كانت محركات البحث محظورة حالياً، فسترى هذا التنبيه."
+
+msgid ""
+"If the browser does not support the Clipboard API, the error message will be "
+"shown."
+msgstr ""
+"إذا كان المتصفح لا يدعم واجهة برمجة تطبيقات الحافظة، فسيتم عرض رسالة الخطأ."
+
+msgid "Improves security by closing common attack vector"
+msgstr "يحسن الأمان عبر إغلاق ثغرة برمجية شائعة الاستهداف."
+
+msgid ""
+"In \"Fields to Keep\", enter a comma-separated list of field IDs you want to "
+"remain visible."
+msgstr ""
+"في \"حقول للمحافظة عليها\"، أدخل قائمة بأسماء الحقول (مفصولة بفاصلة) التي "
+"تريد بقاءها ظاهرة."
+
+msgid ""
+"In any post, page, or widget, use: [email]youraddress@example.com[/email]"
+msgstr "في أي مقال أو صفحة أو ودجت، استخدم: [email]address@example.com[/email]"
+
+msgid "Include noscript tag"
+msgstr "تضمين وسم noscript"
+
+msgid "Inject Google Tag Manager scripts into your site."
+msgstr "إدراج سكريبتات مدير وسوم جوجل في موقعك."
+
+msgid "Inject noscript fallback for users without JavaScript."
+msgstr "إدراج بديل noscript للمستخدمين بدون جافاسكربت."
+
+msgid "Inspect page source - you should not see generator meta tag"
+msgstr "افحص مصدر الصفحة - لا يجب أن تظهر وسوم generator."
+
+msgid "Inspect page source to verify cleaner <head> section"
+msgstr "يمكنك فحص \"مصدر الصفحة\" للتأكد من نظافة قسم <head>."
+
+msgid "Invalid GTM IDs will be rejected - nothing will be injected."
+msgstr "سيتم رفض معرفات GTM غير الصحيحة."
+
+msgid "Invalid ID: GA-123456 (this is Analytics, not Tag Manager)"
+msgstr "معرّف خاطئ: GA-123456 (هذا Analytics وليس Tag Manager)"
+
+msgid "Invalid email addresses are displayed as plain text (not linked)"
+msgstr "عناوين البريد غير الصحيحة ستظهر كنص عادي بدون رابط."
+
+msgid "Jetpack and some plugins may require XML-RPC - test after enabling"
+msgstr ""
+"قد يحتاج Jetpack وبعض الإضافات الأخرى إلى XML-RPC - يرجى الاختبار بعد "
+"التفعيل."
+
+msgid "Keep original case (recommended for non-Latin text)"
+msgstr "الحفاظ على الأحرف الأصلية (موصى به للنص غير اللاتيني)"
+
+msgid "Larger sizes are better for print materials."
+msgstr "الأحجام الأكبر أفضل للمواد المطبوعة."
+
+msgid "Leave this field empty"
+msgstr "اترك هذا الحقل فارغاً"
+
+msgid "Let users dismiss the notice"
+msgstr "السماح للمستخدمين بإغلاق الإشعار"
+
+msgid "Logged-out users are not affected (they never see admin bar anyway)"
+msgstr "لا يتأثر الزوار غير المسجلين (فهم لا يرون الشريط أصلاً)."
+
+msgid "Login Honeypot"
+msgstr "فخ تسجيل الدخول"
+
+msgid "Login attempt blocked."
+msgstr "تم حظر محاولة الدخول."
+
+msgid "Login reCAPTCHA (v2)"
+msgstr "reCAPTCHA لتسجيل الدخول (v2)"
+
+msgid "Low (7%)"
+msgstr "منخفض (7%)"
+
+msgid "Math Captcha (Login + Woo My Account)"
+msgstr "كابتشا رياضية (الدخول + حسابي ووكومرس)"
+
+msgid "Math questions use random numbers (1-9) each time for better security"
+msgstr "تستخدم الأسئلة أرقاماً عشوائية (1-9) في كل مرة لمزيد من الأمان."
+
+msgid "Medium (15%)"
+msgstr "متوسط (15%)"
+
+msgid ""
+"Message placeholder %s is automatically replaced with formatted amount "
+"(e.g., $50.00)"
+msgstr "سيتم استبدال %s تلقائياً بالمبلغ المنسق (مثال: 50.00 ر.س)."
+
+msgid "Message shown on validation failure"
+msgstr "الرسالة المعروضة عند فشل التحقق"
+
+msgid "Message shown to blocked bots"
+msgstr "الرسالة المعروضة للبوتات المحظورة"
+
+msgid "Milliseconds to wait before updating"
+msgstr "المللي ثانية للانتظار قبل التحديث"
+
+msgid "Minimum Amount"
+msgstr "الحد الأدنى للمبلغ"
+
+msgid "Minimum Amount: 50 (no currency symbol needed)"
+msgstr "الحد الأدنى للمبلغ: 50 (بدون رمز العملة)."
+
+msgid "Minimum Order Amount"
+msgstr "الحد الأدنى لقيمة الطلب"
+
+msgid "Minimum amount must be numeric - non-numeric values default to 50"
+msgstr "يجب أن يكون المبلغ رقمياً - القيم غير الرقمية ستعتبر 50 افتراضياً."
+
+msgid "Minimum order value (numeric)"
+msgstr "قيمة الطلب الدنيا (رقمية)"
+
+msgid ""
+"More user-friendly than invisible honeypots or reCAPTCHA for non-technical "
+"users"
+msgstr ""
+"أسهل استخداماً من \"الفخاخ المخفية\" أو reCAPTCHA لبعض المستخدمين غير "
+"التقنيين."
+
+msgid "Name of the honeypot field"
+msgstr "اسم حقل الفخ"
+
+msgid "No configuration needed - just use the shortcode"
+msgstr "لا يحتاج لإعدادات - فقط استخدم الكود المختصر."
+
+msgid "No configuration needed - works automatically after enabling"
+msgstr "لا يحتاج لإعدادات - يعمل تلقائياً بمجرد التفعيل."
+
+msgid "No external services used - completely local and privacy-friendly"
+msgstr "لا يتم استخدام خدمات خارجية - المعالجة محلية بالكامل وتحترم الخصوصية."
+
+msgid "No further configuration needed - protection is automatic"
+msgstr "لا حاجة لمزيد من الإعدادات - الحماية تتم تلقائياً"
+
+msgid "Noscript Location"
+msgstr "موضع Noscript"
+
+msgid "Notes:"
+msgstr "ملاحظات:"
+
+msgid "Notice Type"
+msgstr "نوع الإشعار"
+
+msgid "Notice only appears when \"blog_public\" option is set to 0 (blocked)"
+msgstr "يظهر التنبيه فقط عندما يكون خيار \"blog_public\" مضبوطاً على 0."
+
+msgid "Only Empty Fields (Safe)"
+msgstr "الحقول الفارغة فقط (آمن)"
+
+msgid ""
+"Only Empty Fields (recommended): Only fills in blank metadata, preserves "
+"your manual edits"
+msgstr ""
+"الحقول الفارغة فقط: يملأ المعلومات الناقصة فقط ويحافظ على تعديلاتك اليدوية."
+
+msgid "Only activates when the cart total is 0.00 and no payment is required."
+msgstr "يعمل فقط عندما يكون إجمالي السلة 0.00 ولا يتطلب الأمر دفع مبالغ."
+
+msgid "Only affects frontend - admin bar still shows in WordPress admin area"
+msgstr "يؤثر على الواجهة الأمامية فقط - سيظل الشريط ظاهراً في لوحة التحكم."
+
+msgid ""
+"Only affects images uploaded AFTER enabling - does not modify existing "
+"attachments"
+msgstr "يؤثر فقط على الصور المرفوعة بعد التفعيل - ولا يعدل المرفقات الحالية."
+
+msgid "Only affects products with price exactly 0.00 (zero)"
+msgstr "يؤثر فقط على المنتجات ذات السعر 0.00 (صفر) تماماً."
+
+msgid ""
+"Only protects wp-login.php - does not affect WooCommerce login forms or "
+"custom login pages"
+msgstr ""
+"تحمي صفحة wp-login.php فقط - لا تؤثر على نماذج دخول ووكومرس أو صفحات الدخول "
+"المخصصة"
+
+msgid "Optionally customize the block message shown to bots"
+msgstr "تخصيص رسالة الحظر المعروضة للبوتات اختيارياً"
+
+msgid "Optionally customize the error message and timeout"
+msgstr "يمكنك تخصيص رسالة الخطأ ومهلة الاتصال اختيارياً"
+
+msgid "Optionally customize the honeypot field name (advanced users only)"
+msgstr "تخصيص اسم حقل الفخ اختيارياً (للمستخدمين المتقدمين فقط)"
+
+msgid ""
+"Optionally enable \"Block Direct Access\" to return 403 error when "
+"xmlrpc.php is accessed"
+msgstr ""
+"يمكن تفعيل \"حظر الوصول المباشر\" لإرجاع خطأ 403 عند محاولة الوصول لملف "
+"xmlrpc.php."
+
+msgid ""
+"Optionally enable \"Empty Cart Before Adding\" to ensure customers only buy "
+"one item at a time."
+msgstr ""
+"يمكنك تفعيل \"إفراغ السلة قبل الإضافة\" لضمان شراء العميل لمنتج واحد فقط في "
+"كل مرة."
+
+msgid ""
+"Original Capture: Replaces the original JPG/PNG file entirely to save disk "
+"space."
+msgstr "استبدال الأصل: يستبدل ملف JPG/PNG بالكامل لتوفير مساحة القرص."
+
+msgid "Output: Clickable mailto link with spam-protected email"
+msgstr "النتيجة: رابط بريد إلكتروني قابل للنقر ومحمي من السبام."
+
+msgid "Part of a layered security approach - use with other security features"
+msgstr "جزء من نهج أمني متعدد الطبقات - يُنصح باستخدامه مع ميزات الأمان الأخرى."
+
+msgid "Paste your Site Key and Secret Key into the fields below"
+msgstr "الصق مفتاح الموقع والمفتاح السري في الحقول أدناه"
+
+msgid ""
+"Performance: Slight increase in processing time during upload as conversion "
+"happens on-the-fly."
+msgstr ""
+"الأداء: زيادة طفيفة في وقت المعالجة أثناء الرفع لأن التحويل يتم فورياً (On-"
+"the-fly)."
+
+msgid "Please complete the reCAPTCHA."
+msgstr "يرجى إكمال reCAPTCHA."
+
+msgid "Please enter CSS to minify."
+msgstr "الرجاء إدخال CSS للتصغير."
+
+msgid "Please enter a valid URL."
+msgstr "الرجاء إدخال رابط صحيح."
+
+msgid "Please enter a valid YouTube URL."
+msgstr "الرجاء إدخال رابط YouTube صحيح."
+
+msgid "Please enter a valid timestamp (e.g., 2:30 or 01:30:45)."
+msgstr "الرجاء إدخال طابع زمني صحيح (مثال: 2:30 أو 01:30:45)."
+
+msgid "Please select images to convert."
+msgstr "الرجاء تحديد الصور للتحويل."
+
+msgid "Please verify you are not a robot."
+msgstr "يرجى التحقق من أنك لست روبوت."
+
+msgid "Preserve Case"
+msgstr "الحفاظ على الأحرف"
+
+msgid ""
+"Preserve Case (recommended for Arabic): Keeps original filename case, "
+"important for non-Latin text"
+msgstr ""
+"الحفاظ على الأحرف: يحافظ على حالة أحرف الملف الأصلي، مهم للنصوص غير "
+"اللاتينية."
+
+msgid "Prevents common mistake of launching sites with SEO blocked"
+msgstr "يمنع الخطأ الشائع بإطلاق المواقع بمحركات بحث محظورة."
+
+msgid ""
+"Prevents customers from completing checkout if their cart total is below a "
+"specified minimum amount. Useful for covering shipping costs, ensuring "
+"profitability, or encouraging bulk purchases."
+msgstr ""
+"يمنع العملاء من إتمام الطلب إذا كانت قيمة السلة أقل من الحد الأدنى المحدد. "
+"مفيد لتغطية تكاليف الشحن، أو ضمان الربحية، أو تشجيع الشراء بكميات كبيرة."
+
+msgid "Provides [email] shortcode for spam-protected mailto links."
+msgstr "يوفر كود [email] المختصر لروابط بريد محمية من السبام."
+
+msgid ""
+"Provides a simple [email] shortcode to create clickable email links (mailto "
+"links) with built-in spam protection. WordPress's antispambot function "
+"encodes the email address to make it harder for spam bots to harvest."
+msgstr ""
+"يوفر كوداً مختصراً بسيطاً [email] لإنشاء روابط بريد قابلة للنقر محمية من "
+"السبام. تقوم دالة antispambot الخاصة بووردبريس بترميز البريد لجعل جمعه صعباً "
+"على البوتات."
+
+msgid "QR Code Generator Tool"
+msgstr "أداة إنشاء رمز QR"
+
+msgid "QR code generated!"
+msgstr "تم إنشاء رمز QR!"
+
+msgid ""
+"Quality: Converted at 85% quality by default (optimal balance between size "
+"and quality)."
+msgstr ""
+"الجودة: يتم التحويل بجودة 85% افتراضياً (توازن مثالي بين الحجم والجودة)."
+
+msgid "Quartile (25%)"
+msgstr "ربعي (25%)"
+
+msgid "Question text currently in Arabic - works for Arabic-language sites"
+msgstr "نص السؤال محدد باللغة العربية حالياً - مناسب للمواقع العربية."
+
+msgid "Redirect to Checkout"
+msgstr "إعادة التوجيه للدفع"
+
+msgid "Redirect to checkout and skip cart for single items."
+msgstr "الانتقال للدفع مباشرة وتخطي السلة للعناصر الفردية."
+
+msgid "Reduce checkout fields when cart is free (no payment required)."
+msgstr "تقليل حقول الدفع عندما تكون السلة مجانية."
+
+msgid "Remove \"Order Again\" button from orders"
+msgstr "إزالة زر «اطلب مرة أخرى» من الطلبات."
+
+msgid "Remove WP Version"
+msgstr "إزالة إصدار ووردبريس"
+
+msgid "Remove WordPress version from head and feeds for security."
+msgstr "إزالة إصدار ووردبريس من head والخلاصات للأمان."
+
+msgid ""
+"Remove unnecessary default tags from wp_head (discovery links, shortlink, "
+"and optional REST/feed links)."
+msgstr ""
+"إزالة الأكواد الافتراضية غير الضرورية من رأس الصفحة (روابط الاكتشاف، الروابط "
+"المختصرة، وروابط خلاصات REST)."
+
+msgid "Removes <meta name=\"generator\"> tag from HTML head"
+msgstr "يزيل وسم <meta name=\"generator\"> من رأس HTML."
+
+msgid "Removes Comments link from admin bar"
+msgstr "يزيل رابط التعليقات من شريط الأدوات العلوي."
+
+msgid ""
+"Removes Comments menu from admin and redirects direct access to dashboard"
+msgstr ""
+"يزيل قائمة التعليقات من لوحة التحكم ويعيد توجيه الوصول المباشر إليها إلى "
+"الرئيسية."
+
+msgid "Removes REST API comment endpoints for security"
+msgstr "يزيل نقاط نهاية واجهة REST API للتعليقات لأغراض أمنية."
+
+msgid ""
+"Removes WordPress version number from HTML head and RSS feeds. Prevents "
+"potential attackers from easily identifying your WordPress version and "
+"targeting known vulnerabilities in that specific version."
+msgstr ""
+"يزيل رقم إصدار ووردبريس من رأس HTML وخلاصات RSS. يمنع المهاجمين المحتملين من "
+"التعرف بسهولة على إصدار موقعك واستهداف الثغرات المعروفة فيه."
+
+msgid ""
+"Removes unnecessary meta tags and links from the HTML <head> section. Cleans "
+"up wp_head() output by removing RSD link, Windows Live Writer manifest, and "
+"shortlink tags. Results in cleaner HTML and slightly improved performance."
+msgstr ""
+"يزيل وسوم الميتا والروابط غير الضرورية من وسم <head> في كود HTML. ينظف "
+"مخرجات wp_head() بإزالة روابط RSD، وتقارير Windows Live Writer، والروابط "
+"المختصرة. والنتيجة هي كود HTML أنظف وتحسن طفيف في الأداء."
+
+msgid "Removes version from RSS/Atom feeds"
+msgstr "يزيل رقم الإصدار من خلاصات RSS/Atom."
+
+msgid "Replace hyphens/underscores with spaces"
+msgstr "استبدال الشرطات والشرطات السفلية بمسافات"
+
+msgid ""
+"Replaces the default price display with custom text (e.g., \"Free!\", \"No "
+"Charge\", \"مجاني\") for WooCommerce products that have a price of zero. "
+"Perfect for giveaways, free samples, or promotional items."
+msgstr ""
+"يستبدل السعر الافتراضي بنص مخصص (مثل: \"مجاني!\" أو \"بدون تكلفة\") لمنتجات "
+"ووكومرس ذات السعر صفر. مثالي للهدايا أو العينات المجانية للترويج."
+
+msgid ""
+"Requires GD or ImageMagick PHP extension with WebP support enabled on your "
+"server."
+msgstr ""
+"يتطلب توافر إضافة GD أو ImageMagick في لغة PHP بموقعك مع تفعيل دعم WebP."
+
+msgid ""
+"Requires WooCommerce plugin - feature does nothing if WooCommerce is not "
+"active"
+msgstr "تتطلب إضافة ووكومرس - الميزة لا تعمل إذا كان ووكومرس غير مفعل."
+
+msgid ""
+"Requires valid API keys - invalid or missing keys will block ALL logins "
+"including administrators"
+msgstr ""
+"تتطلب مفاتيح API صالحة - المفاتيح الخاطئة أو المفقودة ستحظر جميع محاولات "
+"الدخول بما في ذلك المسؤولين"
+
+msgid "Return 403 when xmlrpc.php is accessed directly."
+msgstr "إرجاع 403 عند الوصول المباشر لـ xmlrpc.php."
+
+msgid "SEO"
+msgstr "تحسين محركات البحث"
+
+msgid "SEO Visibility Warning"
+msgstr "تحذير ظهور SEO"
+
+msgid "SEO Warning:"
+msgstr "تحذير SEO:"
+
+msgid "Safe for all sites - does not affect functionality"
+msgstr "آمن لجميع المواقع - لا يؤثر على وظائف الموقع."
+
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+msgid ""
+"Scope: Only affects NEW uploads. Existing images in your media library are "
+"not processed."
+msgstr ""
+"النطاق: يؤثر فقط على الرفوعات الجديدة. الصور الموجودة مسبقاً في مكتبة الوسائط "
+"لن يتم معالجتها."
+
+msgid "Search engines are currently discouraged from indexing this site."
+msgstr "محركات البحث محظورة حالياً من فهرسة هذا الموقع."
+
+msgid "Secret Key"
+msgstr "المفتاح السري"
+
+msgid "Secret Key format: 6LcExampleSecret456XYZabc..."
+msgstr "صيغة المفتاح السري: 6LcExampleSecret456XYZabc..."
+
+msgid "Security"
+msgstr "الأمان"
+
+msgid "Security check failed. Please try again."
+msgstr "حصل خطأ في التحقق الأمني. حاول مجددًا."
+
+msgid "Security through obscurity - not a complete security solution"
+msgstr "الأمان عبر الإخفاء - ليس حلاً أمنياً كاملاً ولكنه خطوة إضافية."
+
+msgid "Select \"reCAPTCHA v2\" and choose \"I'm not a robot Checkbox\""
+msgstr "اختر \"reCAPTCHA v2\" ثم اختر \"مربع اختيار أنا لست روبوت\""
+
+msgid "Select Images"
+msgstr "تحديد الصور"
+
+msgid "Select noscript position (body or footer)."
+msgstr "حدد موضع noscript (body أو footer)."
+
+msgid "Select notice type: Error (red) or Warning (yellow)"
+msgstr "اختر نوع التنبيه: خطأ (أحمر) أو تحذير (أصفر)."
+
+msgid ""
+"Select which fields to auto-generate: Title, Caption, Description, Alt Text"
+msgstr "حدد الحقول المراد توليدها: العنوان، التسمية، الوصف، النص البديل."
+
+msgid "Set Alt Text"
+msgstr "تعيين النص البديل"
+
+msgid "Set Caption"
+msgstr "تعيين التسمية"
+
+msgid "Set Description"
+msgstr "تعيين الوصف"
+
+msgid "Set Title"
+msgstr "تعيين العنوان"
+
+msgid "Set any product price to 0 to see your custom label"
+msgstr "عيّن سعر أي منتج إلى 0 لترى التسمية المخصصة."
+
+msgid ""
+"Set the \"Debounce Delay\" (default 250ms) to control how long to wait after "
+"the last quantity change before updating."
+msgstr ""
+"حدد \"تأخير منع التكرار\" (الافتراضي 250ms) للتحكم في مدة الانتظار بعد آخر "
+"تغيير للكمية قبل التحديث."
+
+msgid "Set your Minimum Amount (e.g., 50 for currency units)"
+msgstr "حدد الحد الأدنى للمبلغ (مثال: 50 بعملة المتجر)."
+
+msgid "Settings saved successfully!"
+msgstr "تم حفظ الإعدادات بنجاح!"
+
+msgid "Shortcode copied!"
+msgstr "تم نسخ الكود المختصر!"
+
+msgid "Show On"
+msgstr "عرض على"
+
+msgid "Show admin notice if search engines are blocked."
+msgstr "عرض إشعار إداري إذا كانت محركات البحث محظورة."
+
+msgid ""
+"Simplifies the checkout process for free products by removing unnecessary "
+"billing fields (like address, phone, and company) when the cart total is "
+"zero. Reduces friction and increases conversions for free downloads or "
+"signups."
+msgstr ""
+"يبسط عملية الدفع للمنتجات المجانية عبر إزالة حقول الفوترة غير الضرورية (مثل "
+"العنوان، الهاتف، والشركة) عندما يكون إجمالي السلة صفراً. يقلل الخطوات ويزيد "
+"التحويلات للتحميلات المجانية."
+
+msgid "Site Key"
+msgstr "مفتاح الموقع"
+
+msgid "Site Key format: 6LcExampleKey123ABCdef..."
+msgstr "صيغة مفتاح الموقع: 6LcExampleKey123ABCdef..."
+
+msgid "Skip cart, go directly to checkout"
+msgstr "تخطي السلة والذهاب مباشرة للدفع"
+
+msgid "Skip reCAPTCHA for administrator accounts"
+msgstr "تخطي reCAPTCHA لحسابات المسؤولين"
+
+msgid ""
+"Streamlines the buying process by sending customers directly to the checkout "
+"page immediately after they add a product to their cart, skipping the cart "
+"page entirely. Ideal for stores selling single items or wanting to reduce "
+"friction."
+msgstr ""
+"يسرع عملية الشراء عبر إرسال العملاء مباشرة لصفحة الدفع فور إضافة المنتج "
+"للسلة، متخطياً صفحة السلة بالكامل. مثالي للمتاجر التي تبيع منتجات فردية أو "
+"تريد تقليل خطوات الشراء."
+
+msgid "Subtotal (before tax/shipping)"
+msgstr "المجموع الفرعي (قبل الضريبة/الشحن)"
+
+msgid "Subtotal mode: Checks cart subtotal before tax and shipping are added"
+msgstr "وضع المجموع الفرعي: يتحقق من القيمة قبل إضافة الضرائب والشحن."
+
+msgid "Success Message"
+msgstr "رسالة النجاح"
+
+msgid ""
+"Supported field IDs include: billing_first_name, billing_last_name, "
+"billing_company, billing_address_1, billing_city, billing_phone, etc."
+msgstr ""
+"معرفات الحقول المدعومة تشمل: الاسم الأول، العائلة، الشركة، العنوان، المدينة، "
+"الهاتف، إلخ."
+
+msgid "Suppress \"Cart updated\" messages"
+msgstr "إخفاء رسالة «تم تحديث السلة»."
+
+msgid "Suppress Add-to-Cart Message"
+msgstr "إخفاء رسالة إضافة للسلة"
+
+msgid "Test by adding a free product to your cart and proceeding to checkout."
+msgstr "اختبر بإضافة منتج مجاني للسلة والانتقال لصفحة الدفع."
+
+msgid "Test by adding items below minimum to cart and attempting checkout"
+msgstr ""
+"اختبر الميزة بإضافة عناصر أقل من الحد الأدنى للسلة ومحاولة إتمام الطلب."
+
+msgid ""
+"Test by clicking \"Add to Cart\" on any product; you should land directly on "
+"the Checkout page."
+msgstr ""
+"اختبر بالضغط على \"إضافة للسلة\" لأي منتج؛ يجب أن تنتقل مباشرة لصفحة الدفع."
+
+msgid "Test by logging in as a non-admin user (subscriber, customer, etc.)"
+msgstr "اختبر الميزة بالدخول بحساب غير \"مسؤول\" (مثل مشترك أو عمال)."
+
+msgid ""
+"Test by logging out and trying to log in - you should see the reCAPTCHA "
+"checkbox"
+msgstr ""
+"اختبر الميزة بتسجيل الخروج ومحاولة الدخول مجدداً - سيظهر لك مربع reCAPTCHA"
+
+msgid ""
+"Test by logging out and visiting the login page - you'll see the math "
+"question"
+msgstr "اختبر بالخروج وزيارة صفحة تسجيل الدخول - سترى السؤال الرياضي."
+
+msgid "Text to display for free products"
+msgstr "النص المعروض للمنتجات المجانية"
+
+msgid "Text used if the element has no original content."
+msgstr "النص المستخدم إذا لم يكن للعنصر محتوى أصلي."
+
+msgid "The Comments menu will disappear from WordPress admin"
+msgstr "ستختفي قائمة \"التعليقات\" من لوحة تحكم ووردبريس."
+
+msgid ""
+"The element's content will change to the success message for 1.5 seconds "
+"after a successful copy."
+msgstr "سيتغير محتوى العنصر إلى رسالة النجاح لمدة 1.5 ثانية بعد النسخ الناجح."
+
+msgid "The minimum order amount is %s."
+msgstr "الحد الأدنى لقيمة الطلب هو %s."
+
+msgid "The original image will be deleted and replaced with a .webp version."
+msgstr "سيتم حذف الصورة الأصلية واستبدالها بنسخة .webp."
+
+msgid "The shortcode will output a clickable mailto link with spam protection"
+msgstr "سيقوم الكود المختصر بإخراج رابط بريد محمي وقابل للنقر."
+
+msgid "These tags are legacy and rarely used by modern tools"
+msgstr "هذه الوسوم قديمة ونادراً ما تستخدم من قبل الأدوات الحديثة."
+
+msgid ""
+"This feature relies on the Clipboard API and requires a secure connection "
+"(HTTPS) in most modern browsers."
+msgstr ""
+"تعتمد هذه الميزة على واجهة برمجة تطبيقات الحافظة (Clipboard API) وتتطلب "
+"اتصالاً آمناً (HTTPS) في معظم المتصفحات الحديثة."
+
+msgid "Timeout (seconds)"
+msgstr "المهلة الزمنية (ثوانٍ)"
+
+msgid ""
+"Timeout setting controls how long to wait for Google's API response (default "
+"5 seconds)"
+msgstr ""
+"إعداد المهلة يتحكم في مدة انتظار استجابة API من جوجل (الافتراضي 5 ثوانٍ)"
+
+msgid "Timestamp URL generated!"
+msgstr "تم إنشاء رابط مُوقّت!"
+
+msgid "Tools"
+msgstr "أدوات"
+
+msgid "Total (after tax/shipping)"
+msgstr "المجموع (بعد الضريبة/الشحن)"
+
+msgid "Total mode: Checks final total including tax and shipping"
+msgstr "وضع المجموع الكلي: يتحقق من القيمة النهائية شاملة الضرائب والشحن."
+
+msgid "Transparency: PNG transparency is preserved during conversion."
+msgstr "الشفافية: يتم الحفاظ على شفافية صور PNG أثناء التحويل."
+
+msgid "Type of admin notice"
+msgstr "نوع الإشعار الإداري"
+
+msgid "Unnecessary tags are immediately removed from your site's HTML head"
+msgstr "ستتم إزالة الوسوم غير الضرورية فوراً من رأس صفحة HTML لموقعك."
+
+msgid "Unqueues comment-reply.js script to improve performance"
+msgstr "يلغي تحميل سكريبت comment-reply.js لتحسين الأداء."
+
+msgid "Upload a new JPEG or PNG image to your Media Library."
+msgstr "ارفع صورة JPEG أو PNG جديدة إلى مكتبة الوسائط."
+
+msgid "Upload a new image to test - the filename will be converted to metadata"
+msgstr "ارفع صورة جديدة للاختبار - سيتم تحويل اسم الملف إلى بيانات ميتا."
+
+msgid "Usage: [email]contact@yoursite.com[/email]"
+msgstr "الاستخدام: [email]contact@yoursite.com[/email]"
+
+msgid "Use %s for amount placeholder"
+msgstr "استخدم %s كبديل للمبلغ"
+
+msgid "Use CSS to hide honeypot field"
+msgstr "استخدام CSS لإخفاء حقل الفخ"
+
+msgid "User must type 11 to proceed with login"
+msgstr "يجب على المستخدم كتابة 11 لمتابعة عملية تسجيل الدخول."
+
+msgid ""
+"Users with \"manage_options\" capability (usually Administrators) still see "
+"the admin bar"
+msgstr ""
+"المستخدمون الحاصلون على صلاحية \"manage_options\" (المسؤولون عادةً) سيظلون "
+"يطرون الشريط."
+
+msgid "Uses AJAX to update the cart without a full page reload."
+msgstr "يستخدم تقنية AJAX لتحديث السلة بدون إعادة تحميل كامل الصفحة."
+
+msgid "Valid ID: GTM-ABC1234"
+msgstr "معرّف صحيح: GTM-ABC1234"
+
+msgid "Warning (Yellow)"
+msgstr "تحذير (أصفر)"
+
+msgid "WebP format is not supported on this server."
+msgstr "صيغة WebP غير مدعومة على هذا الخادم."
+
+msgid "What to compare against minimum"
+msgstr "ما يتم مقارنته بالحد الأدنى"
+
+msgid "When to set metadata"
+msgstr "متى يتم تعيين البيانات"
+
+msgid "Where to display the notice"
+msgstr "أين يتم عرض الإشعار"
+
+msgid "Where to inject the noscript tag."
+msgstr "أين يتم إدراج وسم noscript."
+
+msgid "WooCommerce"
+msgstr "ووكومرس"
+
+msgid "WordPress version is immediately hidden from public output"
+msgstr "سيتم إخفاء رقم الإصدار فوراً من المخرجات العامة للموقع."
+
+msgid "Works alongside other login security features (reCAPTCHA, Math Captcha)"
+msgstr ""
+"يعمل جنباً إلى جنب مع ميزات أمان الدخول الأخرى (مثل reCAPTCHA والكابتشا "
+"الرياضية)."
+
+msgid ""
+"Works in posts, pages, custom post types, and text widgets that support "
+"shortcodes"
+msgstr ""
+"يعمل في المقالات، الصفحات، أنواع المقالات المخصصة، والودجت التي تدعم الأكواد "
+"المختصرة."
+
+msgid "Works with all WordPress themes."
+msgstr "يعمل مع كل قوالب ووردبريس."
+
+msgid "XML-RPC is disabled on this site."
+msgstr "XML-RPC معطّل على هذا الموقع."
+
+msgid "XML-RPC is immediately disabled"
+msgstr "سيتم تعطيل XML-RPC فوراً."
+
+msgid ""
+"XML-RPC is used by some mobile apps and legacy publishing tools (rarely "
+"needed today)"
+msgstr ""
+"يُستخدم XML-RPC من قبل بعض تطبيقات الهاتف وأدوات النشر القديمة (نادراً ما تبرز "
+"الحاجة له اليوم)."
+
+msgid "You do not have permission to access this page."
+msgstr "ليس لديك صلاحية الوصول إلى هذه الصفحة."
+
+msgid "reCAPTCHA site key not configured."
+msgstr "مفتاح موقع reCAPTCHA غير مُعدّ."
+
+msgid "reCAPTCHA verification failed."
+msgstr "فشل التحقق من reCAPTCHA."
+
+msgid "reCAPTCHA verification failed: %s"
+msgstr "فشل التحقق من reCAPTCHA: %s"
+
+msgid "إجابة التحقق غير صحيحة."
+msgstr "إجابة التحقق غير صحيحة."
+
+msgid "تم حظر محاولة تسجيل الدخول."
+msgstr "تم حظر محاولة تسجيل الدخول."
+
+msgid "يجب عليك الإجابة على سؤال التحقق."
+msgstr "يجب عليك الإجابة على سؤال التحقق."
+
+msgid "QR Code Generator"
+msgstr "مولد رمز QR"
+
+msgid "Generate QR codes from URLs directly in the admin interface."
+msgstr "إنشاء رموز QR من الروابط مباشرة في لوحة التحكم."
+
+msgid "Enter the URL you want to convert into a QR code."
+msgstr "أدخل الرابط الذي تريد تحويله إلى رمز QR."
+
+msgid "Select the desired size for the QR code."
+msgstr "اختر الحجم المطلوب لرمز QR."
+
+msgid "Click \"Generate QR\" to preview the result."
+msgstr "اضغط على \"إنشاء رمز QR\" لمعاينة النتيجة."
+
+msgid "Click \"Download QR\" to save the image to your computer."
+msgstr "اضغط على \"تحميل رمز QR\" لحفظ الصورة على جهازك."
+
+msgid "This tool is for administrative use and does not output anything on the frontend."
+msgstr "هذه الأداة للاستخدام الإداري فقط ولا تظهر أي شيء في الموقع من الخارج."
+
+msgid "QR codes are generated locally in your browser."
+msgstr "يتم إنشاء رموز QR محلياً في متصفحك."
+
+msgid "URL"
+msgstr "الرابط"
+
+msgid "Size"
+msgstr "الحجم"
+
+msgid "Generate QR"
+msgstr "إنشاء رمز QR"
+
+msgid "Download QR"
+msgstr "تحميل رمز QR"
+
+msgid "QR code will appear here"
+msgstr "سيظهر رمز QR هنا"
+
+msgid "Please enter a valid URL"
+msgstr "الرجاء إدخال رابط صحيح"

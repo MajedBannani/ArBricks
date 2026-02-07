@@ -202,4 +202,11 @@ class Feature_Google_Tag_Manager implements Feature_Interface {
 			<?php
 		}
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

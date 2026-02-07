@@ -73,6 +73,9 @@ class Admin {
 			return;
 		}
 
+		// Enqueue WordPress media scripts.
+		wp_enqueue_media();
+
 		// Enqueue admin CSS.
 		wp_enqueue_style(
 			'arbricks-admin',
@@ -173,6 +176,7 @@ class Admin {
 
 		// Clear cache.
 		Options::clear_cache();
+		delete_transient( 'arbricks_discovered_features' );
 
 		// Redirect with success message.
 		wp_safe_redirect(
@@ -199,9 +203,59 @@ class Admin {
 			'security'    => __( 'Security', 'arbricks' ),
 			'seo'         => __( 'SEO', 'arbricks' ),
 			'woocommerce' => __( 'WooCommerce', 'arbricks' ),
+			'css'         => __( 'CSS Styles', 'arbricks' ),
+			'performance' => __( 'Performance', 'arbricks' ),
 		);
 
 		return $labels[ $category ] ?? ucfirst( $category );
+	}
+
+	/**
+	 * Render sidebar navigation
+	 *
+	 * @param array $categories Array of category slugs.
+	 * @return void
+	 */
+	private function render_sidebar_navigation( $categories ) {
+		?>
+		<nav class="arbricks-admin-sidebar">
+			<ul class="arbricks-category-nav">
+				<li class="arbricks-category-item">
+					<a href="#" class="arbricks-category-link is-active" data-filter="all">
+						<span class="dashicons dashicons-admin-generic"></span>
+						<?php esc_html_e( 'All Features', 'arbricks' ); ?>
+					</a>
+				</li>
+				<?php foreach ( $categories as $category ) : ?>
+					<li class="arbricks-category-item">
+						<a href="#" class="arbricks-category-link" data-filter="<?php echo esc_attr( $category ); ?>">
+							<span class="dashicons <?php echo esc_attr( $this->get_category_icon( $category ) ); ?>"></span>
+							<?php echo esc_html( $this->get_category_label( $category ) ); ?>
+						</a>
+					</li>
+				<?php endforeach; ?>
+			</ul>
+		</nav>
+		<?php
+	}
+
+	/**
+	 * Get category icon mapping
+	 *
+	 * @param string $category Category slug.
+	 * @return string Dashicon class.
+	 */
+	private function get_category_icon( $category ) {
+		$icons = array(
+			'tools'       => 'dashicons-admin-tools',
+			'security'    => 'dashicons-shield',
+			'seo'         => 'dashicons-search',
+			'woocommerce' => 'dashicons-cart',
+			'css'         => 'dashicons-editor-code',
+			'performance' => 'dashicons-performance',
+		);
+
+		return $icons[ $category ] ?? 'dashicons-category';
 	}
 
 	/**
@@ -281,7 +335,11 @@ class Admin {
 				<?php wp_nonce_field( 'arbricks_save_settings', 'arbricks_nonce' ); ?>
 				<input type="hidden" name="arbricks_save_settings" value="1">
 
-				<div class="arbricks-settings">
+				<div class="arbricks-admin-layout">
+					<?php $this->render_sidebar_navigation( array_keys( $categorized ) ); ?>
+
+					<div class="arbricks-admin-main">
+						<div class="arbricks-settings">
 					<?php foreach ( $categorized as $category => $category_items ) : ?>
 						<section class="arbricks-section" data-section="<?php echo esc_attr( $category ); ?>">
 							<?php if ( ! empty( $category ) ) : ?>
@@ -322,6 +380,11 @@ class Admin {
 										$this->render_feature_settings( $item['object'], $item_id );
 									}
 
+									// Render custom tool UI if feature provides it.
+									if ( 'feature' === $item['type'] ) {
+										$item['object']->render_admin_ui();
+									}
+
 									// Render help section if feature has help content.
 									if ( 'feature' === $item['type'] ) {
 										$this->render_feature_help( $item['object'], $item_id );
@@ -332,8 +395,8 @@ class Admin {
 											<span class="arbricks-status-badge">
 												<?php
 												echo $is_enabled
-													? esc_html__( 'Enabled', 'arbricks' )
-													: esc_html__( 'Disabled', 'arbricks' );
+													? esc_html__( 'ENABLED', 'arbricks' )
+													: esc_html__( 'DISABLED', 'arbricks' );
 												?>
 											</span>
 
@@ -353,9 +416,11 @@ class Admin {
 							</div>
 						</section>
 					<?php endforeach; ?>
-				</div>
+						</div>
 
-				<?php submit_button( __( 'Save Changes', 'arbricks' ), 'primary', 'submit', true ); ?>
+						<?php submit_button( __( 'Save Changes', 'arbricks' ), 'primary', 'submit', true ); ?>
+					</div>
+				</div>
 			</form>
 		</div>
 		<?php
@@ -492,6 +557,24 @@ class Admin {
 					echo '</option>';
 				}
 				echo '</select>';
+			} elseif ( 'media' === $type ) {
+				$image_url = '';
+				if ( $value ) {
+					$image_url = wp_get_attachment_image_url( $value, 'thumbnail' );
+				}
+				echo '<label class="arbricks-setting-label">' . esc_html( $label ) . '</label>';
+				echo '<div class="arbricks-media-picker" data-id="' . esc_attr( $field_id ) . '">';
+				echo '<div class="arbricks-media-preview" style="margin-bottom: 10px;">';
+				if ( $image_url ) {
+					echo '<img src="' . esc_url( $image_url ) . '" style="max-width: 100px; height: auto; display: block; border: 1px solid #ddd; padding: 5px;">';
+				}
+				echo '</div>';
+				echo '<input type="hidden" name="' . esc_attr( $field_name ) . '" id="' . esc_attr( $field_id ) . '" value="' . esc_attr( $value ) . '">';
+				echo '<div class="arbricks-media-picker-actions">';
+				echo '<button type="button" class="button arbricks-media-upload">' . esc_html__( 'Select Image', 'arbricks' ) . '</button>';
+				echo ' <button type="button" class="button arbricks-media-remove" ' . ( ! $value ? 'style="display:none;"' : '' ) . '>' . esc_html__( 'Remove', 'arbricks' ) . '</button>';
+				echo '</div>';
+				echo '</div>';
 			} else {
 				// Text input.
 				echo '<label for="' . esc_attr( $field_id ) . '" class="arbricks-setting-label">' . esc_html( $label ) . '</label>';
@@ -523,22 +606,16 @@ class Admin {
 		}
 
 		$help = $meta['help'];
-
-// Debug: Log helper rendering.
-if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-error_log( '[ArBricks] Rendering helper for: ' . $feature_id . ' | has_help=' . ( empty( $help ) ? '0' : '1' ) );
-}
-
 		?>
 		<div class="arbricks-help-section">
 			<button type="button" class="arbricks-help-toggle" aria-expanded="false" aria-controls="help-<?php echo esc_attr( $feature_id ); ?>">
 				<?php esc_html_e( 'Help', 'arbricks' ); ?>
 				<span class="dashicons dashicons-arrow-down-alt2" aria-hidden="true"></span>
 			</button>
-			<div class="arbricks-help-content" id="help-<?php echo esc_attr( $feature_id ); ?>" style="display:none;" aria-hidden="true">
+			<div class="arbricks-help-content" id="help-<?php echo esc_attr( $feature_id ); ?>" hidden aria-hidden="true">
 				<?php if ( ! empty( $help['summary'] ) ) : ?>
 					<p class="arbricks-help-summary">
-						<?php echo esc_html( $help['summary'] ); ?>
+						<?php echo wp_kses_post( $help['summary'] ); ?>
 					</p>
 				<?php endif; ?>
 
@@ -547,7 +624,7 @@ error_log( '[ArBricks] Rendering helper for: ' . $feature_id . ' | has_help=' . 
 						<strong><?php esc_html_e( 'How to use:', 'arbricks' ); ?></strong>
 						<ol>
 							<?php foreach ( $help['how_to'] as $step ) : ?>
-								<li><?php echo esc_html( $step ); ?></li>
+								<li><?php echo wp_kses_post( $step ); ?></li>
 							<?php endforeach; ?>
 						</ol>
 					</div>
@@ -558,7 +635,7 @@ error_log( '[ArBricks] Rendering helper for: ' . $feature_id . ' | has_help=' . 
 						<strong><?php esc_html_e( 'Notes:', 'arbricks' ); ?></strong>
 						<ul>
 							<?php foreach ( $help['notes'] as $note ) : ?>
-								<li><?php echo esc_html( $note ); ?></li>
+								<li><?php echo wp_kses_post( $note ); ?></li>
 							<?php endforeach; ?>
 						</ul>
 					</div>
@@ -569,7 +646,7 @@ error_log( '[ArBricks] Rendering helper for: ' . $feature_id . ' | has_help=' . 
 						<strong><?php esc_html_e( 'Examples:', 'arbricks' ); ?></strong>
 						<ul>
 							<?php foreach ( $help['examples'] as $example ) : ?>
-								<li><?php echo esc_html( $example ); ?></li>
+								<li><?php echo wp_kses_post( $example ); ?></li>
 							<?php endforeach; ?>
 						</ul>
 					</div>
@@ -655,31 +732,6 @@ array(
 			);
 		}
 
-		// QR Code Generator Tool.
-		if ( ! empty( $enabled['qr_generator_tool'] ) ) {
-			wp_enqueue_style(
-'arbricks-tool-qr-generator',
-ARBRICKS_PLUGIN_URL . 'assets/css/tools-qr-generator.css',
-array( 'arbricks-admin' ),
-ARBRICKS_VERSION
-);
-			wp_enqueue_script(
-'arbricks-tool-qr-generator',
-ARBRICKS_PLUGIN_URL . 'assets/js/tools-qr-generator.js',
-array( 'jquery', 'arbricks-admin' ),
-ARBRICKS_VERSION,
-true
-);
-			wp_localize_script(
-'arbricks-tool-qr-generator',
-'arbricksQrGenerator',
-array(
-					'generateSuccess' => __( 'QR code generated!', 'arbricks' ),
-					'generateError'   => __( 'Failed to generate QR code.', 'arbricks' ),
-					'invalidUrl'      => __( 'Please enter a valid URL.', 'arbricks' ),
-				)
-			);
-		}
 
 		// WebP Converter Tool.
 		if ( ! empty( $enabled['webp_converter_tool'] ) ) {

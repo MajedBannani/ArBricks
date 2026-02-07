@@ -39,28 +39,27 @@ class Feature_Wc_Free_Price_Label implements Feature_Interface {
 	 */
 	public static function meta(): array {
 		return array(
-			'title'       => __( 'Free Price Label (Zero Price)', 'arbricks' ),
-			'description' => __( 'Display custom label for products with zero price.', 'arbricks' ),
+			'title'       => __( 'Free Price Label', 'arbricks' ),
+			'description' => __( 'Display custom label for zero-price products.', 'arbricks' ),
 			'category'    => 'woocommerce',
 			'shortcode'   => '',
 			'help'        => array(
-				'summary'  => __( 'Replaces the default price display with custom text (e.g., "Free!", "No Charge", "مجاني") for WooCommerce products that have a price of zero. Perfect for giveaways, free samples, or promotional items.', 'arbricks' ),
+				'summary'  => __( 'Replaces the default price display with a custom text (e.g., "Free!", "No Charge") for WooCommerce products with zero price. Ideal for free samples, promotions, or unpriced services.', 'arbricks' ),
 				'how_to'   => array(
-					__( 'Ensure WooCommerce is installed and active', 'arbricks' ),
-					__( 'Enable the feature toggle above', 'arbricks' ),
-					__( 'Enter your custom "Free Text Label" (e.g., "Free!", "Gratis", "مجاني")', 'arbricks' ),
-					__( 'Click "Save Changes"', 'arbricks' ),
-					__( 'Set any product price to 0 to see your custom label', 'arbricks' ),
+					__( 'Ensure WooCommerce is installed and active.', 'arbricks' ),
+					__( 'Enable the feature toggle above.', 'arbricks' ),
+					__( 'Enter the custom text you prefer (e.g., "Free", "Free Download").', 'arbricks' ),
+					__( 'Click "Save Changes".', 'arbricks' ),
+					__( 'Set any product price to 0 to see the custom text instead of zero.', 'arbricks' ),
 				),
 				'notes'    => array(
-					__( 'Requires WooCommerce plugin', 'arbricks' ),
-					__( 'Only affects products with price exactly 0.00 (zero)', 'arbricks' ),
-					__( 'If product is on sale (regular price > 0, sale price = 0), shows strikethrough with free label', 'arbricks' ),
-					__( 'Works on shop pages, single product pages, and widgets', 'arbricks' ),
+					__( 'Requires WooCommerce plugin.', 'arbricks' ),
+					__( 'Only affects products with exactly zero price (0.00).', 'arbricks' ),
+					__( 'If the product is on sale (Regular Price > 0, Sale Price = 0), the sale tag will appear with the free text.', 'arbricks' ),
+					__( 'Works on shop pages, single product page, and widgets.', 'arbricks' ),
 				),
 				'examples' => array(
-					__( 'English: "Free!" or "No Charge"', 'arbricks' ),
-					__( 'Arabic: "مجاني" or "بدون تكلفة"', 'arbricks' ),
+					__( 'English: "Free!" or "No Cost" or "Gift"', 'arbricks' ),
 				),
 			),
 		);
@@ -75,8 +74,8 @@ class Feature_Wc_Free_Price_Label implements Feature_Interface {
 		return array(
 			'free_text' => array(
 				'type'        => 'text',
-				'label'       => __( 'Free Text Label', 'arbricks' ),
-				'description' => __( 'Text to display for free products', 'arbricks' ),
+				'label'       => __( 'Free Price Text', 'arbricks' ),
+				'description' => __( 'Text to display for free products.', 'arbricks' ),
 				'default'     => __( 'Free!', 'arbricks' ),
 				'placeholder' => __( 'Free!', 'arbricks' ),
 			),

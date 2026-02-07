@@ -40,9 +40,28 @@ class Feature_Seo_Visibility_Warning implements Feature_Interface {
 	public static function meta(): array {
 		return array(
 			'title'       => __( 'SEO Visibility Warning', 'arbricks' ),
-			'description' => __( 'Show admin notice if search engines are blocked.', 'arbricks' ),
+			'description' => __( 'Shows an admin notice if the site is discouraged from search engines.', 'arbricks' ),
 			'category'    => 'seo',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Displays a prominent warning in the admin panel when "Discourage search engines from indexing this site" is enabled in WordPress settings. This prevents accidentally launching a site with search engine indexing disabled.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Enable the feature toggle above.', 'arbricks' ),
+					__( 'Choose where to show the notice: All Admin Pages or Dashboard Only.', 'arbricks' ),
+					__( 'Select the notice type: Error (Red) or Warning (Yellow).', 'arbricks' ),
+					__( 'Choose whether users can dismiss the notice.', 'arbricks' ),
+					__( 'Click "Save Changes".', 'arbricks' ),
+					__( 'If the site is currently discouraged, you will see the notice immediately.', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'This checks the WordPress Reading settings option "Search Engine Visibility".', 'arbricks' ),
+					__( 'The notice only appears when the "blog_public" option is set to 0 (discouraged).', 'arbricks' ),
+					__( 'All Admin Pages: Shows the notice on every admin page to ensure it\'s seen.', 'arbricks' ),
+					__( 'Dashboard Only: Shows the notice only on the main admin dashboard.', 'arbricks' ),
+					__( 'Dismissible: If allowed, users can close the notice (it reappears on page refresh unless handled per-user).', 'arbricks' ),
+					__( 'Prevents the common mistake of launching a site to the public with SEO remaining blocked.', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -55,8 +74,8 @@ class Feature_Seo_Visibility_Warning implements Feature_Interface {
 		return array(
 			'enabled_on'  => array(
 				'type'        => 'select',
-				'label'       => __( 'Show On', 'arbricks' ),
-				'description' => __( 'Where to display the notice', 'arbricks' ),
+				'label'       => __( 'Show on', 'arbricks' ),
+				'description' => __( 'Where the notice should appear in the admin panel.', 'arbricks' ),
 				'options'     => array(
 					'all_admin_pages' => __( 'All Admin Pages', 'arbricks' ),
 					'dashboard_only'  => __( 'Dashboard Only', 'arbricks' ),
@@ -66,7 +85,7 @@ class Feature_Seo_Visibility_Warning implements Feature_Interface {
 			'notice_type' => array(
 				'type'        => 'select',
 				'label'       => __( 'Notice Type', 'arbricks' ),
-				'description' => __( 'Type of admin notice', 'arbricks' ),
+				'description' => __( 'Warning format and color.', 'arbricks' ),
 				'options'     => array(
 					'error'   => __( 'Error (Red)', 'arbricks' ),
 					'warning' => __( 'Warning (Yellow)', 'arbricks' ),
@@ -75,8 +94,8 @@ class Feature_Seo_Visibility_Warning implements Feature_Interface {
 			),
 			'show_dismiss' => array(
 				'type'        => 'checkbox',
-				'label'       => __( 'Allow Dismissal', 'arbricks' ),
-				'description' => __( 'Let users dismiss the notice', 'arbricks' ),
+				'label'       => __( 'Allow Dismiss', 'arbricks' ),
+				'description' => __( 'Allow users to temporarily dismiss the notice.', 'arbricks' ),
 				'default'     => true,
 			),
 		);
@@ -138,8 +157,8 @@ class Feature_Seo_Visibility_Warning implements Feature_Interface {
 		?>
 		<div class="notice notice-<?php echo esc_attr( $notice_type ); ?> <?php echo esc_attr( $dismissible ); ?>" id="arbricks-seo-warning">
 			<p>
-				<strong><?php esc_html_e( 'SEO Warning:', 'arbricks' ); ?></strong>
-				<?php esc_html_e( 'Search engines are currently discouraged from indexing this site.', 'arbricks' ); ?>
+				<strong><?php esc_html_e( 'SEO Alert:', 'arbricks' ); ?></strong>
+				<?php esc_html_e( 'Your site is currently discouraged from search engines and is not being indexed.', 'arbricks' ); ?>
 				<a href="<?php echo esc_url( admin_url( 'options-reading.php' ) ); ?>">
 					<?php esc_html_e( 'Change Settings', 'arbricks' ); ?>
 				</a>
@@ -179,4 +198,11 @@ class Feature_Seo_Visibility_Warning implements Feature_Interface {
 		update_user_meta( get_current_user_id(), 'arbricks_seo_warning_dismissed', true );
 		wp_send_json_success();
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

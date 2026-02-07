@@ -255,6 +255,8 @@ class Options {
 			'login_honeypot'                   => false,
 			// Admin-Only Tool Features.
 			'qr_generator_tool'                => false,
+			// New Copy to Clipboard Feature.
+			'arbricks_copy'                    => false,
 		);
 	}
 

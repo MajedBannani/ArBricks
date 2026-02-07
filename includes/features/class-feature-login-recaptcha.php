@@ -47,31 +47,31 @@ class Feature_Login_Recaptcha implements Feature_Interface {
 	public static function meta(): array {
 		return array(
 			'title'       => __( 'Login reCAPTCHA (v2)', 'arbricks' ),
-			'description' => __( 'Add Google reCAPTCHA v2 checkbox to login form.', 'arbricks' ),
+			'description' => __( 'Add Google reCAPTCHA v2 checkbox to the login form.', 'arbricks' ),
 			'category'    => 'security',
 			'shortcode'   => '',
 			'help'        => array(
-				'summary'  => __( 'Adds Google reCAPTCHA v2 ("I\'m not a robot" checkbox) to the WordPress login page (wp-login.php) to prevent automated brute force attacks and bot login attempts.', 'arbricks' ),
+				'summary'  => __( 'Adds Google reCAPTCHA v2 ("I\'m not a robot" checkbox) to the WordPress login page (wp-login.php) to prevent automated brute-force attacks and bot logins.', 'arbricks' ),
 				'how_to'   => array(
 					__( 'Get free API keys from Google reCAPTCHA: https://www.google.com/recaptcha/admin', 'arbricks' ),
-					__( 'Select "reCAPTCHA v2" and choose "I\'m not a robot Checkbox"', 'arbricks' ),
-					__( 'Add your domain and copy the Site Key and Secret Key', 'arbricks' ),
-					__( 'Enable the feature toggle above', 'arbricks' ),
-					__( 'Paste your Site Key and Secret Key into the fields below', 'arbricks' ),
-					__( 'Optionally customize the error message and timeout', 'arbricks' ),
-					__( 'Click "Save Changes" to activate', 'arbricks' ),
-					__( 'Test by logging out and trying to log in - you should see the reCAPTCHA checkbox', 'arbricks' ),
+					__( 'Choose "reCAPTCHA v2" then "I\'m not a robot Checkbox".', 'arbricks' ),
+					__( 'Add your site domain and copy the "Site Key" and "Secret Key".', 'arbricks' ),
+					__( 'Enable the feature toggle above.', 'arbricks' ),
+					__( 'Paste the Site Key and Secret Key in the fields below.', 'arbricks' ),
+					__( 'You can customize the error message and timeout duration.', 'arbricks' ),
+					__( 'Click "Save Changes" to activate.', 'arbricks' ),
+					__( 'Test by logging out and attempting to log back in - you should see the reCAPTCHA box.', 'arbricks' ),
 				),
 				'notes'    => array(
-					__( 'External Service: User IP addresses are sent to Google\'s servers for verification (required for reCAPTCHA to work)', 'arbricks' ),
-					__( 'Requires valid API keys - invalid or missing keys will block ALL logins including administrators', 'arbricks' ),
-					__( 'Only protects wp-login.php - does not affect WooCommerce login forms or custom login pages', 'arbricks' ),
-					__( 'Bypass for Admins: When enabled, users with administrator role skip reCAPTCHA verification', 'arbricks' ),
-					__( 'Timeout setting controls how long to wait for Google\'s API response (default 5 seconds)', 'arbricks' ),
+					__( 'External Service: User IPs are sent to Google servers for verification (required for reCAPTCHA to work).', 'arbricks' ),
+					__( 'Requires valid API keys - missing or incorrect keys will block all login attempts, including administrators.', 'arbricks' ),
+					__( 'Protects wp-login.php only - does not affect WooCommerce login or custom login pages.', 'arbricks' ),
+					__( 'Bypass for Administrators: When enabled, users with administrator role skip the reCAPTCHA check.', 'arbricks' ),
+					__( 'Timeout setting controls how long to wait for Google API response (default 5 seconds).', 'arbricks' ),
 				),
 				'examples' => array(
-					__( 'Site Key format: 6LcExampleKey123ABCdef...', 'arbricks' ),
-					__( 'Secret Key format: 6LcExampleSecret456XYZabc...', 'arbricks' ),
+					__( 'Site Key Format: 6LcExampleKey123ABCdef...', 'arbricks' ),
+					__( 'Secret Key Format: 6LcExampleSecret456XYZabc...', 'arbricks' ),
 				),
 			),
 		);
@@ -87,34 +87,34 @@ class Feature_Login_Recaptcha implements Feature_Interface {
 			'site_key'          => array(
 				'type'        => 'text',
 				'label'       => __( 'Site Key', 'arbricks' ),
-				'description' => __( 'Google reCAPTCHA site key (required)', 'arbricks' ),
+				'description' => __( 'Google reCAPTCHA Site Key (Required)', 'arbricks' ),
 				'default'     => '',
 				'placeholder' => '6Lc...',
 			),
 			'secret_key'        => array(
 				'type'        => 'text',
 				'label'       => __( 'Secret Key', 'arbricks' ),
-				'description' => __( 'Google reCAPTCHA secret key (required)', 'arbricks' ),
+				'description' => __( 'Google reCAPTCHA Secret Key (Required)', 'arbricks' ),
 				'default'     => '',
 				'placeholder' => '6Lc...',
 			),
 			'error_message'     => array(
 				'type'        => 'text',
 				'label'       => __( 'Error Message', 'arbricks' ),
-				'description' => __( 'Message shown on validation failure', 'arbricks' ),
-				'default'     => __( 'يرجى التحقق من أنك لست روبوت.', 'arbricks' ),
+				'description' => __( 'Message displayed when verification fails.', 'arbricks' ),
+				'default'     => __( 'Please verify you are not a robot.', 'arbricks' ),
 				'placeholder' => __( 'Please verify you are not a robot.', 'arbricks' ),
 			),
 			'bypass_for_admins' => array(
 				'type'        => 'checkbox',
-				'label'       => __( 'Bypass for Admins', 'arbricks' ),
-				'description' => __( 'Skip reCAPTCHA for administrator accounts', 'arbricks' ),
+				'label'       => __( 'Bypass for Administrators', 'arbricks' ),
+				'description' => __( 'Skip reCAPTCHA for administrator accounts.', 'arbricks' ),
 				'default'     => false,
 			),
 			'timeout_seconds'   => array(
 				'type'        => 'text',
-				'label'       => __( 'Timeout (seconds)', 'arbricks' ),
-				'description' => __( 'API request timeout', 'arbricks' ),
+				'label'       => __( 'Timeout (Seconds)', 'arbricks' ),
+				'description' => __( 'Wait time for Google API request.', 'arbricks' ),
 				'default'     => '5',
 				'placeholder' => '5',
 			),
@@ -164,7 +164,7 @@ class Feature_Login_Recaptcha implements Feature_Interface {
 		$site_key = trim( $settings['site_key'] ?? '' );
 
 		if ( empty( $site_key ) ) {
-			echo '<p style="color:red;">' . esc_html__( 'reCAPTCHA site key not configured.', 'arbricks' ) . '</p>';
+			echo '<p style="color:red;">' . esc_html__( 'reCAPTCHA site key is not configured.', 'arbricks' ) . '</p>';
 			return;
 		}
 
@@ -214,7 +214,7 @@ class Feature_Login_Recaptcha implements Feature_Interface {
 		$recaptcha_response = isset( $_POST['g-recaptcha-response'] ) ? sanitize_text_field( wp_unslash( $_POST['g-recaptcha-response'] ) ) : '';
 
 		if ( empty( $recaptcha_response ) ) {
-			$error_message = $settings['error_message'] ?? __( 'Please complete the reCAPTCHA.', 'arbricks' );
+			$error_message = $settings['error_message'] ?? __( 'Please complete the reCAPTCHA test.', 'arbricks' );
 			return new WP_Error( 'recaptcha_missing', esc_html( $error_message ) );
 		}
 
@@ -253,7 +253,7 @@ class Feature_Login_Recaptcha implements Feature_Interface {
 
 		// Check verification result.
 		if ( empty( $data['success'] ) ) {
-			$error_message = $settings['error_message'] ?? __( 'reCAPTCHA verification failed.', 'arbricks' );
+			$error_message = $settings['error_message'] ?? __( 'reCAPTCHA verification process failed.', 'arbricks' );
 			return new WP_Error( 'recaptcha_failed', esc_html( $error_message ) );
 		}
 
