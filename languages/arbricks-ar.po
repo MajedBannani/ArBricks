@@ -2437,3 +2437,55 @@ msgstr "عرض أيقونة افتراضية إذا لم يتم تعيين صو�
 
 msgid "Image"
 msgstr "الصورة"
+
+# Added missing translations
+msgid "ENABLED"
+msgstr "مفعّل"
+
+msgid "DISABLED"
+msgstr "معطّل"
+
+msgid "Settings saved successfully!"
+msgstr "تم حفظ الإعدادات بنجاح!"
+
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+msgid "Tools"
+msgstr "أدوات"
+
+msgid "Security"
+msgstr "أمان"
+
+msgid "SEO"
+msgstr "تحسين محركات البحث"
+
+msgid "WooCommerce"
+msgstr "ووكومرس"
+
+msgid "CSS Styles"
+msgstr "أنماط CSS"
+
+msgid "Performance"
+msgstr "أداء"
+
+msgid "All Features"
+msgstr "كل الميزات"
+
+msgid "Copy Shortcode"
+msgstr "نسخ الكود المختصر"
+
+msgid "Select Image"
+msgstr "اختر صورة"
+
+msgid "Use this image"
+msgstr "استخدم هذه الصورة"
+
+msgid "Remove"
+msgstr "إزالة"
+
+msgid "Invoice #%s"
+msgstr "فاتورة رقم %s"
+
+msgid "Help"
+msgstr "مساعدة"
