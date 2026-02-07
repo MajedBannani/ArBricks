@@ -40,9 +40,29 @@ class Feature_Wc_Minimum_Order_Amount implements Feature_Interface {
 	public static function meta(): array {
 		return array(
 			'title'       => __( 'Minimum Order Amount', 'arbricks' ),
-			'description' => __( 'Enforce minimum order amount at checkout.', 'arbricks' ),
+			'description' => __( 'Enforce a minimum order total at checkout.', 'arbricks' ),
 			'category'    => 'woocommerce',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Prevents customers from checking out if their cart total is below a specified amount. Useful for covering shipping costs, ensuring profitability, or encouraging bulk purchases.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Ensure WooCommerce is installed and active.', 'arbricks' ),
+					__( 'Enable the feature toggle above.', 'arbricks' ),
+					__( 'Define the "Minimum Amount" (e.g., 50).', 'arbricks' ),
+					__( 'Choose "Comparison Mode": Subtotal (before tax and shipping) or Total (after tax and shipping).', 'arbricks' ),
+					__( 'Customize the error message (use %s as a placeholder for the amount).', 'arbricks' ),
+					__( 'Click "Save Changes".', 'arbricks' ),
+					__( 'Try adding products worth less than the minimum and attempt to checkout.', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'Requires WooCommerce plugin.', 'arbricks' ),
+					__( 'Subtotal: Compares the value of products only before adding taxes and shipping costs.', 'arbricks' ),
+					__( 'Total: Compares the final total amount the customer will pay.', 'arbricks' ),
+					__( 'Minimum Amount must be a number (default is 50).', 'arbricks' ),
+					__( 'The error message appears on the cart page and when trying to proceed to checkout.', 'arbricks' ),
+					__( 'The %s symbol will be automatically replaced with the formatted amount (e.g., $50).', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -56,24 +76,24 @@ class Feature_Wc_Minimum_Order_Amount implements Feature_Interface {
 			'minimum_amount' => array(
 				'type'        => 'text',
 				'label'       => __( 'Minimum Amount', 'arbricks' ),
-				'description' => __( 'Minimum order value (numeric)', 'arbricks' ),
+				'description' => __( 'Minimum order value (number only).', 'arbricks' ),
 				'default'     => '50',
 				'placeholder' => '50',
 			),
 			'compare_mode'   => array(
 				'type'        => 'select',
-				'label'       => __( 'Compare Mode', 'arbricks' ),
-				'description' => __( 'What to compare against minimum', 'arbricks' ),
+				'label'       => __( 'Comparison Mode', 'arbricks' ),
+				'description' => __( 'What to compare against the minimum.', 'arbricks' ),
 				'options'     => array(
-					'subtotal' => __( 'Subtotal (before tax/shipping)', 'arbricks' ),
-					'total'    => __( 'Total (after tax/shipping)', 'arbricks' ),
+					'subtotal' => __( 'Subtotal (before tax and shipping)', 'arbricks' ),
+					'total'    => __( 'Order Total (after tax and shipping)', 'arbricks' ),
 				),
 				'default'     => 'subtotal',
 			),
 			'error_message'  => array(
 				'type'        => 'text',
 				'label'       => __( 'Error Message', 'arbricks' ),
-				'description' => __( 'Use %s for amount placeholder', 'arbricks' ),
+				'description' => __( 'Use %s for the amount placeholder.', 'arbricks' ),
 				'default'     => __( 'The minimum order amount is %s.', 'arbricks' ),
 				'placeholder' => __( 'The minimum order amount is %s.', 'arbricks' ),
 			),
@@ -172,4 +192,11 @@ class Feature_Wc_Minimum_Order_Amount implements Feature_Interface {
 			);
 		}
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

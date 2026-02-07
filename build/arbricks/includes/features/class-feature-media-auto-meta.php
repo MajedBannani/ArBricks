@@ -50,6 +50,30 @@ class Feature_Media_Auto_Meta implements Feature_Interface {
 			'description' => __( 'Automatically generate title, caption, description, and alt text from filename.', 'arbricks' ),
 			'category'    => 'seo',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Automatically generates image metadata (title, alt text, caption, description) from the filename when you upload images. Saves time and improves SEO by ensuring all images have proper alt text and titles.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Enable the feature toggle above', 'arbricks' ),
+					__( 'Choose "Apply To" mode: Only Empty Fields (safe) or Always Overwrite', 'arbricks' ),
+					__( 'Select which fields to auto-generate: Title, Caption, Description, Alt Text', 'arbricks' ),
+					__( 'Configure text processing: Preserve Case and Clean Separators', 'arbricks' ),
+					__( 'Click "Save Changes"', 'arbricks' ),
+					__( 'Upload a new image to test - the filename will be converted to metadata', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'Only Empty Fields (recommended): Only fills in blank metadata, preserves your manual edits', 'arbricks' ),
+					__( 'Always Overwrite: Replaces existing metadata every time - use with caution', 'arbricks' ),
+					__( 'Clean Separators: Converts hyphens and underscores to spaces (my-image-file.jpg → My Image File)', 'arbricks' ),
+					__( 'Preserve Case (recommended for Arabic): Keeps original filename case, important for non-Latin text', 'arbricks' ),
+					__( 'Only affects images uploaded AFTER enabling - does not modify existing attachments', 'arbricks' ),
+					__( 'File extension is automatically removed (image.jpg → image)', 'arbricks' ),
+					__( 'No external services used - completely local processing', 'arbricks' ),
+				),
+				'examples' => array(
+					__( 'Filename: product-red-shoes.jpg → Alt: "product red shoes" or "Product Red Shoes"', 'arbricks' ),
+					__( 'Arabic filename: صورة-منتج.jpg → Keeps original case if Preserve Case enabled', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -220,4 +244,11 @@ class Feature_Media_Auto_Meta implements Feature_Interface {
 
 		return trim( $text );
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

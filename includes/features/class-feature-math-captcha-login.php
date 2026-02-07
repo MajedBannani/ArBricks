@@ -39,30 +39,29 @@ class Feature_Math_Captcha_Login implements Feature_Interface {
 	 */
 	public static function meta(): array {
 		return array(
-			'title'       => __( 'Math Captcha (Login + Woo My Account)', 'arbricks' ),
-			'description' => __( 'Adds a simple math captcha to wp-login.php and WooCommerce My Account login/register forms.', 'arbricks' ),
+			'title'       => __( 'Math Captcha (Login + WooCommerce)', 'arbricks' ),
+			'description' => __( 'Add a simple math question to WordPress and WooCommerce login forms to block bots.', 'arbricks' ),
 			'category'    => 'security',
 			'shortcode'   => '',
 			'help'        => array(
-				'summary'  => __( 'Adds a simple math question (e.g., "What is 3 + 5?") to login and registration forms to block automated bots. Works on WordPress core login (wp-login.php) and WooCommerce My Account login/register forms.', 'arbricks' ),
+				'summary'  => __( 'Adds a simple math question (e.g., "What is 3 + 5?") to login and registration forms to block automated bots. Works on the default WordPress login (wp-login.php) and WooCommerce My Account forms.', 'arbricks' ),
 				'how_to'   => array(
-					__( 'Enable the feature toggle above', 'arbricks' ),
-					__( 'Click "Save Changes" to activate', 'arbricks' ),
-					__( 'Test by logging out and visiting the login page - you\'ll see the math question', 'arbricks' ),
-					__( 'If WooCommerce is active, also test the My Account login and register forms', 'arbricks' ),
+					__( 'Enable the feature toggle above.', 'arbricks' ),
+					__( 'Click "Save Changes" to activate.', 'arbricks' ),
+					__( 'Test by logging out and visiting the login page - you will see the math question.', 'arbricks' ),
+					__( 'If WooCommerce is active, also test the login and register form on the "My Account" page.', 'arbricks' ),
 				),
 				'notes'    => array(
-					__( 'No configuration needed - works automatically after enabling', 'arbricks' ),
-					__( 'Covers 3 forms: WordPress login, WooCommerce login, WooCommerce registration', 'arbricks' ),
-					__( 'Math questions use random numbers (1-9) each time for better security', 'arbricks' ),
-					__( 'Question text currently in Arabic - works for Arabic-language sites', 'arbricks' ),
-					__( 'No external services used - completely local and privacy-friendly', 'arbricks' ),
-					__( 'Automatically bypassed for XML-RPC, REST API, WP-CLI, and AJAX requests', 'arbricks' ),
-					__( 'More user-friendly than invisible honeypots or reCAPTCHA for non-technical users', 'arbricks' ),
+					__( 'No further settings needed - the feature works automatically after activation.', 'arbricks' ),
+					__( 'Covers 3 forms: WordPress Login, WooCommerce Login, and WooCommerce Registration.', 'arbricks' ),
+					__( 'Uses random numbers (1-9) for each request for better security.', 'arbricks' ),
+					__( 'The question is processed locally - no external services are used, maintaining privacy.', 'arbricks' ),
+					__( 'Automatically excluded for XML-RPC, REST API, WP-CLI, and AJAX requests.', 'arbricks' ),
+					__( 'Easier for non-technical users than invisible traps or reCAPTCHA.', 'arbricks' ),
 				),
 				'examples' => array(
-					__( 'Example question: "تحقق بسيط: كم حاصل 7 + 4 ؟" (Simple check: What is 7 + 4?)', 'arbricks' ),
-					__( 'User must type 11 to proceed with login', 'arbricks' ),
+					__( 'Example Question: "Simple Verification: What is 7 + 4 ?"', 'arbricks' ),
+					__( 'The user must type 11 to proceed and log in.', 'arbricks' ),
 				),
 			),
 		);
@@ -142,7 +141,7 @@ class Feature_Math_Captcha_Login implements Feature_Interface {
 
 		$label = sprintf(
 			/* translators: 1: first number, 2: second number */
-			esc_html__( 'تحقق بسيط: كم حاصل %1$d + %2$d ؟', 'arbricks' ),
+			esc_html__( 'Simple verification: what is %1$d + %2$d ?', 'arbricks' ),
 			$a,
 			$b
 		);
@@ -196,7 +195,7 @@ class Feature_Math_Captcha_Login implements Feature_Interface {
 
 		$nonce = isset( $_POST['arb_math_captcha_nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['arb_math_captcha_nonce'] ) ) : '';
 		if ( empty( $nonce ) || ! wp_verify_nonce( $nonce, $nonce_action ) ) {
-			return new WP_Error( 'captcha_invalid', __( 'حصل خطأ في التحقق الأمني. حاول مجددًا.', 'arbricks' ) );
+			return new WP_Error( 'captcha_invalid', __( 'Security verification error. Please try again.', 'arbricks' ) );
 		}
 
 		$a = isset( $_POST['arb_math_captcha_a'] ) ? (int) wp_unslash( $_POST['arb_math_captcha_a'] ) : null;
@@ -204,11 +203,11 @@ class Feature_Math_Captcha_Login implements Feature_Interface {
 		$ans = isset( $_POST['arb_math_captcha_answer'] ) ? (int) wp_unslash( $_POST['arb_math_captcha_answer'] ) : null;
 
 		if ( null === $a || null === $b || null === $ans ) {
-			return new WP_Error( 'captcha_missing', __( 'يجب عليك الإجابة على سؤال التحقق.', 'arbricks' ) );
+			return new WP_Error( 'captcha_missing', __( 'You must answer the verification question.', 'arbricks' ) );
 		}
 
 		if ( $ans !== ( $a + $b ) ) {
-			return new WP_Error( 'captcha_error', __( 'إجابة التحقق غير صحيحة.', 'arbricks' ) );
+			return new WP_Error( 'captcha_error', __( 'Incorrect verification answer.', 'arbricks' ) );
 		}
 
 		return true;

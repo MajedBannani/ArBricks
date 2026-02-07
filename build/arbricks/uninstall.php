@@ -30,7 +30,13 @@ if ( $delete_data ) {
 	delete_site_option( 'arbricks_feature_settings' );
 	delete_site_option( 'arbricks_version' );
 	
-	// 3. Delete all transients
+	// 3. Delete user metadata (2FA secrets and status)
+	delete_metadata( 'user', 0, 'arbricks_2fa_enabled', '', true );
+	delete_metadata( 'user', 0, 'arbricks_2fa_secret', '', true );
+	delete_metadata( 'user', 0, 'arbricks_2fa_temp_secret', '', true );
+	delete_metadata( 'user', 0, 'arbricks_last_activity', '', true );
+
+	// 4. Delete all transients
 	global $wpdb;
 	
 	// Single site

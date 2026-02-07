@@ -41,9 +41,32 @@ class Feature_Login_Honeypot implements Feature_Interface {
 	public static function meta(): array {
 		return array(
 			'title'       => __( 'Login Honeypot', 'arbricks' ),
-			'description' => __( 'Add hidden honeypot field to block bots on login.', 'arbricks' ),
+			'description' => __( 'Add a hidden field (honeypot) to block bots during login.', 'arbricks' ),
 			'category'    => 'security',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Adds an invisible field (honeypot) to the login form that bots will fill but humans won\'t see. Any login attempt with a filled honeypot is automatically blocked, preventing automated bot attacks without requiring any user interaction.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Enable the feature toggle above.', 'arbricks' ),
+					__( 'You can customize the honeypot field name (advanced users only).', 'arbricks' ),
+					__( 'You can customize the block message displayed to bots.', 'arbricks' ),
+					__( 'Choose the concealment method: CSS (recommended) or Hidden Input.', 'arbricks' ),
+					__( 'Click "Save Changes" to activate.', 'arbricks' ),
+					__( 'No further settings needed - protection is automatic.', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'CSS Hide (recommended): The field is visually hidden but remains available for bots that ignore CSS files.', 'arbricks' ),
+					__( 'Hidden Field: Uses type="hidden" which sophisticated bots might detect.', 'arbricks' ),
+					__( 'Field Name: Only change if you feel bots have learned your specific field name (rare).', 'arbricks' ),
+					__( 'No external services used - the feature works locally, maintaining privacy.', 'arbricks' ),
+					__( 'Works alongside other login security features (reCAPTCHA, Math Captcha).', 'arbricks' ),
+					__( 'Automatically excluded for XML-RPC, REST API, WP-CLI, and AJAX requests.', 'arbricks' ),
+				),
+				'examples' => array(
+					__( 'Default Field Name: login_honeypot', 'arbricks' ),
+					__( 'Example Custom Field Name: user_website_url (something bots will definitely fill).', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -57,21 +80,21 @@ class Feature_Login_Honeypot implements Feature_Interface {
 			'field_name'      => array(
 				'type'        => 'text',
 				'label'       => __( 'Field Name', 'arbricks' ),
-				'description' => __( 'Name of the honeypot field', 'arbricks' ),
+				'description' => __( 'The name of the invisible honeypot field.', 'arbricks' ),
 				'default'     => 'login_honeypot',
 				'placeholder' => 'login_honeypot',
 			),
 			'block_message'   => array(
 				'type'        => 'text',
 				'label'       => __( 'Block Message', 'arbricks' ),
-				'description' => __( 'Message shown to blocked bots', 'arbricks' ),
-				'default'     => __( 'تم حظر محاولة تسجيل الدخول.', 'arbricks' ),
+				'description' => __( 'The message displayed to blocked bots.', 'arbricks' ),
+				'default'     => __( 'Login attempt blocked.', 'arbricks' ),
 				'placeholder' => __( 'Login attempt blocked.', 'arbricks' ),
 			),
 			'enable_css_hide' => array(
 				'type'        => 'checkbox',
 				'label'       => __( 'Enable CSS Hiding', 'arbricks' ),
-				'description' => __( 'Use CSS to hide honeypot field', 'arbricks' ),
+				'description' => __( 'Use CSS code to hide the honeypot field.', 'arbricks' ),
 				'default'     => true,
 			),
 		);
@@ -222,4 +245,11 @@ class Feature_Login_Honeypot implements Feature_Interface {
 
 		return false;
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }

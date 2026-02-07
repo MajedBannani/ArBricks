@@ -39,9 +39,24 @@ class Feature_Hide_Admin_Bar_Non_Admin implements Feature_Interface {
 	public static function meta(): array {
 		return array(
 			'title'       => __( 'Hide Admin Bar (Non-Admins)', 'arbricks' ),
-			'description' => __( 'Hide WordPress admin bar on the front-end for users who do not have a given capability.', 'arbricks' ),
+			'description' => __( 'Hide the WordPress admin bar on the frontend for users who do not have specified capabilities.', 'arbricks' ),
 			'category'    => 'tools',
 			'shortcode'   => '',
+			'help'        => array(
+				'summary'  => __( 'Hides the WordPress admin bar (the black bar at the top of pages) on the frontend for non-admin users. Clean up your site\'s interface for subscribers, customers, and other users.', 'arbricks' ),
+				'how_to'   => array(
+					__( 'Enable the feature toggle above.', 'arbricks' ),
+					__( 'Click "Save Changes".', 'arbricks' ),
+					__( 'The admin bar will be hidden on the frontend for non-admin users.', 'arbricks' ),
+					__( 'Test by logging in with a non-admin user (Subscriber, Customer, etc.).', 'arbricks' ),
+				),
+				'notes'    => array(
+					__( 'Only affects the frontend - the admin bar still appears in the WordPress dashboard.', 'arbricks' ),
+					__( 'Users with "manage_options" capability (usually Administrators) still see the admin bar.', 'arbricks' ),
+					__( 'Logged-out visitors are not affected (they don\'t see the admin bar anyway).', 'arbricks' ),
+					__( 'Developers can change the required capability using the "arbricks_admin_bar_capability" filter.', 'arbricks' ),
+				),
+			),
 		);
 	}
 
@@ -76,4 +91,11 @@ class Feature_Hide_Admin_Bar_Non_Admin implements Feature_Interface {
 
 		return $show;
 	}
+	/**
+	 * Render custom admin UI
+	 *
+	 * @return void
+	 */
+	public function render_admin_ui(): void {}
+
 }
