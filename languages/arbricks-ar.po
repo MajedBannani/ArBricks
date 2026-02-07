@@ -2489,3 +2489,1572 @@ msgstr "فاتورة رقم %s"
 
 msgid "Help"
 msgstr "مساعدة"
+Found 597 existing translations.
+Found 522 MISSING strings.
+---------------------------------------------------
+msgid "Customize the \"Howdy\" text next to the username in the admin bar."
+msgstr "خصّص نص \"مرحباً\" بجوار اسم المستخدم في شريط الإدارة."
+
+msgid "Enable the feature to start customizing the greeting."
+msgstr "فعّل الميزة للبدء في تخصيص التحية."
+
+msgid "Enter your preferred greeting (e.g., \"Welcome\", \"Hello\", or \"Good Morning\")."
+msgstr "أدخل التحية المفضلة لديك (مثال: \"أهلاً بك\"، \"مرحباً\"، أو \"صباح الخير\")."
+
+msgid "Choose whether to keep the username after the greeting or hide it."
+msgstr "اختر ما إذا كنت تريد إبقاء اسم المستخدم بعد التحية أو إخفائه."
+
+msgid "This change is purely cosmetic and does not change any user permissions."
+msgstr "هذا التغيير جمالي فقط ولا يغير أي صلاحيات للمستخدم."
+
+msgid "The change appears in the admin bar whether you are in the dashboard or browsing the site."
+msgstr "يظهر التغيير في شريط الإدارة سواء كنت في لوحة التحكم أو تتصفح الموقع."
+
+msgid "The text that replaces \"Howdy\". Default is \"Welcome\"."
+msgstr "النص الذي يستبدل \"مرحباً\". الافتراضي هو \"أهلاً بك\"."
+
+msgid "%1$s, %2$s"
+msgstr "%1$s، %2$s"
+
+msgid "Enable the main feature then choose the widgets you want to hide from the options below."
+msgstr "فعّل الميزة الرئيسية ثم اختر الودجات التي تريد إخفاءها من الخيارات أدناه."
+
+msgid "Click \"Save Changes\" to see the result on the main dashboard."
+msgstr ""
+
+msgid "Widgets available to hide: At a Glance, Quick Draft, Activity, Recent Comments, and WordPress Events and News."
+msgstr "الودجات المتاحة للإخفاء: "لمحة سريعة"، "مسودة سريعة"، "النشاط"، "أحدث التعليقات"، و"أخبار وأحداث ووردبريس"."
+
+msgid "This feature does not delete data; it only hides widgets from view."
+msgstr "هذه الميزة لا تحذف البيانات؛ إنها تخفي الودجات فقط من العرض."
+
+msgid "Note: Some other plugins may add their own widgets; this feature focuses on default WordPress widgets."
+msgstr "ملاحظة: قد تضيف إضافات أخرى ودجات خاصة بها؛ تركز هذه الميزة على ودجات ووردبريس الافتراضية."
+
+msgid "Hide \"At a Glance\""
+msgstr "إخفاء \"لمحة سريعة\""
+
+msgid "Hide the \"At a Glance\" widget which displays the number of posts and pages."
+msgstr "إخفاء ودجت \"لمحة سريعة\" الذي يعرض عدد المقالات والصفحات."
+
+msgid "Hide \"Activity\""
+msgstr "إخفاء \"النشاط\""
+
+msgid "Hide the \"Activity\" widget which displays recent posts and comments."
+msgstr "إخفاء ودجت \"النشاط\" الذي يعرض أحدث المقالات والتعليقات."
+
+msgid "Hide \"Quick Draft\""
+msgstr "إخفاء \"مسودة سريعة\""
+
+msgid "Hide the \"Quick Draft\" widget for writing quick post ideas."
+msgstr "إخفاء ودجت \"مسودة سريعة\" لكتابة أفكار المقالات السريعة."
+
+msgid "Hide \"Recent Comments\""
+msgstr "إخفاء \"أحدث التعليقات\""
+
+msgid "Hide the \"Recent Comments\" widget."
+msgstr "إخفاء ودجت \"أحدث التعليقات\"."
+
+msgid "Hide \"WordPress Events and News\""
+msgstr "إخفاء \"أخبار وأحداث ووردبريس\""
+
+msgid "Hide \"Welcome Panel\""
+msgstr "إخفاء \"لوحة الترحيب\""
+
+msgid "Hide the welcome panel that appears on the dashboard."
+msgstr "إخفاء لوحة الترحيب التي تظهر في لوحة التحكم."
+
+msgid "Customize the text displayed in the WordPress admin dashboard footer for client sites or your own branding."
+msgstr "تخصيص النص المعروض في تذييل لوحة تحكم ووردبريس لمواقع العملاء أو علامتك التجارية الخاصة."
+
+msgid "The admin footer is the section at the bottom of every page in the WordPress dashboard. This feature allows you to replace default text with custom text, which is very useful when delivering sites to clients."
+msgstr "تذييل الإدارة هو القسم الموجود أسفل كل صفحة في لوحة تحكم ووردبريس. تتيح لك هذه الميزة استبدال النص الافتراضي بنص مخصص، وهو مفيد جداً عند تسليم المواقع للعملاء."
+
+msgid "Enable the feature to start customizing strings."
+msgstr "فعّل الميزة للبدء في تخصيص النصوص."
+
+msgid "Enter the desired text for the right side (usually WordPress version) and the left side (default thank you text)."
+msgstr "أدخل النص المطلوب للجانب الأيمن (عادة إصدار ووردبريس) والجانب الأيسر (نص الشكر الافتراضي)."
+
+msgid "Save settings and you will see the change immediately at the bottom of the dashboard."
+msgstr "احفظ الإعدادات وسترى التغيير فوراً في أسفل لوحة التحكم."
+
+msgid "If you leave fields empty, WordPress will continue to show its default strings."
+msgstr "إذا تركت الحقول فارغة، سيستمر ووردبريس في عرض نصوصه الافتراضية."
+
+msgid "\"Restore Default Text\" option temporarily disables customization without deleting the text you wrote."
+msgstr ""
+
+msgid "This feature only appears in the dashboard and does not affect the frontend of the site."
+msgstr "تظهر هذه الميزة في لوحة التحكم فقط ولا تؤثر على واجهة الموقع."
+
+msgid "The text that replaces \"Thank you for creating with WordPress\". HTML allowed."
+msgstr "النص الذي يستبدل \"شكراً، لأنك تستخدم ووردبريس\". يسمح بـ HTML."
+
+msgid "Ignore custom strings and revert to official WordPress footer text."
+msgstr "تجاهل النصوص المخصصة والعودة لنص تذييل ووردبريس الرسمي."
+
+msgid "Post Status Colors in Admin"
+msgstr "ألوان حالة المقالات في الإدارة"
+
+msgid "Highlight post rows with subtle colors based on their status (Draft, Pending Review, etc.) in the admin area."
+msgstr "تمييز صفوف المقالات بألوان خفيفة بناءً على حالتها (مسودة، بانتظار المراجعة، إلخ) في منطقة الإدارة."
+
+msgid "Adds subtle background colors to post list table rows based on their status, making it easier to visually distinguish between drafts, scheduled, and private posts."
+msgstr "يضيف ألوان خلفية خفيفة لصفوف جدول قائمة المقالات بناءً على حالتها، مما يسهل التمييز بصرياً بين المسودات والمقالات المجدولة والخاصة."
+
+msgid "Enable the main feature then choose the statuses you want to color from the options below."
+msgstr "فعّل الميزة الرئيسية ثم اختر الحالات التي تريد تلوينها من الخيارات أدناه."
+
+msgid "Navigate to the post (or page) list to see the color effect."
+msgstr "انتقل إلى قائمة المقالات (أو الصفحات) لرؤية تأثير اللون."
+
+msgid "Colors are designed to be very subtle and do not affect text readability."
+msgstr "تم تصميم الألوان لتكون خفيفة جداً ولا تؤثر على قابلية قراءة النص."
+
+msgid "Applies to all posts, pages, and custom post type list tables."
+msgstr "ينطبق على جميع جداول قوائم المقالات والصفحات وأنواع المقالات المخصصة."
+
+msgid "Note: If your theme or another plugin already modifies table colors, you might notice an overlap."
+msgstr "ملاحظة: إذا كان قالبك أو إضافة أخرى تعدل ألوان الجدول بالفعل، فقد تلاحظ تداخلاً."
+
+msgid "Color draft posts with a subtle yellow background."
+msgstr "تلوين المسودات بخلفية صفراء خفيفة."
+
+msgid "Color pending review posts with a subtle blue background."
+msgstr "تلوين المقالات بانتظار المراجعة بخلفية زرقاء خفيفة."
+
+msgid "Color scheduled posts with a subtle green background."
+msgstr "تلوين المقالات المجدولة بخلفية خضراء خفيفة."
+
+msgid "Color private posts with a subtle red background."
+msgstr "تلوين المقالات الخاصة بخلفية حمراء خفيفة."
+
+msgid "Show Post and Page IDs"
+msgstr "إظهار معرفات المقالات والصفحات"
+
+msgid "Adds a column to display the ID of posts and pages in admin tables for easier development."
+msgstr "إضافة عمود لعرض معرف (ID) المقالات والصفحات في جداول الإدارة لتسهيل التطوير."
+
+msgid "Adds a new column to admin tables displaying the unique ID for each post or page, making it easier to work with shortcodes or during development."
+msgstr "يضيف عموداً جديداً لجداول الإدارة يعرض المعرف الفريد لكل مقال أو صفحة، مما يسهل العمل مع الأكواد القصيرة أو أثناء التطوير."
+
+msgid "Navigate to any post or page list and a new \"ID\" column will appear."
+msgstr "انتقل إلى أي قائمة مقالات أو صفحات وسيظهر عمود \"المعرف\" الجديد."
+
+msgid "Works on post and page lists by default."
+msgstr "يعمل على قوائم المقالات والصفحات بشكل افتراضي."
+
+msgid "This column is for display only and is not sortable."
+msgstr "هذا العمود للعرض فقط وليس للفرز."
+
+msgid "Note: If another plugin already shows IDs, you might see duplicate columns. Disable one to avoid clutter."
+msgstr "ملاحظة: إذا كانت إضافة أخرى تعرض المعرفات بالفعل، فقد ترى أعمدة مكررة. عطل إحداها لتجنب الفوضى."
+
+msgid "Auto Logout Inactive Users"
+msgstr "تسجيل خروج المستخدمين غير النشطين تلقائياً"
+
+msgid "Automatically logs out users after a specified period of inactivity to improve security."
+msgstr "تسجيل خروج المستخدمين تلقائياً بعد فترة محددة من عدم النشاط لتحسين الأمان."
+
+msgid "Protects user accounts by closing open sessions that may contain sensitive data when left unused."
+msgstr "يحمي حسابات المستخدمين بإغلاق الجلسات المفتوحة التي قد تحتوي على بيانات حساسة عند تركها دون استخدام."
+
+msgid "Set the inactivity duration in minutes."
+msgstr "حدد مدة عدم النشاط بالدقائق."
+
+msgid "Select the roles this restriction will apply to."
+msgstr "حدد الرتب التي سينطبق عليها هذا القيد."
+
+msgid "You can enable a warning that appears to the user before they are logged out."
+msgstr "يمكنك تفعيل تحذير يظهر للمستخدم قبل تسجيل خروجه."
+
+msgid "Activity is tracked when pages are loaded or when interacting with the site."
+msgstr "يتم تتبع النشاط عند تحميل الصفحات أو التفاعل مع الموقع."
+
+msgid "This feature does not affect non-logged-in visitors."
+msgstr ""
+
+msgid "REST API, Cron, and WP-CLI requests are excluded to ensure background processes continue working."
+msgstr ""
+
+msgid "Inactivity Duration (Minutes)"
+msgstr "مدة عدم النشاط (دقائق)"
+
+msgid "Apply to Roles"
+msgstr "تطبيق على الرتب"
+
+msgid "Show Warning Before Logout"
+msgstr "إظهار تحذير قبل تسجيل الخروج"
+
+msgid "Warning Time Before Logout (Minutes)"
+msgstr "وقت التحذير قبل الخروج (دقائق)"
+
+msgid "Session Expiration Alert"
+msgstr "تنبيه انتهاء الجلسة"
+
+msgid "You will be automatically logged out in"
+msgstr "سيتم تسجيل خروجك تلقائياً خلال"
+
+msgid "seconds due to inactivity."
+msgstr "ثانية بسبب عدم النشاط."
+
+msgid "Stay Logged In"
+msgstr "البقاء متصلاً"
+
+msgid "Apply to Roles:"
+msgstr ""
+
+msgid "Users with these roles will be subject to automatic logout."
+msgstr ""
+
+msgid "Prevent other websites from using your media files directly, saving your bandwidth and server resources."
+msgstr "منع المواقع الأخرى من استخدام ملفات الوسائط الخاصة بك مباشرة، مما يوفر عرض النطاق الترددي وموارد الخادم."
+
+msgid "Hotlinking is when other sites use your image links within their pages, consuming your bandwidth instead of theirs. This feature prevents unauthorized access to your media files."
+msgstr "Hotlinking هو عندما تستخدم مواقع أخرى روابط صورك داخل صفحاتها، مما يستهلك النطاق الترددي الخاص بك بدلاً من خاصتهم. تمنع هذه الميزة الوصول غير المصرح به لملفاتك."
+
+msgid "Enable the main feature and choose your preferred blocking method."
+msgstr "فعّل الميزة الرئيسية واختر طريقة الحظر المفضلة لديك."
+
+msgid "You can choose to show a 403 error or display a placeholder image (like your logo)."
+msgstr "يمكنك اختيار إظهار خطأ 403 أو عرض صورة بديلة (مثل شعارك)."
+
+msgid "Search engines (Google, Bing, etc.) and direct access are automatically allowed to ensure SEO is not affected."
+msgstr "يسمح لمحركات البحث (Google, Bing, etc.) والوصول المباشر تلقائياً لضمان عدم تأثر SEO."
+
+msgid "Warning: If you use a CDN or a separate media domain, make sure to add it to the whitelist."
+msgstr ""
+
+msgid "Note: This feature works via PHP and may have a very small performance impact on very large sites; in those cases, server-level protection is preferred."
+msgstr ""
+
+msgid "Whitelisted Domains"
+msgstr "النطاقات المسموح بها"
+
+msgid "Blocking Method"
+msgstr "طريقة الحظر"
+
+msgid "Choose what happens when hotlinking is detected."
+msgstr "اختر ماذا يحدث عند اكتشاف Hotlinking."
+
+msgid "403 Forbidden"
+msgstr "403 ممنوع"
+
+msgid "URL of the image to show instead of the blocked image."
+msgstr "رابط الصورة التي ستظهر بدلاً من الصورة المحظورة."
+
+msgid "Prevent uploading PHP files to the uploads directory for security."
+msgstr "منع رفع ملفات PHP إلى مجلد الرفوعات للأمان."
+
+msgid "Allowing PHP file uploads is a critical security risk that could allow attackers to execute malicious code on your server. This feature prevents uploading any file with a PHP-related extension."
+msgstr "السماح برفع ملفات PHP هو خطر أمني كبير قد يسمح للمهاجمين بتنفيذ تعليمات برمجية ضارة على الخادم. تمنع هذه الميزة رفع أي ملف بملحق متعلق بـ PHP."
+
+msgid "Enable the feature using the toggle above."
+msgstr ""
+
+msgid "Attempting to upload a PHP file via the Media Library will be rejected with an error message."
+msgstr "سيتم رفض محاولة رفع ملف PHP عبر مكتبة الوسائط مع رسالة خطأ."
+
+msgid "Does not prevent uploading images or standard documents (jpg, png, pdf, etc.)."
+msgstr "لا يمنع رفع الصور أو المستندات القياسية (jpg, png, pdf, etc.)."
+
+msgid "Does not scan previously uploaded files; focuses on new uploads."
+msgstr ""
+
+msgid "Important: If you use a plugin that legitimately needs to upload PHP files (very rare), you may need to disable this."
+msgstr ""
+
+msgid "Sorry, uploading PHP files is not allowed for security reasons."
+msgstr "عذراً، غير مسموح برفع ملفات PHP لأسباب أمنية."
+
+msgid "Copy text to clipboard when clicking any element with data-arbricks-copy"
+msgstr ""
+
+msgid "Allows you to copy any text to the clipboard by clicking on an HTML element. This is useful for sharing links, discount codes, or any specific text snippets."
+msgstr ""
+
+msgid "Add the attribute <code>data-arbricks-copy=\"TEXT\"</code> to any HTML element."
+msgstr ""
+
+msgid "Customize the success and error messages in the settings below if needed."
+msgstr ""
+
+msgid "This feature relies on the Clipboard API and requires a secure connection (HTTPS) in most modern browsers."
+msgstr ""
+
+msgid "If the browser does not support the Clipboard API, the error message will be shown."
+msgstr ""
+
+msgid "Default Text (on Failure)"
+msgstr ""
+
+msgid "Success message"
+msgstr ""
+
+msgid "Message that appears after successful copying."
+msgstr ""
+
+msgid "Error message"
+msgstr ""
+
+msgid "Message that appears when copying fails."
+msgstr ""
+
+msgid "Copy failed"
+msgstr ""
+
+msgid "Disable jQuery Migrate"
+msgstr "تعطيل jQuery Migrate"
+
+msgid "Remove jQuery Migrate from the frontend to improve performance when not using plugins that depend on legacy code."
+msgstr "إزالة jQuery Migrate من الواجهة الأمامية لتحسين الأداء عند عدم استخدام إضافات تعتمد على كود قديم."
+
+msgid "jQuery Migrate is a helper library used to provide compatibility for old jQuery versions. Most modern themes and plugins no longer need it. Disabling it reduces the number of JavaScript files loaded on the frontend."
+msgstr "jQuery Migrate هي مكتبة مساعدة توفر التوافق لإصدارات jQuery القديمة. معظم القوالب والإضافات الحديثة لم تعد بحاجة إليها. تعطيلها يقلل عدد ملفات JS المحملة."
+
+msgid "Enable the toggle above to disable the library."
+msgstr ""
+
+msgid "Click \"Save Changes\" to apply."
+msgstr ""
+
+msgid "Verify there are no errors in the browser \"Console\" after disabling."
+msgstr ""
+
+msgid "Disabling happens on the frontend only and does not affect the dashboard or block editor."
+msgstr ""
+
+msgid "If you notice certain functions (like menus or sliders) stop working, your theme or a plugin might be using old code; in that case, re-enable the library."
+msgstr ""
+
+msgid "The file is not deleted from the server; it is only prevented from loading as a jQuery dependency."
+msgstr ""
+
+msgid "Disable RSS feeds for posts and comments to reduce spam and unnecessary server overhead."
+msgstr "تعطيل خلاصات RSS للمقالات والتعليقات لتقليل السبام والحمل غير الضروري على الخادم."
+
+msgid "Enable the feature and choose what to disable (Posts, Comments, or All)."
+msgstr "فعّل الميزة واختر ما تريد تعطيله (المقالات، التعليقات، أو الكل)."
+
+msgid "Choose the response type (410, 404, or redirect to home)."
+msgstr "اختر نوع الاستجابة (410, 404, أو إعادة توجيه للرئيسية)."
+
+msgid "Removing feed links from the head is recommended to hide their presence."
+msgstr ""
+
+msgid "Warning: If you use services depending on RSS like automated newsletters or Jetpack, do not enable this."
+msgstr ""
+
+msgid "410 (Gone) response is recommended for search engines."
+msgstr ""
+
+msgid "Choose which feeds to disable."
+msgstr "اختر الخلاصات التي تريد تعطيلها."
+
+msgid "Disable Posts Feeds only"
+msgstr "تعطيل خلاصات المقالات فقط"
+
+msgid "Disable Comments Feeds only"
+msgstr "تعطيل خلاصات التعليقات فقط"
+
+msgid "What happens when a disabled feed is accessed."
+msgstr "ماذا يحدث عند الوصول لخلاصة معطلة."
+
+msgid "Remove feed links from <head>"
+msgstr "إزالة روابط الخلاصات من <head>"
+
+msgid "Remove automatic feed links added by WordPress in the page source."
+msgstr ""
+
+msgid "Feed disabled"
+msgstr "الخلاصة معطلة"
+
+msgid "Prevent attackers from discovering usernames via author archives and query parameters."
+msgstr "منع المهاجمين من اكتشاف أسماء المستخدمين عبر أرشيف المؤلف ومعلمات الاستعلام."
+
+msgid "User enumeration is a technique where attackers discover registered usernames by scanning author archives or using specific query parameters like author=1."
+msgstr "تعداد المستخدمين هو تقنية يكتشف بها المهاجمون أسماء المستخدمين المسجلين بفحص أرشيف المؤلف أو استخدام معلمات مثل author=1."
+
+msgid "Any attempt to access author archives or enumeration query parameters will be redirected to the homepage."
+msgstr "أي محاولة للوصول لأرشيف المؤلف أو معلمات التعداد سيتم إعادة توجيهها للصفحة الرئيسية."
+
+msgid "Security Risk: Knowing a username is the first step in a Brute Force attack."
+msgstr "خطر أمني: معرفة اسم المستخدم هو الخطوة الأولى في هجوم التخمين."
+
+msgid "This feature does not affect the WordPress dashboard or REST API."
+msgstr ""
+
+msgid "Important Note: If you are using another security plugin or a Web Application Firewall (WAF) that provides the same protection, disable one to avoid conflict."
+msgstr ""
+
+msgid "Disable WLWManifest Link"
+msgstr "تعطيل رابط WLWManifest"
+
+msgid "Remove the Windows Live Writer manifest link from the head section."
+msgstr "إزالة رابط بيان Windows Live Writer من قسم الترويسة."
+
+msgid "Removes the wlwmanifest.xml link from the site head. This file was used by Windows Live Writer to enable publishing to WordPress, and is obsolete for most modern sites."
+msgstr "يزيل رابط wlwmanifest.xml من ترويسة الموقع. كان هذا الملف يستخدمه Windows Live Writer وهو قديم لمعظم المواقع الحديثة."
+
+msgid "Enable the toggle above to remove the link."
+msgstr ""
+
+msgid "Click \"Save Changes\" to apply the setting."
+msgstr ""
+
+msgid "The link will be immediately removed from the HTML head section on the frontend."
+msgstr ""
+
+msgid "Improves head section cleanliness."
+msgstr ""
+
+msgid "Does not affect modern editors or basic site performance."
+msgstr ""
+
+msgid "The actual file is not deleted from the server, only the link in the header is removed."
+msgstr ""
+
+msgid "This feature does not affect the admin panel."
+msgstr ""
+
+msgid "Fading Page Transitions"
+msgstr "انتقالات الصفحات المتلاشية"
+
+msgid "Adds a smooth fade transition effect between pages to improve user experience without affecting performance or SEO."
+msgstr "يضيف تأثير انتقال تلاشي سلس بين الصفحات لتحسين تجربة المستخدم دون التأثير على الأداء أو SEO."
+
+msgid "Improves navigation smoothness by masking the abrupt change between pages with a simple opacity-based animation."
+msgstr "يحسن سلاسة التنقل بإخفاء التغيير المفاجئ بين الصفحات برسوم متحركة بسيطة تعتمد على الشفافية."
+
+msgid "Set the transition duration in milliseconds (e.g., 200)."
+msgstr "حدد مدة الانتقال بالمللي ثانية (مثال: 200)."
+
+msgid "Choose the element to apply the effect to (default is body)."
+msgstr "اختر العنصر لتطبيق التأثير عليه (الافتراضي هو body)."
+
+msgid "Save changes and test by navigating between site pages."
+msgstr ""
+
+msgid "The effect is automatically disabled if the user prefers reduced motion (Accessibility)."
+msgstr ""
+
+msgid "Does not apply to external links or links that open in a new window."
+msgstr ""
+
+msgid "This is a visual-only feature and does not consume server resources."
+msgstr ""
+
+msgid "Transition Duration (ms)"
+msgstr "مدة الانتقال (مللي ثانية)"
+
+msgid "CSS Selector"
+msgstr "محدد CSS"
+
+msgid "Specify the element to fade. Default is body."
+msgstr "حدد العنصر الذي سيتلاشى. الافتراضي هو body."
+
+msgid "Add a column to display the featured image in admin post and page lists."
+msgstr ""
+
+msgid "Helps you visually review content faster by displaying a thumbnail of the post directly in the \"All Posts\" or \"All Pages\" list."
+msgstr "يساعدك على مراجعة المحتوى بصرياً بشكل أسرع من خلال عرض صورة مصغرة للمقال مباشرة في قائمة \"كل المقالات\" أو \"كل الصفحات\"."
+
+msgid "Enable the feature and select the post types where you want the column to appear."
+msgstr "فعّل الميزة وحدد أنواع المقالات التي تريد ظهور العمود فيها."
+
+msgid "This feature only appears in the admin panel and does not affect site speed for visitors."
+msgstr ""
+
+msgid "If the post has no featured image, a default icon will appear (if enabled)."
+msgstr ""
+
+msgid "Select which lists to add the column to."
+msgstr "حدد القوائم التي تريد إضافة العمود إليها."
+
+msgid "Prevent direct access to sensitive WordPress files that might reveal system information."
+msgstr "منع الوصول المباشر لملفات ووردبريس الحساسة التي قد تكشف معلومات النظام."
+
+msgid "A 404 error (Not Found) is returned to suggest the file does not exist."
+msgstr "يتم إرجاع خطأ 404 (غير موجود) للإيحاء بأن الملف غير موجود."
+
+msgid "This feature does not affect internal site operations or the admin panel."
+msgstr ""
+
+msgid "Important Note: If your server (Nginx/Apache) already blocks these files, you do not need to enable this feature."
+msgstr "ملاحظة مهمة: إذا كان خادمك (Nginx/Apache) يحظر هذه الملفات بالفعل، فلا داعي لتفعيل هذه الميزة."
+
+msgid "Show Last User Login"
+msgstr "إظهار آخر تسجيل دخول للمستخدم"
+
+msgid "Adds a column to display the last time a user logged in to the site."
+msgstr "إضافة عمود لعرض آخر مرة قام فيها المستخدم بتسجيل الدخول."
+
+msgid "Helps site administrators monitor user activity by displaying the date and time of the last successful login for each user in the Users table."
+msgstr "يساعد مسؤولي الموقع في مراقبة نشاط المستخدمين بعرض تاريخ ووقت آخر دخول ناجح لكل مستخدم في جدول المستخدمين."
+
+msgid "Enable the toggle above to start tracking last login and add the column."
+msgstr ""
+
+msgid "Navigate to the \"Users\" screen in the dashboard."
+msgstr ""
+
+msgid "You will find a new column titled \"Last Login\" displaying the precise time."
+msgstr ""
+
+msgid "Only the login time is stored (Unix Timestamp)."
+msgstr "يتم تخزين وقت الدخول فقط (طابع زمني يونكس)."
+
+msgid "No other sensitive data like IP address or browser type is stored."
+msgstr ""
+
+msgid "This feature only affects the dashboard and does not track user activity after login."
+msgstr ""
+
+msgid "Last Login"
+msgstr "آخر دخول"
+
+msgid "Never logged in"
+msgstr "لم يسجل الدخول أبداً"
+
+msgid "Protect your site from Brute Force attacks by limiting the number of failed login attempts across all forms."
+msgstr "حمِ موقعك من هجمات التخمين بتحديد عدد محاولات الدخول الفاشلة عبر جميع النماذج."
+
+msgid "Brute force attacks are repeated attempts by hackers to guess passwords to access your account. This feature blocks any IP address that exceeds a certain number of failed attempts for a specified period of time."
+msgstr "هجمات التخمين هي محاولات متكررة من الهاكرز لتخمين كلمات المرور. تمنع هذه الميزة أي عنوان IP يتجاوز عدداً معيناً من المحاولات الفاشلة لفترة محددة."
+
+msgid "Attempts are automatically reset upon successful login."
+msgstr ""
+
+msgid "This feature protects all login forms including the default WordPress form, WooCommerce, and other membership forms."
+msgstr ""
+
+msgid "This feature does not affect the REST API or automated system processes."
+msgstr ""
+
+msgid "Important Note: If you are using another security plugin that provides the same functionality, please enable only one to avoid conflict."
+msgstr ""
+
+msgid "If you are accidentally locked out, you can wait until the lockout duration expires or disable the feature via direct file access if necessary."
+msgstr ""
+
+msgid "The number of allowed failed attempts before lockout (Default: 5)."
+msgstr "عدد المحاولات الفاشلة المسموح بها قبل القفل (الافتراضي: 5)."
+
+msgid "The duration in minutes for which the IP will be blocked (Default: 15)."
+msgstr "المدة بالدقائق التي سيتم فيها حظر IP (الافتراضي: 15)."
+
+msgid "Reset on Success"
+msgstr "إعادة تعيين عند النجاح"
+
+msgid "All Login Forms (Recommended)"
+msgstr "كل نماذج الدخول (موصى به)"
+
+msgid "Allows users to log in using their email address or username instead of just their username."
+msgstr "السماح للمستخدمين بتسجيل الدخول باستخدام بريدهم الإلكتروني أو اسم المستخدم بدلاً من اسم المستخدم فقط."
+
+msgid "Users can now type their email address in the \"Username\" field on the login page."
+msgstr ""
+
+msgid "This works by converting the entered email to its matching username before the authentication process begins."
+msgstr "يعمل هذا عن طريق تحويل البريد المدخل إلى اسم المستخدم المطابق له قبل بدء عملية المصادقة."
+
+msgid "The feature does not change the login page interface or any error messages."
+msgstr ""
+
+msgid "Important Note: If you are using a security plugin that customizes the login process (e.g., 2FA or OTP), a conflict might occur. Disable one of them if you face issues."
+msgstr ""
+
+msgid "Markdown URLs for LLMs"
+msgstr "روابط Markdown لنماذج الذكاء الاصطناعي"
+
+msgid "Adds an additional representation of links in Markdown format within the page to help AI models understand the site structure."
+msgstr "يضيف تمثيلاً إضافياً للروابط بصيغة Markdown داخل الصفحة لمساعدة نماذج الذكاء الاصطناعي على فهم هيكل الموقع."
+
+msgid "Choose whether to include primary menu links and the current page link."
+msgstr "اختر ما إذا كنت تريد تضمين روابط القائمة الرئيسية ورابط الصفحة الحالية."
+
+msgid "Set the maximum number of links to be injected."
+msgstr ""
+
+msgid "These links are completely hidden from human visitors and only appear in the source code."
+msgstr ""
+
+msgid "The comment is injected into the site Footer to ensure initial load speed is not affected."
+msgstr ""
+
+msgid "Include Primary Menu Links"
+msgstr "تضمين روابط القائمة الرئيسية"
+
+msgid "Include Current Page Link"
+msgstr "تضمين رابط الصفحة الحالية"
+
+msgid "Maximum Links Limit"
+msgstr "الحد الأقصى للروابط"
+
+msgid "Arabic PDF Support"
+msgstr "دعم PDF العربي"
+
+msgid "Ensures exported PDFs support Arabic text correctly (RTL direction, letter shaping, and Arabic fonts)."
+msgstr "يضمن أن ملفات PDF المصدرة تدعم النص العربي بشكل صحيح (اتجاه اليمين لليسار، تشكيل الأحرف، والخطوط العربية)."
+
+msgid "Arabic text in PDFs often appears with disconnected letters or incorrect direction. This feature configures the export engine to support RTL direction and character shaping automatically."
+msgstr "غالباً ما يظهر النص العربي في PDF بأحرف مقطعة أو اتجاه خاطئ. تقوم هذه الميزة بتهيئة محرك التصدير لدعم RTL وتشكيل الأحرف تلقائياً."
+
+msgid "Enable the feature in the settings."
+msgstr ""
+
+msgid "Select your preferred Arabic font (e.g., Amiri)."
+msgstr "اختر الخط العربي المفضل لديك (مثل: Amiri)."
+
+msgid "ArBricks will use these settings when exporting any content to PDF."
+msgstr ""
+
+msgid "The mPDF library is only loaded when needed to minimize resource consumption."
+msgstr ""
+
+msgid "Ensures conversion of numbers and symbols to match the Arabic context."
+msgstr ""
+
+msgid "The Arabic font file must be available in the plugin assets for export to work correctly."
+msgstr ""
+
+msgid "Default PDF Font"
+msgstr "خط PDF الافتراضي"
+
+msgid "System Default"
+msgstr "افتراضي النظام"
+
+msgid "Force RTL for Arabic Pages"
+msgstr "فرض RTL للصفحات العربية"
+
+msgid "Enable Arabic Shaping"
+msgstr "تفعيل تشكيل الأحرف العربية"
+
+msgid "Click \"Generate QR\" to preview the result."
+msgstr "انقر \"إنشاء QR\" لمعاينة النتيجة."
+
+msgid "Click \"Download QR\" to save the image to your computer."
+msgstr "انقر \"تنزيل QR\" لحفظ الصورة على جهازك."
+
+msgid "Click \"Scan Now\" to start requesting links and analyzing the redirect chain."
+msgstr "انقر \"افحص الآن\" لبدء طلب الروابط وتحليل سلسلة إعادة التوجيه."
+
+msgid "Tested URL"
+msgstr "الرابط المفحوص"
+
+msgid "Browser:"
+msgstr "المتصفح:"
+
+msgid "Bot:"
+msgstr "البوت:"
+
+msgid "N/A"
+msgstr ""
+
+msgid "Error occurred during scan."
+msgstr "حدث خطأ أثناء الفحص."
+
+msgid "Remove Block Library CSS"
+msgstr "إزالة CSS مكتبة المكونات"
+
+msgid "Remove Gutenberg block library CSS from the frontend to improve performance when not using Gutenberg."
+msgstr "إزالة CSS مكتبة مكونات Gutenberg من الواجهة الأمامية لتحسين الأداء عند عدم استخدام Gutenberg."
+
+msgid "Enable the toggle above to remove the files."
+msgstr ""
+
+msgid "Verify site speed or inspect source code for wp-block-library files."
+msgstr "تحقق من سرعة الموقع أو افحص مصدر الكود بحثاً عن ملفات wp-block-library."
+
+msgid "Very useful for users of Bricks, Elementor, and other page builders."
+msgstr ""
+
+msgid "Affects frontend only; does not disable the block editor in the dashboard."
+msgstr ""
+
+msgid "Warning: Do not enable if you use Gutenberg blocks on your frontend, as styles will be lost."
+msgstr "تحذير: لا تفعل هذا إذا كنت تستخدم مكونات Gutenberg في الواجهة الأمامية، حيث ستفقد التنسيقات."
+
+msgid "Remove Dashicons Frontend"
+msgstr "إزالة Dashicons من الواجهة الأمامية"
+
+msgid "Remove Dashicons from the frontend for non-logged-in users to improve performance."
+msgstr "إزالة Dashicons من الواجهة الأمامية للمستخدمين غير المسجلين لتحسين الأداء."
+
+msgid "Dashicons is the default icon font set for WordPress. It is automatically loaded on the frontend, which increases page size by about 30KB. This feature removes it to improve performance."
+msgstr "Dashicons هي مجموعة خطوط الأيقونات الافتراضية لووردبريس. يتم تحميلها تلقائياً مما يزيد حجم الصفحة. تقوم هذه الميزة بإزالتها لتحسين الأداء."
+
+msgid "Enable the toggle above to remove the icons."
+msgstr ""
+
+msgid "Browse the site as a guest to verify dashicons.min.css is no longer loaded."
+msgstr ""
+
+msgid "Icons are kept for logged-in users to ensure the Admin Bar works correctly."
+msgstr "يتم الاحتفاظ بالأيقونات للمستخدمين المسجلين لضمان عمل شريط الإدارة بشكل صحيح."
+
+msgid "If your theme or certain plugins use Dashicons on the frontend, those icons may disappear for visitors."
+msgstr ""
+
+msgid "Modern page builders like Bricks and Elementor usually use other icon sets, so it is safe to enable in most cases."
+msgstr ""
+
+msgid "Add essential HTTP security headers to improve site and browser protection."
+msgstr "إضافة ترويسات أمان HTTP الأساسية لتحسين حماية الموقع والمتصفح."
+
+msgid "Security Headers are HTTP headers sent by the server to the browser to enable additional protection layers that prevent attacks like XSS, Clickjacking, and Content Sniffing."
+msgstr "ترويسات الأمان هي رؤوس HTTP يرسلها الخادم للمتصفح لتفعيل طبقات حماية إضافية تمنع هجمات مثل XSS و Clickjacking."
+
+msgid "Click \"Save Changes\" to apply the settings."
+msgstr ""
+
+msgid "X-Frame-Options: Prevents your site from being displayed in an iframe to protect it from Clickjacking attacks."
+msgstr "X-Frame-Options: يمنع عرض موقعك داخل iframe لحمايته من هجمات Clickjacking."
+
+msgid "Note: If you use Cloudflare or another security plugin that already adds these headers, disable the duplicates."
+msgstr ""
+
+msgid "HSTS Warning: Only enable this if your site is fully stable on HTTPS; configuration errors may block site access."
+msgstr ""
+
+msgid "Prevent browser from guessing the content type."
+msgstr ""
+
+msgid "Control referrer information."
+msgstr ""
+
+msgid "Permissions Policy (Conservative)"
+msgstr "سياسة الأذونات (محافظة)"
+
+msgid "Reduce browser permissions (camera, microphone, location)."
+msgstr ""
+
+msgid "HSTS Policy (Force HTTPS)"
+msgstr "سياسة HSTS (فرض HTTPS)"
+
+msgid "Force secure connection (use with caution)."
+msgstr ""
+
+msgid "Scan posts and pages for suspicious patterns like hidden text, obfuscated code, or spam keywords."
+msgstr "فحص المقالات والصفحات بحثاً عن أنماط مشبوهة مثل النص المخفي، الكود المبهم، أو كلمات السبام."
+
+msgid "Enable the feature and configure scan options (count and scope)."
+msgstr ""
+
+msgid "Click \"Start Scan Now\" to begin analyzing the content code."
+msgstr ""
+
+msgid "Review the resulting list and pay attention to items with a \"High\" risk level."
+msgstr ""
+
+msgid "Use the direct \"Edit\" link to review and remove suspicious content if necessary."
+msgstr ""
+
+msgid "This tool is for auditing only and does not change anything in the database."
+msgstr ""
+
+msgid "The tool looks for text hidden with CSS, obfuscated code (Base64), or suspicious keywords."
+msgstr ""
+
+msgid "Notice: Some themes may use hidden text for legitimate design purposes, so manual review is always required before taking action."
+msgstr ""
+
+msgid "Hidden via CSS (Zero font)"
+msgstr "مخفي عبر CSS (خط صفر)"
+
+msgid "Base64 Obfuscation"
+msgstr "إبهام Base64"
+
+msgid "Gzip Obfuscation"
+msgstr ""
+
+msgid "Code Execution (Eval)"
+msgstr ""
+
+msgid "High link density"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Item Limit"
+msgstr ""
+
+msgid "Include private content"
+msgstr ""
+
+msgid "Start Scan Now"
+msgstr "ابدأ الفحص الآن"
+
+msgid "ID"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "suspicious items detected."
+msgstr "عنصر مشبوه تم اكتشافه."
+
+msgid "The Link Audit tool helps you discover hidden or suspicious external links that may be added to your site via comments or content injection for SEO spam purposes. This tool helps you clean up your site and improve its quality."
+msgstr ""
+
+msgid "Enable the feature for the scan form to appear below."
+msgstr ""
+
+msgid "Choose the scan scope (Posts, Pages, or Comments) and the maximum items limit."
+msgstr ""
+
+msgid "Click \"Start Scan Now\" to begin extracting and analyzing links."
+msgstr ""
+
+msgid "Review the resulting table and pay attention to domains flagged as \"Suspicious\"."
+msgstr ""
+
+msgid "Links are classified as suspicious based on technical criteria such as domain length, number of hyphens, or the use of cheap TLD suffixes famous for spam."
+msgstr ""
+
+msgid "In case you find suspicious links, make sure to review their content and delete them manually if they prove to be spam."
+msgstr ""
+
+msgid "Detected Links Count"
+msgstr "عدد الروابط المكتشفة"
+
+msgid "external domains detected."
+msgstr "نطاقات خارجية مكتشفة."
+
+msgid "Click on the \"Setup Two-Factor Authentication\" button below."
+msgstr "انقر على زر \"إعداد المصادقة الثنائية\" أدناه."
+
+msgid "Error:"
+msgstr ""
+
+msgid "Print Order Invoice from Admin"
+msgstr "طباعة فاتورة الطلب من الإدارة"
+
+msgid "Adds an invoice print button for orders within the WooCommerce admin panel, supporting single and bulk printing."
+msgstr ""
+
+msgid "Allows managers to print simplified invoices (receipts) for orders directly from the WooCommerce orders page. The invoice is designed to be compatible with thermal printers and supports RTL direction."
+msgstr ""
+
+msgid "Navigate to the WooCommerce orders page."
+msgstr ""
+
+msgid "To print a single order: Click the print icon in the actions column."
+msgstr ""
+
+msgid "To print bulk orders: Select orders, then choose \"Print Invoices\" from the \"Bulk actions\" menu."
+msgstr ""
+
+msgid "The browser may block multiple popups during bulk printing; please allow popups for your site."
+msgstr ""
+
+msgid "Tip: Ensure paper size is set to match your printer (80mm or 58mm)."
+msgstr ""
+
+msgid "Invoice Logo"
+msgstr "شعار الفاتورة"
+
+msgid "Choose the logo to appear at the top of the invoice."
+msgstr "اختر الشعار الذي سيظهر أعلى الفاتورة."
+
+msgid "Paper Size"
+msgstr "حجم الورق"
+
+msgid "80mm (Thermal)"
+msgstr "80mm (حراري)"
+
+msgid "58mm (Small Thermal)"
+msgstr "58mm (حراري صغير)"
+
+msgid "A4 (Standard)"
+msgstr "A4 (قياسي)"
+
+msgid "Auto Print & Close"
+msgstr "طباعة تلقائية وإغلاق"
+
+msgid "Open print dialog immediately and close window after printing."
+msgstr "فتح نافذة الطباعة فوراً وإغلاق النافذة بعد الطباعة."
+
+msgid "Bulk Print Delay (ms)"
+msgstr "تأخير الطباعة الجماعية (مللي ثانية)"
+
+msgid "Delay between opening windows during bulk printing to avoid browser blocks."
+msgstr "التأخير بين فتح النوافذ أثناء الطباعة الجماعية لتجنب حظر المتصفح."
+
+msgid "Print Invoice"
+msgstr "طباعة الفاتورة"
+
+msgid "Print Invoice (ArBricks)"
+msgstr "طباعة الفاتورة (ArBricks)"
+
+msgid "Invalid order ID."
+msgstr "معرف الطلب غير صالح."
+
+msgid "Permission denied."
+msgstr "تم رفض الإذن."
+
+msgid "Order not found."
+msgstr "الطلب غير موجود."
+
+msgid "Order Receipt"
+msgstr "إيصال طلب"
+
+msgid "Date:"
+msgstr "التاريخ:"
+
+msgid "Customer:"
+msgstr "العميل:"
+
+msgid "Phone:"
+msgstr "الهاتف:"
+
+msgid "Payment Method:"
+msgstr "طريقة الدفع:"
+
+msgid "Address:"
+msgstr "العنوان:"
+
+msgid "Customer Note:"
+msgstr "ملاحظة العميل:"
+
+msgid "Product"
+msgstr "المنتج"
+
+msgid "Qty"
+msgstr "الكمية"
+
+msgid "Total"
+msgstr "الإجمالي"
+
+msgid "Total:"
+msgstr "الإجمالي:"
+
+msgid "Thank you for your business!"
+msgstr "شكراً لتعاملكم معنا!"
+
+msgid "Disable comments everywhere (Frontend + Admin), remove interface elements, disable comment feeds, and remove REST endpoints for comments."
+msgstr ""
+
+msgid "Completely disables all comment functionality across the entire WordPress site, including frontend forms, the admin interface, comment feeds, the REST API, and the admin bar. Ideal for sites that do not need comments (portfolios, business sites, blogs using external comment systems)."
+msgstr ""
+
+msgid "Click \"Save Changes\"."
+msgstr ""
+
+msgid "Comments will be disabled immediately sitewide."
+msgstr ""
+
+msgid "The Comments menu will disappear from the WordPress dashboard."
+msgstr ""
+
+msgid "Existing comments remain in the database but are completely hidden."
+msgstr ""
+
+msgid "Removes the comments menu from admin and redirects direct access to the dashboard."
+msgstr ""
+
+msgid "Removes the comments link from the admin bar."
+msgstr ""
+
+msgid "Disables comment feeds (RSS/Atom) - returns a 404 error."
+msgstr ""
+
+msgid "Removes REST API comment endpoints for increased security."
+msgstr ""
+
+msgid "Prevents comment-reply.js script from loading to improve performance."
+msgstr ""
+
+msgid "No configuration required - works automatically."
+msgstr ""
+
+msgid "Disable XML-RPC functionality entirely with the option to block direct access."
+msgstr ""
+
+msgid "Disables WordPress XML-RPC functionality which is often targeted by Brute Force and DDoS attacks. XML-RPC is an old remote access protocol and is rarely needed on modern sites."
+msgstr ""
+
+msgid "You can enable \"Block Direct Access\" to return a 403 error when trying to access the xmlrpc.php file."
+msgstr ""
+
+msgid "XML-RPC will be disabled immediately."
+msgstr ""
+
+msgid "XML-RPC is used by some mobile apps and old publishing tools (rarely needed today)."
+msgstr ""
+
+msgid "Jetpack and some plugins may require XML-RPC - please test after enabling."
+msgstr ""
+
+msgid "Block Direct Access: Returns a 403 Forbidden error when trying to access the xmlrpc.php file directly."
+msgstr ""
+
+msgid "Improves security by closing a common attack vector."
+msgstr ""
+
+msgid "Return 403 error when accessing xmlrpc.php directly."
+msgstr ""
+
+msgid "Easily add Google Tag Manager tracking to your WordPress site with automatic code injection."
+msgstr ""
+
+msgid "ArBricks - Google Tag Manager:"
+msgstr ""
+
+msgid "Your theme may not support the wp_body_open hook. The GTM noscript tag might not display correctly. Consider selecting \"Footer\" as the noscript location instead."
+msgstr ""
+
+msgid "Remove unnecessary default tags from wp_head output (RSD, shortlinks, etc.)."
+msgstr ""
+
+msgid "Removes unnecessary meta tags and links from the <head> section of your HTML. It cleans up the wp_head() output by removing RSD links, Windows Live Writer manifests, and shortlink tags. This results in cleaner HTML code and a slight performance improvement."
+msgstr ""
+
+msgid "Inspect your page source to verify a cleaner <head> section."
+msgstr ""
+
+msgid "Always removed: RSD links, Windows Live Writer manifest, and Shortlinks."
+msgstr ""
+
+msgid "These tags are legacy and rarely used by modern tools."
+msgstr ""
+
+msgid "Future versions may add options to remove REST API links and RSS feeds."
+msgstr ""
+
+msgid "No configuration needed - works automatically."
+msgstr ""
+
+msgid "Safe for all sites - does not affect site functionality."
+msgstr ""
+
+msgid "Hide the WordPress admin bar on the frontend for users who do not have specified capabilities."
+msgstr ""
+
+msgid "The admin bar will be hidden on the frontend for non-admin users."
+msgstr ""
+
+msgid "Test by logging in with a non-admin user (Subscriber, Customer, etc.)."
+msgstr ""
+
+msgid "Only affects the frontend - the admin bar still appears in the WordPress dashboard."
+msgstr ""
+
+msgid "Users with \"manage_options\" capability (usually Administrators) still see the admin bar."
+msgstr ""
+
+msgid "Developers can change the required capability using the \"arbricks_admin_bar_capability\" filter."
+msgstr ""
+
+msgid "Add a hidden field (honeypot) to block bots during login."
+msgstr ""
+
+msgid "You can customize the honeypot field name (advanced users only)."
+msgstr ""
+
+msgid "You can customize the block message displayed to bots."
+msgstr ""
+
+msgid "Choose the concealment method: CSS (recommended) or Hidden Input."
+msgstr ""
+
+msgid "Click \"Save Changes\" to activate."
+msgstr ""
+
+msgid "No further settings needed - protection is automatic."
+msgstr ""
+
+msgid "CSS Hide (recommended): The field is visually hidden but remains available for bots that ignore CSS files."
+msgstr ""
+
+msgid "Hidden Field: Uses type=\"hidden\" which sophisticated bots might detect."
+msgstr ""
+
+msgid "Field Name: Only change if you feel bots have learned your specific field name (rare)."
+msgstr ""
+
+msgid "No external services used - the feature works locally, maintaining privacy."
+msgstr ""
+
+msgid "Works alongside other login security features (reCAPTCHA, Math Captcha)."
+msgstr ""
+
+msgid "Automatically excluded for XML-RPC, REST API, WP-CLI, and AJAX requests."
+msgstr ""
+
+msgid "Default Field Name: login_honeypot"
+msgstr ""
+
+msgid "Example Custom Field Name: user_website_url (something bots will definitely fill)."
+msgstr ""
+
+msgid "The name of the invisible honeypot field."
+msgstr ""
+
+msgid "The message displayed to blocked bots."
+msgstr ""
+
+msgid "Use CSS code to hide the honeypot field."
+msgstr ""
+
+msgid "Add Google reCAPTCHA v2 checkbox to the login form."
+msgstr ""
+
+msgid "Get free API keys from Google reCAPTCHA: https://www.google.com/recaptcha/admin"
+msgstr ""
+
+msgid "Add your site domain and copy the \"Site Key\" and \"Secret Key\"."
+msgstr ""
+
+msgid "Paste the Site Key and Secret Key in the fields below."
+msgstr ""
+
+msgid "You can customize the error message and timeout duration."
+msgstr ""
+
+msgid "Test by logging out and attempting to log back in - you should see the reCAPTCHA box."
+msgstr ""
+
+msgid "External Service: User IPs are sent to Google servers for verification (required for reCAPTCHA to work)."
+msgstr ""
+
+msgid "Requires valid API keys - missing or incorrect keys will block all login attempts, including administrators."
+msgstr ""
+
+msgid "Protects wp-login.php only - does not affect WooCommerce login or custom login pages."
+msgstr ""
+
+msgid "Bypass for Administrators: When enabled, users with administrator role skip the reCAPTCHA check."
+msgstr ""
+
+msgid "Timeout setting controls how long to wait for Google API response (default 5 seconds)."
+msgstr ""
+
+msgid "Site Key Format: 6LcExampleKey123ABCdef..."
+msgstr ""
+
+msgid "Secret Key Format: 6LcExampleSecret456XYZabc..."
+msgstr ""
+
+msgid "Google reCAPTCHA Site Key (Required)"
+msgstr ""
+
+msgid "Google reCAPTCHA Secret Key (Required)"
+msgstr ""
+
+msgid "Message displayed when verification fails."
+msgstr ""
+
+msgid "Bypass for Administrators"
+msgstr ""
+
+msgid "Skip reCAPTCHA for administrator accounts."
+msgstr ""
+
+msgid "Timeout (Seconds)"
+msgstr ""
+
+msgid "Wait time for Google API request."
+msgstr ""
+
+msgid "reCAPTCHA site key is not configured."
+msgstr ""
+
+msgid "Please complete the reCAPTCHA test."
+msgstr ""
+
+msgid "reCAPTCHA verification process failed."
+msgstr ""
+
+msgid "Math Captcha (Login + WooCommerce)"
+msgstr ""
+
+msgid "Add a simple math question to WordPress and WooCommerce login forms to block bots."
+msgstr ""
+
+msgid "Adds a simple math question (e.g., \"What is 3 + 5?\") to login and registration forms to block automated bots. Works on the default WordPress login (wp-login.php) and WooCommerce My Account forms."
+msgstr ""
+
+msgid "Test by logging out and visiting the login page - you will see the math question."
+msgstr ""
+
+msgid "If WooCommerce is active, also test the login and register form on the \"My Account\" page."
+msgstr ""
+
+msgid "No further settings needed - the feature works automatically after activation."
+msgstr ""
+
+msgid "Covers 3 forms: WordPress Login, WooCommerce Login, and WooCommerce Registration."
+msgstr ""
+
+msgid "Uses random numbers (1-9) for each request for better security."
+msgstr ""
+
+msgid "The question is processed locally - no external services are used, maintaining privacy."
+msgstr ""
+
+msgid "Easier for non-technical users than invisible traps or reCAPTCHA."
+msgstr ""
+
+msgid "Example Question: \"Simple Verification: What is 7 + 4 ?\""
+msgstr ""
+
+msgid "The user must type 11 to proceed and log in."
+msgstr ""
+
+msgid "Simple verification: what is %1$d + %2$d ?"
+msgstr ""
+
+msgid "Security verification error. Please try again."
+msgstr ""
+
+msgid "You must answer the verification question."
+msgstr ""
+
+msgid "Incorrect verification answer."
+msgstr ""
+
+msgid "Automatically generate title, caption, description, and alt text from filename."
+msgstr ""
+
+msgid "Automatically generates image metadata (title, alt text, caption, description) from the filename when you upload images. Saves time and improves SEO by ensuring all images have proper alt text and titles."
+msgstr ""
+
+msgid "Choose \"Apply To\" mode: Only Empty Fields (safe) or Always Overwrite"
+msgstr ""
+
+msgid "Select which fields to auto-generate: Title, Caption, Description, Alt Text"
+msgstr ""
+
+msgid "Click \"Save Changes\""
+msgstr ""
+
+msgid "Only Empty Fields (recommended): Only fills in blank metadata, preserves your manual edits"
+msgstr ""
+
+msgid "Always Overwrite: Replaces existing metadata every time - use with caution"
+msgstr ""
+
+msgid "Clean Separators: Converts hyphens and underscores to spaces (my-image-file.jpg → My Image File)"
+msgstr ""
+
+msgid "Preserve Case (recommended for Arabic): Keeps original filename case, important for non-Latin text"
+msgstr ""
+
+msgid "Only affects images uploaded AFTER enabling - does not modify existing attachments"
+msgstr ""
+
+msgid "No external services used - completely local processing"
+msgstr ""
+
+msgid "Filename: product-red-shoes.jpg → Alt: \"product red shoes\" or \"Product Red Shoes\""
+msgstr ""
+
+msgid "Arabic filename example supports original case if Preserve Case enabled"
+msgstr ""
+
+msgid "Removes the WordPress version number from your HTML head and RSS feeds. This prevents potential attackers from easily identifying your WordPress version and targeting known vulnerabilities for that specific version."
+msgstr ""
+
+msgid "Inspect page source - you should not see the \"generator\" meta tag."
+msgstr ""
+
+msgid "Security through obscurity - not a complete security solution but an extra step."
+msgstr ""
+
+msgid "Removes the <meta name=\"generator\"> tag from HTML head."
+msgstr ""
+
+msgid "Removes versioning from RSS/Atom feeds."
+msgstr ""
+
+msgid "Part of a multi-layered security approach - best used with other security features."
+msgstr ""
+
+msgid "Shows an admin notice if the site is discouraged from search engines."
+msgstr ""
+
+msgid "Displays a prominent warning in the admin panel when \"Discourage search engines from indexing this site\" is enabled in WordPress settings. This prevents accidentally launching a site with search engine indexing disabled."
+msgstr ""
+
+msgid "Choose where to show the notice: All Admin Pages or Dashboard Only."
+msgstr ""
+
+msgid "Select the notice type: Error (Red) or Warning (Yellow)."
+msgstr ""
+
+msgid "Choose whether users can dismiss the notice."
+msgstr ""
+
+msgid "If the site is currently discouraged, you will see the notice immediately."
+msgstr ""
+
+msgid "This checks the WordPress Reading settings option \"Search Engine Visibility\"."
+msgstr ""
+
+msgid "The notice only appears when the \"blog_public\" option is set to 0 (discouraged)."
+msgstr ""
+
+msgid "Dashboard Only: Shows the notice only on the main admin dashboard."
+msgstr ""
+
+msgid "Dismissible: If allowed, users can close the notice (it reappears on page refresh unless handled per-user)."
+msgstr ""
+
+msgid "Prevents the common mistake of launching a site to the public with SEO remaining blocked."
+msgstr ""
+
+msgid "Show on"
+msgstr ""
+
+msgid "Where the notice should appear in the admin panel."
+msgstr ""
+
+msgid "Warning format and color."
+msgstr ""
+
+msgid "Allow Dismiss"
+msgstr ""
+
+msgid "Allow users to temporarily dismiss the notice."
+msgstr ""
+
+msgid "SEO Alert:"
+msgstr ""
+
+msgid "Your site is currently discouraged from search engines and is not being indexed."
+msgstr ""
+
+msgid "In any post, page, or widget, use: [email]youraddress@example.com[/email]"
+msgstr ""
+
+msgid "Works in posts, pages, custom post types, and text widgets that support shortcodes"
+msgstr ""
+
+msgid "Auto Update Cart on Quantity Change"
+msgstr ""
+
+msgid "Automatically update the cart as soon as the customer changes any product quantity."
+msgstr ""
+
+msgid "Automatically updates cart totals as soon as the customer changes a product quantity. This eliminates the need for customers to manually click the \"Update Cart\" button, providing a smoother and more modern shopping experience."
+msgstr ""
+
+msgid "Ensure WooCommerce is installed and active."
+msgstr ""
+
+msgid "Adjust \"Update Delay\" (default 250ms) to control the wait period after the last quantity change before updating."
+msgstr ""
+
+msgid "Choose whether you want to hide the manual \"Update Cart\" button."
+msgstr ""
+
+msgid "Go to the cart page and try changing a product quantity to see the auto-update."
+msgstr ""
+
+msgid "This feature requires WooCommerce."
+msgstr ""
+
+msgid "Uses AJAX technology to update the cart without reloading the entire page."
+msgstr ""
+
+msgid "Update Delay (Debounce): Prevents multiple updates if the customer clicks quantity buttons quickly."
+msgstr ""
+
+msgid "Hide Update Button: Recommended for a cleaner interface when auto-update is enabled."
+msgstr ""
+
+msgid "Hide Notices: Optionally hides the \"Cart updated\" message for a more seamless experience."
+msgstr ""
+
+msgid "Compatibility: Works with most themes using standard WooCommerce cart structure."
+msgstr ""
+
+msgid "Update Delay (ms)"
+msgstr ""
+
+msgid "Wait period after change and before start update."
+msgstr ""
+
+msgid "Disable the manual button and rely on auto-update."
+msgstr ""
+
+msgid "Do not show \"Cart updated\" message."
+msgstr ""
+
+msgid "Direct Checkout (Single Item)"
+msgstr ""
+
+msgid "Streamlines the buying process by sending customers directly to the checkout page immediately after they add a product to their cart, skipping the cart page entirely. Ideal for stores selling single items or wanting to reduce friction."
+msgstr ""
+
+msgid "Optionally enable \"Empty Cart Before Adding\" to ensure customers only buy one item at a time."
+msgstr ""
+
+msgid "Test by clicking \"Add to Cart\" on any product; you should land directly on the Checkout page."
+msgstr ""
+
+msgid "Requires WooCommerce plugin."
+msgstr ""
+
+msgid "Redirect to Checkout: Bypasses the cart page after a successful add-to-cart action."
+msgstr ""
+
+msgid "Empty Cart Before Adding: Automatically clears the current cart before adding the new product. Prevents multi-item orders."
+msgstr ""
+
+msgid "Suppress Message: Hides the standard \"Product added to cart\" notice."
+msgstr ""
+
+msgid "Disable Order Again: Optionally removes the \"Order Again\" button from order history to maintain focus on current purchases."
+msgstr ""
+
+msgid "Skip cart and go directly to checkout."
+msgstr ""
+
+msgid "Suppress Add to Cart Message"
+msgstr ""
+
+msgid "Hide \"Product added to cart\" notice."
+msgstr ""
+
+msgid "Clear cart before adding new product."
+msgstr ""
+
+msgid "Remove re-order button from my account page."
+msgstr ""
+
+msgid "Reduce checkout fields when cart is free (no payment needed)."
+msgstr ""
+
+msgid "Simplifies the checkout process for free products by removing unnecessary billing fields (like address, phone, and company) when the cart total is zero. Reduces friction and increases conversions for free products or samples."
+msgstr ""
+
+msgid "In \"Fields to Keep\", enter a comma-separated list of field IDs you want to remain visible."
+msgstr ""
+
+msgid "Try adding a free product to your cart and proceed to checkout to see the simplification."
+msgstr ""
+
+msgid "Only works when the cart total is 0.00 and no payment is required."
+msgstr ""
+
+msgid "Fields to Keep: Default is \"billing_email,billing_first_name\"."
+msgstr ""
+
+msgid "Supported field IDs include: billing_first_name, billing_last_name, billing_company, billing_address_1, billing_city, billing_phone, etc."
+msgstr ""
+
+msgid "Comma-separated field IDs (e.g., billing_email,billing_first_name)"
+msgstr ""
+
+msgid "Free Price Label"
+msgstr ""
+
+msgid "Display custom label for zero-price products."
+msgstr ""
+
+msgid "Replaces the default price display with a custom text (e.g., \"Free!\", \"No Charge\") for WooCommerce products with zero price. Ideal for free samples, promotions, or unpriced services."
+msgstr ""
+
+msgid "Enter the custom text you prefer (e.g., \"Free\", \"Free Download\")."
+msgstr ""
+
+msgid "Set any product price to 0 to see the custom text instead of zero."
+msgstr ""
+
+msgid "Only affects products with exactly zero price (0.00)."
+msgstr ""
+
+msgid "If the product is on sale (Regular Price > 0, Sale Price = 0), the sale tag will appear with the free text."
+msgstr ""
+
+msgid "Works on shop pages, single product page, and widgets."
+msgstr ""
+
+msgid "English: \"Free!\" or \"No Cost\" or \"Gift\""
+msgstr ""
+
+msgid "Free Price Text"
+msgstr ""
+
+msgid "Text to display for free products."
+msgstr ""
+
+msgid "Enforce a minimum order total at checkout."
+msgstr ""
+
+msgid "Prevents customers from checking out if their cart total is below a specified amount. Useful for covering shipping costs, ensuring profitability, or encouraging bulk purchases."
+msgstr ""
+
+msgid "Define the \"Minimum Amount\" (e.g., 50)."
+msgstr ""
+
+msgid "Choose \"Comparison Mode\": Subtotal (before tax and shipping) or Total (after tax and shipping)."
+msgstr ""
+
+msgid "Customize the error message (use %s as a placeholder for the amount)."
+msgstr ""
+
+msgid "Try adding products worth less than the minimum and attempt to checkout."
+msgstr ""
+
+msgid "Subtotal: Compares the value of products only before adding taxes and shipping costs."
+msgstr ""
+
+msgid "Total: Compares the final total amount the customer will pay."
+msgstr ""
+
+msgid "Minimum Amount must be a number (default is 50)."
+msgstr ""
+
+msgid "The error message appears on the cart page and when trying to proceed to checkout."
+msgstr ""
+
+msgid "The %s symbol will be automatically replaced with the formatted amount (e.g., $50)."
+msgstr ""
+
+msgid "Minimum order value (number only)."
+msgstr ""
+
+msgid "Comparison Mode"
+msgstr ""
+
+msgid "What to compare against the minimum."
+msgstr ""
+
+msgid "Subtotal (before tax and shipping)"
+msgstr ""
+
+msgid "Order Total (after tax and shipping)"
+msgstr ""
+
+msgid "Use %s for the amount placeholder."
+msgstr ""
+
+msgid "Automatically convert uploaded JPEG/PNG images to WebP and replace the original file."
+msgstr ""
+
+msgid "Automatically optimizes your media library by converting new JPEG and PNG uploads to the modern WebP format. WebP images are significantly smaller in size without losing quality, leading to faster site loading times."
+msgstr ""
+
+msgid "Requires GD or ImageMagick PHP extension with WebP support enabled on your server."
+msgstr ""
+
+msgid "Original Capture: Replaces the original JPG/PNG file entirely to save disk space."
+msgstr ""
+
+msgid "Quality: Converted at 85% quality by default (optimal balance between size and quality)."
+msgstr ""
+
+msgid "Scope: Only affects NEW uploads. Existing images in your media library are not processed."
+msgstr ""
+
+msgid "Performance: Slight increase in processing time during upload as conversion happens on-the-fly."
+msgstr ""
+
