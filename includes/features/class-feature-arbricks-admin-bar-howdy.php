@@ -111,7 +111,7 @@ class Feature_ArBricks_Admin_Bar_Howdy implements Feature_Interface {
 
 		if ( $keep_user ) {
 			/* translators: 1: Custom greeting, 2: Display name */
-			$new_title = sprintf( __( '%1$s، %2$s', 'arbricks' ), $greeting, $display_name );
+			$new_title = sprintf( __( '%1$s, %2$s', 'arbricks' ), $greeting, $display_name );
 		} else {
 			$new_title = $greeting;
 		}

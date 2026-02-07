@@ -160,8 +160,8 @@
 			const $removeBtn = $container.find('.arbricks-media-remove');
 
 			const frame = wp.media({
-				title: 'Select Image',
-				button: { text: 'Use this image' },
+				title: arbricksAdmin.selectImage,
+				button: { text: arbricksAdmin.useThisImage },
 				multiple: false
 			});
 

@@ -74,9 +74,9 @@ class Feature_ArBricks_WC_Admin_Invoice_Print implements Feature_Interface {
 				'label'   => __( 'Paper Size', 'arbricks' ),
 				'default' => '80mm',
 				'options' => array(
-					'80mm' => '80mm (Thermal)',
-					'58mm' => '58mm (Small Thermal)',
-					'A4'   => 'A4 (Standard)',
+					'80mm' => __( '80mm (Thermal)', 'arbricks' ),
+					'58mm' => __( '58mm (Small Thermal)', 'arbricks' ),
+					'A4'   => __( 'A4 (Standard)', 'arbricks' ),
 				),
 			),
 			'auto_print'  => array(
@@ -391,7 +391,8 @@ class Feature_ArBricks_WC_Admin_Invoice_Print implements Feature_Interface {
 						$address_parts[] = $order->get_billing_postcode();
 						$address_parts[] = WC()->countries->get_countries()[ $order->get_billing_country() ] ?? $order->get_billing_country();
 						
-						echo esc_html( implode( '، ', array_filter( $address_parts ) ) );
+						$separator = _x( ', ', 'address parts separator', 'arbricks' );
+						echo esc_html( implode( $separator, array_filter( $address_parts ) ) );
 						?>
 					</div>
 				</div>

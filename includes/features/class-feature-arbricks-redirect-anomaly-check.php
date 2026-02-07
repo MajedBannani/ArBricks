@@ -298,20 +298,20 @@ class Feature_ArBricks_Redirect_Anomaly_Check implements Feature_Interface {
 							$row.append($('<td>').append($('<small>').append($('<code>').text(item.url))));
 							
 							var $chainCell = $('<td>');
-							$chainCell.append($('<strong>').text('Browser: '));
+							$chainCell.append($('<strong>').text('<?php echo esc_js( __( 'Browser:', 'arbricks' ) ); ?> '));
 							item.normal.chain.forEach(function(c, i) {
 								if (i > 0) $chainCell.append(' → ');
 								$chainCell.append($('<span>').addClass('arbricks-badge').text(c.code));
 							});
 							$chainCell.append($('<br>'));
-							$chainCell.append($('<strong>').text('Bot: '));
+							$chainCell.append($('<strong>').text('<?php echo esc_js( __( 'Bot:', 'arbricks' ) ); ?> '));
 							if (item.bot) {
 								item.bot.chain.forEach(function(c, i) {
 									if (i > 0) $chainCell.append(' → ');
 									$chainCell.append($('<span>').addClass('arbricks-badge').text(c.code));
 								});
 							} else {
-								$chainCell.append('N/A');
+								$chainCell.append('<?php echo esc_js( __( 'N/A', 'arbricks' ) ); ?>');
 							}
 							$row.append($chainCell);
 
@@ -333,7 +333,7 @@ class Feature_ArBricks_Redirect_Anomaly_Check implements Feature_Interface {
 						});
 						$('#arbricks-red-results').fadeIn();
 					} else {
-						alert(response.data.message || 'Error occurred during scan.');
+						alert(response.data.message || '<?php echo esc_js( __( 'Error occurred during scan.', 'arbricks' ) ); ?>');
 					}
 				});
 			});

@@ -71,7 +71,7 @@ class Feature_Media_Auto_Meta implements Feature_Interface {
 				),
 				'examples' => array(
 					__( 'Filename: product-red-shoes.jpg → Alt: "product red shoes" or "Product Red Shoes"', 'arbricks' ),
-					__( 'Arabic filename: صورة-منتج.jpg → Keeps original case if Preserve Case enabled', 'arbricks' ),
+					__( 'Arabic filename example supports original case if Preserve Case enabled', 'arbricks' ),
 				),
 			),
 		);

@@ -98,8 +98,10 @@ class Admin {
 			'arbricks-admin',
 			'arbricksAdmin',
 			array(
-				'copySuccess' => __( 'Shortcode copied!', 'arbricks' ),
-				'copyError'   => __( 'Failed to copy shortcode.', 'arbricks' ),
+				'copySuccess'   => __( 'Shortcode copied!', 'arbricks' ),
+				'copyError'     => __( 'Failed to copy shortcode.', 'arbricks' ),
+				'selectImage'   => __( 'Select Image', 'arbricks' ),
+				'useThisImage'  => __( 'Use this image', 'arbricks' ),
 			)
 		);
 
@@ -578,7 +580,7 @@ class Admin {
 			} else {
 				// Text input.
 				echo '<label for="' . esc_attr( $field_id ) . '" class="arbricks-setting-label">' . esc_html( $label ) . '</label>';
-				echo '<input type="text" name="' . esc_attr( $field_name ) . '" id="' . esc_attr( $field_id ) . '" value="' . esc_attr( $value ) . '" class="arbricks-setting-input" placeholder="' . esc_attr( $placeholder ) . '">';
+				echo '<input type="text" name="' . esc_attr( $field_name ) . '" id="' . esc_attr( $field_id ) . '" value="' . esc_attr( (string) $value ) . '" class="arbricks-setting-input" placeholder="' . esc_attr( $placeholder ?: $field['default'] ?? '' ) . '">';
 			}
 
 			if ( ! empty( $description ) ) {

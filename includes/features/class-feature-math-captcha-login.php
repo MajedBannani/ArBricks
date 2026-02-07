@@ -146,16 +146,18 @@ class Feature_Math_Captcha_Login implements Feature_Interface {
 			$b
 		);
 
-		echo '<p class="arb-math-captcha form-row">'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo '<label for="' . esc_attr( $id ) . '">' . $label . '</label>';
-		echo '<input type="number" name="arb_math_captcha_answer" id="' . esc_attr( $id ) . '" class="input" value="" autocomplete="off" required />';
-		echo '<input type="hidden" name="arb_math_captcha_a" value="' . esc_attr( (string) $a ) . '">';
-		echo '<input type="hidden" name="arb_math_captcha_b" value="' . esc_attr( (string) $b ) . '">';
+		printf(
+			'<p class="arb-math-captcha form-row"><label for="%1$s">%2$s</label><input type="number" name="arb_math_captcha_answer" id="%1$s" class="input" value="" autocomplete="off" required /><input type="hidden" name="arb_math_captcha_a" value="%3$s"><input type="hidden" name="arb_math_captcha_b" value="%4$s">',
+			esc_attr( $id ),
+			esc_html( $label ),
+			esc_attr( (string) $a ),
+			esc_attr( (string) $b )
+		);
 
 		$nonce_action = $this->nonce_action_for_context( $context );
 		wp_nonce_field( $nonce_action, 'arb_math_captcha_nonce' );
 
-		echo '</p>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '</p>';
 	}
 
 	/**

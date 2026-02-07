@@ -43,19 +43,19 @@ class Feature_Arbricks_Copy implements Feature_Interface {
                 'type'        => 'text',
                 'label'       => __( 'Default Text (on Failure)', 'arbricks' ),
                 'description' => __( 'Text used if the element has no original content.', 'arbricks' ),
-                'default'     => __( 'Copy', 'arbricks' ),
+                'default'     => 'Copy',
             ],
             'success_text' => [
                 'type'        => 'text',
                 'label'       => __( 'Success message', 'arbricks' ),
                 'description' => __( 'Message that appears after successful copying.', 'arbricks' ),
-                'default'     => __( 'Copied', 'arbricks' ),
+                'default'     => 'Copied',
             ],
             'error_text'   => [
                 'type'        => 'text',
                 'label'       => __( 'Error message', 'arbricks' ),
                 'description' => __( 'Message that appears when copying fails.', 'arbricks' ),
-                'default'     => __( 'Copy failed', 'arbricks' ),
+                'default'     => 'Copy failed',
             ],
         ];
     }
