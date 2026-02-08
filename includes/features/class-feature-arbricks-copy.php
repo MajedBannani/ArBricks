@@ -43,19 +43,22 @@ class Feature_Arbricks_Copy implements Feature_Interface {
                 'type'        => 'text',
                 'label'       => __( 'Default Text (on Failure)', 'arbricks' ),
                 'description' => __( 'Text used if the element has no original content.', 'arbricks' ),
-                'default'     => 'Copy',
+                'default'     => '',
+                'placeholder' => __( 'Copy', 'arbricks' ),
             ],
             'success_text' => [
                 'type'        => 'text',
                 'label'       => __( 'Success message', 'arbricks' ),
                 'description' => __( 'Message that appears after successful copying.', 'arbricks' ),
-                'default'     => 'Copied',
+                'default'     => '',
+                'placeholder' => __( 'Copied', 'arbricks' ),
             ],
             'error_text'   => [
                 'type'        => 'text',
                 'label'       => __( 'Error message', 'arbricks' ),
                 'description' => __( 'Message that appears when copying fails.', 'arbricks' ),
-                'default'     => 'Copy failed',
+                'default'     => '',
+                'placeholder' => __( 'Copy failed', 'arbricks' ),
             ],
         ];
     }
@@ -87,9 +90,9 @@ class Feature_Arbricks_Copy implements Feature_Interface {
             'arbricks-copy',
             'ArBricksCopyConfig',
             [
-                'defaultText' => $config['default_text'],
-                'successText' => $config['success_text'],
-                'errorText'   => $config['error_text'],
+                'defaultText' => ! empty( $config['default_text'] ) ? $config['default_text'] : __( 'Copy', 'arbricks' ),
+                'successText' => ! empty( $config['success_text'] ) ? $config['success_text'] : __( 'Copied', 'arbricks' ),
+                'errorText'   => ! empty( $config['error_text'] ) ? $config['error_text'] : __( 'Copy failed', 'arbricks' ),
             ]
         );
     }

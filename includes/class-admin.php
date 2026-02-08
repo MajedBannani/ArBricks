@@ -543,6 +543,11 @@ class Admin {
 			$description = $field['description'] ?? '';
 			$placeholder = $field['placeholder'] ?? '';
 
+			// Skip custom types that are handled by render_admin_ui to avoid double rendering and warnings.
+			if ( 'roles_multiselect' === $type ) {
+				continue;
+			}
+
 			echo '<div class="arbricks-setting-field">';
 
 			if ( 'checkbox' === $type ) {
@@ -550,6 +555,20 @@ class Admin {
 				echo '<input type="checkbox" name="' . esc_attr( $field_name ) . '" id="' . esc_attr( $field_id ) . '" value="1" ' . checked( $value, true, false ) . '>';
 				echo '<span>' . esc_html( $label ) . '</span>';
 				echo '</label>';
+			} elseif ( 'checkbox_group' === $type ) {
+				// Handle checkbox groups (e.g., Featured Image Column post types).
+				echo '<label class="arbricks-setting-label">' . esc_html( $label ) . '</label>';
+				$value = is_array( $value ) ? $value : array();
+				$options = $field['options'] ?? array();
+				echo '<div class="arbricks-checkbox-group" style="margin-top: 8px;">';
+				foreach ( $options as $opt_value => $opt_label ) {
+					$checked = in_array( $opt_value, $value, true );
+					echo '<label style="display: block; margin-bottom: 5px;">';
+					echo '<input type="checkbox" name="' . esc_attr( $field_name ) . '[]" value="' . esc_attr( $opt_value ) . '" ' . checked( $checked, true, false ) . '>';
+					echo ' <span>' . esc_html( $opt_label ) . '</span>';
+					echo '</label>';
+				}
+				echo '</div>';
 			} elseif ( 'select' === $type ) {
 				echo '<label for="' . esc_attr( $field_id ) . '" class="arbricks-setting-label">' . esc_html( $label ) . '</label>';
 				echo '<select name="' . esc_attr( $field_name ) . '" id="' . esc_attr( $field_id ) . '" class="arbricks-setting-input">';
@@ -559,6 +578,31 @@ class Admin {
 					echo '</option>';
 				}
 				echo '</select>';
+			} elseif ( 'radio' === $type ) {
+				// Handle radio buttons.
+				echo '<label class="arbricks-setting-label">' . esc_html( $label ) . '</label>';
+				$options = $field['options'] ?? array();
+				echo '<div class="arbricks-radio-group" style="margin-top: 8px;">';
+				foreach ( $options as $opt_value => $opt_label ) {
+					$radio_id = $field_id . '-' . sanitize_key( $opt_value );
+					echo '<label style="display: block; margin-bottom: 5px;">';
+					echo '<input type="radio" name="' . esc_attr( $field_name ) . '" id="' . esc_attr( $radio_id ) . '" value="' . esc_attr( $opt_value ) . '" ' . checked( $value, $opt_value, false ) . '>';
+					echo ' <span>' . esc_html( $opt_label ) . '</span>';
+					echo '</label>';
+				}
+				echo '</div>';
+			} elseif ( 'textarea' === $type ) {
+				// Handle textarea fields.
+				echo '<label for="' . esc_attr( $field_id ) . '" class="arbricks-setting-label">' . esc_html( $label ) . '</label>';
+				$rows = $field['rows'] ?? 4;
+				echo '<textarea name="' . esc_attr( $field_name ) . '" id="' . esc_attr( $field_id ) . '" rows="' . esc_attr( $rows ) . '" class="arbricks-setting-input" style="width: 100%; max-width: 500px;" placeholder="' . esc_attr( $placeholder ) . '">' . esc_textarea( $value ) . '</textarea>';
+			} elseif ( 'number' === $type ) {
+				// Handle number fields.
+				echo '<label for="' . esc_attr( $field_id ) . '" class="arbricks-setting-label">' . esc_html( $label ) . '</label>';
+				$min = isset( $field['min'] ) ? 'min="' . esc_attr( $field['min'] ) . '"' : '';
+				$max = isset( $field['max'] ) ? 'max="' . esc_attr( $field['max'] ) . '"' : '';
+				$step = isset( $field['step'] ) ? 'step="' . esc_attr( $field['step'] ) . '"' : '';
+				echo '<input type="number" name="' . esc_attr( $field_name ) . '" id="' . esc_attr( $field_id ) . '" value="' . esc_attr( $value ) . '" class="arbricks-setting-input" placeholder="' . esc_attr( $placeholder ?: $field['default'] ?? '' ) . '" ' . $min . ' ' . $max . ' ' . $step . '>';
 			} elseif ( 'media' === $type ) {
 				$image_url = '';
 				if ( $value ) {

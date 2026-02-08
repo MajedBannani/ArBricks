@@ -52,11 +52,11 @@ class Feature_WebP_Auto_Convert implements Feature_Interface {
 				),
 				'notes'    => array(
 					__( 'Requires GD or ImageMagick PHP extension with WebP support enabled on your server.', 'arbricks' ),
-					__( 'Original Capture: Replaces the original JPG/PNG file entirely to save disk space.', 'arbricks' ),
-					__( 'Quality: Converted at 85% quality by default (optimal balance between size and quality).', 'arbricks' ),
-					__( 'Transparency: PNG transparency is preserved during conversion.', 'arbricks' ),
-					__( 'Scope: Only affects NEW uploads. Existing images in your media library are not processed.', 'arbricks' ),
-					__( 'Performance: Slight increase in processing time during upload as conversion happens on-the-fly.', 'arbricks' ),
+					sprintf( __( '%s: %s', 'arbricks' ), __( 'Original Capture', 'arbricks' ), __( 'Replaces the original JPG/PNG file entirely to save disk space.', 'arbricks' ) ),
+					sprintf( __( '%s: %s', 'arbricks' ), __( 'Quality', 'arbricks' ), __( 'Converted at 85% quality by default (optimal balance between size and quality).', 'arbricks' ) ),
+					sprintf( __( '%s: %s', 'arbricks' ), __( 'Transparency', 'arbricks' ), __( 'PNG transparency is preserved during conversion.', 'arbricks' ) ),
+					sprintf( __( '%s: %s', 'arbricks' ), __( 'Scope', 'arbricks' ), __( 'Only affects NEW uploads. Existing images in your media library are not processed.', 'arbricks' ) ),
+					sprintf( __( '%s: %s', 'arbricks' ), __( 'Performance', 'arbricks' ), __( 'Slight increase in processing time during upload as conversion happens on-the-fly.', 'arbricks' ) ),
 				),
 			),
 		);

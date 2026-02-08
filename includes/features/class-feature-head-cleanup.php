@@ -47,8 +47,8 @@ class Feature_Head_Cleanup implements Feature_Interface {
 				'how_to'   => array(
 					__( 'Enable the feature using the toggle above.', 'arbricks' ),
 					__( 'Click "Save Changes".', 'arbricks' ),
-					__( 'The unnecessary tags will be removed immediately from your site\'s HTML head.', 'arbricks' ),
-					__( 'Inspect your page source to verify a cleaner <head> section.', 'arbricks' ),
+					__( 'The unnecessary tags will be removed immediately from the HTML head of your site.', 'arbricks' ),
+					__( 'Inspect your page source to verify a cleaner head section.', 'arbricks' ),
 				),
 				'notes'    => array(
 					__( 'Always removed: RSD links, Windows Live Writer manifest, and Shortlinks.', 'arbricks' ),

@@ -85,16 +85,25 @@ class Feature_Registry {
 		
 		if ( false !== $cached_features && is_array( $cached_features ) ) {
 			// Use cached list - no filesystem access needed.
+			$cache_valid = true;
 			foreach ( $cached_features as $file => $full_class_name ) {
-				require_once $file;
-				if ( class_exists( $full_class_name ) ) {
-					$feature = new $full_class_name();
-					if ( $feature instanceof Feature_Interface ) {
-						$this->register_feature( $feature );
+				if ( file_exists( $file ) ) {
+					require_once $file;
+					if ( class_exists( $full_class_name ) ) {
+						$feature = new $full_class_name();
+						if ( $feature instanceof Feature_Interface ) {
+							$this->register_feature( $feature );
+						}
 					}
+				} else {
+					$cache_valid = false;
 				}
 			}
-			return;
+			
+			if ( $cache_valid ) {
+				return;
+			}
+			// If cache was invalid (file missing), continue to rediscovery.
 		}
 
 		// Cache miss - discover features from filesystem.

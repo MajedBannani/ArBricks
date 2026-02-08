@@ -66,7 +66,8 @@ class Feature_ArBricks_Admin_Bar_Howdy implements Feature_Interface {
 				'type'        => 'text',
 				'label'       => __( 'Greeting Text', 'arbricks' ),
 				'description' => __( 'The text that replaces "Howdy". Default is "Welcome".', 'arbricks' ),
-				'default'     => 'Welcome',
+				'default'     => '',
+				'placeholder' => __( 'Welcome', 'arbricks' ),
 			),
 			'arbricks_abh_keep_username' => array(
 				'type'        => 'checkbox',
@@ -93,7 +94,7 @@ class Feature_ArBricks_Admin_Bar_Howdy implements Feature_Interface {
 	 */
 	public function customize_greeting( $wp_admin_bar ): void {
 		$settings = Options::get_feature_settings( self::id() );
-		$greeting = $settings['arbricks_abh_greeting'] ?? 'Welcome';
+		$greeting = ! empty( $settings['arbricks_abh_greeting'] ) ? $settings['arbricks_abh_greeting'] : __( 'Welcome', 'arbricks' );
 		$keep_user = $settings['arbricks_abh_keep_username'] ?? true;
 
 		$my_account = $wp_admin_bar->get_node( 'my-account' );
