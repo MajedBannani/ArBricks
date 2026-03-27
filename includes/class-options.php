@@ -194,13 +194,37 @@ class Options {
 	 */
 	private static function initialize_defaults(): array {
 		$defaults = array(
-			'version'  => self::SCHEMA_VERSION,
-			'enabled'  => array(),
-			'settings' => array(),
+			'version'             => self::SCHEMA_VERSION,
+			'enabled'             => array(),
+			'settings'            => array(),
+			'delete_on_uninstall' => false,
 		);
 
 		update_option( self::OPTION_NAME, $defaults );
 		return $defaults;
+	}
+
+	/**
+	 * Get delete_on_uninstall setting
+	 *
+	 * @return bool True if data should be deleted on uninstall.
+	 */
+	public static function get_delete_on_uninstall(): bool {
+		$options = self::get_all();
+		return ! empty( $options['delete_on_uninstall'] );
+	}
+
+	/**
+	 * Set delete_on_uninstall setting
+	 *
+	 * @param bool $value Whether to delete data on uninstall.
+	 * @return bool True on success.
+	 */
+	public static function set_delete_on_uninstall( bool $value ): bool {
+		$options                        = self::get_all();
+		$options['delete_on_uninstall'] = (bool) $value;
+		self::$cache = $options;
+		return update_option( self::OPTION_NAME, $options );
 	}
 
 	/**

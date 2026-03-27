@@ -176,6 +176,9 @@ class Admin {
 			}
 		}
 
+		// Handle delete on uninstall.
+		Options::set_delete_on_uninstall( ! empty( $_POST['arbricks_delete_on_uninstall'] ) );
+
 		// Clear cache.
 		Options::clear_cache();
 		delete_transient( 'arbricks_discovered_features' );
@@ -420,37 +423,23 @@ class Admin {
 					<?php endforeach; ?>
 						</div>
 
+						<div class="arbricks-global-settings" style="margin-top: 30px; padding: 20px; background: #f6f7f7; border: 1px solid #c3c4c7; border-radius: 4px;">
+							<h3 style="margin-top: 0;"><?php esc_html_e( 'Data & Privacy', 'arbricks' ); ?></h3>
+							<label class="arbricks-setting-label" style="display: flex; align-items: center; gap: 10px;">
+								<input type="checkbox" name="arbricks_delete_on_uninstall" value="1" <?php checked( Options::get_delete_on_uninstall() ); ?>>
+								<span><?php esc_html_e( 'Delete all data on uninstall', 'arbricks' ); ?></span>
+							</label>
+							<p class="description" style="margin-top: 8px; margin-bottom: 0;">
+								<?php esc_html_e( 'When enabled, uninstalling the plugin will remove all settings, options, user meta (2FA secrets, last activity), transients, and temporary files. Disabled by default to protect your settings.', 'arbricks' ); ?>
+							</p>
+						</div>
+
 						<?php submit_button( __( 'Save Changes', 'arbricks' ), 'primary', 'submit', true ); ?>
 					</div>
 				</div>
 			</form>
 		</div>
 		<?php
-	}
-
-	/**
-	 * Categorize snippets by their category
-	 *
-	 * @param array $snippets Array of snippet objects.
-	 * @return array Categorized snippets.
-	 */
-	private function categorize_snippets( $snippets ) {
-		$categorized = array(
-			'tools'  => array(),
-			'styles' => array(),
-			'other'  => array(),
-		);
-
-		foreach ( $snippets as $snippet ) {
-			$category = $snippet->get_category();
-			if ( ! isset( $categorized[ $category ] ) ) {
-				$categorized[ $category ] = array();
-			}
-			$categorized[ $category ][] = $snippet;
-		}
-
-		// Remove empty categories.
-		return array_filter( $categorized );
 	}
 
 	/**

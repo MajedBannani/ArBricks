@@ -141,7 +141,7 @@ class Feature_ArBricks_Redirect_Anomaly_Check implements Feature_Interface {
 				'user-agent'  => $ua,
 				'timeout'     => 10,
 				'redirection' => 0, // Manual follow
-				'sslverify'   => false,
+				'sslverify'   => true,
 			) );
 
 			if ( is_wp_error( $response ) ) {
@@ -314,6 +314,10 @@ class Feature_ArBricks_Redirect_Anomaly_Check implements Feature_Interface {
 								$chainCell.append('<?php echo esc_js( __( 'N/A', 'arbricks' ) ); ?>');
 							}
 							$row.append($chainCell);
+
+							var riskColor = '#68de7c';
+							if (item.anomaly.risk === '<?php echo esc_js( __( 'High', 'arbricks' ) ); ?>') riskColor = '#d63638';
+							else if (item.anomaly.risk === '<?php echo esc_js( __( 'Medium', 'arbricks' ) ); ?>') riskColor = '#f0b20a';
 
 							var $riskCell = $('<td>');
 							$riskCell.append($('<span>').css({'font-weight': 'bold', 'color': riskColor}).text(item.anomaly.risk));

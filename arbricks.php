@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     arbricks
+ * Plugin Name:     ArBricks - Professional WordPress Toolkit
  * Plugin URI:      https://arbricks.net/
  * Description:     Enjoy the easiest way to add professional patterns and tools to your WordPress site.
  * Version:         2.0.13

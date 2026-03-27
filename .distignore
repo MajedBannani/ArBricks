@@ -1,0 +1,41 @@
+# Development and build files
+.DS_Store
+vendor
+.git
+.gitattributes
+.github
+.gitignore
+.tools
+build-submission.sh
+composer.json
+composer.lock
+docs
+fix_po.py
+*.pyc
+__pycache__
+
+# IDE files
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# Log files
+*.log
+
+# Backup files
+*.bak
+*.swp
+*~
+
+# Node modules (if any)
+node_modules
+
+# Test files
+tests
+phpunit.xml
+.phpunit.result.cache
+
+# Documentation
+README.md
+CONTRIBUTING.md

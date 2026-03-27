@@ -273,7 +273,7 @@ class Feature_ArBricks_Auto_Logout_Inactive_Users implements Feature_Interface {
 			$('#arbricks-stay-logged-in').on('click', function() {
 				$.post('<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>', {
 					action: 'arbricks_update_activity',
-					nonce: '<?php echo wp_create_nonce( 'arbricks_activity' ); ?>'
+					nonce: '<?php echo esc_js( wp_create_nonce( 'arbricks_activity' ) ); ?>'
 				}).done(function() {
 					lastActivity = Date.now();
 					$('#arbricks-logout-warning').fadeOut();

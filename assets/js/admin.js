@@ -170,7 +170,10 @@
 				$input.val(attachment.id);
 				
 				const url = attachment.sizes.thumbnail ? attachment.sizes.thumbnail.url : attachment.url;
-				$preview.html('<img src="' + url + '" style="max-width: 100px; height: auto; display: block; border: 1px solid #ddd; padding: 5px;">');
+				const img = document.createElement('img');
+				img.src = url;
+				img.style.cssText = 'max-width: 100px; height: auto; display: block; border: 1px solid #ddd; padding: 5px;';
+				$preview.empty().append(img);
 				$removeBtn.show();
 			});
 
